@@ -1,2 +1,2 @@
 # navn-r.github.io
-Host for my site :triumph:
+Host for my site :hear_no_evil:
