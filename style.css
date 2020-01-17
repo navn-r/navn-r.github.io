@@ -1,11 +1,13 @@
-body {
+:root {
     --orange: rgb(235, 68, 46);
     --orange-trans: rgba(235, 68, 46, 0.75);
     --purple: rgb(162, 0, 255);
     --purple-trans: rgba(162, 0, 255, 0.473);
-    background-color: #101010;
-    margin: 0;
-    
+}
+
+body {
+    background: #101010;
+    margin: 0; 
 }
 
 .grid-container {
@@ -25,11 +27,11 @@ body {
     background-color: rgb(3, 3, 3);
     padding: 3em 5vw;
     margin-bottom: 0;
-    border-bottom: 20px var(--purple-trans) ridge;
+    border-bottom: 1.25em var(--purple-trans) ridge;
 }
 
 .title {
-    font-family: Caveat, monospace;
+    font-family: Caveat, sans-serif;
     font-weight: 700;
     font-size: 4em;
     text-align: left;
@@ -38,8 +40,20 @@ body {
     color: #ffffff;
 }
 
+.subtitle {
+    margin-top: 0;
+    font-family: inherit;
+    color: var(--orange);
+    user-select: none;
+    
+}
+
+.right {
+    float: right;
+}
+
 .icon {
-    width: 40px;
+    width: 2.5em;
     margin: 10px;
     user-select: none;
 }
@@ -51,13 +65,16 @@ body {
 }
 
 .footer {
+    padding-top: 1em;
+    border-top: 1px var(--orange) dashed;
     font-family: monospace;
 }
+
 
 .text-container {
     display: grid;
     grid-area: text;
-    width: 90%;
+    width: 80%;
     font-family: "Oxygen Mono", monospace;
     font-size: 1rem;
     color: white;
@@ -96,6 +113,16 @@ body {
     background: var(--orange-trans);
 }
 
+@media(max-width: 1200px) {
+    .grid-container {
+        grid-column-gap: 0%;
+    }
+    .text-container {
+        width: 90%;
+    }
+}
+
+
 @media (max-width: 600px) {
     .title {
         font-size: 3em;
@@ -112,6 +139,7 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 15%;
         padding: 0 10vw;
+        width: 80vw;
     }
 
     .text-container {
@@ -121,6 +149,14 @@ body {
 }
 
 @media (max-width: 400px) {
+    .title {
+        font-size: 2.5em;
+    }
+
+    .icon {
+        width: 2em;
+    }
+
     .grid-container {
         grid-row-gap: 1.5em;
     }
@@ -129,8 +165,10 @@ body {
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr 1fr;
         padding: 0 30vw;
+        width: 40vw;
         text-align: center;
     }
+
 
     .text-container {
         padding: 0 10vw;
