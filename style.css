@@ -105,6 +105,10 @@ body {
     color: var(--orange);
 }
 
+#open {
+    color: var(--orange);
+}
+
 .letter {
     color: var(--orange);
 }
