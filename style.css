@@ -28,10 +28,11 @@ body {
     padding: 3em 5vw;
     margin-bottom: 0;
     border-bottom: 1.25em var(--purple-trans) ridge;
+    user-select: none;
 }
 
 .title {
-    font-family: Caveat, sans-serif;
+    font-family: Caveat, 'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 4em;
     text-align: left;
@@ -48,26 +49,31 @@ body {
     
 }
 
-.right {
-    float: right;
+.date {
+    color: var(--orange);
 }
+
 
 .icon {
     width: 2.5em;
     margin: 10px;
-    user-select: none;
+    padding: 0 0.5em;
 }
 
+.icon:hover {
+    filter: drop-shadow(0 0 0.5em var(--purple));
+} 
+
 #logo {
-    padding-left: 20px;
-    padding-right: 20px;
-    opacity: 0.5;
+    padding: 0 1em 0 0;
+    filter: opacity(.5);
+    border-right: 0.1em solid #696969;
 }
 
 .footer {
     padding-top: 1em;
     border-top: 1px var(--orange) dashed;
-    font-family: monospace;
+    font-family: "Oxygen Mono", monospace;
 }
 
 
@@ -90,15 +96,15 @@ body {
     grid-area: menu;
     grid-template-rows: 1fr 1fr 1fr;
     padding-left: 5vw;
+    font-family: Caveat, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    user-select: none;
 }
 
 .menu-container a {
-    text-decoration: none;
-    font-family: Caveat, sans-serif;
-    font-size: 2em;
-    font-weight: 400;
     color: var(--purple);
-    user-select: none;
+    text-decoration: none;
 }
 
 .menu-container a:hover {
@@ -117,12 +123,12 @@ body {
     background: var(--orange-trans);
 }
 
-@media(max-width: 1200px) {
+@media(min-width: 2160px) {
     .grid-container {
-        grid-column-gap: 0%;
-    }
-    .text-container {
-        width: 90%;
+        grid-template-areas: "head head ."
+                             "menu text ."
+                             ". text .";
+        grid-template-columns: 12em 5fr .5fr;
     }
 }
 
