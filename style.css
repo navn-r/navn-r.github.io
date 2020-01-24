@@ -81,7 +81,7 @@ body {
     margin: 0.625em 0.25em;
     filter: opacity(.5);
     animation: none;
-    transition: transform .69s ease-in-out;
+    transition: transform .420s ease-in-out;
 }
 
 #logo:hover {
@@ -135,20 +135,20 @@ body {
 }
 
 .menu-container a:hover {
-    animation: menu-hover 360ms forwards;
+    animation: menu-hover 200ms forwards;
 }
 
 @keyframes menu-hover {
     100% {
         color: var(--orange);
-        filter: drop-shadow(.25em .25em .15em black);
+        filter: drop-shadow(.25em .25em .1em black);
     }
 }
 
 #open {
     animation: none;
     color: var(--orange);
-    filter: drop-shadow(.25em .25em .15em black);
+    filter: drop-shadow(.25em .25em .1em black);
 }
 
 .letter {
