@@ -61,19 +61,16 @@ body {
 }
 
 .icon:hover {
-    animation: icon-hover .8s forwards;
+    animation: icon-hover 200ms forwards;
     animation-timing-function: ease-out;
 } 
 
 @keyframes icon-hover {
-    0% {
-        filter: drop-shadow(0 0 0.5em var(--orange));
-    }
     50% {
-        filter: drop-shadow(0 0 0.5em var(--purple));
+        filter: drop-shadow(0 0 0.42069em var(--purple-trans));
     }
     100% {
-        filter: drop-shadow(0 0 0.5em var(--purple));
+        filter: drop-shadow(0 0 0.42069em var(--purple));
     }
 }
 
@@ -93,7 +90,7 @@ body {
     border-left: 0.1em solid #696969;
     opacity: .5;
     margin: 5px 10px 5px 5px;
-    height: 50px;
+    height: 3.125em;
 }
 
 .footer {
