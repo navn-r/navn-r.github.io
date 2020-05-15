@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Projects - navn.me</title>
-        <meta charset="UTF-8">
-        <link href="style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap" rel="stylesheet"> 
-        <link rel="shortcut icon" href="Assets/icon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="grid-container">
-            <div class="header">
-                <header>
-                    <h1 class="title"><span class="letter">N</span>avinn <span class="letter">R</span>avindaran</h1>
-                    <img class="icon" id="logo" title="Est. 2020" src="Assets/Logo.png"><span class="line-break"></span>
-                    <a title="Fork Me" target="_blank" href="https://github.com/navn-r/navn-r.github.io/"><img class="icon" src="Assets/GitHub-Mark-Light-120px-plus.png"></a><a title="Hire Me" target="_blank" href="https://www.linkedin.com/in/navinn-ravindaran/"><img class="icon" src="Assets/LI-In-Bug.png"></a>
-                </header>
-            </div>
-            <div class="menu-container">
-                <a href="index.html">About</a>
-                <a id="open" href="projects.html">Projects</a>
-                <a href="resume.html">Resume</a>
-            </div>
-            <div class="text-container">
-                <p>Does this website count as one?<br><br>Nothing to see here then...<br>Just keep on moving.</p>
-                <footer class="footer">
-                    "Before I do anything, I ask myself, 'Would an idiot do that?' And if the answer is yes, I do not do that thing."<br>- Dwight K. Schrute<br></br>Navinn Ravindaran /n&#x00e6;v&#x026A;n/
-                </footer>
-            </div>
+  <head>
+    <title>Projects - Navinn Ravindaran</title>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="Assets/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        <header>
+          <h1 class="title">
+            <span class="letter">N</span>avinn
+            <span class="letter">R</span>avindaran
+          </h1>
+          <img
+            class="icon"
+            id="logo"
+            title="Est. 2020"
+            src="Assets/Logo.png"
+          /><span class="line-break"></span>
+          <a title="Fork Me" target="_blank" href="https://github.com/navn-r/"
+            ><img
+              class="icon"
+              src="Assets/GitHub-Mark-Light-120px-plus.png" /></a
+          ><a
+            title="Hire Me"
+            target="_blank"
+            href="https://www.linkedin.com/in/navinn-ravindaran/"
+            ><img class="icon" src="Assets/LI-In-Bug.png"
+          /></a>
+        </header>
+      </div>
+      <div class="menu-container">
+        <a href="index.html">About</a>
+        <a id="open" href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </div>
+      <div class="text-container">
+        <p>Does this website count as one?</p>
+        <div class="project-container">
+          <div class="project-title-container">
+            <h1 class="subtitle">Noten</h1>
+          </div>
+          <div class="project-icon-container">
+            <a href="https://github.com/navn-r/noten">
+              <img alt="Noten" src="./Assets/noten-icon.png" id="noten-icon" />
+            </a>
+          </div>
+          <div class="project-button-container">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.noten&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              ><img
+                id="google-play-badge"
+                alt="Get it on Google Play"
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+            /></a>
+          </div>
+          <div class="project-info-container">
+            <p>
+              Noten, meaning 'grades' in German, is a cloud based grade
+              management app. (<span class="date">2020</span>)
+            </p>
+          </div>
+          <div class="project-text-container">
+            Core Features:
+            <ul>
+              <li>Basic Semester, Course, Catagory, Grade management</li>
+              <li>Grade Prediction Calculator</li>
+              <li>Pass/Fail Courses</li>
+              <li>Multiple Grade Scales (5.0, 4.33, 4.0)</li>
+              <li>Incognito Grades (ignore grade in GPA calculations)</li>
+              <li>Dark Mode (because Light Mode is painful)</li>
+            </ul>
+            Powered By:
+            <ul>
+              <li>React Native</li>
+              <li>Firebase:</li>
+              <ul>
+                <li>Auth with Google sign in</li>
+                <li>Realtime Database</li>
+              </ul>
+            </ul>
+          </div>
         </div>
-    </body>
+        <footer class="footer">
+          "Before I do anything, I ask myself, 'Would an idiot do that?' And if
+          the answer is yes, I do not do that thing."<br /><br>- Dwight K.
+          Schrute<br />
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
