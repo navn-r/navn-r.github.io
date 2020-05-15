@@ -142,9 +142,9 @@ body {
 }
 
 .project-info-container {
-    padding-left: 1em;
-    display: grid;
-    grid-area: info;
+  padding-left: 1em;
+  display: grid;
+  grid-area: info;
 }
 
 .project-icon-container {
@@ -228,7 +228,7 @@ body {
   }
 
   .project-text-container {
-      padding-top: 1em;
+    padding-top: 1em;
   }
 }
 
@@ -281,10 +281,42 @@ body {
   }
 
   #noten-icon {
-    width: 10rem;
+    width: 7rem;
   }
 
   #google-play-badge {
     width: 10rem;
+  }
+
+  .project-container {
+    grid-template-areas:
+      "icon title"
+      "icon info"
+      "icon info"
+      "button button"
+      "text text";
+  }
+
+  .project-button-container {
+    justify-content:  center;
+  }
+}
+
+@media (max-width: 300px) {
+  .project-container {
+    grid-template-areas:
+      "title title"
+      "info info"
+      "icon icon"
+      "button button"
+      "text text";
+  }
+
+  .project-icon-container {
+    padding-top: 1em;
+  }
+
+  .project-button-container {
+    justify-content:  center;
   }
 }
