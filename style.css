@@ -255,6 +255,27 @@ body {
     width: 80vw;
     padding: 0 10vw;
   }
+
+  #noten-icon {
+    width: 10rem;
+  }
+
+  #google-play-badge {
+    width: 14rem;
+  }
+
+  .project-container {
+    grid-template-areas:
+      "icon title"
+      "icon info"
+      "icon info"
+      "button button"
+      "text text";
+  }
+
+  .project-button-container {
+    justify-content:  center;
+  }
 }
 
 @media (max-width: 450px) {
@@ -286,19 +307,6 @@ body {
 
   #google-play-badge {
     width: 10rem;
-  }
-
-  .project-container {
-    grid-template-areas:
-      "icon title"
-      "icon info"
-      "icon info"
-      "button button"
-      "text text";
-  }
-
-  .project-button-container {
-    justify-content:  center;
   }
 }
 
