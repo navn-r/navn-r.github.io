@@ -10,6 +10,11 @@ body {
   margin: 0;
 }
 
+a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -33,7 +38,7 @@ body {
 }
 
 .title {
-  font-family: Caveat, "Times New Roman", Times, serif;
+  font-family: Caveat, "Oxygen Mono", monospace, serif;
   font-weight: 700;
   font-size: 4em;
   text-align: left;
@@ -43,6 +48,13 @@ body {
 }
 
 .subtitle {
+  margin-top: 0;
+  font-family: inherit;
+  color: var(--orange);
+  user-select: none;
+}
+
+.subsection {
   margin-top: 0;
   font-family: inherit;
   color: var(--orange);
@@ -94,9 +106,13 @@ body {
 
 .footer {
   padding-top: 1em;
-  margin-top: 0.5em;
+  margin-top: 1.25em;
   border-top: 1px var(--orange) dashed;
   font-family: "Oxygen Mono", monospace;
+}
+
+.font-awesome-icon {
+  font-size: 2em;
 }
 
 #msg {
@@ -116,6 +132,25 @@ body {
   margin-top: 0px;
 }
 
+.skills-container {
+  display: grid;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5em 0;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skill h4 {
+  margin: 10px;
+}
+
 .project-container {
   border-top: 1px var(--orange) dashed;
   padding-top: 1em;
@@ -124,7 +159,7 @@ body {
     "icon title"
     "icon info"
     "icon text"
-    ". text"
+    "code text"
     "button text";
   grid-template-columns: 1fr 9fr;
 }
@@ -158,12 +193,37 @@ body {
   grid-area: button;
 }
 
+.project-code-container {
+  display: grid;
+  grid-area: code;
+  align-items: center;
+}
+
+.project-code-container a {
+  color: #ffffff;
+}
+
+.project-code-button {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 0.35em;
+  margin: 0 0.69em;
+  height: 1em;
+  max-width: 183px;
+  padding: 0.75em 0 1em 0;
+}
+
 #noten-icon {
   width: 15rem;
 }
 
 #google-play-badge {
   width: 17rem;
+}
+
+#noten-code-link {
+  text-align: center;
+  font-size: 1.25em;
 }
 
 .menu-container {
@@ -220,15 +280,22 @@ body {
 @media (max-width: 900px) {
   .project-container {
     grid-template-areas:
-      "icon title"
-      "icon info"
-      "icon info"
-      "icon button"
-      "text text";
+      "icon title title"
+      "icon info info"
+      "icon code button"
+      "text text text";
   }
 
   .project-text-container {
     padding-top: 1em;
+  }
+
+  .project-code-button {
+    min-width: 100px;
+    margin: 0 0.69em;
+    height: 2em;
+    padding: 1em 0 0.5em 0;
+
   }
 }
 
@@ -269,12 +336,18 @@ body {
       "icon title"
       "icon info"
       "icon info"
-      "button button"
+      "code button"
       "text text";
   }
 
   .project-button-container {
-    justify-content:  center;
+    justify-content: center;
+  }
+
+  .project-code-button {
+    margin: 0;
+    height: inherit;
+    padding: 0.5em 0 0.5em 0;
   }
 }
 
@@ -316,6 +389,7 @@ body {
       "title title"
       "info info"
       "icon icon"
+      "code code"
       "button button"
       "text text";
   }
@@ -325,6 +399,6 @@ body {
   }
 
   .project-button-container {
-    justify-content:  center;
+    justify-content: center;
   }
 }
