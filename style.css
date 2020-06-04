@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+h4 {
+  margin: 0.5em 1em;
+}
+
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -147,8 +151,16 @@ a {
   align-items: center;
 }
 
-.skill h4 {
-  margin: 10px;
+.tool {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: inherit;
+}
+
+.fa-icon {
+  font-size: 1.5em;
+  color: var(--orange);
 }
 
 .project-container {
@@ -159,7 +171,7 @@ a {
     "icon title"
     "icon info"
     "icon text"
-    "code text"
+    "button text"
     "button text";
   grid-template-columns: 1fr 9fr;
 }
@@ -190,40 +202,13 @@ a {
 
 .project-button-container {
   display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: none;
   grid-area: button;
-}
-
-.project-code-container {
-  display: grid;
-  grid-area: code;
-  align-items: center;
-}
-
-.project-code-container a {
-  color: #ffffff;
-}
-
-.project-code-button {
-  background-color: #000000;
-  border: 1px solid #ffffff;
-  border-radius: 0.35em;
-  margin: 0 0.69em;
-  height: 1em;
-  max-width: 183px;
-  padding: 0.75em 0 1em 0;
 }
 
 #noten-icon {
   width: 15rem;
-}
-
-#google-play-badge {
-  width: 17rem;
-}
-
-#noten-code-link {
-  text-align: center;
-  font-size: 1.25em;
 }
 
 .menu-container {
@@ -282,7 +267,7 @@ a {
     grid-template-areas:
       "icon title title"
       "icon info info"
-      "icon code button"
+      "icon button button"
       "text text text";
   }
 
@@ -290,12 +275,16 @@ a {
     padding-top: 1em;
   }
 
-  .project-code-button {
-    min-width: 100px;
-    margin: 0 0.69em;
-    height: 2em;
-    padding: 1em 0 0.5em 0;
+  .project-button-container {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+  }
 
+  .project-button {
+    justify-content: center;
+  }
+  #noten-icon {
+    width: 10rem;
   }
 }
 
@@ -323,31 +312,16 @@ a {
     padding: 0 10vw;
   }
 
-  #noten-icon {
-    width: 10rem;
-  }
-
-  #google-play-badge {
-    width: 14rem;
-  }
-
   .project-container {
     grid-template-areas:
       "icon title"
       "icon info"
-      "icon info"
-      "code button"
+      "icon button"
       "text text";
   }
 
   .project-button-container {
     justify-content: center;
-  }
-
-  .project-code-button {
-    margin: 0;
-    height: inherit;
-    padding: 0.5em 0 0.5em 0;
   }
 }
 
@@ -374,6 +348,15 @@ a {
     font-size: 0.75em;
   }
 
+  .project-container {
+    grid-template-areas:
+      "icon title"
+      "icon info"
+      "button button"
+      "text text";
+    gap: 0.75em 0;
+  }
+
   #noten-icon {
     width: 7rem;
   }
@@ -386,19 +369,38 @@ a {
 @media (max-width: 300px) {
   .project-container {
     grid-template-areas:
-      "title title"
+      "icon title"
+      "icon button"
+      "icon button"
       "info info"
-      "icon icon"
-      "code code"
-      "button button"
       "text text";
+    gap: 0;
+  }
+
+  .project-info-container {
+    margin-top: 1em;
+  }
+
+  .project-button-container  {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
+  }
+
+  .project-button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .subtitle {
+    margin: 0;
+  }
+
+  .project-title-container {
+    align-items: flex-end;
   }
 
   .project-icon-container {
     padding-top: 1em;
-  }
-
-  .project-button-container {
-    justify-content: center;
   }
 }
