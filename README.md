@@ -1,2 +1,6 @@
-# navn-r.github.io
-Host for my site :hear_no_evil:
+# Portfolio Website
+
+Built with pure HTML and CSS.
+Hosted with Github Pages.
+
+Made with ❤️ by Navinn Ravindaran
