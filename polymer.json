@@ -2,7 +2,7 @@
     "entrypoint": "index.html",
     "shell": "index.js",
     "sources": [
-        "assets/**/*",
+        "Assets/**/*",
         "components/**/*",
         "pages/**/*",
         "style.css",
