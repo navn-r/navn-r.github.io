@@ -1,0 +1,24 @@
+{
+  "name": "navn-r.github.io",
+  "version": "1.1.0",
+  "description": "~~Built with pure HTML and CSS.~~ **v1.1:** Built with Web Components (HTML, CSS, JS) using `lit-element, lit-html` with `polymer-cli`",
+  "main": "index.js",
+  "dependencies": {
+    "fa-icons": "^0.2.0",
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navn-r/navn-r.github.io.git"
+  },
+  "author": "Navinn Ravindaran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navn-r/navn-r.github.io/issues"
+  },
+  "homepage": "https://github.com/navn-r/navn-r.github.io#readme"
+}

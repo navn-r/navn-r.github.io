@@ -1,0 +1,2 @@
+import"./node_modules/fa-icons/index.js";import"./components/Header.js";import"./components/Menu.js";import"./components/ProjectCard.js";// MAKE BETTER L8R
+import"./pages/About.js";import"./pages/Projects.js";import"./pages/Resume.js";
