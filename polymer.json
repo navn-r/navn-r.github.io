@@ -1,0 +1,25 @@
+{
+    "entrypoint": "index.html",
+    "shell": "index.js",
+    "sources": [
+        "Assets/**/*",
+        "components/**/*",
+        "pages/**/*",
+        "style.css",
+        "package.json"
+    ],
+    "extraDependencies": [
+        "CNAME"
+    ],
+    "componentDir": "components",
+    "moduleResolution": "node",
+    "npm": true,
+    "builds": [
+        {   
+            "name": "public",
+            "preset": "es6-bundled",
+            "addServiceWorker": false
+        }
+    ]
+}
+
