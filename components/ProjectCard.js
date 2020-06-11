@@ -62,14 +62,14 @@ class ProjectCard extends LitElement {
 
       .project-img-container {
         justify-content: center;
+        align-items: flex-start;
         display: grid;
         grid-area: icon;
       }
 
       .project-button-container {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: none;
+        display: flex;
+        flex-direction: column;
         grid-area: button;
       }
 
@@ -77,6 +77,7 @@ class ProjectCard extends LitElement {
         display: flex;
         flex-direction: row;
         margin: 0.5rem 0;
+        align-items: center;
       }
 
       @media (max-width: 900px) {
@@ -93,8 +94,8 @@ class ProjectCard extends LitElement {
         }
 
         .project-button-container {
-          grid-template-columns: ${unsafeCSS(orgButton)};
-          grid-template-rows: none;
+          flex-direction: row;
+          justify-content: space-evenly;
         }
 
         .project-button a {
@@ -110,10 +111,6 @@ class ProjectCard extends LitElement {
             "icon button"
             "text text";
         }
-
-        .project-button-container {
-          justify-content: center;
-        }
       }
 
       @media (max-width: 450px) {
@@ -124,7 +121,6 @@ class ProjectCard extends LitElement {
             "icon info"
             "button button"
             "text text";
-          gap: 0.75rem 0;
         }
         h1 {
           font-size: 1.5rem;
@@ -138,15 +134,15 @@ class ProjectCard extends LitElement {
             "icon button"
             "info info"
             "text text";
-          gap: 0;
         }
         .project-info-container {
           margin-top: 1rem;
         }
 
         .project-button-container {
-          grid-template-rows: repeat(auto-fit, 1fr);
-          grid-template-columns: none;
+          flex-direction: column;
+          justify-content; center;
+          margin-left: 1rem;
         }
 
         .project-button a {

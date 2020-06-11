@@ -4,7 +4,7 @@ class Projects extends LitElement {
   static get styles() {
     return css`
       .footer {
-        padding-top: 1rem;
+        padding: 1rem 0;
       }
 
       .highlight {
@@ -29,6 +29,11 @@ class Projects extends LitElement {
         width: 15rem;
       }
 
+      .site-img {
+        font-size: 7rem;
+        color: var(--gray);
+      }
+
       @media (max-width: 900px) {
         #noten-icon {
           width: 10rem;
@@ -38,6 +43,10 @@ class Projects extends LitElement {
       @media (max-width: 450px) {
         #noten-icon {
           width: 7rem;
+        }
+
+        .site-img {
+          font-size: 5.6rem;
         }
       }
     `;
@@ -100,8 +109,7 @@ class Projects extends LitElement {
       >
         <fa-icon
           slot="project-img"
-          class="fas fa-laptop-code"
-          style="font-size:7rem; color: #7F7F7F;"
+          class="fas fa-laptop-code site-img"
         ></fa-icon>
         <div slot="info">
           Platform to showcase my projects and experiences. V1.1 (<span
@@ -142,6 +150,7 @@ class Projects extends LitElement {
           <ul>
             <li>Fully responsive with CSS Grid</li>
             <li>Web components using lit-element, lit-html</li>
+            <li>Automated build and deployment with TravisCI</li>
             <li>Hosted on Github Pages</li>
           </ul>
         </div>

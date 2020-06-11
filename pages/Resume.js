@@ -23,7 +23,7 @@ class Resume extends LitElement {
 
       .footer {
         margin-top: 2rem;
-        padding-top: 1rem;
+        padding: 1rem 0;
         border-top: 1px var(--orange) dashed;
       }
     `;
@@ -44,7 +44,7 @@ class Resume extends LitElement {
       <p>
         Error 404: There's nothing here yet.<br />
         Want to say hi?
-        <a target="_blank" href="https://www.linkedin.com/in/navinn-ravindaran/">Contact me.</a>
+        <a target="_blank" href="mailto:navinn.ravindaran@mail.utoronto.on.ca">Contact me.</a>
       </p>
       <div class="footer">
         "Sometimes I'll start a sentence and I don't even know where it's going.

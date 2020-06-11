@@ -5,6 +5,7 @@
 
 :root {
   --dark-gray: #101010;
+  --gray: #7F7F7F;
   --orange: rgb(235, 68, 46);
   --orange-trans: rgba(235, 68, 46, 0.75);
   --purple: rgb(162, 0, 255);
@@ -14,8 +15,6 @@
 body {
   background-color: var(--dark-gray);
 }
-
-
 
 #main-grid {
   display: grid;
@@ -55,9 +54,6 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-}
-
 @media (max-width: 600px) {
   #main-grid {
     grid-template-areas:
@@ -82,7 +78,4 @@ body {
     width: 80vw;
     font-size: 0.75rem;
   }
-}
-
-@media (max-width: 300px) {
 }
