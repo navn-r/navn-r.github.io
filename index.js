@@ -1,4 +1,4 @@
-define(["exports"],function(_exports){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.eventOptions$1=_exports.eventOptions=eventOptions;_exports.insertNodeIntoTemplate=insertNodeIntoTemplate;_exports.internalProperty$1=_exports.internalProperty=internalProperty;_exports.property$1=_exports.property=property;_exports.query$1=_exports.query=query;_exports.queryAll$1=_exports.queryAll=queryAll;_exports.queryAssignedNodes$1=_exports.queryAssignedNodes=queryAssignedNodes;_exports.queryAsync$1=_exports.queryAsync=queryAsync;_exports.removeNodesFromTemplate=removeNodesFromTemplate;_exports.templateFactory$1=_exports.templateFactory=templateFactory;_exports.templateCaches$1=_exports.templateCaches=_exports.svg$2=_exports.svg$1=_exports.svg=_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=_exports.reparentNodes$1=_exports.reparentNodes=_exports.render$1=_exports.render$2=_exports.render=_exports.removeNodes$1=_exports.removeNodes=_exports.parts$1=_exports.parts=_exports.nothing$1=_exports.nothing=_exports.notEqual$1=_exports.notEqual=_exports.nodeMarker=_exports.noChange$1=_exports.noChange=_exports.markerRegex=_exports.marker=_exports.lastAttributeNameRegex=_exports.isTemplatePartActive$1=_exports.isTemplatePartActive=_exports.isPrimitive$1=_exports.isPrimitive=_exports.isIterable$1=_exports.isIterable=_exports.isDirective$1=_exports.isDirective=_exports.isCEPolyfill=_exports.html$2=_exports.html$1=_exports.html=_exports.directive$1=_exports.directive=_exports.defaultTemplateProcessor$1=_exports.defaultTemplateProcessor=_exports.defaultConverter$1=_exports.defaultConverter=_exports.customElement$1=_exports.customElement=_exports.css$1=_exports.css=_exports.createMarker$1=_exports.createMarker=_exports.boundAttributeSuffix=_exports.UpdatingElement$1=_exports.UpdatingElement=_exports.TemplateResult$3=_exports.TemplateResult$2=_exports.TemplateResult$1=_exports.TemplateResult=_exports.TemplateInstance$1=_exports.TemplateInstance=_exports.Template$1=_exports.Template=_exports.SVGTemplateResult$2=_exports.SVGTemplateResult$1=_exports.SVGTemplateResult=_exports.PropertyPart$1=_exports.PropertyPart=_exports.PropertyCommitter$1=_exports.PropertyCommitter=_exports.NodePart$1=_exports.NodePart=_exports.LitElement=_exports.EventPart$1=_exports.EventPart=_exports.DefaultTemplateProcessor$1=_exports.DefaultTemplateProcessor=_exports.CSSResult$1=_exports.CSSResult=_exports.BooleanAttributePart$1=_exports.BooleanAttributePart=_exports.AttributePart$1=_exports.AttributePart=_exports.AttributeCommitter$1=_exports.AttributeCommitter=_exports.$updatingElement=_exports.$templateResult=_exports.$templateInstance=_exports.$templateFactory=_exports.$template=_exports.$shadyRender=_exports.$render=_exports.$parts=_exports.$part=_exports.$modifyTemplate=_exports.$litHtml=_exports.$litElement=_exports.$dom=_exports.$directive=_exports.$defaultTemplateProcessor=_exports.$decorators=_exports.$cssTag=void 0;_exports.unsafeCSS$1=_exports.unsafeCSS=void 0;/**
+define(["exports"],function(_exports){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.eventOptions$1=_exports.eventOptions=eventOptions;_exports.insertNodeIntoTemplate=insertNodeIntoTemplate;_exports.internalProperty$1=_exports.internalProperty=internalProperty;_exports.property$1=_exports.property=property;_exports.query$1=_exports.query=query;_exports.queryAll$1=_exports.queryAll=queryAll;_exports.queryAssignedNodes$1=_exports.queryAssignedNodes=queryAssignedNodes;_exports.queryAsync$1=_exports.queryAsync=queryAsync;_exports.removeNodesFromTemplate=removeNodesFromTemplate;_exports.templateFactory$1=_exports.templateFactory=templateFactory;_exports.svg$2=_exports.svg$1=_exports.svg=_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=_exports.reparentNodes$1=_exports.reparentNodes=_exports.render$1=_exports.render$2=_exports.render=_exports.removeNodes$1=_exports.removeNodes=_exports.parts$1=_exports.parts=_exports.nothing$1=_exports.nothing=_exports.notEqual$1=_exports.notEqual=_exports.nodeMarker=_exports.noChange$1=_exports.noChange=_exports.markerRegex=_exports.marker=_exports.lastAttributeNameRegex=_exports.isTemplatePartActive$1=_exports.isTemplatePartActive=_exports.isPrimitive$1=_exports.isPrimitive=_exports.isIterable$1=_exports.isIterable=_exports.isDirective$1=_exports.isDirective=_exports.isCEPolyfill=_exports.html$2=_exports.html$1=_exports.html=_exports.directive$1=_exports.directive=_exports.defaultTemplateProcessor$1=_exports.defaultTemplateProcessor=_exports.defaultConverter$1=_exports.defaultConverter=_exports.customElement$1=_exports.customElement=_exports.css$1=_exports.css=_exports.createMarker$1=_exports.createMarker=_exports.boundAttributeSuffix=_exports.UpdatingElement$1=_exports.UpdatingElement=_exports.TemplateResult$3=_exports.TemplateResult$2=_exports.TemplateResult$1=_exports.TemplateResult=_exports.TemplateInstance$1=_exports.TemplateInstance=_exports.Template$1=_exports.Template=_exports.SVGTemplateResult$2=_exports.SVGTemplateResult$1=_exports.SVGTemplateResult=_exports.PropertyPart$1=_exports.PropertyPart=_exports.PropertyCommitter$1=_exports.PropertyCommitter=_exports.NodePart$1=_exports.NodePart=_exports.LitElement=_exports.FaIcon=_exports.EventPart$1=_exports.EventPart=_exports.DefaultTemplateProcessor$1=_exports.DefaultTemplateProcessor=_exports.CSSResult$1=_exports.CSSResult=_exports.BooleanAttributePart$1=_exports.BooleanAttributePart=_exports.AttributePart$1=_exports.AttributePart=_exports.AttributeCommitter$1=_exports.AttributeCommitter=_exports.$updatingElement=_exports.$templateResult=_exports.$templateInstance=_exports.$templateFactory=_exports.$template=_exports.$shadyRender=_exports.$render=_exports.$parts=_exports.$part=_exports.$modifyTemplate=_exports.$litHtml=_exports.$litElement=_exports.$faIcon=_exports.$dom=_exports.$directive=_exports.$defaultTemplateProcessor=_exports.$decorators=_exports.$cssTag=void 0;_exports.unsafeCSS$1=_exports.unsafeCSS=_exports.templateCaches$1=_exports.templateCaches=void 0;/**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at
@@ -1410,7 +1410,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
             <a target="_blank" href="${this.codesrc}">
               <fa-icon
                 class="fab fa-github"
-                style="height: 1.5rem;width: 1.5rem;"
+                style="font-size:1.5rem;"
               ></fa-icon>
               <h4>Code</h4>
             </a>
@@ -1419,7 +1419,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
                   <a target="_blank" href="${this.demosrc}">
                     <fa-icon
                       class="fab fa-google-play"
-                      style="height: 1.5rem;width: 1.5rem;"
+                      style="font-size:1.5rem;"
                     ></fa-icon>
                     <h4>Download</h4>
                   </a>
@@ -1430,30 +1430,13 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
                 </div>`:html``}
         </div>
       </div>
-    `}}customElements.define("project-card",ProjectCard);class FaIcon extends LitElement{static get properties(){return{color:String,iClass:{attribute:"class"},src:String,style:String,size:String,pathPrefix:{attribute:"path-prefix"}}}static get styles(){return css`
-      :host {
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-      }
-      :host svg {
-        fill: var(--fa-icon-fill-color, currentcolor);
-        width: var(--fa-icon-width, 19px);
-        height: var(--fa-icon-height, 19px);
-      }
-    `}getSources(className){const PREFIX_TO_STYLE={fas:"solid",far:"regular",fal:"light",fab:"brands",fa:"solid"},getPrefix=iClass=>{let data=iClass.split(" ");return[PREFIX_TO_STYLE[data[0]],normalizeIconName(data[1])]},normalizeIconName=name=>{let icon=name.replace("fa-","");return icon};let data=getPrefix(className);return`${this.pathPrefix}/@fortawesome/fontawesome-free/sprites/${data[0]}.svg#${data[1]}`}constructor(){super();this.iClass="";this.src="";this.style="";this.size="";this.color="";this.pathPrefix="node_modules"}firstUpdated(){this.src=this.getSources(this.iClass)}_parseStyles(){return`
-      ${this.size?`width: ${this.size};`:""}
-      ${this.size?`height: ${this.size};`:""}
-      ${this.color?`fill: ${this.color};`:""}
-      ${this.style}
-    `}render(){return html`
-      <svg 
-        .style="${this._parseStyles()}">
-        <use 
-          href="${this.src}">
-        </use>
-      </svg>
-    `}}customElements.define("fa-icon",FaIcon);"use strict";class About extends LitElement{static get styles(){return css`
+    `}}customElements.define("project-card",ProjectCard);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"
+      />
+      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;class About extends LitElement{static get styles(){return css`
       p {
         margin: 0;
       }
@@ -1504,20 +1487,20 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       <h2 class="highlight">Skills:</h2>
       <h3 class="highlight">Programming Languages</h3>
       <div class="skills-container">
-        <div class="skill"><fa-icon class="fab fa-html5" style="height: 2rem;width: 2rem;"></fa-icon><h4>HTML</h4></div>
-        <div class="skill"><fa-icon class="fab fa-css3-alt" style="height: 2rem;width: 2rem;"></fa-icon><h4>CSS</h4></div>
-        <div class="skill"><fa-icon class="fab fa-js-square" style="height: 2rem;width: 2rem;"></fa-icon><h4>JavaScript</h4></div>
-        <div class="skill"><fa-icon class="fab fa-java" style="height: 2rem;width: 2rem;"></fa-icon><h4>Java</h4></div>
-        <div class="skill"><fa-icon class="fab fa-python" style="height: 2rem;width: 2rem;"></fa-icon><h4>Python</h4></div>
-        <div class="skill"><fa-icon class="fas fa-copyright" style="height: 2rem;width: 2rem;"></fa-icon><h4>C</h4></div>
+        <div class="skill"><fa-icon class="fab fa-html5" style="font-size:2rem;"></fa-icon><h4>HTML</h4></div>
+        <div class="skill"><fa-icon class="fab fa-css3-alt" style="font-size:2rem;"></fa-icon><h4>CSS</h4></div>
+        <div class="skill"><fa-icon class="fab fa-js-square" style="font-size:2rem;"></fa-icon><h4>JavaScript</h4></div>
+        <div class="skill"><fa-icon class="fab fa-java" style="font-size:2rem;"></fa-icon><h4>Java</h4></div>
+        <div class="skill"><fa-icon class="fab fa-python" style="font-size:2rem;"></fa-icon><h4>Python</h4></div>
+        <div class="skill"><fa-icon class="fas fa-copyright" style="font-size:2rem;"></fa-icon><h4>C</h4></div>
       </div>
       <h3 class="highlight">Frameworks and Technologies</h3>
       <div class="skills-container">
-        <div class="skill"><fa-icon class="fab fa-react" style="height: 2rem;width: 2rem;"></fa-icon><h4>React Native</h4></div>
-        <div class="skill"><fa-icon class="fas fa-database" style="height: 2rem;width: 2rem;"></fa-icon><h4>Firebase</h4></div>
-        <div class="skill"><fa-icon class="fab fa-git-alt" style="height: 2rem;width: 2rem;"></fa-icon><h4>Git</h4></div>
-        <div class="skill"><fa-icon class="fas fa-terminal" style="height: 2rem;width: 2rem;"></fa-icon><h4>Shell (bash)</h4></div>
-        <div class="skill"><fa-icon class="fas fa-desktop" style="height: 2rem;width: 2rem;"></fa-icon><h4>Windows, MacOS, Linux</h4></div>
+        <div class="skill"><fa-icon class="fab fa-react" style="font-size:2rem;"></fa-icon><h4>React Native</h4></div>
+        <div class="skill"><fa-icon class="fas fa-database" style="font-size:2rem;"></fa-icon><h4>Firebase</h4></div>
+        <div class="skill"><fa-icon class="fab fa-git" style="font-size:2rem;"></fa-icon><h4>Git</h4></div>
+        <div class="skill"><fa-icon class="fas fa-terminal" style="font-size:2rem;"></fa-icon><h4>Shell (bash)</h4></div>
+        <div class="skill"><fa-icon class="fas fa-desktop" style="font-size:2rem;"></fa-icon><h4>Windows, MacOS, Linux</h4></div>
       </div> 
       <div class="footer">
           "Why waste time say lot word when few word do trick."<br /><br />
@@ -1590,21 +1573,21 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <div class="tool">
             <fa-icon
               class="fab fa-react highlight"
-              style="height: 1.5rem;width: 1.5rem;"
+              style="font-size: 1.5rem;"
             ></fa-icon>
             <h4>React Native</h4>
           </div>
           <div class="tool">
             <fa-icon
               class="fas fa-database highlight"
-              style="height: 1.5rem;width: 1.5rem;"
+              style="font-size: 1.5rem;"
             ></fa-icon>
             <h4>Firebase Realtime Database</h4>
           </div>
           <div class="tool">
             <fa-icon
               class="fab fa-google highlight"
-              style="height: 1.5rem;width: 1.5rem;"
+              style="font-size: 1.5rem;"
             ></fa-icon>
             <h4>Firebase Auth with Google Sign in</h4>
           </div>
@@ -1617,7 +1600,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         <fa-icon
           slot="project-img"
           class="fas fa-laptop-code"
-          style="height: 7rem;width: 7rem; color: #7F7F7F;"
+          style="font-size:7rem; color: #7F7F7F;"
         ></fa-icon>
         <div slot="info">
           Platform to showcase my projects and experiences. V1.1 (<span
@@ -1628,31 +1611,31 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         <div slot="text">
           <fa-icon
             class="fab fa-html5 highlight"
-            style="height: 1.5rem;width: 1.5rem; color: #E34C26;"
+            style="font-size: 1.5rem; color: #E34C26;"
           ></fa-icon>
           <fa-icon
             class="fas fa-plus"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <fa-icon
             class="fab fa-css3-alt highlight"
-            style="height: 1.5rem;width: 1.5rem; color: #2196F3;"
+            style="font-size: 1.5rem; color: #2196F3;"
           ></fa-icon>
           <fa-icon
             class="fas fa-plus"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <fa-icon
             class="fab fa-js-square highlight"
-            style="height: 1.5rem;width: 1.5rem; color: #F0DB4F;"
+            style="font-size: 1.5rem; color: #F0DB4F;"
           ></fa-icon>
           <fa-icon
             class="fas fa-equals"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <fa-icon
             class="fas fa-heart highlight"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <br />
           <ul>
