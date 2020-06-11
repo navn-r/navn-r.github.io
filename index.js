@@ -1510,7 +1510,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       <div class="skills-container">
         <div class="skill"><fa-icon class="fab fa-react"></fa-icon><h4>React Native</h4></div>
         <div class="skill"><fa-icon class="fas fa-database"></fa-icon><h4>Firebase</h4></div>
-        <div class="skill"><fa-icon class="fab fa-git"></fa-icon><h4>Git</h4></div>
+        <div class="skill"><fa-icon class="fas fa-code-branch"></fa-icon><h4>Git</h4></div>
         <div class="skill"><fa-icon class="fas fa-terminal"></fa-icon><h4>Shell (bash)</h4></div>
         <div class="skill"><fa-icon class="fas fa-desktop"></fa-icon><h4>Windows, MacOS, Linux</h4></div>
       </div> 
