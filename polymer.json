@@ -16,7 +16,8 @@
     "moduleResolution": "node",
     "npm": true,
     "builds": [
-        {
+        {   
+            "name": "public",
             "preset": "es6-bundled"
         }
     ]
