@@ -57,20 +57,20 @@ class About extends LitElement {
       <h2 class="highlight">Skills:</h2>
       <h3 class="highlight">Programming Languages</h3>
       <div class="skills-container">
-        <div class="skill"><fa-icon class="fab fa-html5" style="height: 2rem;width: 2rem;"></fa-icon><h4>HTML</h4></div>
-        <div class="skill"><fa-icon class="fab fa-css3-alt" style="height: 2rem;width: 2rem;"></fa-icon><h4>CSS</h4></div>
-        <div class="skill"><fa-icon class="fab fa-js-square" style="height: 2rem;width: 2rem;"></fa-icon><h4>JavaScript</h4></div>
-        <div class="skill"><fa-icon class="fab fa-java" style="height: 2rem;width: 2rem;"></fa-icon><h4>Java</h4></div>
-        <div class="skill"><fa-icon class="fab fa-python" style="height: 2rem;width: 2rem;"></fa-icon><h4>Python</h4></div>
-        <div class="skill"><fa-icon class="fas fa-copyright" style="height: 2rem;width: 2rem;"></fa-icon><h4>C</h4></div>
+        <div class="skill"><fa-icon class="fab fa-html5" style="font-size:2rem;"></fa-icon><h4>HTML</h4></div>
+        <div class="skill"><fa-icon class="fab fa-css3-alt" style="font-size:2rem;"></fa-icon><h4>CSS</h4></div>
+        <div class="skill"><fa-icon class="fab fa-js-square" style="font-size:2rem;"></fa-icon><h4>JavaScript</h4></div>
+        <div class="skill"><fa-icon class="fab fa-java" style="font-size:2rem;"></fa-icon><h4>Java</h4></div>
+        <div class="skill"><fa-icon class="fab fa-python" style="font-size:2rem;"></fa-icon><h4>Python</h4></div>
+        <div class="skill"><fa-icon class="fas fa-copyright" style="font-size:2rem;"></fa-icon><h4>C</h4></div>
       </div>
       <h3 class="highlight">Frameworks and Technologies</h3>
       <div class="skills-container">
-        <div class="skill"><fa-icon class="fab fa-react" style="height: 2rem;width: 2rem;"></fa-icon><h4>React Native</h4></div>
-        <div class="skill"><fa-icon class="fas fa-database" style="height: 2rem;width: 2rem;"></fa-icon><h4>Firebase</h4></div>
-        <div class="skill"><fa-icon class="fab fa-git-alt" style="height: 2rem;width: 2rem;"></fa-icon><h4>Git</h4></div>
-        <div class="skill"><fa-icon class="fas fa-terminal" style="height: 2rem;width: 2rem;"></fa-icon><h4>Shell (bash)</h4></div>
-        <div class="skill"><fa-icon class="fas fa-desktop" style="height: 2rem;width: 2rem;"></fa-icon><h4>Windows, MacOS, Linux</h4></div>
+        <div class="skill"><fa-icon class="fab fa-react" style="font-size:2rem;"></fa-icon><h4>React Native</h4></div>
+        <div class="skill"><fa-icon class="fas fa-database" style="font-size:2rem;"></fa-icon><h4>Firebase</h4></div>
+        <div class="skill"><fa-icon class="fab fa-git" style="font-size:2rem;"></fa-icon><h4>Git</h4></div>
+        <div class="skill"><fa-icon class="fas fa-terminal" style="font-size:2rem;"></fa-icon><h4>Shell (bash)</h4></div>
+        <div class="skill"><fa-icon class="fas fa-desktop" style="font-size:2rem;"></fa-icon><h4>Windows, MacOS, Linux</h4></div>
       </div> 
       <div class="footer">
           "Why waste time say lot word when few word do trick."<br /><br />

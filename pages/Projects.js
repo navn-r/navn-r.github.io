@@ -74,21 +74,21 @@ class Projects extends LitElement {
           <div class="tool">
             <fa-icon
               class="fab fa-react highlight"
-              style="height: 1.5rem;width: 1.5rem;"
+              style="font-size: 1.5rem;"
             ></fa-icon>
             <h4>React Native</h4>
           </div>
           <div class="tool">
             <fa-icon
               class="fas fa-database highlight"
-              style="height: 1.5rem;width: 1.5rem;"
+              style="font-size: 1.5rem;"
             ></fa-icon>
             <h4>Firebase Realtime Database</h4>
           </div>
           <div class="tool">
             <fa-icon
               class="fab fa-google highlight"
-              style="height: 1.5rem;width: 1.5rem;"
+              style="font-size: 1.5rem;"
             ></fa-icon>
             <h4>Firebase Auth with Google Sign in</h4>
           </div>
@@ -101,7 +101,7 @@ class Projects extends LitElement {
         <fa-icon
           slot="project-img"
           class="fas fa-laptop-code"
-          style="height: 7rem;width: 7rem; color: #7F7F7F;"
+          style="font-size:7rem; color: #7F7F7F;"
         ></fa-icon>
         <div slot="info">
           Platform to showcase my projects and experiences. V1.1 (<span
@@ -112,31 +112,31 @@ class Projects extends LitElement {
         <div slot="text">
           <fa-icon
             class="fab fa-html5 highlight"
-            style="height: 1.5rem;width: 1.5rem; color: #E34C26;"
+            style="font-size: 1.5rem; color: #E34C26;"
           ></fa-icon>
           <fa-icon
             class="fas fa-plus"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <fa-icon
             class="fab fa-css3-alt highlight"
-            style="height: 1.5rem;width: 1.5rem; color: #2196F3;"
+            style="font-size: 1.5rem; color: #2196F3;"
           ></fa-icon>
           <fa-icon
             class="fas fa-plus"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <fa-icon
             class="fab fa-js-square highlight"
-            style="height: 1.5rem;width: 1.5rem; color: #F0DB4F;"
+            style="font-size: 1.5rem; color: #F0DB4F;"
           ></fa-icon>
           <fa-icon
             class="fas fa-equals"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <fa-icon
             class="fas fa-heart highlight"
-            style="height: 1.5rem;width: 1.5rem;"
+            style="font-size: 1.5rem;"
           ></fa-icon>
           <br />
           <ul>

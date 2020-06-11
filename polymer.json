@@ -9,8 +9,7 @@
         "package.json"
     ],
     "extraDependencies": [
-        "CNAME",
-        "node_modules/@fortawesome/fontawesome-free/**"
+        "CNAME"
     ],
     "componentDir": "components",
     "moduleResolution": "node",
@@ -18,7 +17,9 @@
     "builds": [
         {   
             "name": "public",
-            "preset": "es6-bundled"
+            "preset": "es6-bundled",
+            "addServiceWorker": false
         }
     ]
 }
+

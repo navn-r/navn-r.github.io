@@ -4,7 +4,6 @@
   "description": "~~Built with pure HTML and CSS.~~ **v1.1:** Built with Web Components (HTML, CSS, JS) using `lit-element, lit-html` with `polymer-cli`",
   "main": "index.js",
   "dependencies": {
-    "fa-icons": "^0.2.0",
     "lit-element": "^2.3.1"
   },
   "devDependencies": {},

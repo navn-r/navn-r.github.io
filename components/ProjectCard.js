@@ -195,7 +195,7 @@ class ProjectCard extends LitElement {
             <a target="_blank" href="${this.codesrc}">
               <fa-icon
                 class="fab fa-github"
-                style="height: 1.5rem;width: 1.5rem;"
+                style="font-size:1.5rem;"
               ></fa-icon>
               <h4>Code</h4>
             </a>
@@ -206,7 +206,7 @@ class ProjectCard extends LitElement {
                   <a target="_blank" href="${this.demosrc}">
                     <fa-icon
                       class="fab fa-google-play"
-                      style="height: 1.5rem;width: 1.5rem;"
+                      style="font-size:1.5rem;"
                     ></fa-icon>
                     <h4>Download</h4>
                   </a>
