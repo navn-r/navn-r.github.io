@@ -1241,7 +1241,11 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         Resume
       </p>
       
-    </div>`}}customElements.define("nav-menu",Menu);class ProjectCard extends LitElement{constructor(){super();this.name="Project";this.codesrc="#";this.demosrc="#";this.hasdemo=!1;this.hasapp=!1}static get styles(){const orgButton=this.hasdemo||this.hasapp?css`1fr 1fr`:css`1fr`;return css`
+    </div>`}}customElements.define("nav-menu",Menu);class ProjectCard extends LitElement{constructor(){super();this.name="Project";this.codesrc="#";this.demosrc="#";this.hasdemo=!1;this.hasapp=!1}static get styles(){return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+      
       .project-container {
         border-bottom: 1px var(--orange) dashed;
         padding: 1rem 0;
@@ -1294,6 +1298,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         align-items: flex-start;
         display: grid;
         grid-area: icon;
+        user-select: none;
       }
 
       .project-button-container {
@@ -1433,12 +1438,17 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         crossorigin="anonymous"
       />
       <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;class About extends LitElement{static get styles(){return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+
       p {
         margin: 0;
       }
 
       h2 {
         margin: 1rem 0 0 0;
+        user-select: none;
       }
 
       a {
@@ -1518,6 +1528,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           "Why waste time say lot word when few word do trick."<br /><br />
           - Kevin J. Malone<br />
       </div>`}constructor(){super()}}customElements.define("about-page",About);class Projects extends LitElement{static get styles(){return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+      
       .footer {
         padding: 1rem 0;
       }
@@ -1672,6 +1686,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         Schrute<br />
       </div>
     `}constructor(){super()}}customElements.define("projects-page",Projects);class Resume extends LitElement{static get styles(){return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+
       p {
         margin: 0 0 1rem 0;
       }
@@ -1679,6 +1697,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       h2 {
         margin: 0 0 1.5rem 0;
         color: var(--orange);
+        user-select: none;
       }
 
       a {
