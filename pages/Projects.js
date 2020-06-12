@@ -3,6 +3,10 @@ import { LitElement, html, css } from "lit-element";
 class Projects extends LitElement {
   static get styles() {
     return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+      
       .footer {
         padding: 1rem 0;
       }

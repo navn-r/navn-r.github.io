@@ -3,6 +3,10 @@ import { LitElement, html, css } from "lit-element";
 class Resume extends LitElement {
   static get styles() {
     return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+
       p {
         margin: 0 0 1rem 0;
       }
@@ -10,6 +14,7 @@ class Resume extends LitElement {
       h2 {
         margin: 0 0 1.5rem 0;
         color: var(--orange);
+        user-select: none;
       }
 
       a {

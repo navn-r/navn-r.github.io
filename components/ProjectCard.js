@@ -11,8 +11,11 @@ class ProjectCard extends LitElement {
   }
 
   static get styles() {
-    const orgButton = this.hasdemo || this.hasapp ? css`1fr 1fr` : css`1fr`
     return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+      
       .project-container {
         border-bottom: 1px var(--orange) dashed;
         padding: 1rem 0;
@@ -65,6 +68,7 @@ class ProjectCard extends LitElement {
         align-items: flex-start;
         display: grid;
         grid-area: icon;
+        user-select: none;
       }
 
       .project-button-container {

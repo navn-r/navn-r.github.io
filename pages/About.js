@@ -3,12 +3,17 @@ import { LitElement, html, css } from "lit-element";
 class About extends LitElement {
   static get styles() {
     return css`
+      ::selection {
+        background: var(--orange-trans);
+      }
+
       p {
         margin: 0;
       }
 
       h2 {
         margin: 1rem 0 0 0;
+        user-select: none;
       }
 
       a {
