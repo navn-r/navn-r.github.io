@@ -1220,7 +1220,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           font-size: 1.5rem;
         }
       }
-    `}static get properties(){return{current:{type:String}}}onPressHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;if("about"!==e.target.id)window.location.hash=e.target.id;else window.location.hash="";const content=document.getElementsByClassName("content");for(let i=0;i<content.length;i++){content[i].style.display="none"}const currentContent=document.getElementById(e.target.id);currentContent.style.display="block"}render(){return html` <div class="menu-container">
+    `}static get properties(){return{current:{type:String}}}onPressHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;const content=document.getElementsByClassName("content");for(let i=0;i<content.length;i++){content[i].style.display="none"}const currentContent=document.getElementById(e.target.id);currentContent.style.display="block"}render(){return html` <div class="menu-container">
       <p
         @click="${this.onPressHandler}"
         class="${"about"===this.current?"open":""}"
