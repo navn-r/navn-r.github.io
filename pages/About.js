@@ -67,9 +67,9 @@ class About extends LitElement {
   }
 
   render() {
-    return html`<p>
-        Hi, I'm Navinn!
-        <br /><br />
+    return html`
+      <typewriter-term></typewriter-term>
+      <p>
         I am a 2nd year student dev. currently
         <span style="text-decoration: line-through;">surviving</span>
         studying at the <span class="highlight">University of Toronto</span> in Canada.<br />

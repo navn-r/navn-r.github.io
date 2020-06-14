@@ -1,7 +1,8 @@
 import "./components/Header";
 import "./components/Menu";
 import "./components/fa-icon";
-import "./components/ProjectCard"; // MAKE BETTER L8R
+import "./components/ProjectCard";
+import "./components/Terminal";
 import "./pages/About"
 import "./pages/Projects";
 import "./pages/Resume";
