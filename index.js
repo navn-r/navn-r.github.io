@@ -1431,7 +1431,92 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
                 </div>`:html``}
         </div>
       </div>
-    `}}customElements.define("project-card",ProjectCard);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+    `}}customElements.define("project-card",ProjectCard);class Terminal extends LitElement{static get styles(){return css`
+      :host {
+        /* Code Colors */
+        --light-gray: rgb(199, 208, 217);
+        --green: rgb(137, 202, 120);
+        --blue: rgb(82, 173, 242);
+        --red: rgb(239, 89, 111);
+        --aqua: rgb(43, 186, 197);
+        --yellow: rgb(229, 192, 123);
+        --salmon: rgb(216, 152, 95);
+      }
+
+      .term {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: #000;
+        color: var(--light-gray);
+        max-width: 56rem;
+        border-radius: 5px;
+        border: 1px var(--gray) solid;
+        user-select: none;
+        filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
+      }
+
+      .dots {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0.75rem;
+      }
+
+      .dot {
+        height: 0.75rem;
+        width: 0.75rem;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      #term-type {
+        animation: cursor-blink 0.9s infinite;
+        padding-right: 0.05rem;
+        border-right: 0.1rem solid #fff;
+      }
+
+      @keyframes cursor-blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      #min {
+        background-color: rgb(255, 188, 68);
+      }
+      #max {
+        background-color: rgb(55, 200, 79);
+      }
+      #exit {
+        background-color: rgb(254, 86, 82);
+      }
+    `}render(){return html`<div class="term">
+      <div class="dots">
+        <span class="dot" id="exit"></span>
+        <span class="dot" id="min"></span>
+        <span class="dot" id="max"></span>
+      </div>
+      <div id="term-text">
+        👉 <span id="term-type"></span>
+        <div></div>
+      </div>
+    </div>`}constructor(){super();const nextTextDelay=2e3}firstUpdated(changedproperties){const texts=[html`<span style="color: var(--aqua);">print</span>(<span
+          style="color: var(--green);"
+          >"Hi, I'm Navinn!"</span
+        >)`,html`<span style="color: var(--blue);">printf</span>(<span
+          style="color: var(--green);"
+          >"Hi, I'm Navinn!<span style="color: var(--red);">\\n</span>"</span
+        >);`,html`<span style="color: var(--yellow);">console</span>.<span
+          style="color: var(--blue);"
+          >log</span
+        >(<span style="color:var(--green);">"Hi, I'm Navinn!"</span>);`,html`<span style="color: var(--red);">System</span>.<span style="color: var(--red);">out</span style="color: var(--red);">.<span style="color: var(--blue);">println</span>(<span style="color: var(--green);">"Hi, I'm Navinn!"</span>);`,html`&lt;<span style="color: var(--red);">span</span>
+        <span style="color: var(--salmon);">id</span>=<span
+          style="color: var(--green);"
+          >"greeting"</span
+        >&gt;<span style="color: #fff;">Hi, I'm Navinn!</span>&lt;/<span
+          style="color: var(--red);"
+          >span</span
+        >&gt;`],text=this.shadowRoot.getElementById("term-type");let textsIndex=0;const type=()=>{text.innerHTML=texts[textsIndex].strings[0];textsIndex=(textsIndex+1)%5;setTimeout(type,2e3)};type()}}customElements.define("typewriter-term",Terminal);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -1498,9 +1583,9 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           font-size: 1.5rem;
         }
       }
-    `}render(){return html`<p>
-        Hi, I'm Navinn!
-        <br /><br />
+    `}render(){return html`
+      <typewriter-term></typewriter-term>
+      <p>
         I am a 2nd year student dev. currently
         <span style="text-decoration: line-through;">surviving</span>
         studying at the <span class="highlight">University of Toronto</span> in Canada.<br />
