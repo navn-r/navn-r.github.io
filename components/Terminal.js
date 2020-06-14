@@ -80,7 +80,6 @@ class Terminal extends LitElement {
 
   constructor() {
     super();
-    const nextTextDelay = 2000;
   }
 
   firstUpdated(changedproperties) {
@@ -112,7 +111,7 @@ class Terminal extends LitElement {
     const type = () => {
         text.innerHTML = texts[textsIndex].strings[0]
         textsIndex = (textsIndex + 1) % 5;
-        setTimeout(type, 2000);
+        setTimeout(type, 1750);
     };
     type();
   }

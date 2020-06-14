@@ -15,12 +15,14 @@ class Menu extends LitElement {
         color: var(--purple);
         margin: 0;
         user-select: none;
+        cursor: pointer;
       }
 
       .open {
         animation: none;
         color: var(--orange);
         filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
+        cursor: default;
       }
 
       p:hover {
@@ -67,7 +69,10 @@ class Menu extends LitElement {
   }
 
   onPressHandler(e) {
+    if(this.current === e.target.id) return;
     this.current = e.target.id;
+    if(e.target.id !== 'about') window.location.hash = e.target.id;
+    else window.location.hash = "";
     const content = document.getElementsByClassName("content");
     for(let i = 0; i < content.length; i++) {
       content[i].style.display = "none";
