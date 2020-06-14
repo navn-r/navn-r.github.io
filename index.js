@@ -1178,12 +1178,14 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         color: var(--purple);
         margin: 0;
         user-select: none;
+        cursor: pointer;
       }
 
       .open {
         animation: none;
         color: var(--orange);
         filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
+        cursor: default;
       }
 
       p:hover {
@@ -1218,7 +1220,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           font-size: 1.5rem;
         }
       }
-    `}static get properties(){return{current:{type:String}}}onPressHandler(e){this.current=e.target.id;const content=document.getElementsByClassName("content");for(let i=0;i<content.length;i++){content[i].style.display="none"}const currentContent=document.getElementById(e.target.id);currentContent.style.display="block"}render(){return html` <div class="menu-container">
+    `}static get properties(){return{current:{type:String}}}onPressHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;if("about"!==e.target.id)window.location.hash=e.target.id;else window.location.hash="";const content=document.getElementsByClassName("content");for(let i=0;i<content.length;i++){content[i].style.display="none"}const currentContent=document.getElementById(e.target.id);currentContent.style.display="block"}render(){return html` <div class="menu-container">
       <p
         @click="${this.onPressHandler}"
         class="${"about"===this.current?"open":""}"
@@ -1500,7 +1502,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         👉 <span id="term-type"></span>
         <div></div>
       </div>
-    </div>`}constructor(){super();const nextTextDelay=2e3}firstUpdated(changedproperties){const texts=[html`<span style="color: var(--aqua);">print</span>(<span
+    </div>`}constructor(){super()}firstUpdated(changedproperties){const texts=[html`<span style="color: var(--aqua);">print</span>(<span
           style="color: var(--green);"
           >"Hi, I'm Navinn!"</span
         >)`,html`<span style="color: var(--blue);">printf</span>(<span
@@ -1516,7 +1518,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         >&gt;<span style="color: #fff;">Hi, I'm Navinn!</span>&lt;/<span
           style="color: var(--red);"
           >span</span
-        >&gt;`],text=this.shadowRoot.getElementById("term-type");let textsIndex=0;const type=()=>{text.innerHTML=texts[textsIndex].strings[0];textsIndex=(textsIndex+1)%5;setTimeout(type,2e3)};type()}}customElements.define("typewriter-term",Terminal);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+        >&gt;`],text=this.shadowRoot.getElementById("term-type");let textsIndex=0;const type=()=>{text.innerHTML=texts[textsIndex].strings[0];textsIndex=(textsIndex+1)%5;setTimeout(type,1750)};type()}}customElements.define("typewriter-term",Terminal);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -1779,6 +1781,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         margin: 0 0 1rem 0;
       }
 
+      .resume-container  {
+        margin-bottom: 1rem;
+      }
+
       h2 {
         margin: 0 0 1.5rem 0;
         color: var(--orange);
@@ -1799,12 +1805,15 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         padding: 1rem 0;
         border-top: 1px var(--orange) dashed;
       }
-    `}render(){return html` 
-    <h2>Education</h2>
+    `}render(){return html` <div class="resume-container">
+        <a target="_blank" href="https://go.aws/30Gv8LP">[Download Resume]</a>
+      </div>
+      <h2>Education</h2>
       <p>
         University of Toronto&#160;(<span class="highlight">2019 - Present</span
         >)<br />
-        HBSc. Computer Science Specialist - Soft. Eng Stream (<span class="highlight"
+        HBSc. Computer Science Specialist - Soft. Eng Stream (<span
+          class="highlight"
           >Co-op</span
         >)<br />
         - UofT Scholar Entrance Award (<span class="highlight">$7500</span>)
@@ -1813,7 +1822,8 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       <p>
         Error 404: There's nothing here yet.<br />
         Want to say hi?
-        <a target="_blank" href="mailto:navinn.ravindaran@mail.utoronto.on.ca">Contact me.</a>
+        <a target="_blank" href="mailto:me@navn.me">Email me.</a> ( me [at] navn
+        [dot] me )
       </p>
       <div class="footer">
         "Sometimes I'll start a sentence and I don't even know where it's going.
