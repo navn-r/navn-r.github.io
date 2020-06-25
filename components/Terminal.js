@@ -23,6 +23,7 @@ class Terminal extends LitElement {
         border-radius: 5px;
         border: 1px var(--gray) solid;
         user-select: none;
+        -webkit-user-select: none;
         filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
       }
 

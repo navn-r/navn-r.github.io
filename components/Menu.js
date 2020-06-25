@@ -15,6 +15,7 @@ class Menu extends LitElement {
         color: var(--purple);
         margin: 0;
         user-select: none;
+        -webkit-user-select: none;
         cursor: pointer;
       }
 

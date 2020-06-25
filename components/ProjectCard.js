@@ -37,6 +37,7 @@ class ProjectCard extends LitElement {
       h1 {
         color: var(--orange);
         user-select: none;
+        -webkit-user-select: none;
         margin: 0;
         font-size: 1.75rem;
       }
@@ -69,6 +70,7 @@ class ProjectCard extends LitElement {
         display: grid;
         grid-area: icon;
         user-select: none;
+        -webkit-user-select: none;
       }
 
       .project-button-container {

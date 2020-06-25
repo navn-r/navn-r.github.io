@@ -6,10 +6,15 @@
 :root {
   --dark-gray: #101010;
   --gray: #7f7f7f;
+  --yellow: #ff9900;
   --orange: rgb(235, 68, 46);
   --orange-trans: rgba(235, 68, 46, 0.75);
   --purple: rgb(162, 0, 255);
   --purple-trans: rgba(162, 0, 255, 0.473);
+}
+
+::selection {
+  background: var(--orange-trans);
 }
 
 body {
