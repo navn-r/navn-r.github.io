@@ -1070,42 +1070,61 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
                                  * @param options Element name.
                                  * @nocollapse
                                  */LitElement.render=render$2;var litElement={LitElement:LitElement,defaultConverter:defaultConverter,notEqual:notEqual,UpdatingElement:UpdatingElement,customElement:customElement,property:property,internalProperty:internalProperty,query:query,queryAsync:queryAsync,queryAll:queryAll,eventOptions:eventOptions,queryAssignedNodes:queryAssignedNodes,html:html,svg:svg,TemplateResult:TemplateResult,SVGTemplateResult:SVGTemplateResult,supportsAdoptingStyleSheets:supportsAdoptingStyleSheets,CSSResult:CSSResult,unsafeCSS:unsafeCSS,css:css};_exports.$litElement=litElement;class Header extends LitElement{static get styles(){return css`
-      h1 {
-        margin: 0;
-        padding: 0;
-      }
-
       .header {
         width: 90vw;
         background-color: #000;
-        padding: 3em 5vw;
-        border-bottom: 1.2em var(--purple-trans) ridge;
+        padding: 3rem 5vw;
+        border-bottom: 1.2rem var(--purple-trans) ridge;
         user-select: none;
+        -webkit-user-select: none;
       }
 
       .letter {
-        color: var(--orange);
+        color: transparent;
+        background: inherit;
+        padding-right: 1rem;
+        margin-right: -1rem;
       }
 
-      .title {
-        font-family: Caveat, "Oxygen Mono", monospace, serif;
+      #title {
+        display: flex;
+        flex-direction: row;
+        font-family: Caveat, Times;
         font-weight: 700;
-        font-size: 4em;
-        text-align: left;
+        font-size: 4rem;
         user-select: none;
+        -webkit-user-select: none;
         color: #ffffff;
+        background: linear-gradient(0deg, var(--orange) 45%, var(--yellow) 60%)
+          repeat-x;
+        background-size: 250% 250%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: GradientAnimation 3s ease-in-out infinite;
+      }
+
+      @keyframes GradientAnimation {
+        0% {
+          background-position: 0% 69%;
+        }
+        50% {
+          background-position: 100% 31%;
+        }
+        100% {
+          background-position: 0% 69%;
+        }
       }
 
       .line-break {
         display: inline-block;
-        border-left: 0.1em solid #696969;
+        border-left: 0.1rem solid #696969;
         opacity: 0.5;
         margin: 5px 10px 5px 5px;
-        height: 3.125em;
+        height: 3.125rem;
       }
 
       #logo {
-        margin: 0.625em 0.25em;
+        margin: 0.625rem 0.25rem;
         filter: opacity(0.5);
         animation: none;
         transition: transform 0.42s ease-in-out;
@@ -1116,9 +1135,9 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       }
 
       .icon {
-        width: 2.5em;
+        width: 2.5rem;
         margin: 10px;
-        padding: 0 0.5em;
+        padding: 0 0.5rem;
       }
 
       .icon:hover {
@@ -1128,34 +1147,33 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
 
       @keyframes icon-hover {
         50% {
-          filter: drop-shadow(0 0 0.42069em var(--purple-trans));
+          filter: drop-shadow(0 0 0.42069rem var(--purple-trans));
         }
         100% {
-          filter: drop-shadow(0 0 0.42069em var(--purple));
+          filter: drop-shadow(0 0 0.42069rem var(--purple));
         }
       }
 
       @media (max-width: 600px) {
-        .title {
-          font-size: 3em;
+        #title {
+          font-size: 3rem;
         }
       }
 
       @media (max-width: 450px) {
-        .title {
-          font-size: 2.5em;
+        #title {
+          font-size: 2.5rem;
         }
 
         .icon {
-          width: 2em;
+          width: 2rem;
         }
       }
     `}render(){return html` <div class="header">
       <header>
-        <h1 class="title">
-          <span class="letter">N</span>avinn
-          <span class="letter">R</span>avindaran
-        </h1>
+        <div id="title">
+          <span class="letter">N</span>avinn&nbsp;<span class="letter">R</span>avindaran
+        </div>
         <img
           class="icon"
           id="logo"
@@ -1178,6 +1196,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         color: var(--purple);
         margin: 0;
         user-select: none;
+        -webkit-user-select: none;
         cursor: pointer;
       }
 
@@ -1269,6 +1288,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       h1 {
         color: var(--orange);
         user-select: none;
+        -webkit-user-select: none;
         margin: 0;
         font-size: 1.75rem;
       }
@@ -1301,6 +1321,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         display: grid;
         grid-area: icon;
         user-select: none;
+        -webkit-user-select: none;
       }
 
       .project-button-container {
@@ -1454,6 +1475,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         border-radius: 5px;
         border: 1px var(--gray) solid;
         user-select: none;
+        -webkit-user-select: none;
         filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
       }
 
