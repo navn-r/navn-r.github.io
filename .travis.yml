@@ -2,8 +2,8 @@ language: node_js
 node_js:
 - node
 install:
-- npm i -g polymer-cli
-- npm ci
+- yarn global add polymer-cli
+- yarn
 script:
 - polymer build
 deploy:

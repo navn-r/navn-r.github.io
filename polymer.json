@@ -4,9 +4,7 @@
     "sources": [
         "Assets/**/*",
         "components/**/*",
-        "pages/**/*",
-        "style.css",
-        "package.json"
+        "style.css"
     ],
     "extraDependencies": [
         "CNAME"
