@@ -1,2 +1,2 @@
 import "./components/Header";
-import "./components/BorderBox";
+import "./components/Frame";

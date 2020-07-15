@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -14,16 +15,5 @@
 }
 
 body {
-  background-color: #fbf3de;
-}
-
-.content {
-  margin: 6rem 6rem 12rem 6rem;
-}
-
-
-@media (max-width: 900px) {
-  .content {
-    margin: 0;
-  }
+  background-color: var(--tan);
 }
