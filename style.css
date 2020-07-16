@@ -5,6 +5,8 @@
 }
 
 :root {
+  --light-gray: #808080;
+  --gray:  rgba(15, 20, 23, 1);
   --green: rgb(80, 60, 47);
   --red: rgb(219, 72, 23);
   --orange: rgb(224, 166, 50);
@@ -15,5 +17,27 @@
 }
 
 body {
-  background-color: var(--tan);
+  background: var(--tan);
+}
+
+::-moz-selection {
+    background-color: var(--aqua);
+    color: var(--gray);
+}
+
+::selection {
+    background-color: var(--aqua);
+    color: var(--gray);
+}
+
+#content {
+  display: grid;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+
+@media(max-width: 900px) {
+  body {
+    background-color: var(--gray);
+  }
 }

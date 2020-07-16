@@ -4,29 +4,21 @@ class Header extends LitElement {
   
   static get styles() {
     return css`
-      .header {
-        display: flex;
-      }
 
-      .header-container {
-        width: 100%;
+      .header {
+        margin: 1rem 0;
       }
 
       #name {
-        font-size: 7rem;
-        height: 10rem;
-        padding-left: 5rem;
-        color: var(--brown);
+        font-size: 5.5rem;
         -moz-user-select: none;
         -webkit-user-select: none;
-        text-shadow: -0.15rem 0.15rem var(--tan), -0.3rem 0.3rem var(--orange),
-          -0.45rem 0.45rem var(--aqua);
+        color: var(--light-gray);
       }
 
-      #border {
+      /* #border {
         display: flex;
-        background-image:
-        linear-gradient(
+        background-image: linear-gradient(
           var(--green) 0%,
           var(--green) 25%,
           var(--red) 25%,
@@ -38,15 +30,18 @@ class Header extends LitElement {
         );
         height: 3rem;
         width: 100%;
-      }
+      } */
 
-      #border-swirl {
-        margin-top: calc(4.25rem + 2px); /* FIX */
+      /* #border-swirl {
+        margin-top: 4.35rem;
         margin-right: -5rem;
-        height: calc(9.83rem - 2px);
+        height: 9.83rem;
         width: 10rem;
+        flex-shrink: 0;
         background-image: radial-gradient(
-          var(--green) 0%,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0) 0.75rem,
+          var(--green) 0.75rem,
           var(--green) 1.5rem,
           var(--red) 1.5rem,
           var(--red) 2.25rem,
@@ -54,26 +49,13 @@ class Header extends LitElement {
           var(--orange) 3rem,
           var(--aqua) 3rem,
           var(--aqua) 3.75rem,
-          transparent 3.75rem,
-          transparent 100%
+          rgba(0, 0, 0, 0) 3.75rem,
+          rgba(0, 0, 0, 0) 100%
         );
-      }
-
-      @media (max-width: 900px) {
+      } */
+      @media (max-width: 300px) {
         #name {
-          font-size: 5rem;
-          height: 7rem;
-          padding-left: 2.5rem;
-          text-shadow: -0.1rem 0.1rem var(--tan), -0.2rem 0.2rem var(--orange),
-            -0.3rem 0.3rem var(--aqua);
-        }
-
-        #border {
-          height: 2rem;
-        }
-
-        #border-swirl {
-          display: none;
+          font-size: 3.5rem;
         }
       }
     `;
@@ -88,11 +70,7 @@ class Header extends LitElement {
         crossorigin="anonymous"
       />
       <div class="header">
-        <div id="border-swirl"></div>
-        <div class="header-container">
           <div id="name"></div>
-          <div id="border"></div>
-        </div>
       </div>
     `;
   }
@@ -102,13 +80,11 @@ class Header extends LitElement {
   }
 
   firstUpdated() {
-    let name = this.shadowRoot.getElementById("name");
     const nameKatex = katex.renderToString(
       "\\mathbb{N}\\textnormal{a}\\vec{v}_i\\textnormal{nn}",
       { throwOnError: false }
-    );
-    console.log(nameKatex);
-    name.innerHTML = nameKatex;
+      );
+    this.shadowRoot.getElementById("name").innerHTML = nameKatex;
   }
 }
 
