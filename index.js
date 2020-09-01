@@ -1546,6 +1546,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
+      />
       <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;class About extends LitElement{static get styles(){return css`
       ::selection {
         background: var(--orange-trans);
@@ -1623,13 +1627,13 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         <div class="skill"><fa-icon class="fab fa-js-square"></fa-icon><h4>JavaScript</h4></div>
         <div class="skill"><fa-icon class="fab fa-java"></fa-icon><h4>Java</h4></div>
         <div class="skill"><fa-icon class="fab fa-python"></fa-icon><h4>Python</h4></div>
-        <div class="skill"><fa-icon class="fas fa-copyright"></fa-icon><h4>C</h4></div>
+        <div class="skill"><fa-icon class="devicon-c-plain-wordmark"></fa-icon><h4>C</h4></div>
       </div>
       <h3 class="highlight">Frameworks and Technologies</h3>
       <div class="skills-container">
         <div class="skill"><fa-icon class="fab fa-react"></fa-icon><h4>React Native</h4></div>
         <div class="skill"><fa-icon class="fas fa-database"></fa-icon><h4>Firebase</h4></div>
-        <div class="skill"><fa-icon class="fas fa-code-branch"></fa-icon><h4>Git</h4></div>
+        <div class="skill"><fa-icon class="devicon-git-plain"></fa-icon><h4>Git</h4></div>
         <div class="skill"><fa-icon class="fas fa-terminal"></fa-icon><h4>Shell (bash)</h4></div>
         <div class="skill"><fa-icon class="fas fa-desktop"></fa-icon><h4>Windows, MacOS, Linux</h4></div>
       </div> 
