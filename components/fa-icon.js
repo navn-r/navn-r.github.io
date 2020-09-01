@@ -20,6 +20,10 @@ export class FaIcon extends LitElement {
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
+      />
       <i class="${this.class} icon" style="${this.style}"></i>`;
   }
 }
