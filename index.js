@@ -2,6 +2,7 @@ import "./components/Header";
 import "./components/Menu";
 import "./components/fa-icon";
 import "./components/ProjectCard";
+import "./components/WorkCard";
 import "./components/Terminal";
 import "./pages/About"
 import "./pages/Projects";

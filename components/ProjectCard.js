@@ -181,7 +181,7 @@ class ProjectCard extends LitElement {
     return html`
       <div class="project-container">
         <div class="project-title-container">
-          <h1 class="title">${this.name}</h1>
+          <h1>${this.name}</h1>
         </div>
         <div class="project-img-container">
           <slot name="project-img"></slot>

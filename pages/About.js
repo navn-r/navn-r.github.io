@@ -70,10 +70,16 @@ class About extends LitElement {
     return html`
       <typewriter-term></typewriter-term>
       <p>
-        I am a 2nd year student dev. currently
+        I am a 2nd year student dev.
         <span style="text-decoration: line-through;">surviving</span>
         studying at the <span class="highlight">University of Toronto</span> in Canada.<br />
-        You can view my notes <a href="https://navn-r.github.io/notes" target="_blank">here</a> (work in progress)<br /><br />
+        Currently, I am working as a Software Developer at <a href="https://caseware.com/ca">CaseWare International</a> for my co-op term. <br \>
+        You can view my notes <a href="https://navn-r.github.io/notes" target="_blank">here</a> (work in progress).<br /><br />
+        <p>
+        Want to say hi?
+        <a target="_blank" href="mailto:me@navn.me">Email me.</a> ( me [at] navn
+        [dot] me )
+      </p>
       </p>
       <h2 class="highlight">Skills:</h2>
       <h3 class="highlight">Programming Languages</h3>

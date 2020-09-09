@@ -67,7 +67,7 @@ class Projects extends LitElement {
       >
         <p slot="info">
           Noten, meaning 'grades' in German, is a cloud based grade management
-          app. (<span class="highlight">2020</span>)
+          app. (2020</span>)
         </p>
         <img
           slot="project-img"
