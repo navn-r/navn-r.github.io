@@ -1418,7 +1418,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
     `}static get properties(){return{name:{type:String},codesrc:{type:String},demosrc:{type:String},hasdemo:{type:Boolean},hasapp:{type:Boolean}}}render(){return html`
       <div class="project-container">
         <div class="project-title-container">
-          <h1 class="title">${this.name}</h1>
+          <h1>${this.name}</h1>
         </div>
         <div class="project-img-container">
           <slot name="project-img"></slot>
@@ -1540,7 +1540,36 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         >&gt;<span style="color: #fff;">Hi, I'm Navinn!</span>&lt;/<span
           style="color: var(--red);"
           >span</span
-        >&gt;`],text=this.shadowRoot.getElementById("term-type");let textsIndex=0;const type=()=>{text.innerHTML=texts[textsIndex].strings[0];textsIndex=(textsIndex+1)%5;setTimeout(type,1750)};type()}}customElements.define("typewriter-term",Terminal);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+        >&gt;`],text=this.shadowRoot.getElementById("term-type");let textsIndex=0;const type=()=>{text.innerHTML=texts[textsIndex].strings[0];textsIndex=(textsIndex+1)%5;setTimeout(type,1750)};type()}}customElements.define("typewriter-term",Terminal);class WorkCard extends LitElement{constructor(){super();this.name="Work"}static get styles(){return css`
+          .work-container {
+            display: flex;
+            flex-direction: row;
+          }
+
+          .work-logo-container {
+              display: flex;
+              align-items: center;
+              padding-right: 1rem;
+          }
+
+          h3 {
+            color: var(--orange);
+            user-select: none;
+            -webkit-user-select: none;
+            margin: 0;
+            padding-bottom: 1rem;
+          }
+        `}static get properties(){return{name:{type:String}}}render(){return html`
+            <div class="work-container">
+                <div class="work-logo-container">
+                    <slot class="logo-img" name="work-logo-img"></slot>
+                </div>
+                <div class="work-info-container">
+                    <h3>${this.name}</h1>
+                    <slot name="work-body">Work body</slot>
+                </div>
+            </div>
+        `}}customElements.define("work-card",WorkCard);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -1614,10 +1643,16 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
     `}render(){return html`
       <typewriter-term></typewriter-term>
       <p>
-        I am a 2nd year student dev. currently
+        I am a 2nd year student dev.
         <span style="text-decoration: line-through;">surviving</span>
         studying at the <span class="highlight">University of Toronto</span> in Canada.<br />
-        You can view my notes <a href="https://navn-r.github.io/notes" target="_blank">here</a> (work in progress)<br /><br />
+        Currently, I am working as a Software Developer at <a href="https://caseware.com/ca">CaseWare International</a> for my co-op term. <br \>
+        You can view my notes <a href="https://navn-r.github.io/notes" target="_blank">here</a> (work in progress).<br /><br />
+        <p>
+        Want to say hi?
+        <a target="_blank" href="mailto:me@navn.me">Email me.</a> ( me [at] navn
+        [dot] me )
+      </p>
       </p>
       <h2 class="highlight">Skills:</h2>
       <h3 class="highlight">Programming Languages</h3>
@@ -1701,7 +1736,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       >
         <p slot="info">
           Noten, meaning 'grades' in German, is a cloud based grade management
-          app. (<span class="highlight">2020</span>)
+          app. (2020</span>)
         </p>
         <img
           slot="project-img"
@@ -1807,7 +1842,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         margin: 0 0 1rem 0;
       }
 
-      .resume-container  {
+      .resume-container {
         margin-bottom: 1rem;
       }
 
@@ -1815,6 +1850,11 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         margin: 0 0 1.5rem 0;
         color: var(--orange);
         user-select: none;
+      }
+
+
+      .highlight {
+        color: var(--orange);
       }
 
       a {
@@ -1831,26 +1871,77 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         padding: 1rem 0;
         border-top: 1px var(--orange) dashed;
       }
+
+      h3 {
+        color: var(--orange);
+        user-select: none;
+        margin: 0;
+        -webkit-user-select: none;
+      }
+
+      #uni {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #uni-logo-container {
+        padding-right: 2rem;
+      }
+
+      #uni-logo {
+        width: 4rem;
+        user-select: none;
+        moz-user-select: none;
+      }
+
+      #caseware-logo {
+        width: 7rem;
+      }
+
+      #uni-details-container {
+        display: grid;
+        grid-template-rows: 1fr 1.5fr;
+      }
+
+      @media(max-width: 350px) {
+        #uni-details-container {
+          grid-template-rows: 1fr 2fr;
+        }
+      }
     `}render(){return html` <div class="resume-container">
         <a target="_blank" href="https://go.aws/30Gv8LP">[Download Resume]</a>
       </div>
       <h2>Education</h2>
-      <p>
-        University of Toronto&#160;(<span class="highlight">2019 - Present</span
-        >)<br />
-        HBSc. Computer Science Specialist - Soft. Eng Stream (<span
-          class="highlight"
-          >Co-op</span
-        >)<br />
-        - UofT Scholar Entrance Award (<span class="highlight">$7500</span>)
-      </p>
+      <div id="uni">
+        <div id="uni-logo-container">
+          <img src="../Assets/uoft.png" id="uni-logo"/>
+        </div>
+        <div id="uni-details-container">
+          <h3 class="title">
+            University of Toronto
+          </h3>
+          <p>
+          Scarborough Campus&#160;(<span class="highlight"
+            >2019 - Present</span
+          >)<br />
+          HBSc. Computer Science Specialist - Soft. Eng Stream (<span
+            class="highlight"
+            >Co-op</span
+          >)<br />
+          - UofT Scholar Entrance Award (<span class="highlight">$7500</span>)
+        </p>
+        </div>
+        </div>
+      </div>
+      <br />
       <h2 class="subtitle">Experiences</h2>
-      <p>
-        Error 404: There's nothing here yet.<br />
-        Want to say hi?
-        <a target="_blank" href="mailto:me@navn.me">Email me.</a> ( me [at] navn
-        [dot] me )
-      </p>
+      <work-card name="CaseWare International">
+        <img id="caseware-logo" slot="work-logo-img" src="../Assets/Caseware.png"/>
+        <p slot="work-body">
+          Remote (<span class="highlight">Sept. 2020 - Present</span>)  <br />
+          Software Developer Co-op, Cloud Engagements.
+        </p>
+      </work-card>
       <div class="footer">
         "Sometimes I'll start a sentence and I don't even know where it's going.
         I just hope I find it along the way."<br /><br />- Michael G. Scott<br />
