@@ -6,38 +6,43 @@
 
 :root {
   --light-gray: #808080;
-  --gray:  rgba(15, 20, 23, 1);
-  --green: rgb(80, 60, 47);
+  --off-white: #b2b2b2;
+  --dark-gray: #050708;
+  --gray:  #0F1417;
   --red: rgb(219, 72, 23);
   --orange: rgb(224, 166, 50);
   --aqua: rgb(4, 134, 138);
-  --brown: rgb(43, 43, 27);
-  --tan: #e4e4a1;
-  --beige: #f5f5dc;
+
+  --main: 'KaTeX_Main';
+  --ss: 'KaTeX_SansSerif';
+
+  --text: 1.25rem;
+  --title: 2rem;
+  --subtitle: 1.5rem;
 }
 
 body {
-  background: var(--tan);
+  background: var(--gray);
+  color: var(--light-gray);
+  font-family: var(--ss);
+  font-size: var(--text);
 }
 
-::-moz-selection {
-    background-color: var(--aqua);
-    color: var(--gray);
+#container {
+  display: grid;
+  grid-template-areas: ". menu content ." ". . content .";
+  grid-template-columns: 0.125fr 20rem 2fr 0.25fr;
+  padding-top: 3rem;
 }
 
-::selection {
-    background-color: var(--aqua);
-    color: var(--gray);
+app-menu {
+  grid-area: menu;
 }
 
 #content {
-  display: grid;
-  padding: 0 2rem;
-  font-size: 1.5rem;
-}
-
-@media(max-width: 900px) {
-  body {
-    background-color: var(--gray);
-  }
+  grid-area: content;
+  padding-left: 5rem;
+  position: sticky;
+  height: calc(100vh - 20rem);
+  top: 20rem;
 }
