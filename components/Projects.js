@@ -12,10 +12,10 @@ class Projects extends LitElement {
   render() {
     return html`
     <div id="projects-container">
-      <project-card></project-card>
-      <project-card></project-card>
-      <project-card></project-card>
-      <project-card></project-card>
+      <project-card title="Ritrovo"></project-card>
+      <project-card title="Noten"></project-card>
+      <project-card title="Standup Bot"></project-card>
+      <project-card title="Portfolio Website"></project-card>
     </div>
     `;
   }

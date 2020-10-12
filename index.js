@@ -6,3 +6,5 @@ import "./components/Name";
 import "./components/ProjectCard";
 import "./components/Projects";
 import "./components/Menu";
+import "./components/Terminal";
+import "fa-icons";

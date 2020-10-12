@@ -78,7 +78,6 @@ class Menu extends LitElement {
   }
 
   clickHandler(e) {
-    console.log(e.target);
     if (this.current === e.target.id) return;
     this.current = e.target.id;
   }

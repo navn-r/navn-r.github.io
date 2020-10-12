@@ -5,7 +5,7 @@ class Header extends LitElement {
     return css`
       .header {
         width: 100%;
-        height: 100vh;
+        height: 18rem;
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         background-color: var(--dark-gray);
