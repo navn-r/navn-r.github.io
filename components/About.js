@@ -1,8 +1,9 @@
 import { LitElement, html, css } from "lit-element";
+import { selectionStyles } from "./selectionStyles";
 
 class About extends LitElement {
   static get styles() {
-    return css`
+    return [css`
       #about {
         margin-bottom: 1rem;
       }
@@ -94,13 +95,18 @@ class About extends LitElement {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 2rem;
       }
-    `;
+
+      figure {
+        width: 70rem;
+        margin: 0;
+      }
+    `, selectionStyles];
   }
 
   render() {
     return html`
-    <!-- <typewriter-term></typewriter-term> -->
       <div id="about">
         <span class="title highlight">Hello.</span><br /><br />
         <p>
@@ -120,22 +126,23 @@ class About extends LitElement {
             >Software Developer at CaseWare International</a
           >
           for my co-op term. <br />
-          Want to say hi? Reach out below!
+          Let's connect. Reach out below!
         </p>
         <div id="contacts">
           <div @click="${this.clickHandler}" id="github" class="contact">
-            <fa-icon class="fab fa-github" size="2rem"></fa-icon>
+            <fa-icon class="fab fa-github"></fa-icon>
             <div class="tooltip">navn-r</div>
           </div>
           <div @click="${this.clickHandler}" id="linkedin" class="contact">
-            <fa-icon class="fab fa-linkedin" size="2rem"></fa-icon>
+            <fa-icon class="fab fa-linkedin"></fa-icon>
             <div class="tooltip">navinn-ravindaran</div>
           </div>
           <div @click="${this.clickHandler}" id="email" class="contact">
-            <fa-icon class="fas fa-paper-plane" size="2rem"></fa-icon>
+            <fa-icon class="fas fa-paper-plane"></fa-icon>
             <div class="tooltip">me [at] navn [dot] me</div>
           </div>
         </div>
+        <!-- <typewriter-term></typewriter-term> -->
       </div>
     `;
   }
@@ -149,7 +156,6 @@ class About extends LitElement {
     let i = e.target.id === "github" ? 0 : e.target.id === "linkedin" ? 1 : 2;
     window.open(links[i], "_blank");
   }
-
 
   constructor() {
     super();

@@ -7,4 +7,10 @@ import "./components/ProjectCard";
 import "./components/Projects";
 import "./components/Menu";
 import "./components/Terminal";
-import "fa-icons";
+import './components/particles';
+import './components/fa-icon';
+import './components/selectionStyles'
+
+particlesJS.load("particles", "Assets/particles.json", function () {
+  console.log("callback - particles.js config loaded");
+});

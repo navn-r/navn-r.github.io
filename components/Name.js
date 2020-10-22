@@ -10,6 +10,20 @@ class Name extends LitElement {
         color: var(--light-gray);
         text-align: center;
       }
+
+      .wiggle {
+        transition: transform 0.5s ease-out;
+      }
+
+      .wiggle:hover {
+        transform: rotate(20deg);
+      }
+
+      @media (max-width: 1000px) {
+        #name {
+          font-size: min(15vw, 5rem);
+        }
+      }
     `;
   }
 
@@ -35,6 +49,8 @@ class Name extends LitElement {
       { throwOnError: false }
     );
     this.shadowRoot.getElementById("name").innerHTML += nameKatex;
+    const i = this.shadowRoot.getElementById("name").childNodes[0].childNodes[1].childNodes[0].childNodes[3].childNodes[1].childNodes[0];
+    i.className += " wiggle";
   }
 }
 

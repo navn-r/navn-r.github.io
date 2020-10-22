@@ -7,20 +7,28 @@
 :root {
   --light-gray: #808080;
   --off-white: #b2b2b2;
+  --light-dark-gray: #0f0f0f;
   --dark-gray: #050708;
-  --gray:  #0F1417;
-  --red: rgb(219, 72, 23);
-  --orange: rgb(224, 166, 50);
-  --aqua: rgb(4, 134, 138);
+  --gray: #0f1417;
+  --red: #db4817;
+  --orange: #e0a632;
+  --aqua: #04868a;
+  --green: #a8e4a0;
+  --blue: #46c2ff;
 
-  --main: 'KaTeX_Main';
-  --ss: 'KaTeX_SansSerif';
-  --code: 'Fira Code';
+  --main: "KaTeX_Main";
+  --ss: "KaTeX_SansSerif";
+  --code: "Fira Code";
 
   --tooltip: 1rem;
   --text: 1.25rem;
   --title: 2rem;
   --subtitle: 1.5rem;
+}
+
+
+html {
+  font-size: 80%;
 }
 
 body {
@@ -35,16 +43,68 @@ body {
   grid-template-areas: ". menu content ." ". . content .";
   grid-template-columns: 0.125fr 20rem 2fr 0.25fr;
   padding-top: 3rem;
+  float: none;
+}
+
+#logo {
+  width: 2.75rem;
+  transition: transform 0.42s ease-in-out;
+}
+
+#logo:hover {
+  transform: rotate(360deg);
 }
 
 app-menu {
   grid-area: menu;
 }
 
+footer {
+  text-align: center;
+  font-family: var(--code);
+  width: 100%;
+  background-color: var(--dark-gray);
+  height: 4rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  -moz-user-select: none;
+}
+
 #content {
   grid-area: content;
   padding-left: 5rem;
- /*  position: sticky;
-  height: calc(100vh - 20rem);
-  top: 20rem; */
+  margin-bottom: 2rem;
+  min-height: calc(100vh - 18rem - 4rem - 3rem - 2rem);
+}
+
+#particles {
+  height: 18rem;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  #container {
+    grid-template-areas: "menu" "content";
+    grid-template-columns: auto;
+    row-gap: 2rem;
+  }
+  #content {
+    padding-left: 2rem;
+  }
+
+  #particles {
+    height: 10rem;
+  }
+
+  app-menu {
+    height: 3rem;
+  }
+
+  #content {
+  min-height: calc(100vh - 15rem - 4rem - 3rem - 2rem);
+
+  }
 }

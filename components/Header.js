@@ -3,36 +3,39 @@ import { LitElement, html, css } from "lit-element";
 class Header extends LitElement {
   static get styles() {
     return css`
-      .header {
+      #header {
         width: 100%;
         height: 18rem;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
         background-color: var(--dark-gray);
-        align-items: center;
+        user-select: none;
+        -moz-user-select: none;
       }
 
       app-name {
-        position: sticky;
-        top: 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -18rem;
       }
 
-      #logo {
-        width: 5rem;
-      }
+      @media (max-width: 1000px) {
+        #header {
+          height: 10rem;
+        }
 
-      .spacer {
-        flex: 1 1 auto;
+        app-name {
+          margin-top: -10rem;
+        }
       }
     `;
   }
 
   render() {
     return html`
-      <div class="header">
-        <div class="spacer"></div>
+      <div id="header">
+        <slot name="particles"></slot>
         <app-name></app-name>
-        <div class="spacer"></div>
       </div>
     `;
   }

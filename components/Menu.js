@@ -31,6 +31,28 @@ class Menu extends LitElement {
         cursor: pointer;
         color: var(--red);
       }
+
+      @media (max-width: 1000px) {
+        #button-container {
+          grid-template-rows: auto;
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        button {
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 600px) {
+        button {
+          font-size: 1.75rem;
+        }
+      }
+      @media (max-width: 360px) {
+        button {
+          font-size: 1.5rem;
+        }
+      }
     `;
   }
 

@@ -4,7 +4,6 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "dependencies": {
-    "fa-icons": "^0.2.0",
     "lit-element": "^2.4.0"
   },
   "devDependencies": {},

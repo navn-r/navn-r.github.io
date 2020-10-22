@@ -1,8 +1,9 @@
 import { LitElement, html, css } from "lit-element";
+import { selectionStyles } from "./selectionStyles";
 
 class ProjectCard extends LitElement {
   static get styles() {
-    return css`
+    return [css`
       .subtitle {
         font-size: var(--subtitle);
       }
@@ -10,7 +11,7 @@ class ProjectCard extends LitElement {
       .card {
         margin-top: 2rem;
       }
-    `;
+    `, selectionStyles];
   }
 
   render() {
