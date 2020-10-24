@@ -1,4 +1,4 @@
-define(["exports"],function(_exports){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.eventOptions$1=_exports.eventOptions=eventOptions;_exports.insertNodeIntoTemplate=insertNodeIntoTemplate;_exports.internalProperty$1=_exports.internalProperty=internalProperty;_exports.property$1=_exports.property=property;_exports.query$1=_exports.query=query;_exports.queryAll$1=_exports.queryAll=queryAll;_exports.queryAssignedNodes$1=_exports.queryAssignedNodes=queryAssignedNodes;_exports.queryAsync$1=_exports.queryAsync=queryAsync;_exports.removeNodesFromTemplate=removeNodesFromTemplate;_exports.templateFactory$1=_exports.templateFactory=templateFactory;_exports.svg$2=_exports.svg$1=_exports.svg=_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=_exports.reparentNodes$1=_exports.reparentNodes=_exports.render$1=_exports.render$2=_exports.render=_exports.removeNodes$1=_exports.removeNodes=_exports.parts$1=_exports.parts=_exports.nothing$1=_exports.nothing=_exports.notEqual$1=_exports.notEqual=_exports.nodeMarker=_exports.noChange$1=_exports.noChange=_exports.markerRegex=_exports.marker=_exports.lastAttributeNameRegex=_exports.isTemplatePartActive$1=_exports.isTemplatePartActive=_exports.isPrimitive$1=_exports.isPrimitive=_exports.isIterable$1=_exports.isIterable=_exports.isDirective$1=_exports.isDirective=_exports.isCEPolyfill=_exports.html$2=_exports.html$1=_exports.html=_exports.directive$1=_exports.directive=_exports.defaultTemplateProcessor$1=_exports.defaultTemplateProcessor=_exports.defaultConverter$1=_exports.defaultConverter=_exports.customElement$1=_exports.customElement=_exports.css$1=_exports.css=_exports.createMarker$1=_exports.createMarker=_exports.boundAttributeSuffix=_exports.UpdatingElement$1=_exports.UpdatingElement=_exports.TemplateResult$3=_exports.TemplateResult$2=_exports.TemplateResult$1=_exports.TemplateResult=_exports.TemplateInstance$1=_exports.TemplateInstance=_exports.Template$1=_exports.Template=_exports.SVGTemplateResult$2=_exports.SVGTemplateResult$1=_exports.SVGTemplateResult=_exports.PropertyPart$1=_exports.PropertyPart=_exports.PropertyCommitter$1=_exports.PropertyCommitter=_exports.NodePart$1=_exports.NodePart=_exports.LitElement=_exports.FaIcon=_exports.EventPart$1=_exports.EventPart=_exports.DefaultTemplateProcessor$1=_exports.DefaultTemplateProcessor=_exports.CSSResult$1=_exports.CSSResult=_exports.BooleanAttributePart$1=_exports.BooleanAttributePart=_exports.AttributePart$1=_exports.AttributePart=_exports.AttributeCommitter$1=_exports.AttributeCommitter=_exports.$updatingElement=_exports.$templateResult=_exports.$templateInstance=_exports.$templateFactory=_exports.$template=_exports.$shadyRender=_exports.$render=_exports.$parts=_exports.$part=_exports.$modifyTemplate=_exports.$litHtml=_exports.$litElement=_exports.$faIcon=_exports.$dom=_exports.$directive=_exports.$defaultTemplateProcessor=_exports.$decorators=_exports.$cssTag=void 0;_exports.unsafeCSS$1=_exports.unsafeCSS=_exports.templateCaches$1=_exports.templateCaches=void 0;/**
+define(["exports"],function(_exports){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.eventOptions$1=_exports.eventOptions=eventOptions;_exports.insertNodeIntoTemplate=insertNodeIntoTemplate;_exports.internalProperty$1=_exports.internalProperty=internalProperty;_exports.property$1=_exports.property=property;_exports.query$1=_exports.query=query;_exports.queryAll$1=_exports.queryAll=queryAll;_exports.queryAssignedNodes$1=_exports.queryAssignedNodes=queryAssignedNodes;_exports.queryAsync$1=_exports.queryAsync=queryAsync;_exports.removeNodesFromTemplate=removeNodesFromTemplate;_exports.templateFactory$1=_exports.templateFactory=templateFactory;_exports.shadyTemplateFactory=_exports.selectionStyles=_exports.reparentNodes$1=_exports.reparentNodes=_exports.render$1=_exports.render$2=_exports.render=_exports.removeNodes$1=_exports.removeNodes=_exports.parts$1=_exports.parts=_exports.nothing$1=_exports.nothing=_exports.notEqual$1=_exports.notEqual=_exports.nodeMarker=_exports.noChange$1=_exports.noChange=_exports.markerRegex=_exports.marker=_exports.lastAttributeNameRegex=_exports.isTemplatePartActive$1=_exports.isTemplatePartActive=_exports.isPrimitive$1=_exports.isPrimitive=_exports.isIterable$1=_exports.isIterable=_exports.isDirective$1=_exports.isDirective=_exports.isCEPolyfill=_exports.html$2=_exports.html$1=_exports.html=_exports.directive$1=_exports.directive=_exports.defaultTemplateProcessor$1=_exports.defaultTemplateProcessor=_exports.defaultConverter$1=_exports.defaultConverter=_exports.customElement$1=_exports.customElement=_exports.css$1=_exports.css=_exports.createMarker$1=_exports.createMarker=_exports.boundAttributeSuffix=_exports.UpdatingElement$1=_exports.UpdatingElement=_exports.TemplateResult$3=_exports.TemplateResult$2=_exports.TemplateResult$1=_exports.TemplateResult=_exports.TemplateInstance$1=_exports.TemplateInstance=_exports.Template$1=_exports.Template=_exports.SVGTemplateResult$2=_exports.SVGTemplateResult$1=_exports.SVGTemplateResult=_exports.PropertyPart$1=_exports.PropertyPart=_exports.PropertyCommitter$1=_exports.PropertyCommitter=_exports.NodePart$1=_exports.NodePart=_exports.LitElement=_exports.FaIcon=_exports.EventPart$1=_exports.EventPart=_exports.DefaultTemplateProcessor$1=_exports.DefaultTemplateProcessor=_exports.CSSResult$1=_exports.CSSResult=_exports.BooleanAttributePart$1=_exports.BooleanAttributePart=_exports.AttributePart$1=_exports.AttributePart=_exports.AttributeCommitter$1=_exports.AttributeCommitter=_exports.$updatingElement=_exports.$templateResult=_exports.$templateInstance=_exports.$templateFactory=_exports.$template=_exports.$shadyRender=_exports.$selectionStyles=_exports.$render=_exports.$parts=_exports.$part=_exports.$modifyTemplate=_exports.$litHtml=_exports.$litElement=_exports.$jumpModuleDefault=_exports.$jumpModule=_exports.$faIcon=_exports.$dom=_exports.$directive=_exports.$defaultTemplateProcessor=_exports.$decorators=_exports.$cssTag=void 0;_exports.unsafeCSS$1=_exports.unsafeCSS=_exports.templateCaches$1=_exports.templateCaches=_exports.svg$2=_exports.svg$1=_exports.svg=_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=void 0;/**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at
@@ -243,7 +243,7 @@ while(nodeIndex<part.index){nodeIndex++;if("TEMPLATE"===node.nodeName){stack.pus
 // - There is a template in the stack
 // - The walker will find a nextNode outside the template
 walker.currentNode=stack.pop();node=walker.nextNode()}}// We've arrived at our part's node.
-if("node"===part.type){const part=this.processor.handleTextExpression(this.options);part.insertAfterNode(node.previousSibling);this.__parts.push(part)}else{this.__parts.push(...this.processor.handleAttributeExpressions(node,part.name,part.strings,this.options))}partIndex++}if(isCEPolyfill){document.adoptNode(fragment);customElements.upgrade(fragment)}return fragment}}_exports.TemplateInstance$1=_exports.TemplateInstance=TemplateInstance;var templateInstance={TemplateInstance:TemplateInstance};_exports.$templateInstance=templateInstance;const commentMarker=` ${marker} `;/**
+if("node"===part.type){const part=this.processor.handleTextExpression(this.options);part.insertAfterNode(node.previousSibling);this.__parts.push(part)}else{this.__parts.push(...this.processor.handleAttributeExpressions(node,part.name,part.strings,this.options))}partIndex++}if(isCEPolyfill){document.adoptNode(fragment);customElements.upgrade(fragment)}return fragment}}_exports.TemplateInstance$1=_exports.TemplateInstance=TemplateInstance;var templateInstance={TemplateInstance:TemplateInstance};_exports.$templateInstance=templateInstance;const policy=window.trustedTypes&&trustedTypes.createPolicy("lit-html",{createHTML:s=>s}),commentMarker=` ${marker} `;/**
                                       * The return type of `html`, which holds a Template and the values from
                                       * interpolated expressions.
                                       */class TemplateResult{constructor(strings,values,type,processor){this.strings=strings;this.values=values;this.type=type;this.processor=processor}/**
@@ -279,7 +279,11 @@ const attributeMatch=lastAttributeNameRegex.exec(s);if(null===attributeMatch){//
 html+=s+(isCommentBinding?commentMarker:nodeMarker)}else{// For attributes we use just a marker sentinel, and also append a
 // $lit$ suffix to the name to opt-out of attribute-specific parsing
 // that IE and Edge do for style and certain SVG attributes.
-html+=s.substr(0,attributeMatch.index)+attributeMatch[1]+attributeMatch[2]+boundAttributeSuffix+attributeMatch[3]+marker}}html+=this.strings[l];return html}getTemplateElement(){const template=document.createElement("template");template.innerHTML=this.getHTML();return template}}/**
+html+=s.substr(0,attributeMatch.index)+attributeMatch[1]+attributeMatch[2]+boundAttributeSuffix+attributeMatch[3]+marker}}html+=this.strings[l];return html}getTemplateElement(){const template=document.createElement("template");let value=this.getHTML();if(policy!==void 0){// this is secure because `this.strings` is a TemplateStringsArray.
+// TODO: validate this when
+// https://github.com/tc39/proposal-array-is-template-object is
+// implemented.
+value=policy.createHTML(value)}template.innerHTML=value;return template}}/**
    * A TemplateResult for SVG fragments.
    *
    * This class wraps HTML in an `<svg>` tag in order to parse its contents in the
@@ -292,7 +296,20 @@ html+=s.substr(0,attributeMatch.index)+attributeMatch[1]+attributeMatch[2]+bound
     * for an attribute.
     */_exports.isIterable$1=_exports.isIterable=isIterable;class AttributeCommitter{constructor(element,name,strings){this.dirty=!0;this.element=element;this.name=name;this.strings=strings;this.parts=[];for(let i=0;i<strings.length-1;i++){this.parts[i]=this._createPart()}}/**
      * Creates a single part. Override this to create a differnt type of part.
-     */_createPart(){return new AttributePart(this)}_getValue(){const strings=this.strings,l=strings.length-1;let text="";for(let i=0;i<l;i++){text+=strings[i];const part=this.parts[i];if(part!==void 0){const v=part.value;if(isPrimitive(v)||!isIterable(v)){text+="string"===typeof v?v:v+""}else{for(const t of v){text+="string"===typeof t?t:t+""}}}}text+=strings[l];return text}commit(){if(this.dirty){this.dirty=!1;this.element.setAttribute(this.name,this._getValue())}}}/**
+     */_createPart(){return new AttributePart(this)}_getValue(){const strings=this.strings,l=strings.length-1,parts=this.parts;// If we're assigning an attribute via syntax like:
+//    attr="${foo}"  or  attr=${foo}
+// but not
+//    attr="${foo} ${bar}" or attr="${foo} baz"
+// then we don't want to coerce the attribute value into one long
+// string. Instead we want to just return the value itself directly,
+// so that sanitizeDOMValue can get the actual value rather than
+// String(value)
+// The exception is if v is an array, in which case we do want to smash
+// it together into a string without calling String() on the array.
+//
+// This also allows trusted values (when using TrustedTypes) being
+// assigned to DOM sinks without being stringified in the process.
+if(1===l&&""===strings[0]&&""===strings[1]){const v=parts[0].value;if("symbol"===typeof v){return v+""}if("string"===typeof v||!isIterable(v)){return v}}let text="";for(let i=0;i<l;i++){text+=strings[i];const part=parts[i];if(part!==void 0){const v=part.value;if(isPrimitive(v)||!isIterable(v)){text+="string"===typeof v?v:v+""}else{for(const t of v){text+="string"===typeof t?t:t+""}}}}text+=strings[l];return text}commit(){if(this.dirty){this.dirty=!1;this.element.setAttribute(this.name,this._getValue())}}}/**
    * A Part that controls all or part of an attribute value.
    */_exports.AttributeCommitter$1=_exports.AttributeCommitter=AttributeCommitter;class AttributePart{constructor(committer){this.value=void 0;this.committer=committer}setValue(value){if(value!==noChange&&(!isPrimitive(value)||value!==this.value)){this.value=value;// If the value is a not a directive, dirty the committer so that it'll
 // call setAttribute. If the value is a directive, it'll dirty the
@@ -406,7 +423,7 @@ templateCache.stringsArray.set(result.strings,template);return template}const te
      * @param templateFactory
      */handleTextExpression(options){return new NodePart(options)}}_exports.DefaultTemplateProcessor$1=_exports.DefaultTemplateProcessor=DefaultTemplateProcessor;const defaultTemplateProcessor=new DefaultTemplateProcessor;_exports.defaultTemplateProcessor$1=_exports.defaultTemplateProcessor=defaultTemplateProcessor;var defaultTemplateProcessor$1={DefaultTemplateProcessor:DefaultTemplateProcessor,defaultTemplateProcessor:defaultTemplateProcessor};// This line will be used in regexes to search for lit-html usage.
 // TODO(justinfagnani): inject version number at build time
-_exports.$defaultTemplateProcessor=defaultTemplateProcessor$1;if("undefined"!==typeof window){(window.litHtmlVersions||(window.litHtmlVersions=[])).push("1.2.1")}/**
+_exports.$defaultTemplateProcessor=defaultTemplateProcessor$1;if("undefined"!==typeof window){(window.litHtmlVersions||(window.litHtmlVersions=[])).push("1.3.0")}/**
    * Interprets a template literal as an HTML template that can efficiently
    * render to and update a container.
    */const html=(strings,...values)=>new TemplateResult(strings,values,"html",defaultTemplateProcessor);/**
@@ -415,7 +432,7 @@ _exports.$defaultTemplateProcessor=defaultTemplateProcessor$1;if("undefined"!==t
                                                                                                                     */_exports.html$2=_exports.html$1=_exports.html=html;const svg=(strings,...values)=>new SVGTemplateResult(strings,values,"svg",defaultTemplateProcessor);_exports.svg$2=_exports.svg$1=_exports.svg=svg;var litHtml={html:html,svg:svg,DefaultTemplateProcessor:DefaultTemplateProcessor,defaultTemplateProcessor:defaultTemplateProcessor,directive:directive,isDirective:isDirective,removeNodes:removeNodes,reparentNodes:reparentNodes,noChange:noChange,nothing:nothing,AttributeCommitter:AttributeCommitter,AttributePart:AttributePart,BooleanAttributePart:BooleanAttributePart,EventPart:EventPart,isIterable:isIterable,isPrimitive:isPrimitive,NodePart:NodePart,PropertyCommitter:PropertyCommitter,PropertyPart:PropertyPart,parts:parts$1,render:render,templateCaches:templateCaches,templateFactory:templateFactory,TemplateInstance:TemplateInstance,SVGTemplateResult:SVGTemplateResult,TemplateResult:TemplateResult,createMarker:createMarker,isTemplatePartActive:isTemplatePartActive,Template:Template};_exports.$litHtml=litHtml;const getTemplateCacheKey=(type,scopeName)=>`${type}--${scopeName}`;let compatibleShadyCSSVersion=!0;if("undefined"===typeof window.ShadyCSS){compatibleShadyCSSVersion=!1}else if("undefined"===typeof window.ShadyCSS.prepareTemplateDom){console.warn(`Incompatible ShadyCSS version detected. `+`Please update to at least @webcomponents/webcomponentsjs@2.0.2 and `+`@webcomponents/shadycss@1.3.1.`);compatibleShadyCSSVersion=!1}/**
    * Template factory which scopes template DOM using ShadyCSS.
    * @param scopeName {string}
-   */const shadyTemplateFactory=scopeName=>result=>{const cacheKey=getTemplateCacheKey(result.type,scopeName);let templateCache=templateCaches.get(cacheKey);if(templateCache===void 0){templateCache={stringsArray:new WeakMap,keyString:new Map};templateCaches.set(cacheKey,templateCache)}let template=templateCache.stringsArray.get(result.strings);if(template!==void 0){return template}const key=result.strings.join(marker);template=templateCache.keyString.get(key);if(template===void 0){const element=result.getTemplateElement();if(compatibleShadyCSSVersion){window.ShadyCSS.prepareTemplateDom(element,scopeName)}template=new Template(result,element);templateCache.keyString.set(key,template)}templateCache.stringsArray.set(result.strings,template);return template},TEMPLATE_TYPES=["html","svg"],removeStylesFromLitTemplates=scopeName=>{TEMPLATE_TYPES.forEach(type=>{const templates=templateCaches.get(getTemplateCacheKey(type,scopeName));if(templates!==void 0){templates.keyString.forEach(template=>{const{element:{content}}=template,styles=new Set;// IE 11 doesn't support the iterable param Set constructor
+   */const shadyTemplateFactory=scopeName=>result=>{const cacheKey=getTemplateCacheKey(result.type,scopeName);let templateCache=templateCaches.get(cacheKey);if(templateCache===void 0){templateCache={stringsArray:new WeakMap,keyString:new Map};templateCaches.set(cacheKey,templateCache)}let template=templateCache.stringsArray.get(result.strings);if(template!==void 0){return template}const key=result.strings.join(marker);template=templateCache.keyString.get(key);if(template===void 0){const element=result.getTemplateElement();if(compatibleShadyCSSVersion){window.ShadyCSS.prepareTemplateDom(element,scopeName)}template=new Template(result,element);templateCache.keyString.set(key,template)}templateCache.stringsArray.set(result.strings,template);return template};_exports.shadyTemplateFactory=shadyTemplateFactory;const TEMPLATE_TYPES=["html","svg"],removeStylesFromLitTemplates=scopeName=>{TEMPLATE_TYPES.forEach(type=>{const templates=templateCaches.get(getTemplateCacheKey(type,scopeName));if(templates!==void 0){templates.keyString.forEach(template=>{const{element:{content}}=template,styles=new Set;// IE 11 doesn't support the iterable param Set constructor
 Array.from(content.querySelectorAll("style")).forEach(s=>{styles.add(s)});removeNodesFromTemplate(template,styles)})}})},shadyRenderSet=new Set,prepareTemplateStyles=(scopeName,renderedDOM,template)=>{shadyRenderSet.add(scopeName);// If `renderedDOM` is stamped from a Template, then we need to edit that
 // Template's underlying template element. Otherwise, we create one here
 // to give to ShadyCSS, which still requires one while scoping.
@@ -472,7 +489,9 @@ const template=part.value instanceof TemplateInstance?part.value.template:void 0
 // safest to do every render; however, this would regress performance
 // so we leave it up to the user to call `ShadyCSS.styleElement`
 // for dynamic changes.
-if(!hasRendered&&needsScoping){window.ShadyCSS.styleElement(container.host)}};_exports.render$1=render$2;var shadyRender={render:render$2,html:html,svg:svg,TemplateResult:TemplateResult};/**
+if(!hasRendered&&needsScoping){window.ShadyCSS.styleElement(container.host)}};/**
+                                         * Removes all style elements from Templates for the given scopeName.
+                                         */_exports.render$1=render$2;var shadyRender={shadyTemplateFactory:shadyTemplateFactory,render:render$2,html:html,svg:svg,TemplateResult:TemplateResult};/**
     * @license
     * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
     * This code may only be used under the BSD style license found at
@@ -485,11 +504,15 @@ if(!hasRendered&&needsScoping){window.ShadyCSS.styleElement(container.host)}};_e
     * subject to an additional IP rights grant found at
     * http://polymer.github.io/PATENTS.txt
     */_exports.$shadyRender=shadyRender;var _a;/**
-         * When using Closure Compiler, JSCompiler_renameProperty(property, object) is
-         * replaced at compile time by the munged name for object[property]. We cannot
-         * alias this function, so we have to use a small shim that has the same
-         * behavior when not compiling.
-         */window.JSCompiler_renameProperty=(prop,_obj)=>prop;const defaultConverter={toAttribute(value,type){switch(type){case Boolean:return value?"":null;case Object:case Array:// if the value is `null` or `undefined` pass this through
+         * Use this module if you want to create your own base class extending
+         * [[UpdatingElement]].
+         * @packageDocumentation
+         */ /*
+             * When using Closure Compiler, JSCompiler_renameProperty(property, object) is
+             * replaced at compile time by the munged name for object[property]. We cannot
+             * alias this function, so we have to use a small shim that has the same
+             * behavior when not compiling.
+             */window.JSCompiler_renameProperty=(prop,_obj)=>prop;const defaultConverter={toAttribute(value,type){switch(type){case Boolean:return value?"":null;case Object:case Array:// if the value is `null` or `undefined` pass this through
 // to allow removing/no change behavior.
 return null==value?value:JSON.stringify(value);}return value},fromAttribute(value,type){switch(type){case Boolean:return null!==value;case Number:return null===value?null:+value;case Object:case Array:return JSON.parse(value);}return value}};/**
     * Change function that returns true if `value` is different from `oldValue`.
@@ -499,14 +522,8 @@ return old!==value&&(old===old||value===value)};_exports.notEqual$1=_exports.not
                                 * Base element class which manages element properties and attributes. When
                                 * properties change, the `update` method is asynchronously called. This method
                                 * should be supplied by subclassers to render updates as desired.
-                                */class UpdatingElement extends HTMLElement{constructor(){super();this._updateState=0;this._instanceProperties=void 0;// Initialize to an unresolved Promise so we can make sure the element has
-// connected before first update.
-this._updatePromise=new Promise(res=>this._enableUpdatingResolver=res);/**
-                                                                                   * Map with keys for any properties that have changed since the last
-                                                                                   * update cycle with previous values.
-                                                                                   */this._changedProperties=new Map;/**
-                                          * Map with keys of properties that should be reflected when updated.
-                                          */this._reflectingProperties=void 0;this.initialize()}/**
+                                * @noInheritDoc
+                                */class UpdatingElement extends HTMLElement{constructor(){super();this.initialize()}/**
      * Returns a list of attributes corresponding to the registered properties.
      * @nocollapse
      */static get observedAttributes(){// note: piggy backing on this to ensure we're finalized.
@@ -570,8 +587,8 @@ if(options.noAccessor||this.prototype.hasOwnProperty(name)){return}const key="sy
      *   }
      *
      * @nocollapse
-     */static getPropertyDescriptor(name,key,_options){return{// tslint:disable-next-line:no-any no symbol in index
-get(){return this[key]},set(value){const oldValue=this[name];this[key]=value;this._requestUpdate(name,oldValue)},configurable:!0,enumerable:!0}}/**
+     */static getPropertyDescriptor(name,key,options){return{// tslint:disable-next-line:no-any no symbol in index
+get(){return this[key]},set(value){const oldValue=this[name];this[key]=value;this.requestUpdateInternal(name,oldValue,options)},configurable:!0,enumerable:!0}}/**
      * Returns the property options associated with the given property.
      * These options are defined with a PropertyDeclaration via the `properties`
      * object or the `@property` decorator and are registered in
@@ -620,9 +637,9 @@ this.createProperty(p,props[p])}}}/**
      */static _propertyValueToAttribute(value,options){if(options.reflect===void 0){return}const type=options.type,converter=options.converter,toAttribute=converter&&converter.toAttribute||defaultConverter.toAttribute;return toAttribute(value,type)}/**
      * Performs element initialization. By default captures any pre-set values for
      * registered properties.
-     */initialize(){this._saveInstanceProperties();// ensures first update will be caught by an early access of
+     */initialize(){this._updateState=0;this._updatePromise=new Promise(res=>this._enableUpdatingResolver=res);this._changedProperties=new Map;this._saveInstanceProperties();// ensures first update will be caught by an early access of
 // `updateComplete`
-this._requestUpdate()}/**
+this.requestUpdateInternal()}/**
      * Fixes any properties set on the instance before upgrade time.
      * Otherwise these would shadow the accessor and break these properties.
      * The properties are stored in a Map which is played back after the
@@ -667,11 +684,11 @@ if(propName!==void 0){const options=ctor.getPropertyOptions(propName);// mark st
 this._updateState=this._updateState|STATE_IS_REFLECTING_TO_PROPERTY;this[propName]=// tslint:disable-next-line:no-any
 ctor._propertyValueFromAttribute(value,options);// mark state not reflecting
 this._updateState=this._updateState&~STATE_IS_REFLECTING_TO_PROPERTY}}/**
-     * This private version of `requestUpdate` does not access or return the
+     * This protected version of `requestUpdate` does not access or return the
      * `updateComplete` promise. This promise can be overridden and is therefore
      * not free to access.
-     */_requestUpdate(name,oldValue){let shouldRequestUpdate=!0;// If we have a property key, perform property update steps.
-if(name!==void 0){const ctor=this.constructor,options=ctor.getPropertyOptions(name);if(ctor._valueHasChanged(this[name],oldValue,options.hasChanged)){if(!this._changedProperties.has(name)){this._changedProperties.set(name,oldValue)}// Add to reflecting properties set.
+     */requestUpdateInternal(name,oldValue,options){let shouldRequestUpdate=!0;// If we have a property key, perform property update steps.
+if(name!==void 0){const ctor=this.constructor;options=options||ctor.getPropertyOptions(name);if(ctor._valueHasChanged(this[name],oldValue,options.hasChanged)){if(!this._changedProperties.has(name)){this._changedProperties.set(name,oldValue)}// Add to reflecting properties set.
 // Note, it's important that every change has a chance to add the
 // property to `_reflectingProperties`. This ensures setting
 // attribute + property reflects correctly.
@@ -688,7 +705,7 @@ shouldRequestUpdate=!1}}if(!this._hasRequestedUpdate&&shouldRequestUpdate){this.
      * @param name {PropertyKey} (optional) name of requesting property
      * @param oldValue {any} (optional) old value of requesting property
      * @returns {Promise} A Promise that is resolved when the update completes.
-     */requestUpdate(name,oldValue){this._requestUpdate(name,oldValue);return this.updateComplete}/**
+     */requestUpdate(name,oldValue){this.requestUpdateInternal(name,oldValue);return this.updateComplete}/**
      * Sets up the element to asynchronously update.
      */_enqueueUpdate(){var _this=this;return babelHelpers.asyncToGenerator(function*(){_this._updateState=_this._updateState|STATE_UPDATE_REQUESTED;try{// Ensure any previous update has resolved before updating.
 // This `await` also ensures that property changes are batched.
@@ -712,7 +729,10 @@ if(null!=result){yield result}return!_this._hasRequestedUpdate})()}get _hasReque
      *   super.performUpdate();
      * }
      * ```
-     */performUpdate(){// Mixin instance properties once, if they exist.
+     */performUpdate(){// Abort any update if one is not pending when this is called.
+// This can happen if `performUpdate` is called early to "flush"
+// the update.
+if(!this._hasRequestedUpdate){return}// Mixin instance properties once, if they exist.
 if(this._instanceProperties){this._applyInstanceProperties()}let shouldUpdate=!1;const changedProperties=this._changedProperties;try{shouldUpdate=this.shouldUpdate(changedProperties);if(shouldUpdate){this.update(changedProperties)}else{this._markUpdated()}}catch(e){// Prevent `firstUpdated` and `updated` from running when there's an
 // update exception.
 shouldUpdate=!1;// Ensure element can accept additional updates after an exception.
@@ -814,19 +834,20 @@ return{kind:"field",key:Symbol(),placement:"own",descriptor:{},// When @babel/pl
 // ],
 initializer(){if("function"===typeof element.initializer){this[element.key]=element.initializer.call(this)}},finisher(clazz){clazz.createProperty(element.key,options)}}}},legacyProperty=(options,proto,name)=>{proto.constructor.createProperty(name,options)};/**
     * A property decorator which creates a LitElement property which reflects a
-    * corresponding attribute value. A `PropertyDeclaration` may optionally be
+    * corresponding attribute value. A [[`PropertyDeclaration`]] may optionally be
     * supplied to configure property features.
     *
     * This decorator should only be used for public fields. Private or protected
-    * fields should use the internalProperty decorator.
+    * fields should use the [[`internalProperty`]] decorator.
     *
     * @example
-    *
-    *     class MyElement {
-    *       @property({ type: Boolean })
-    *       clicked = false;
-    *     }
-    *
+    * ```ts
+    * class MyElement {
+    *   @property({ type: Boolean })
+    *   clicked = false;
+    * }
+    * ```
+    * @category Decorator
     * @ExportDecoratedItems
     */function property(options){// tslint:disable-next-line:no-any decorator
 return(protoOrDescriptor,name)=>name!==void 0?legacyProperty(options,protoOrDescriptor,name):standardProperty(options,protoOrDescriptor)}/**
@@ -836,30 +857,35 @@ return(protoOrDescriptor,name)=>name!==void 0?legacyProperty(options,protoOrDesc
    * Properties declared this way must not be used from HTML or HTML templating
    * systems, they're solely for properties internal to the element. These
    * properties may be renamed by optimization tools like closure compiler.
+   * @category Decorator
    */function internalProperty(options){return property({attribute:!1,hasChanged:null===options||void 0===options?void 0:options.hasChanged})}/**
    * A property decorator that converts a class property into a getter that
    * executes a querySelector on the element's renderRoot.
    *
    * @param selector A DOMString containing one or more selectors to match.
+   * @param cache An optional boolean which when true performs the DOM query only
+   * once and caches the result.
    *
    * See: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
    *
    * @example
    *
-   *     class MyElement {
-   *       @query('#first')
-   *       first;
+   * ```ts
+   * class MyElement {
+   *   @query('#first')
+   *   first;
    *
-   *       render() {
-   *         return html`
-   *           <div id="first"></div>
-   *           <div id="second"></div>
-   *         `;
-   *       }
-   *     }
-   *
-   */function query(selector){return(protoOrDescriptor,// tslint:disable-next-line:no-any decorator
-name)=>{const descriptor={get(){return this.renderRoot.querySelector(selector)},enumerable:!0,configurable:!0};return name!==void 0?legacyQuery(descriptor,protoOrDescriptor,name):standardQuery(descriptor,protoOrDescriptor)}}// Note, in the future, we may extend this decorator to support the use case
+   *   render() {
+   *     return html`
+   *       <div id="first"></div>
+   *       <div id="second"></div>
+   *     `;
+   *   }
+   * }
+   * ```
+   * @category Decorator
+   */function query(selector,cache){return(protoOrDescriptor,// tslint:disable-next-line:no-any decorator
+name)=>{const descriptor={get(){return this.renderRoot.querySelector(selector)},enumerable:!0,configurable:!0};if(cache){const key="symbol"===typeof name?Symbol():`__${name}`;descriptor.get=function(){if(this[key]===void 0){this[key]=this.renderRoot.querySelector(selector)}return this[key]}}return name!==void 0?legacyQuery(descriptor,protoOrDescriptor,name):standardQuery(descriptor,protoOrDescriptor)}}// Note, in the future, we may extend this decorator to support the use case
 // where the queried element may need to do work to become ready to interact
 // with (e.g. load some implementation code). If so, we might elect to
 // add a second argument defining a function that can be run to make the
@@ -877,23 +903,25 @@ name)=>{const descriptor={get(){return this.renderRoot.querySelector(selector)},
  * See: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
  *
  * @example
+ * ```ts
+ * class MyElement {
+ *   @queryAsync('#first')
+ *   first;
  *
- *     class MyElement {
- *       @queryAsync('#first')
- *       first;
+ *   render() {
+ *     return html`
+ *       <div id="first"></div>
+ *       <div id="second"></div>
+ *     `;
+ *   }
+ * }
  *
- *       render() {
- *         return html`
- *           <div id="first"></div>
- *           <div id="second"></div>
- *         `;
- *       }
- *     }
- *
- *     // external usage
- *     async doSomethingWithFirst() {
- *      (await aMyElement.first).doSomething();
- *     }
+ * // external usage
+ * async doSomethingWithFirst() {
+ *  (await aMyElement.first).doSomething();
+ * }
+ * ```
+ * @category Decorator
  */function queryAsync(selector){return(protoOrDescriptor,// tslint:disable-next-line:no-any decorator
 name)=>{const descriptor={get(){var _this2=this;return babelHelpers.asyncToGenerator(function*(){yield _this2.updateComplete;return _this2.renderRoot.querySelector(selector)})()},enumerable:!0,configurable:!0};return name!==void 0?legacyQuery(descriptor,protoOrDescriptor,name):standardQuery(descriptor,protoOrDescriptor)}}/**
    * A property decorator that converts a class property into a getter
@@ -905,18 +933,20 @@ name)=>{const descriptor={get(){var _this2=this;return babelHelpers.asyncToGener
    * https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
    *
    * @example
+   * ```ts
+   * class MyElement {
+   *   @queryAll('div')
+   *   divs;
    *
-   *     class MyElement {
-   *       @queryAll('div')
-   *       divs;
-   *
-   *       render() {
-   *         return html`
-   *           <div id="first"></div>
-   *           <div id="second"></div>
-   *         `;
-   *       }
-   *     }
+   *   render() {
+   *     return html`
+   *       <div id="first"></div>
+   *       <div id="second"></div>
+   *     `;
+   *   }
+   * }
+   * ```
+   * @category Decorator
    */function queryAll(selector){return(protoOrDescriptor,// tslint:disable-next-line:no-any decorator
 name)=>{const descriptor={get(){return this.renderRoot.querySelectorAll(selector)},enumerable:!0,configurable:!0};return name!==void 0?legacyQuery(descriptor,protoOrDescriptor,name):standardQuery(descriptor,protoOrDescriptor)}}const legacyQuery=(descriptor,proto,name)=>{Object.defineProperty(proto,name,descriptor)},standardQuery=(descriptor,element)=>({kind:"method",placement:"prototype",key:element.key,descriptor}),standardEventOptions=(options,element)=>{return Object.assign(Object.assign({},element),{finisher(clazz){Object.assign(clazz.prototype[element.key],options)}})},legacyEventOptions=// tslint:disable-next-line:no-any legacy decorator
 (options,proto,name)=>{Object.assign(proto[name],options)};/**
@@ -930,35 +960,60 @@ name)=>{const descriptor={get(){return this.renderRoot.querySelectorAll(selector
     * https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters
     *
     * @example
+    * ```ts
+    * class MyElement {
+    *   clicked = false;
     *
-    *     class MyElement {
-    *       clicked = false;
+    *   render() {
+    *     return html`
+    *       <div @click=${this._onClick}`>
+    *         <button></button>
+    *       </div>
+    *     `;
+    *   }
     *
-    *       render() {
-    *         return html`
-    *           <div @click=${this._onClick}`>
-    *             <button></button>
-    *           </div>
-    *         `;
-    *       }
-    *
-    *       @eventOptions({capture: true})
-    *       _onClick(e) {
-    *         this.clicked = true;
-    *       }
-    *     }
+    *   @eventOptions({capture: true})
+    *   _onClick(e) {
+    *     this.clicked = true;
+    *   }
+    * }
+    * ```
+    * @category Decorator
     */function eventOptions(options){// Return value typed as any to prevent TypeScript from complaining that
 // standard decorator function signature does not match TypeScript decorator
 // signature
 // TODO(kschaaf): unclear why it was only failing on this decorator and not
 // the others
-return(protoOrDescriptor,name)=>name!==void 0?legacyEventOptions(options,protoOrDescriptor,name):standardEventOptions(options,protoOrDescriptor)}/**
-   * A property decorator that converts a class property into a getter that
-   * returns the `assignedNodes` of the given named `slot`. Note, the type of
-   * this property should be annotated as `NodeListOf<HTMLElement>`.
-   *
-   */function queryAssignedNodes(slotName="",flatten=!1){return(protoOrDescriptor,// tslint:disable-next-line:no-any decorator
-name)=>{const descriptor={get(){const selector=`slot${slotName?`[name=${slotName}]`:""}`,slot=this.renderRoot.querySelector(selector);return slot&&slot.assignedNodes({flatten})},enumerable:!0,configurable:!0};return name!==void 0?legacyQuery(descriptor,protoOrDescriptor,name):standardQuery(descriptor,protoOrDescriptor)}}var decorators={customElement:customElement,property:property,internalProperty:internalProperty,query:query,queryAsync:queryAsync,queryAll:queryAll,eventOptions:eventOptions,queryAssignedNodes:queryAssignedNodes};/**
+return(protoOrDescriptor,name)=>name!==void 0?legacyEventOptions(options,protoOrDescriptor,name):standardEventOptions(options,protoOrDescriptor)}// x-browser support for matches
+// tslint:disable-next-line:no-any
+const ElementProto=Element.prototype,legacyMatches=ElementProto.msMatchesSelector||ElementProto.webkitMatchesSelector;/**
+                                                                                             * A property decorator that converts a class property into a getter that
+                                                                                             * returns the `assignedNodes` of the given named `slot`. Note, the type of
+                                                                                             * this property should be annotated as `NodeListOf<HTMLElement>`.
+                                                                                             *
+                                                                                             * @param slotName A string name of the slot.
+                                                                                             * @param flatten A boolean which when true flattens the assigned nodes,
+                                                                                             * meaning any assigned nodes that are slot elements are replaced with their
+                                                                                             * assigned nodes.
+                                                                                             * @param selector A string which filters the results to elements that match
+                                                                                             * the given css selector.
+                                                                                             *
+                                                                                             * * @example
+                                                                                             * ```ts
+                                                                                             * class MyElement {
+                                                                                             *   @queryAssignedNodes('list', true, '.item')
+                                                                                             *   listItems;
+                                                                                             *
+                                                                                             *   render() {
+                                                                                             *     return html`
+                                                                                             *       <slot name="list"></slot>
+                                                                                             *     `;
+                                                                                             *   }
+                                                                                             * }
+                                                                                             * ```
+                                                                                             * @category Decorator
+                                                                                             */function queryAssignedNodes(slotName="",flatten=!1,selector=""){return(protoOrDescriptor,// tslint:disable-next-line:no-any decorator
+name)=>{const descriptor={get(){const slotSelector=`slot${slotName?`[name=${slotName}]`:":not([name])"}`,slot=this.renderRoot.querySelector(slotSelector);let nodes=slot&&slot.assignedNodes({flatten});if(nodes&&selector){nodes=nodes.filter(node=>node.nodeType===Node.ELEMENT_NODE&&node.matches?node.matches(selector):legacyMatches.call(node,selector))}return nodes},enumerable:!0,configurable:!0};return name!==void 0?legacyQuery(descriptor,protoOrDescriptor,name):standardQuery(descriptor,protoOrDescriptor)}}var decorators={customElement:customElement,property:property,internalProperty:internalProperty,query:query,queryAsync:queryAsync,queryAll:queryAll,eventOptions:eventOptions,queryAssignedNodes:queryAssignedNodes};/**
    @license
    Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
    This code may only be used under the BSD style license found at
@@ -967,29 +1022,38 @@ name)=>{const descriptor={get(){const selector=`slot${slotName?`[name=${slotName
    found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
    part of the polymer project is also subject to an additional IP rights grant
    found at http://polymer.github.io/PATENTS.txt
-   */_exports.$decorators=decorators;const supportsAdoptingStyleSheets="adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype;_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=supportsAdoptingStyleSheets;const constructionToken=Symbol();class CSSResult{constructor(cssText,safeToken){if(safeToken!==constructionToken){throw new Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.")}this.cssText=cssText}// Note, this is a getter so that it's lazy. In practice, this means
+   */ /**
+       * Whether the current browser supports `adoptedStyleSheets`.
+       */_exports.$decorators=decorators;const supportsAdoptingStyleSheets=window.ShadowRoot&&(window.ShadyCSS===void 0||window.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype;_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=supportsAdoptingStyleSheets;const constructionToken=Symbol();class CSSResult{constructor(cssText,safeToken){if(safeToken!==constructionToken){throw new Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.")}this.cssText=cssText}// Note, this is a getter so that it's lazy. In practice, this means
 // stylesheets are not created until the first element instance is made.
-get styleSheet(){if(this._styleSheet===void 0){// Note, if `adoptedStyleSheets` is supported then we assume CSSStyleSheet
-// is constructable.
+get styleSheet(){if(this._styleSheet===void 0){// Note, if `supportsAdoptingStyleSheets` is true then we assume
+// CSSStyleSheet is constructable.
 if(supportsAdoptingStyleSheets){this._styleSheet=new CSSStyleSheet;this._styleSheet.replaceSync(this.cssText)}else{this._styleSheet=null}}return this._styleSheet}toString(){return this.cssText}}/**
-   * Wrap a value for interpolation in a css tagged template literal.
+   * Wrap a value for interpolation in a [[`css`]] tagged template literal.
    *
    * This is unsafe because untrusted CSS text can be used to phone home
    * or exfiltrate data to an attacker controlled site. Take care to only use
    * this with trusted input.
    */_exports.CSSResult$1=_exports.CSSResult=CSSResult;const unsafeCSS=value=>{return new CSSResult(value+"",constructionToken)};_exports.unsafeCSS$1=_exports.unsafeCSS=unsafeCSS;const textFromCSSResult=value=>{if(value instanceof CSSResult){return value.cssText}else if("number"===typeof value){return value}else{throw new Error(`Value passed to 'css' function must be a 'css' function result: ${value}. Use 'unsafeCSS' to pass non-literal values, but
             take care to ensure page security.`)}},css=(strings,...values)=>{const cssText=values.reduce((acc,v,idx)=>acc+textFromCSSResult(v)+strings[idx+1],strings[0]);return new CSSResult(cssText,constructionToken)};/**
-    * Template tag which which can be used with LitElement's `style` property to
-    * set element styles. For security reasons, only literal string values may be
-    * used. To incorporate non-literal values `unsafeCSS` may be used inside a
-    * template string part.
+    * Template tag which which can be used with LitElement's [[LitElement.styles |
+    * `styles`]] property to set element styles. For security reasons, only literal
+    * string values may be used. To incorporate non-literal values [[`unsafeCSS`]]
+    * may be used inside a template string part.
     */_exports.css$1=_exports.css=css;var cssTag={supportsAdoptingStyleSheets:supportsAdoptingStyleSheets,CSSResult:CSSResult,unsafeCSS:unsafeCSS,css:css};// IMPORTANT: do not change the property name or the assignment expression.
 // This line will be used in regexes to search for LitElement usage.
 // TODO(justinfagnani): inject version number at build time
-_exports.$cssTag=cssTag;(window.litElementVersions||(window.litElementVersions=[])).push("2.3.1");/**
+_exports.$cssTag=cssTag;(window.litElementVersions||(window.litElementVersions=[])).push("2.4.0");/**
                                                                                       * Sentinal value used to avoid calling lit-html's render function when
                                                                                       * subclasses do not implement `render`
-                                                                                      */const renderNotImplemented={};class LitElement extends UpdatingElement{/**
+                                                                                      */const renderNotImplemented={};/**
+                                  * Base element class that manages element properties and attributes, and
+                                  * renders a lit-html template.
+                                  *
+                                  * To define a component, subclass `LitElement` and implement a
+                                  * `render` method to provide the component's template. Define properties
+                                  * using the [[`properties`]] property or the [[`property`]] decorator.
+                                  */class LitElement extends UpdatingElement{/**
    * Return the array of styles to apply to the element.
    * Override this method to integrate into a style management system.
    *
@@ -1001,7 +1065,7 @@ if(this.hasOwnProperty(JSCompiler_renameProperty("_styles",this))){return}// Tak
 // shared styles will generate new stylesheet objects, which is wasteful.
 // This should be addressed when a browser ships constructable
 // stylesheets.
-const userStyles=this.getStyles();if(userStyles===void 0){this._styles=[]}else if(Array.isArray(userStyles)){// De-duplicate styles preserving the _last_ instance in the set.
+const userStyles=this.getStyles();if(Array.isArray(userStyles)){// De-duplicate styles preserving the _last_ instance in the set.
 // This is a performance optimization to avoid duplicated styles that can
 // occur especially when composing via subclassing.
 // The last item is kept to try to preserve the cascade order with the
@@ -1010,10 +1074,20 @@ const userStyles=this.getStyles();if(userStyles===void 0){this._styles=[]}else i
 const addStyles=(styles,set)=>styles.reduceRight((set,s)=>// Note: On IE set.add() does not return the set
 Array.isArray(s)?addStyles(s,set):(set.add(s),set),set),set=addStyles(userStyles,new Set),styles=[];// Array.from does not work on Set in IE, otherwise return
 // Array.from(addStyles(userStyles, new Set<CSSResult>())).reverse()
-set.forEach(v=>styles.unshift(v));this._styles=styles}else{this._styles=[userStyles]}}/**
-     * Performs element initialization. By default this calls `createRenderRoot`
-     * to create the element `renderRoot` node and captures any pre-set values for
-     * registered properties.
+set.forEach(v=>styles.unshift(v));this._styles=styles}else{this._styles=userStyles===void 0?[]:[userStyles]}// Ensure that there are no invalid CSSStyleSheet instances here. They are
+// invalid in two conditions.
+// (1) the sheet is non-constructible (`sheet` of a HTMLStyleElement), but
+//     this is impossible to check except via .replaceSync or use
+// (2) the ShadyCSS polyfill is enabled (:. supportsAdoptingStyleSheets is
+//     false)
+this._styles=this._styles.map(s=>{if(s instanceof CSSStyleSheet&&!supportsAdoptingStyleSheets){// Flatten the cssText from the passed constructible stylesheet (or
+// undetectable non-constructible stylesheet). The user might have
+// expected to update their stylesheets over time, but the alternative
+// is a crash.
+const cssText=Array.prototype.slice.call(s.cssRules).reduce((css,rule)=>css+rule.cssText,"");return unsafeCSS(cssText)}return s})}/**
+     * Performs element initialization. By default this calls
+     * [[`createRenderRoot`]] to create the element [[`renderRoot`]] node and
+     * captures any pre-set values for registered properties.
      */initialize(){super.initialize();this.constructor._getUniqueStyles();this.renderRoot=this.createRenderRoot();// Note, if renderRoot is not a shadowRoot, styles would/could apply to the
 // element's getRootNode(). While this could be done, we're choosing not to
 // support this now since it would require different logic around de-duping.
@@ -1024,7 +1098,7 @@ if(window.ShadowRoot&&this.renderRoot instanceof window.ShadowRoot){this.adoptSt
      * childNodes, return `this`.
      * @returns {Element|DocumentFragment} Returns a node into which to render.
      */createRenderRoot(){return this.attachShadow({mode:"open"})}/**
-     * Applies styling to the element shadowRoot using the `static get styles`
+     * Applies styling to the element shadowRoot using the [[`styles`]]
      * property. Styling will apply using `shadowRoot.adoptedStyleSheets` where
      * available and will fallback otherwise. When Shadow DOM is polyfilled,
      * ShadyCSS scopes styles and adds them to the document. When Shadow DOM
@@ -1033,10 +1107,10 @@ if(window.ShadowRoot&&this.renderRoot instanceof window.ShadowRoot){this.adoptSt
      * behavior](https://wicg.github.io/construct-stylesheets/#using-constructed-stylesheets).
      */adoptStyles(){const styles=this.constructor._styles;if(0===styles.length){return}// There are three separate cases here based on Shadow DOM support.
 // (1) shadowRoot polyfilled: use ShadyCSS
-// (2) shadowRoot.adoptedStyleSheets available: use it.
+// (2) shadowRoot.adoptedStyleSheets available: use it
 // (3) shadowRoot.adoptedStyleSheets polyfilled: append styles after
 // rendering
-if(window.ShadyCSS!==void 0&&!window.ShadyCSS.nativeShadow){window.ShadyCSS.ScopingShim.prepareAdoptedCssText(styles.map(s=>s.cssText),this.localName)}else if(supportsAdoptingStyleSheets){this.renderRoot.adoptedStyleSheets=styles.map(s=>s.styleSheet)}else{// This must be done after rendering so the actual style insertion is done
+if(window.ShadyCSS!==void 0&&!window.ShadyCSS.nativeShadow){window.ShadyCSS.ScopingShim.prepareAdoptedCssText(styles.map(s=>s.cssText),this.localName)}else if(supportsAdoptingStyleSheets){this.renderRoot.adoptedStyleSheets=styles.map(s=>s instanceof CSSStyleSheet?s:s.styleSheet)}else{// This must be done after rendering so the actual style insertion is done
 // in `update`.
 this._needsShimAdoptedStyleSheets=!0}}connectedCallback(){super.connectedCallback();// Note, first update/render handles styleElement so we only call this if
 // connected after first update.
@@ -1054,9 +1128,9 @@ if(templateResult!==renderNotImplemented){this.constructor.render(templateResult
 // priority.
 if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.constructor._styles.forEach(s=>{const style=document.createElement("style");style.textContent=s.cssText;this.renderRoot.appendChild(style)})}}/**
      * Invoked on each update to perform rendering tasks. This method may return
-     * any value renderable by lit-html's NodePart - typically a TemplateResult.
-     * Setting properties inside this method will *not* trigger the element to
-     * update.
+     * any value renderable by lit-html's `NodePart` - typically a
+     * `TemplateResult`. Setting properties inside this method will *not* trigger
+     * the element to update.
      */render(){return renderNotImplemented}}/**
    * Ensure this class is marked as `finalized` as an optimization ensuring
    * it will not needlessly try to `finalize`.
@@ -1064,419 +1138,726 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
    * Note this property name is a string to prevent breaking Closure JS Compiler
    * optimizations. See updating-element.ts for more information.
    */_exports.LitElement=LitElement;LitElement.finalized=!0;/**
-                                 * Render method used to render the value to the element's DOM.
-                                 * @param result The value to render.
-                                 * @param container Node into which to render.
-                                 * @param options Element name.
+                                 * Reference to the underlying library method used to render the element's
+                                 * DOM. By default, points to the `render` method from lit-html's shady-render
+                                 * module.
+                                 *
+                                 * **Most users will never need to touch this property.**
+                                 *
+                                 * This  property should not be confused with the `render` instance method,
+                                 * which should be overridden to define a template for the element.
+                                 *
+                                 * Advanced users creating a new base class based on LitElement can override
+                                 * this property to point to a custom render method with a signature that
+                                 * matches [shady-render's `render`
+                                 * method](https://lit-html.polymer-project.org/api/modules/shady_render.html#render).
+                                 *
                                  * @nocollapse
-                                 */LitElement.render=render$2;var litElement={LitElement:LitElement,defaultConverter:defaultConverter,notEqual:notEqual,UpdatingElement:UpdatingElement,customElement:customElement,property:property,internalProperty:internalProperty,query:query,queryAsync:queryAsync,queryAll:queryAll,eventOptions:eventOptions,queryAssignedNodes:queryAssignedNodes,html:html,svg:svg,TemplateResult:TemplateResult,SVGTemplateResult:SVGTemplateResult,supportsAdoptingStyleSheets:supportsAdoptingStyleSheets,CSSResult:CSSResult,unsafeCSS:unsafeCSS,css:css};_exports.$litElement=litElement;class Header extends LitElement{static get styles(){return css`
-      .header {
-        width: 90vw;
-        background-color: #000;
-        padding: 3rem 5vw;
-        border-bottom: 1.2rem var(--purple-trans) ridge;
-        user-select: none;
-        -webkit-user-select: none;
-      }
+                                 */LitElement.render=render$2;var litElement={LitElement:LitElement,defaultConverter:defaultConverter,notEqual:notEqual,UpdatingElement:UpdatingElement,customElement:customElement,property:property,internalProperty:internalProperty,query:query,queryAsync:queryAsync,queryAll:queryAll,eventOptions:eventOptions,queryAssignedNodes:queryAssignedNodes,html:html,svg:svg,TemplateResult:TemplateResult,SVGTemplateResult:SVGTemplateResult,supportsAdoptingStyleSheets:supportsAdoptingStyleSheets,CSSResult:CSSResult,unsafeCSS:unsafeCSS,css:css};_exports.$litElement=litElement;const selectionStyles=css`
+  ::-moz-selection {
+    color: var(--dark-gray);
+    background: var(--aqua);
+  }
 
-      .letter {
-        color: transparent;
-        background: inherit;
-        padding-right: 1rem;
-        margin-right: -1rem;
-      }
+  ::selection {
+    color: var(--dark-gray);
+    background: var(--aqua);
+  }
 
-      #title {
-        display: flex;
-        flex-direction: row;
-        font-family: Caveat, Times;
-        font-weight: 700;
-        font-size: 4rem;
-        user-select: none;
-        -webkit-user-select: none;
-        color: #ffffff;
-        background: linear-gradient(0deg, var(--orange) 45%, var(--yellow) 60%)
-          repeat-x;
-        background-size: 250% 250%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        animation: GradientAnimation 3s ease-in-out infinite;
-      }
-
-      @keyframes GradientAnimation {
-        0% {
-          background-position: 0% 69%;
-        }
-        50% {
-          background-position: 100% 31%;
-        }
-        100% {
-          background-position: 0% 69%;
-        }
-      }
-
-      .line-break {
-        display: inline-block;
-        border-left: 0.1rem solid #696969;
-        opacity: 0.5;
-        margin: 5px 10px 5px 5px;
-        height: 3.125rem;
-      }
-
-      #logo {
-        margin: 0.625rem 0.25rem;
-        filter: opacity(0.5);
-        animation: none;
-        transition: transform 0.42s ease-in-out;
-      }
-
-      #logo:hover {
-        transform: rotate(360deg);
-      }
-
-      .icon {
-        width: 2.5rem;
-        margin: 10px;
-        padding: 0 0.5rem;
-      }
-
-      .icon:hover {
-        animation: icon-hover 200ms forwards;
-        animation-timing-function: ease-out;
-      }
-
-      @keyframes icon-hover {
-        50% {
-          filter: drop-shadow(0 0 0.42069rem var(--purple-trans));
-        }
-        100% {
-          filter: drop-shadow(0 0 0.42069rem var(--purple));
-        }
-      }
-
-      @media (max-width: 600px) {
-        #title {
-          font-size: 3rem;
-        }
-      }
-
-      @media (max-width: 450px) {
-        #title {
-          font-size: 2.5rem;
+  .highlight {
+    color: var(--off-white);
+    text-decoration: none;
+  }
+`;_exports.selectionStyles=selectionStyles;var selectionStyles$1={selectionStyles:selectionStyles};_exports.$selectionStyles=selectionStyles$1;class About extends LitElement{static get styles(){return[css`
+        #about {
+          margin-bottom: 1rem;
         }
 
-        .icon {
-          width: 2rem;
+        .subtitle {
+          font-size: var(--subtitle);
         }
-      }
-    `}render(){return html` <div class="header">
-      <header>
-        <div id="title">
-          <span class="letter">N</span>avinn&nbsp;<span class="letter">R</span>avindaran
-        </div>
-        <img
-          class="icon"
-          id="logo"
-          title="Est. 2020"
-          src="Assets/Logo.png"
-        /><span class="line-break"></span>
-        <a title="Fork Me" target="_blank" href="https://github.com/navn-r/"
-          ><img class="icon" src="Assets/GitHub-Mark-Light-120px-plus.png" /></a
-        ><a
-          title="Hire Me"
-          target="_blank"
-          href="https://www.linkedin.com/in/navinn-ravindaran/"
-          ><img class="icon" src="Assets/LI-In-Bug.png"
-        /></a>
-      </header>
-    </div>`}constructor(){super()}}customElements.define("my-header",Header);class Menu extends LitElement{constructor(){super();this.current="about";document.getElementById(this.current).style.display="block"}static get styles(){return css`
-      p {
-        font-family: Caveat, sans-serif, times;
-        font-size: 2rem;
-        color: var(--purple);
-        margin: 0;
-        user-select: none;
-        -webkit-user-select: none;
-        cursor: pointer;
-      }
 
-      .open {
-        animation: none;
-        color: var(--orange);
-        filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
-        cursor: default;
-      }
-
-      p:hover {
-        animation: menu-hover 200ms forwards;
-      }
-
-      @keyframes menu-hover {
-        100% {
-          color: var(--orange);
-          filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
-        }
-      }
-
-      .menu-container {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        padding-left: 5vw;
-      }
-
-      @media (max-width: 600px) {
-        .menu-container {
-          grid-template-rows: none;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-column-gap: 15%;
-          padding: 0 10vw;
-          width: 80vw;
-        }
-      }
-
-      @media (max-width: 450px) {
         p {
-          font-size: 1.5rem;
+          margin-top: 0;
         }
-      }
-    `}static get properties(){return{current:{type:String}}}onPressHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;const content=document.getElementsByClassName("content");for(let i=0;i<content.length;i++){content[i].style.display="none"}const currentContent=document.getElementById(e.target.id);currentContent.style.display="block"}render(){return html` <div class="menu-container">
-      <p
-        @click="${this.onPressHandler}"
-        class="${"about"===this.current?"open":""}"
-        id="about"
-      >
-        About
-      </p>
-      <p
-        @click="${this.onPressHandler}"
-        class="${"projects"===this.current?"open":""}"
-        id="projects"
-      >
-        Projects
-      </p>
-      <p
-        @click="${this.onPressHandler}"
-        class="${"resume"===this.current?"open":""}"
-        id="resume"
-      >
-        Resume
-      </p>
-      
-    </div>`}}customElements.define("nav-menu",Menu);class ProjectCard extends LitElement{constructor(){super();this.name="Project";this.codesrc="#";this.demosrc="#";this.hasdemo=!1;this.hasapp=!1}static get styles(){return css`
-      ::selection {
-        background: var(--orange-trans);
-      }
-      
-      .project-container {
-        border-bottom: 1px var(--orange) dashed;
-        padding: 1rem 0;
-        display: grid;
-        grid-template-areas:
-          "icon title"
-          "icon info"
-          "icon text"
-          "button text"
-          "button text";
-        grid-template-columns: 1fr 9fr;
-      }
 
-      a {
-        text-decoration: none;
-        color: var(--purple);
-      }
+        .title {
+          font-size: var(--title);
+          font-family: var(--main);
+        }
 
-      h1 {
-        color: var(--orange);
-        user-select: none;
-        -webkit-user-select: none;
-        margin: 0;
-        font-size: 1.75rem;
-      }
+        .link:hover {
+          color: var(--aqua);
+        }
 
-      h4 {
-        margin: 0 1em;
-      }
+        #contacts {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 7rem);
+          row-gap: 0.5rem;
 
-      .project-title-container {
-        padding-left: 1rem;
-        display: grid;
-        grid-area: title;
-      }
+          margin-bottom: 5rem;
+        }
 
-      .project-text-container {
-        padding-left: 1rem;
-        display: grid;
-        grid-area: text;
-      }
+        a {
+          text-decoration: none;
+          color: inherit;
+          outline: none;
+        }
 
-      .project-info-container {
-        padding-left: 1rem;
-        display: grid;
-        grid-area: info;
-      }
+        .contact {
+          display: flex;
+          border-radius: 5rem;
+          background-color: var(--dark-gray);
+          color: var(--light-gray);
+          width: 5rem;
+          height: 5rem;
+          justify-content: center;
+          align-items: center;
+          margin: 1px;
+        }
 
-      .project-img-container {
+        .contact:hover {
+          cursor: pointer;
+          color: var(--off-white);
+        }
+        .contact:hover .tooltip {
+          visibility: visible;
+        }
+
+        .contact .tooltip::before {
+          position: absolute;
+          left: calc(50% - 1rem);
+          margin-top: -1.5rem;
+          z-index: 1;
+          height: 1rem;
+          width: 1rem;
+          background: var(--dark-gray);
+          content: "";
+          transform: translateX(50%) rotate(45deg) translateZ(5rem);
+        }
+
+        .contact .tooltip {
+          visibility: hidden;
+          background-color: var(--dark-gray);
+          color: var(--off-white);
+          text-align: center;
+          font-family: var(--code);
+          font-size: var(--tooltip);
+          position: absolute;
+          z-index: 1;
+          padding: 1rem;
+          border-radius: 5rem;
+          transform: translateY(5rem);
+        }
+
+        fa-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+        }
+
+        figure {
+          width: 70rem;
+          margin: 0;
+        }
+      `,selectionStyles]}render(){return html`
+      <div id="about">
+        <span class="title highlight">Hello.</span><br /><br />
+        <p>
+          I am a student developer studying at the
+          <a
+            href="https://www.utoronto.ca/"
+            target="_blank"
+            class="highlight link"
+            >University of Toronto</a
+          >
+          in Canada. <br />
+          Currently, I am working as a
+          <a
+            href="https://www.caseware.com/ca"
+            target="_blank"
+            class="highlight link"
+            >Software Developer at CaseWare International</a
+          >
+          for my co-op term. <br />
+          Let's connect. Reach out below! <br />
+          <span
+            style="font-family: var(--code); color: var(--green); font-size: 1.25rem;"
+            >under construction and new management</span
+          >
+        </p>
+        <div id="contacts">
+          <a
+            id="github"
+            href="https://github.com/navn-r"
+            target="_blank"
+            class="contact"
+          >
+            <fa-icon class="fab fa-github"></fa-icon>
+            <div class="tooltip">navn-r</div>
+          </a>
+          <a
+            id="linkedin"
+            href="https://linkedin.com/in/navinn-ravindaran"
+            target="_blank"
+            class="contact"
+          >
+            <fa-icon class="fab fa-linkedin"></fa-icon>
+            <div class="tooltip">navinn-ravindaran</div>
+          </a>
+          <a
+            id="email"
+            href="mailto:me@navn.me"
+            target="_blank"
+            class="contact"
+          >
+            <fa-icon class="fas fa-paper-plane"></fa-icon>
+            <div class="tooltip">me [at] navn [dot] me</div>
+          </a>
+          <a
+            id="resume"
+            href="https://utsc-utoronto-csm.symplicity.com/qr/4db0a409d04be0eebe62b63e9d0e1e4f?resume=73d14a30f47b13ade479e1689e2fd6ae&student=46b91eed6f460f44229377b0f6ec2264"
+            target="_blank"
+            class="contact"
+          >
+            <fa-icon class="fas fa-file-pdf"></fa-icon>
+            <div class="tooltip">resume [dot] pdf</div>
+          </a>
+        </div>
+        <!-- <typewriter-term></typewriter-term> -->
+      </div>
+    `}constructor(){super()}}customElements.define("about-section",About);class Carousel extends LitElement{static get styles(){return css`
+      fa-icon {
+        font-size: 5rem;
+      }
+      .button {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        color: var(--light-gray);
+        width: 3rem;
+        height: 100%;
+        display: flex;
         justify-content: center;
-        align-items: flex-start;
-        display: grid;
-        grid-area: icon;
-        user-select: none;
-        -webkit-user-select: none;
-      }
-
-      .project-button-container {
-        display: flex;
-        flex-direction: column;
-        grid-area: button;
-      }
-
-      .project-button a {
-        display: flex;
-        flex-direction: row;
-        margin: 0.5rem 0;
         align-items: center;
       }
 
-      @media (max-width: 900px) {
-        .project-container {
-          grid-template-areas:
-            "icon title title"
-            "icon info info"
-            "icon button button"
-            "text text text";
+      .button:hover {
+        color: var(--off-white);
+      }
+
+      .slide {
+        width: 100%;
+        background-color: var(--gray);
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .slide > img {
+        height: 100%;
+      }
+
+      .carousel {
+        display: grid;
+        grid-template-columns: 3rem 1fr 3rem;
+      }
+
+      .track {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+    `}render(){return html`
+      <div class="carousel">
+        <button @click="${this.changeImgLeft}" class="button">
+          <fa-icon class="fas fa-angle-left"></fa-icon>
+        </button>
+        <div class="track-container">
+          <ul class="track"></ul>
+        </div>
+        <button @click="${this.changeImgRight}" class="button">
+          <fa-icon class="fas fa-angle-right"></fa-icon>
+        </button>
+      </div>
+    `}static get properties(){return{name:{type:String},length:{type:Number},current:{type:Number},width:{type:Number}}}firstUpdated(){const track=this.shadowRoot.querySelector("ul");let slide=document.createElement("li");slide.className="slide";let image=document.createElement("img");this.current=1;image.src=`Assets/projects/${this.name}/${this.name}-1.png`;image.width=this.width;slide.appendChild(image);track.appendChild(slide)}changeImgRight(e){let image=this.shadowRoot.querySelector("img");if(this.current===this.length)this.current=1;else this.current++;image.src=`Assets/projects/${this.name}/${this.name}-${this.current}.png`}changeImgLeft(){let image=this.shadowRoot.querySelector("img");if(1===this.current)this.current=this.length;else this.current--;image.src=`Assets/projects/${this.name}/${this.name}-${this.current}.png`}constructor(){super()}}customElements.define("image-carousel",Carousel);class ExperienceCard extends LitElement{static get styles(){return[css`
+      .title {
+        font-size: var(--subtitle);
+      }
+
+      .location {
+        font-family: var(--code);
+        background: var(--dark-gray);
+        padding: 0.25rem;
+      }
+
+      .card {
+        margin: 4rem  0;
+      }
+    `,selectionStyles]}render(){return html`
+      <div class="card">
+        <span class="title">${this.name}</span
+        > <span class="title location">${this.location}</span>
+        <slot name="body"></slot>
+      </div>
+    `}static get properties(){return{name:{type:String},location:{type:String}}}constructor(){super()}}customElements.define("experience-card",ExperienceCard);class Experiences extends LitElement{static get styles(){return[css`
+        #experience-container {
+          margin-bottom: 6rem;
         }
 
-        .project-text-container {
-          padding-top: 1rem;
+        ul {
+          padding-left: 2rem;
         }
 
-        .project-button-container {
-          flex-direction: row;
-          justify-content: space-evenly;
+        .title {
+          font-family: var(--main);
+          font-size: var(--title);
+          color: var(--off-white);
+          margin-bottom: -2rem;
+        }
+      `,selectionStyles]}render(){return html`
+    <div class="title">What I do.</div>
+    <div id="experience-container">
+        <experience-card name="Software Developer Co-op" location="@caseware">
+          <div slot="body">
+            Sept. 2020 - Present
+            <ul>
+                <li>Working in an <span class="highlight">Agile Scrum</span> on the <span class="highlight">CaseWare Cloud</span> product</li>
+                <li>Converting manual tests to unit tests using <span class="highlight">Karma and Jasmine</span></li>
+                <li>Developing bug fixes and features using <span class="highlight">Angular and AngularJS</span></li>
+            </ul>
+          </div>
+        </experience-card>
+        <experience-card name="HBSc. Computer Science" location="@uoft">
+          <div slot="body">
+            2019 - Present (Co-op)
+            <ul>
+                <li>cGPA: <span class="highlight">3.75</span>/4.0</li>
+                <li>Dean's List (<span class="highlight">2020-21</span>)</li>
+                <li>UofT Scholar (<span class="highlight">Sept 2019</span>)</li>
+            </ul>
+          </div>
+        </experience-card>
+    </div>`}constructor(){super()}}customElements.define("experiences-section",Experiences);class Header extends LitElement{static get styles(){return css`
+      #header {
+        width: 100%;
+        height: 18rem;
+        background-color: var(--dark-gray);
+        user-select: none;
+        -moz-user-select: none;
+      }
+
+      app-name {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -18rem;
+      }
+
+      @media (max-width: 1000px) {
+        #header {
+          height: 10rem;
         }
 
-        .project-button a {
-          justify-content: center;
+        app-name {
+          margin-top: -10rem;
+        }
+      }
+    `}render(){return html`
+      <div id="header">
+        <slot name="particles"></slot>
+        <app-name></app-name>
+      </div>
+    `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);// Robert Penner's easeInOutQuad
+// find the rest of his easing functions here: http://robertpenner.com/easing/
+// find them exported for ES6 consumption here: https://github.com/jaxgeller/ez.js
+var easeInOutQuad=function easeInOutQuad(t,b,c,d){t/=d/2;if(1>t)return c/2*t*t+b;t--;return-c/2*(t*(t-2)-1)+b},_typeof="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?function(obj){return typeof obj}:function(obj){return obj&&"function"===typeof Symbol&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj},jumper=function jumper(){// private variable cache
+// no variables are created during a jump, preventing memory leaks
+var element=void 0,start=void 0,stop=void 0,offset=void 0,easing=void 0,a11y=void 0,distance=void 0,duration=void 0,timeStart=void 0,timeElapsed=void 0,next=void 0,callback=void 0;// element to scroll to                   (node)
+// to call when done scrolling            (function)
+// scroll position helper
+function location(){return window.scrollY||window.pageYOffset}// element offset helper
+function top(element){return element.getBoundingClientRect().top+start}// rAF loop helper
+function loop(timeCurrent){// store time scroll started, if not started already
+if(!timeStart){timeStart=timeCurrent}// determine time spent scrolling so far
+timeElapsed=timeCurrent-timeStart;// calculate next scroll position
+next=easing(timeElapsed,start,distance,duration);// scroll to it
+window.scrollTo(0,next);// check progress
+timeElapsed<duration?window.requestAnimationFrame(loop)// continue scroll loop
+:done();// scrolling is done
+}// scroll finished helper
+function done(){// account for rAF time rounding inaccuracies
+window.scrollTo(0,start+distance);// if scrolling to an element, and accessibility is enabled
+if(element&&a11y){// add tabindex indicating programmatic focus
+element.setAttribute("tabindex","-1");// focus the element
+element.focus()}// if it exists, fire the callback
+if("function"===typeof callback){callback()}// reset time for next jump
+timeStart=!1}// API
+function jump(target){var options=1<arguments.length&&arguments[1]!==void 0?arguments[1]:{};// resolve options, or use defaults
+duration=options.duration||1e3;offset=options.offset||0;callback=options.callback;// "undefined" is a suitable default, and won't be called
+easing=options.easing||easeInOutQuad;a11y=options.a11y||!1;// cache starting position
+start=location();// resolve target
+switch("undefined"===typeof target?"undefined":_typeof(target)){// scroll from current position
+case"number":element=void 0;// no element to scroll to
+a11y=!1;// make sure accessibility is off
+stop=start+target;break;// scroll to element (node)
+// bounding rect is relative to the viewport
+case"object":element=target;stop=top(element);break;// scroll to element (selector)
+// bounding rect is relative to the viewport
+case"string":element=document.querySelector(target);stop=top(element);break;}// resolve scroll distance, accounting for offset
+distance=stop-start+offset;// resolve duration
+switch(_typeof(options.duration)){// number in ms
+case"number":duration=options.duration;break;// function passed the distance of the scroll
+case"function":duration=options.duration(distance);break;}// start the loop
+window.requestAnimationFrame(loop)}// expose only the jump method
+return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_module={default:singleton};_exports.$jumpModule=jump_module;class Menu extends LitElement{static get styles(){return css`
+      #button-container {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 1rem;
+      }
+
+      button {
+        background-color: inherit;
+        border: 0;
+        font-size: 2rem;
+        text-align: right;
+        font-family: var(--main);
+        color: inherit;
+      }
+
+      .selected {
+        color: var(--red);
+      }
+
+      .selected:hover {
+        color: var(--red);
+        cursor: initial;
+      }
+
+      button:hover {
+        cursor: pointer;
+        color: var(--red);
+      }
+
+      @media (max-width: 1000px) {
+        #button-container {
+          grid-template-rows: auto;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        button {
+          text-align: center;
         }
       }
 
       @media (max-width: 600px) {
-        .project-container {
-          grid-template-areas:
-            "icon title"
-            "icon info"
-            "icon button"
-            "text text";
+        button {
+          font-size: 1.75rem;
         }
       }
+    `}static get properties(){return{current:{type:String}}}render(){return html`
+      <div id="button-container">
+        <button
+          @click="${this.clickHandler}"
+          class="${"about"===this.current?"selected":""}"
+          id="about"
+        >
+          About
+        </button>
+        <button
+          @click="${this.clickHandler}"
+          class="${"experience"===this.current?"selected":""}"
+          id="experience"
+        >
+          Experience
+        </button>
+        <button
+          @click="${this.clickHandler}"
+          class="${"projects"===this.current?"selected":""}"
+          id="projects"
+        >
+          Projects
+        </button>
+      </div>
+    `}clickHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;singleton("."+this.current,{offset:"projects"===this.current?-15:0})}constructor(){super();this.current="about"}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
+      #name {
+        font-size: min(20vw, 8.5rem);
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        color: var(--light-gray);
+        text-align: center;
+      }
 
-      @media (max-width: 450px) {
-        .project-container {
-          grid-template-areas:
-            "icon title"
-            "icon info"
-            "icon info"
-            "button button"
-            "text text";
-        }
-        h1 {
-          font-size: 1.5rem;
+      .wiggle {
+        transition: transform 0.5s ease-out;
+      }
+
+      .wiggle:hover {
+        transform: rotate(20deg);
+      }
+
+      @media (max-width: 1000px) {
+        #name {
+          font-size: min(15vw, 5rem);
         }
       }
-      @media (max-width: 300px) {
-        .project-container {
-          grid-template-areas:
-            "icon title"
-            "icon button"
-            "icon button"
-            "info info"
-            "text text";
-        }
-        .project-info-container {
-          margin-top: 1rem;
-        }
-
-        .project-button-container {
-          flex-direction: column;
-          justify-content; center;
-          margin-left: 1rem;
-        }
-
-        .project-button a {
-          justify-content: left;
+    `}render(){return html`
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+        crossorigin="anonymous"
+      />
+      <div id="name"></div>
+    `}constructor(){super()}firstUpdated(){const nameKatex=katex.renderToString("\\mathbb{N}\\textnormal{a}\\vec{v}_i\\textnormal{nn}",{throwOnError:!1});this.shadowRoot.getElementById("name").innerHTML+=nameKatex;const i=this.shadowRoot.getElementById("name").childNodes[0].childNodes[1].childNodes[0].childNodes[3].childNodes[1].childNodes[0];i.className+=" wiggle"}}customElements.define("app-name",Name);class ProjectCard extends LitElement{static get styles(){return[css`
+        .subtitle {
+          font-size: 2rem;
+          width: 100%;
+          color: var(--off-white);
+          margin-bottom: 1rem;
+          display: flex;
+          justify-content: space-between;
+          width: 48rem;
           align-items: center;
         }
 
-        .project-title-container {
-          align-items: flex-end;
+        a {
+          color: var(--off-white);
+          text-decoration: none;
+          margin-left: 1rem;
         }
 
-        .project-icon-container {
-          padding-top: 1rem;
+        .fa-github {
+          font-size: 2.25rem;
         }
-      }
-    `}static get properties(){return{name:{type:String},codesrc:{type:String},demosrc:{type:String},hasdemo:{type:Boolean},hasapp:{type:Boolean}}}render(){return html`
-      <div class="project-container">
-        <div class="project-title-container">
-          <h1>${this.name}</h1>
-        </div>
-        <div class="project-img-container">
-          <slot name="project-img"></slot>
-        </div>
-        <div class="project-info-container">
-          <slot name="info">Project Info</slot>
-        </div>
-        <div class="project-text-container">
-          <slot name="text">Project Text</slot>
-        </div>
-        <div class="project-button-container">
-          <div class="project-button">
-            <a target="_blank" href="${this.codesrc}">
-              <fa-icon
-                class="fab fa-github"
-                style="font-size:1.5rem;"
-              ></fa-icon>
-              <h4>Code</h4>
-            </a>
+
+        a:hover {
+          color: var(--aqua);
+        }
+
+        ::slotted(div) {
+          margin-top: 2rem;
+        }
+
+        .card {
+          margin-top: 2rem;
+          padding-bottom: 3rem;
+        }
+
+        @media (max-width: 500px) {
+          .subtitle {
+            width: calc(100% - 2rem);
+          }
+        }
+      `,selectionStyles]}render(){return html`
+      <div class="card">
+        <div class="subtitle">
+          ${this.name}
+          <div class="button-container">
+            <a href="${this.github}" target="_blank"><fa-icon class="fab fa-github"></fa-icon></a
+            >${this.demo?html`<a href="${this.demo}" target="_blank"
+              ><fa-icon class="fas fa-external-link-alt"></fa-icon
+            ></a>`:""}
           </div>
-          ${this.hasdemo?this.hasapp?html`<div class="project-button">
-                  <a target="_blank" href="${this.demosrc}">
-                    <fa-icon
-                      class="fab fa-google-play"
-                      style="font-size:1.5rem;"
-                    ></fa-icon>
-                    <h4>Download</h4>
-                  </a>
-                </div>`:html`<div class="project-button">
-                  <a href="${this.demosrc}">
-                    <h4>View</h4>
-                  </a>
-                </div>`:html``}
         </div>
+        <slot name="description"></slot>
+        <slot name="body"></slot>
       </div>
-    `}}customElements.define("project-card",ProjectCard);class Terminal extends LitElement{static get styles(){return css`
+    `}static get properties(){return{name:{type:String},github:{type:String},demo:{type:String}}}constructor(){super()}}customElements.define("project-card",ProjectCard);class Projects extends LitElement{static get styles(){return[css`
+        .title {
+          font-family: var(--main);
+          font-size: var(--title);
+          color: var(--off-white);
+        }
+
+        ul {
+          margin-top: 0.5rem;
+        }
+
+        li {
+          margin-top: 0.5rem;
+        }
+
+        blockquote {
+          border-left: 1rem solid var(--dark-gray);
+          background-color: var(--light-dark-gray);
+          margin: 0;
+          padding: 1rem;
+          width: 45rem;
+        }
+
+        .code {
+          font-family: var(--code);
+          font-size: 1.25rem;
+        }
+
+        .tags-container {
+          display: flex;
+          flex-wrap: wrap;
+          user-select: none;
+          -moz-user-select: none;
+          width: 45rem;
+        }
+
+        .tag {
+          font-family: var(--code);
+          font-size: 1rem;
+          background: var(--dark-gray);
+          padding: 0.75rem;
+          margin: 0.25rem;
+          border-radius: 0.5rem;
+          width: max-content;
+        }
+
+        .project {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-content: space-around;
+        }
+
+        @media (max-width: 500px) {
+          blockquote {
+            width: calc(100% - 5rem);
+          }
+
+          ul {
+            padding-left: 2rem;
+          }
+
+          .tags-container {
+            width: calc(100% - 3rem);
+          }
+        }
+      `,selectionStyles]}render(){return html`
+      <span class="title">What I've made.</span>
+      <div id="projects-container">
+        <project-card
+          name="Ritrovo"
+          github="https://github.com/navn-r/ritrovo"
+          demo="https://ritrovo.herokuapp.com"
+        >
+          <blockquote slot="description">
+            Meaning 'meeting place' in Italian, is a social platform.
+          </blockquote>
+          <div slot="body">
+            <ul>
+              <li>Single page, single community based design</li>
+              <li>View all posts by other users</li>
+              <li>Create, edit, and delete posts written in Markdown</li>
+              <li>Built on the MEAN stack</li>
+            </ul>
+            <div class="tags-container">
+              <div class="tag">MongoDB</div>
+              <div class="tag">ExpressJS</div>
+              <div class="tag">Angular</div>
+              <div class="tag">Node.js</div>
+              <div class="tag">TypeScript</div>
+              <div class="tag">Markdown</div>
+              <div class="tag">Bootstrap</div>
+              <div class="tag">Heroku</div>
+            </div>
+          </div>
+        </project-card>
+        <project-card
+          name="Standup Bot"
+          github="https://github.com/navn-r/standup-bot"
+        >
+          <blockquote slot="description">
+            A Discord bot used for Scrum daily standup meetings.
+          </blockquote>
+          <div slot="body">
+            <ul>
+              <li>
+                Creates and faciliates a
+                <span class="code">#daily-standups</span> text channel upon
+                joining
+              </li>
+              <li>View, add and remove members in the standup</li>
+              <li>Private DM triggering a standup prompt and response</li>
+              <li>Present all member responses in a formatted message</li>
+              <li>
+                Be in multiple standups in different servers simultaneously
+              </li>
+            </ul>
+            <div class="tags-container">
+              <div class="tag">discord.js</div>
+              <div class="tag">MongoDB</div>
+              <div class="tag">Heroku</div>
+              <div class="tag">Node.js</div>
+            </div>
+          </div>
+        </project-card>
+        <project-card
+          name="Noten"
+          github="https://github.com/navn-r/standup-bot"
+          demo="https://ply.gl/com.noten"
+        >
+          <blockquote slot="description">
+            Meaning 'grades' in German, is a cloud based grade management app.
+          </blockquote>
+          <div slot="body">
+            <ul>
+              <li>Basic Semester, Course, Catagory, Grade management</li>
+              <li>Grade Prediction Calculator</li>
+              <li>Pass/Fail Courses</li>
+              <li>Multiple Grade Scales (5.0, 4.33, 4.0)</li>
+              <li>Incognito Grades (ignored in GPA calculations)</li>
+            </ul>
+            <div class="tags-container">
+              <div class="tag">React Native</div>
+              <div class="tag">Google Sign-in</div>
+              <div class="tag">Firebase Realtime Database</div>
+            </div>
+          </div>
+        </project-card>
+        <project-card name="Portfolio Website">
+          <blockquote slot="description">
+            Platform to showcase my projects and experiences.
+          </blockquote>
+          <div slot="body">
+            <ul>
+              <li>Fully responsive with CSS Grid</li>
+              <li>Web components using lit-element, lit-html</li>
+              <li>Automated build and deployment with TravisCI</li>
+              <li>Purposefully built without a front-end framework</li>
+            </ul>
+            <div class="tags-container">
+              <div class="tag">Web Components</div>
+              <div class="tag">HTML</div>
+              <div class="tag">CSS</div>
+              <div class="tag">JavaScript</div>
+            </div>
+          </div></project-card
+        >
+      </div>
+    `}constructor(){super()}}customElements.define("projects-section",Projects);class Terminal extends LitElement{static get styles(){return css`
       :host {
         /* Code Colors */
-        --light-gray: rgb(199, 208, 217);
-        --green: rgb(137, 202, 120);
+        /* --green: rgb(137, 202, 120);
         --blue: rgb(82, 173, 242);
         --red: rgb(239, 89, 111);
         --aqua: rgb(43, 186, 197);
         --yellow: rgb(229, 192, 123);
-        --salmon: rgb(216, 152, 95);
+        --salmon: rgb(216, 152, 95); */
       }
 
       .term {
         padding: 1rem;
         margin-bottom: 1rem;
-        background-color: #000;
-        color: var(--light-gray);
-        max-width: 56rem;
+        color: var(--off-white);
+        max-width: 70rem;
         border-radius: 5px;
-        border: 1px var(--gray) solid;
         user-select: none;
         -webkit-user-select: none;
-        filter: drop-shadow(0.25rem 0.25rem 0.1rem black);
+        border: 0.2rem var(--dark-gray) solid;
+        /* filter: drop-shadow(0.25rem 0.25rem 0.1rem black); */
       }
 
       .dots {
@@ -1494,9 +1875,12 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       }
 
       #term-type {
-        animation: cursor-blink 0.9s infinite;
+        /* animation: cursor-blink 0.9s infinite; */
         padding-right: 0.05rem;
-        border-right: 0.1rem solid #fff;
+        /* border-right: 0.1rem solid var(--off-white); */
+        font-family: var(--code);
+        line-height: 1.125;
+        color: var(--aqua);
       }
 
       @keyframes cursor-blink {
@@ -1521,428 +1905,90 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         <span class="dot" id="max"></span>
       </div>
       <div id="term-text">
-        👉 <span id="term-type"></span>
-        <div></div>
+        <pre id="term-type"></pre>
+        <!-- <font size="-3"> -->
+<!-- <pre><font color=black>1000010100110011011010110</font><font color=#151515>1</font><font color=#626262>1</font><font color=#9e9e9e>1</font><font color=#b5b5b5>1</font><font color=#aeaeae>1</font><font color=#939393>0</font><font color=#757575>0</font><font color=#555555>1</font><font color=#313131>0</font><font color=#1c1c1c>1</font><font color=#0a0a0a>0</font><font color=black>100100010000100100010101</font><br><font color=black>111111101010111011000001001</font><font color=#030303>0</font><font color=#272727>0</font><font color=#6a6a6a>0</font><font color=#c2c2c2>0</font><font color=#fdfdfd>0</font><font color=white>0</font><font color=#fdfdfd>0</font><font color=#e9e9e9>1</font><font color=#cecece>1</font><font color=#aaaaaa>1</font><font color=#747474>0</font><font color=#3f3f3f>0</font><font color=#101010>1</font><font color=black>10101001001000110000</font><br><font color=black>110101100111010000110100000010</font><font color=#070707>0</font><font color=#373737>0</font><font color=#b4b4b4>1</font><font color=#fefefe>1</font><font color=white>0001</font><font color=#f9f9f9>0</font><font color=#eaeaea>1</font><font color=#b5b5b5>1</font><font color=#6d6d6d>0</font><font color=#202020>1</font><font color=#050505>1</font><font color=black>1101001100110000</font><br><font color=black>011101111011110011110001101001</font><font color=#020202>0</font><font color=#0b0b0b>0</font><font color=#242424>0</font><font color=#ebebeb>0</font><font color=white>11111000</font><font color=#f9f9f9>0</font><font color=#bbbbbb>0</font><font color=#5e5e5e>0</font><font color=#080808>1</font><font color=black>10010111001011</font><br><font color=black>01011000111100110000</font><font color=#0e0e0e>1</font><font color=#2e2e2e>0</font><font color=#4a4a4a>1</font><font color=#626262>0</font><font color=#7a7a7a>1</font><font color=#8b8b8b>1</font><font color=#9d9d9d>0</font><font color=#ababab>0</font><font color=#b7b7b7>0</font><font color=#c3c3c3>0</font><font color=#cfcfcf>0</font><font color=#d7d7d7>0</font><font color=#e9e9e9>0</font><font color=white>00100011010</font><font color=#fdfdfd>1</font><font color=#afafaf>1</font><font color=#111111>0</font><font color=black>0110001010011</font><br><font color=black>11001110000001</font><font color=#070707>0</font><font color=#1c1c1c>1</font><font color=#4a4a4a>1</font><font color=#828282>1</font><font color=#b3b3b3>0</font><font color=#e0e0e0>0</font><font color=#f8f8f8>1</font><font color=#fbfbfb>1</font><font color=#fdfdfd>0</font><font color=white>11011111010111111100100</font><font color=#c7c7c7>0</font><font color=#101010>0</font><font color=black>010111101100</font><br><font color=black>11110000001</font><font color=#050505>1</font><font color=#373737>1</font><font color=#7f7f7f>0</font><font color=#c3c3c3>0</font><font color=#f1f1f1>1</font><font color=white>0010</font><font color=#f4f4f4>0</font><font color=#dddddd>1</font><font color=#c8c8c8>0</font><font color=#b9b9b9>0</font><font color=#b0b0b0>0</font><font color=#a3a3a3>11</font><font color=#a4a4a4>0</font><font color=#b0b0b0>0</font><font color=#bbbbbb>1</font><font color=#cccccc>1</font><font color=#e0e0e0>0</font><font color=#fafafa>0</font><font color=white>00111000101000</font><font color=#a5a5a5>0</font><font color=#010101>0</font><font color=black>01101110100</font><br><font color=black>11101111</font><font color=#010101>0</font><font color=#121212>1</font><font color=#717171>0</font><font color=#cfcfcf>0</font><font color=#f6f6f6>0</font><font color=white>10</font><font color=#fbfbfb>0</font><font color=#e4e4e4>0</font><font color=#a5a5a5>1</font><font color=#6d6d6d>1</font><font color=#3a3a3a>0</font><font color=#1c1c1c>0</font><font color=#121212>1</font><font color=#090909>0</font><font color=#020202>1</font><font color=black>01000</font><font color=#030303>1</font><font color=#0a0a0a>0</font><font color=#131313>1</font><font color=#232323>1</font><font color=#4d4d4d>0</font><font color=#888888>1</font><font color=#cecece>0</font><font color=#fafafa>1</font><font color=white>0011011011</font><font color=#fcfcfc>0</font><font color=#333333>0</font><font color=black>011</font><font color=#010101>0</font><font color=black>1100100</font><br><font color=black>0000110</font><font color=#202020>1</font><font color=#8c8c8c>1</font><font color=#f0f0f0>1</font><font color=white>11</font><font color=#fcfcfc>0</font><font color=#d4d4d4>1</font><font color=gray>1</font><font color=#333333>0</font><font color=#020202>1</font><font color=black>0000001010111001011</font><font color=#2a2a2a>0</font><font color=#8b8b8b>1</font><font color=#eaeaea>1</font><font color=white>100100000</font><font color=#8b8b8b>1</font><font color=#050505>1</font><font color=#3b3b3b>1</font><font color=#939393>0</font><font color=#ababab>0</font><font color=#9a9a9a>1</font><font color=#5d5d5d>1</font><font color=#1c1c1c>1</font><font color=black>1111</font><br><font color=black>00101</font><font color=#040404>1</font><font color=#717171>0</font><font color=#e7e7e7>0</font><font color=white>010</font><font color=#bfbfbf>1</font><font color=#4f4f4f>0</font><font color=#0e0e0e>0</font><font color=black>111110111111101110100001</font><font color=#242424>1</font><font color=#b2b2b2>1</font><font color=white>00100011</font><font color=#e3e3e3>0</font><font color=#b6b6b6>1</font><font color=#f7f7f7>0</font><font color=white>0110</font><font color=#e6e6e6>0</font><font color=#7e7e7e>1</font><font color=#060606>0</font><font color=black>10</font><br><font color=black>0010</font><font color=#1b1b1b>1</font><font color=#bababa>0</font><font color=#fdfdfd>0</font><font color=white>00</font><font color=#dfdfdf>1</font><font color=#545454>0</font><font color=#060606>1</font><font color=black>00000110001011</font><font color=#010101>0</font><font color=#070707>01</font><font color=black>0001010011</font><font color=#060606>1</font><font color=#aeaeae>0</font><font color=white>101011100111111</font><font color=#fefefe>1</font><font color=#989898>0</font><font color=black>01</font><br><font color=black>101</font><font color=#212121>1</font><font color=#d4d4d4>0</font><font color=white>011</font><font color=#b5b5b5>0</font><font color=#191919>1</font><font color=black>111010000111101</font><font color=#0a0a0a>1</font><font color=#989898>1</font><font color=#c5c5c5>1</font><font color=#c3c3c3>1</font><font color=#878787>1</font><font color=#040404>0</font><font color=black>0</font><font color=#343434>1</font><font color=#8e8e8e>1</font><font color=#9b9b9b>0</font><font color=#7d7d7d>1</font><font color=#1a1a1a>1</font><font color=black>011</font><font color=#2c2c2c>0</font><font color=white>0010111100100000</font><font color=#fbfbfb>1</font><font color=#141414>0</font><font color=black>1</font><br><font color=black>11</font><font color=#0e0e0e>0</font><font color=#cfcfcf>1</font><font color=white>011</font><font color=#b0b0b0>1</font><font color=#0b0b0b>0</font><font color=black>10001011</font><font color=#212121>1</font><font color=#646464>1</font><font color=#464646>0</font><font color=black>01001</font><font color=#0c0c0c>1</font><font color=#b4b4b4>1</font><font color=#e8e8e8>0</font><font color=#e4e4e4>0</font><font color=#a1a1a1>1</font><font color=#050505>0</font><font color=black>1</font><font color=#898989>0</font><font color=#fefefe>1</font><font color=white>0</font><font color=#f7f7f7>1</font><font color=#4f4f4f>1</font><font color=black>101</font><font color=#191919>0</font><font color=white>01000011001000100</font><font color=#161616>1</font><font color=black>0</font><br><font color=black>11</font><font color=#9b9b9b>0</font><font color=white>100</font><font color=#dadada>0</font><font color=#0c0c0c>1</font><font color=black>0110010</font><font color=#141414>1</font><font color=#9d9d9d>0</font><font color=#fcfcfc>1</font><font color=white>1</font><font color=#fcfcfc>0</font><font color=#303030>1</font><font color=black>011110011011</font><font color=#121212>0</font><font color=#212121>0</font><font color=#0a0a0a>1</font><font color=black>0100</font><font color=#171717>1</font><font color=#fcfcfc>1</font><font color=white>100010000101110</font><font color=#bdbdbd>1</font><font color=black>00</font><br><font color=black>1</font><font color=#282828>0</font><font color=#f9f9f9>0</font><font color=white>001</font><font color=#595959>0</font><font color=black>0101001</font><font color=#0a0a0a>0</font><font color=#c4c4c4>1</font><font color=white>0011</font><font color=#b1b1b1>0</font><font color=#020202>1</font><font color=black>001010001001011010</font><font color=#040404>1</font><font color=#515151>0</font><font color=#8b8b8b>0</font><font color=#b2b2b2>1</font><font color=#d6d6d6>0</font><font color=#fdfdfd>1</font><font color=white>0101001001</font><font color=#f1f1f1>0</font><font color=#323232>1</font><font color=black>10</font><br><font color=black>0</font><font color=#7f7f7f>1</font><font color=white>0</font><font color=#f4f4f4>0</font><font color=#b9b9b9>0</font><font color=#6f6f6f>1</font><font color=#050505>0</font><font color=black>0001011</font><font color=#696969>1</font><font color=white>11111</font><font color=#fdfdfd>1</font><font color=#7a7a7a>1</font><font color=#040404>0</font><font color=black>01101110110010011100</font><font color=#020202>1</font><font color=#0c0c0c>1</font><font color=#878787>0</font><font color=white>111011110</font><font color=#f0f0f0>0</font><font color=#494949>0</font><font color=black>101</font><br><font color=black>0</font><font color=#8e8e8e>1</font><font color=#919191>1</font><font color=#232323>0</font><font color=black>1000101100</font><font color=#959595>0</font><font color=white>111111</font><font color=#fefefe>1</font><font color=#acacac>1</font><font color=#2b2b2b>1</font><font color=#010101>1</font><font color=black>1101001101011011111</font><font color=#2d2d2d>0</font><font color=#d8d8d8>0</font><font color=white>01110111</font><font color=#c9c9c9>0</font><font color=#2f2f2f>0</font><font color=black>0010</font><br><font color=black>1</font><font color=#0d0d0d>1</font><font color=black>110001100111</font><font color=#898989>1</font><font color=white>01100101</font><font color=#eeeeee>1</font><font color=#a9a9a9>1</font><font color=#4c4c4c>0</font><font color=#0c0c0c>0</font><font color=black>100100111011010</font><font color=#282828>0</font><font color=#868686>1</font><font color=#ebebeb>1</font><font color=white>0101010</font><font color=#e5e5e5>0</font><font color=#6f6f6f>0</font><font color=#0f0f0f>1</font><font color=black>10011</font><br><font color=black>01111010000101</font><font color=#333333>1</font><font color=#f9f9f9>0</font><font color=white>010100011</font><font color=#fdfdfd>1</font><font color=#f3f3f3>1</font><font color=silver>0</font><font color=#8d8d8d>0</font><font color=#616161>0</font><font color=#3f3f3f>0</font><font color=#262626>0</font><font color=#1d1d1d>0</font><font color=#1a1a1a>0</font><font color=#171717>1</font><font color=#1b1b1b>1</font><font color=#1d1d1d>1</font><font color=#2c2c2c>1</font><font color=#464646>1</font><font color=#6e6e6e>0</font><font color=#9a9a9a>1</font><font color=#d8d8d8>0</font><font color=#fafafa>1</font><font color=white>010010</font><font color=#f6f6f6>1</font><font color=#cccccc>0</font><font color=#666666>1</font><font color=#0b0b0b>1</font><font color=black>0000110</font><br><font color=black>011111100111001</font><font color=#888888>0</font><font color=white>101100111010000</font><font color=#fdfdfd>1</font><font color=#f6f6f6>0</font><font color=#f0f0f0>0</font><font color=#e8e8e8>0</font><font color=#f1f1f1>0</font><font color=#f7f7f7>0</font><font color=white>100101111</font><font color=#f5f5f5>0</font><font color=#c9c9c9>1</font><font color=#848484>1</font><font color=#373737>0</font><font color=#030303>0</font><font color=black>101001010</font><br><font color=black>000111000110111</font><font color=#070707>1</font><font color=#9a9a9a>0</font><font color=#fefefe>1</font><font color=white>101010000100001011100</font><font color=#fefefe>0</font><font color=#fcfcfc>1</font><font color=#f9f9f9>0</font><font color=#eaeaea>1</font><font color=#c1c1c1>0</font><font color=#8e8e8e>0</font><font color=#575757>0</font><font color=#222222>0</font><font color=#090909>1</font><font color=black>010000000111</font><br><font color=black>0000110111101110</font><font color=#010101>1</font><font color=#747474>1</font><font color=#f1f1f1>0</font><font color=white>1011101111101</font><font color=#fdfdfd>0</font><font color=#e8e8e8>0</font><font color=#d8d8d8>1</font><font color=#c8c8c8>0</font><font color=#adadad>1</font><font color=#959595>0</font><font color=#797979>1</font><font color=#5c5c5c>0</font><font color=#3e3e3e>1</font><font color=#1c1c1c>1</font><font color=#020202>0</font><font color=black>01011110100101000</font><br><font color=black>100001011010010110</font><font color=#343434>1</font><font color=#a8a8a8>0</font><font color=#f4f4f4>1</font><font color=white>10011010111</font><font color=#525252>1</font><font color=#1f1f1f>1</font><font color=#0c0c0c>1</font><font color=black>1010111100010111010000100</font><br><font color=black>0001000011011101000</font><font color=#030303>1</font><font color=#161616>1</font><font color=#545454>1</font><font color=#979797>0</font><font color=#d3d3d3>0</font><font color=#f0f0f0>0</font><font color=#fcfcfc>1</font><font color=white>001101</font><font color=#b6b6b6>0</font><font color=#323232>1</font><font color=#080808>0</font><font color=black>1010110011011110000001100</font><br><font color=black>00000111000100001011111</font><font color=#010101>0</font><font color=#1f1f1f>1</font><font color=#4c4c4c>1</font><font color=#7b7b7b>0</font><font color=#ababab>0</font><font color=#cdcdcd>1</font><font color=#e5e5e5>0</font><font color=#f9f9f9>1</font><font color=white>00</font><font color=#fbfbfb>0</font><font color=#c4c4c4>1</font><font color=#757575>1</font><font color=#2f2f2f>0</font><font color=#050505>0</font><font color=black>0010011011101100101010</font><br><font color=black>1110101000000110101010110011</font><font color=#0a0a0a>0</font><font color=#191919>1</font><font color=#272727>1</font><font color=#3e3e3e>1</font><font color=#5b5b5b>1</font><font color=#767676>1</font><font color=#8c8c8c>0</font><font color=#9f9f9f>0</font><font color=#a2a2a2>0</font><font color=#8b8b8b>1</font><font color=#464646>0</font><font color=#010101>0</font><font color=black>11101001001110110101</font><br>
+</pre></font> -->
       </div>
-    </div>`}constructor(){super()}firstUpdated(changedproperties){const texts=[html`<span style="color: var(--aqua);">print</span>(<span
-          style="color: var(--green);"
-          >"Hi, I'm Navinn!"</span
-        >)`,html`<span style="color: var(--blue);">printf</span>(<span
-          style="color: var(--green);"
-          >"Hi, I'm Navinn!<span style="color: var(--red);">\\n</span>"</span
-        >);`,html`<span style="color: var(--yellow);">console</span>.<span
-          style="color: var(--blue);"
-          >log</span
-        >(<span style="color:var(--green);">"Hi, I'm Navinn!"</span>);`,html`<span style="color: var(--red);">System</span>.<span style="color: var(--red);">out</span style="color: var(--red);">.<span style="color: var(--blue);">println</span>(<span style="color: var(--green);">"Hi, I'm Navinn!"</span>);`,html`&lt;<span style="color: var(--red);">span</span>
-        <span style="color: var(--salmon);">id</span>=<span
-          style="color: var(--green);"
-          >"greeting"</span
-        >&gt;<span style="color: #fff;">Hi, I'm Navinn!</span>&lt;/<span
-          style="color: var(--red);"
-          >span</span
-        >&gt;`],text=this.shadowRoot.getElementById("term-type");let textsIndex=0;const type=()=>{text.innerHTML=texts[textsIndex].strings[0];textsIndex=(textsIndex+1)%5;setTimeout(type,1750)};type()}}customElements.define("typewriter-term",Terminal);class WorkCard extends LitElement{constructor(){super();this.name="Work"}static get styles(){return css`
-          .work-container {
-            display: flex;
-            flex-direction: row;
-          }
+    </div>`}constructor(){super()}firstUpdated(){const logo=`
+                      .ohhs+:\`                     home@navn.me
+                       \`/mMMMmy/.                  ---------------------------
+                          /NMMMMMd+\`               OS: macOS Catalina 10.15.6 19G2021 x86_64
+                           oMMMMMMMMy.             Host: MacBookPro15,4
+                 \`:/osyhdmNMMMMMMMMMMN-            Kernel: 19.6.0
+             -ohNMMMMMMMMMMMMMMMMMMMMMN.           Uptime: 19 years, 18 hours, 26 mins
+          -sNMMMMMmhhyyyhmMMMMMMMMMMMMMh           Packages: 51 (brew)
+        :dMMMNy+.          -+dMMMMMMMMMM.          Shell: zsh 5.7.1
+      -dMMMd/                 -hMMMMMMMM+ +yy/     Resolution: 3840x2160, 3840x2160
+     oMMMd:                     /MMMMMMMmmMMMMm-   DE: Aqua
+    yMMMo                        +MMMMMMMMMMMMMN\`  WM: Rectangle
+   yMMM/             -hds  +yo\`   NMMMMMMMMMMMMM/  Terminal: vscode
+  +MMM+       .+.    -mNy \`NMM:   NMMMMMMMMMMMMM+  CPU: Intel i5-8257U (8) @ 1.40GHz
+ \`NMMd       +MMd           .\`    NMMMMMMMMMMMMM.  GPU: Intel Iris Plus Graphics 645
+ +MMM:      /MMMM:                :sdMMMMMMMMMMy   Memory: 6831MiB / 8192MiB
+ dMm+       mMMMMm\`                  \`MMMMMMMMd\`  
+ h:         MMMMMMm.                 oMMMMMMMd\`        
+            NMMMMMMMy-             .yMMMMMMMo      Made with ♥
+            yMMMMMMMMMmy+-.\` \`\`-/smMMMMMMMy.      
+            .MMMMMMMMMMMMMMMMMMMMMMMMMMmo\`        
+             /MMMMMMMMMMMMMMMMMMMMMNh+.           
+              /MMMMMMMMMMMMMNdys+:\`               
+               -dMMMMMMMMMd.                      
+                 -odMMMMMMM+                      
+                    \`/sdMMMMmo.                   
+                         .:+oyyo.                 
 
-          .work-logo-container {
-              display: flex;
-              align-items: center;
-              padding-right: 1rem;
-          }
-
-          h3 {
-            color: var(--orange);
-            user-select: none;
-            -webkit-user-select: none;
-            margin: 0;
-            padding-bottom: 1rem;
-          }
-        `}static get properties(){return{name:{type:String}}}render(){return html`
-            <div class="work-container">
-                <div class="work-logo-container">
-                    <slot class="logo-img" name="work-logo-img"></slot>
-                </div>
-                <div class="work-info-container">
-                    <h3>${this.name}</h1>
-                    <slot name="work-body">Work body</slot>
-                </div>
-            </div>
-        `}}customElements.define("work-card",WorkCard);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+`,text=this.shadowRoot.getElementById("term-type");text.innerText=logo}}customElements.define("typewriter-term",Terminal);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
-      />
-      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;class About extends LitElement{static get styles(){return css`
-      ::selection {
-        background: var(--orange-trans);
-      }
-
-      p {
-        margin: 0;
-      }
-
-      h2 {
-        margin: 1rem 0 0 0;
-        user-select: none;
-      }
-
-      a {
-        text-decoration: none;
-        color: var(--purple);
-      }
-
-      .highlight {
-        color: var(--orange);
-      }
-
-      .skills-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.5rem 0;
-        padding-bottom: 1rem;
-      }
-
-      .skill {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .skill h4 {
-        margin: 0.5rem 1rem;
-      }
-
-      .footer {
-        padding: 1rem 0;
-        margin-top: 0.25rem;
-        border-top: 1px var(--orange) dashed;
-      }
-
-      .skill fa-icon {
-        font-size: 2rem;
-      }
-
-      @media (max-width: 600px) {
-        .skill fa-icon {
-          font-size: 1.75rem;
-        }
-      }
-
-      @media (max-width: 300px) {
-        .skill fa-icon {
-          font-size: 1.5rem;
-        }
-      }
-    `}render(){return html`
-      <typewriter-term></typewriter-term>
-      <p>
-        I am a 2nd year student dev.
-        <span style="text-decoration: line-through;">surviving</span>
-        studying at the <span class="highlight">University of Toronto</span> in Canada.<br />
-        Currently, I am working as a Software Developer at <a href="https://caseware.com/ca">CaseWare International</a> for my co-op term. <br \>
-        You can view my notes <a href="https://navn-r.github.io/notes" target="_blank">here</a> (work in progress).<br /><br />
-        <p>
-        Want to say hi?
-        <a target="_blank" href="mailto:me@navn.me">Email me.</a> ( me [at] navn
-        [dot] me )
-      </p>
-      </p>
-      <h2 class="highlight">Skills:</h2>
-      <h3 class="highlight">Programming Languages</h3>
-      <div class="skills-container">
-        <div class="skill"><fa-icon class="fab fa-html5"></fa-icon><h4>HTML</h4></div>
-        <div class="skill"><fa-icon class="fab fa-css3-alt"></fa-icon><h4>CSS</h4></div>
-        <div class="skill"><fa-icon class="fab fa-js-square"></fa-icon><h4>JavaScript</h4></div>
-        <div class="skill"><fa-icon class="fab fa-java"></fa-icon><h4>Java</h4></div>
-        <div class="skill"><fa-icon class="fab fa-python"></fa-icon><h4>Python</h4></div>
-        <div class="skill"><fa-icon class="devicon-c-plain-wordmark"></fa-icon><h4>C</h4></div>
-      </div>
-      <h3 class="highlight">Frameworks and Technologies</h3>
-      <div class="skills-container">
-        <div class="skill"><fa-icon class="fab fa-react"></fa-icon><h4>React Native</h4></div>
-        <div class="skill"><fa-icon class="fas fa-database"></fa-icon><h4>Firebase</h4></div>
-        <div class="skill"><fa-icon class="devicon-git-plain"></fa-icon><h4>Git</h4></div>
-        <div class="skill"><fa-icon class="fas fa-terminal"></fa-icon><h4>Shell (bash)</h4></div>
-        <div class="skill"><fa-icon class="fas fa-desktop"></fa-icon><h4>Windows, MacOS, Linux</h4></div>
-      </div> 
-      <div class="footer">
-          "Why waste time say lot word when few word do trick."<br /><br />
-          - Kevin J. Malone<br />
-      </div>`}constructor(){super()}}customElements.define("about-page",About);class Projects extends LitElement{static get styles(){return css`
-      ::selection {
-        background: var(--orange-trans);
-      }
-      
-      .footer {
-        padding: 1rem 0;
-      }
-
-      .highlight {
-        color: var(--orange);
-      }
-
-      .tool {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      #site-info h4 {
-        margin: 0 0 1em 0;
-      }
-
-      .tool h4 {
-        margin: 0.5em 1em;
-      }
-
-      #noten-icon {
-        width: 15rem;
-      }
-
-      .site-img {
-        font-size: 7rem;
-        color: var(--gray);
-      }
-
-      @media (max-width: 900px) {
-        #noten-icon {
-          width: 10rem;
-        }
-      }
-
-      @media (max-width: 450px) {
-        #noten-icon {
-          width: 7rem;
-        }
-
-        .site-img {
-          font-size: 5.6rem;
-        }
-      }
-    `}render(){return html`
-      <project-card
-        name="Noten"
-        codesrc="https://github.com/navn-r/Noten"
-        demosrc="https://ply.gl/com.noten"
-        hasdemo="true"
-        hasapp="true"
-      >
-        <p slot="info">
-          Noten, meaning 'grades' in German, is a cloud based grade management
-          app. (2020</span>)
-        </p>
-        <img
-          slot="project-img"
-          title="Logo design by Divya Rohit"
-          src="https://raw.githubusercontent.com/navn-r/Noten/master/assets/icon-rounded.png"
-          id="noten-icon"
-        />
-        <div slot="text">
-          Core Features:
-          <ul>
-            <li>Basic Semester, Course, Catagory, Grade management</li>
-            <li>Grade Prediction Calculator</li>
-            <li>Pass/Fail Courses</li>
-            <li>Multiple Grade Scales (5.0, 4.33, 4.0)</li>
-            <li>Incognito Grades (ignore grade in GPA calculations)</li>
-          </ul>
-          <div class="tool">
-            <fa-icon
-              class="fab fa-react highlight"
-              style="font-size: 1.5rem;"
-            ></fa-icon>
-            <h4>React Native</h4>
-          </div>
-          <div class="tool">
-            <fa-icon
-              class="fas fa-database highlight"
-              style="font-size: 1.5rem;"
-            ></fa-icon>
-            <h4>Firebase Realtime Database</h4>
-          </div>
-          <div class="tool">
-            <fa-icon
-              class="fab fa-google highlight"
-              style="font-size: 1.5rem;"
-            ></fa-icon>
-            <h4>Firebase Auth with Google Sign in</h4>
-          </div>
-        </div>
-      </project-card>
-      <project-card
-        name="Portfolio Website"
-        codesrc="https://github.com/navn-r/navn-r.github.io"
-      >
-        <fa-icon
-          slot="project-img"
-          class="fas fa-laptop-code site-img"
-        ></fa-icon>
-        <div slot="info">
-          Platform to showcase my projects and experiences. V1.1 (<span
-            class="highlight"
-            >2020</span
-          >) <br /><br />
-        </div>
-        <div slot="text">
-          <fa-icon
-            class="fab fa-html5 highlight"
-            style="font-size: 1.5rem; color: #E34C26;"
-          ></fa-icon>
-          <fa-icon
-            class="fas fa-plus"
-            style="font-size: 1.5rem;"
-          ></fa-icon>
-          <fa-icon
-            class="fab fa-css3-alt highlight"
-            style="font-size: 1.5rem; color: #2196F3;"
-          ></fa-icon>
-          <fa-icon
-            class="fas fa-plus"
-            style="font-size: 1.5rem;"
-          ></fa-icon>
-          <fa-icon
-            class="fab fa-js-square highlight"
-            style="font-size: 1.5rem; color: #F0DB4F;"
-          ></fa-icon>
-          <fa-icon
-            class="fas fa-equals"
-            style="font-size: 1.5rem;"
-          ></fa-icon>
-          <fa-icon
-            class="fas fa-heart highlight"
-            style="font-size: 1.5rem;"
-          ></fa-icon>
-          <br />
-          <ul>
-            <li>Fully responsive with CSS Grid</li>
-            <li>Web components using lit-element, lit-html</li>
-            <li>Automated build and deployment with TravisCI</li>
-            <li>Hosted on Github Pages</li>
-          </ul>
-        </div>
-      </project-card>
-      <div class="footer">
-        "Before I do anything, I ask myself, 'Would an idiot do that?' And if
-        the answer is yes, I do not do that thing."<br /><br />- Dwight K.
-        Schrute<br />
-      </div>
-    `}constructor(){super()}}customElements.define("projects-page",Projects);class Resume extends LitElement{static get styles(){return css`
-      ::selection {
-        background: var(--orange-trans);
-      }
-
-      p {
-        margin: 0 0 1rem 0;
-      }
-
-      .resume-container {
-        margin-bottom: 1rem;
-      }
-
-      h2 {
-        margin: 0 0 1.5rem 0;
-        color: var(--orange);
-        user-select: none;
-      }
-
-
-      .highlight {
-        color: var(--orange);
-      }
-
-      a {
-        text-decoration: none;
-        color: var(--purple);
-      }
-
-      .highlight {
-        color: var(--orange);
-      }
-
-      .footer {
-        margin-top: 2rem;
-        padding: 1rem 0;
-        border-top: 1px var(--orange) dashed;
-      }
-
-      h3 {
-        color: var(--orange);
-        user-select: none;
-        margin: 0;
-        -webkit-user-select: none;
-      }
-
-      #uni {
-        display: flex;
-        flex-direction: row;
-      }
-
-      #uni-logo-container {
-        padding-right: 2rem;
-      }
-
-      #uni-logo {
-        width: 4rem;
-        user-select: none;
-        moz-user-select: none;
-      }
-
-      #caseware-logo {
-        width: 7rem;
-      }
-
-      #uni-details-container {
-        display: grid;
-        grid-template-rows: 1fr 1.5fr;
-      }
-
-      @media(max-width: 350px) {
-        #uni-details-container {
-          grid-template-rows: 1fr 2fr;
-        }
-      }
-    `}render(){return html` <div class="resume-container">
-        <a target="_blank" href="https://go.aws/30Gv8LP">[Download Resume]</a>
-      </div>
-      <h2>Education</h2>
-      <div id="uni">
-        <div id="uni-logo-container">
-          <img src="../Assets/uoft.png" id="uni-logo"/>
-        </div>
-        <div id="uni-details-container">
-          <h3 class="title">
-            University of Toronto
-          </h3>
-          <p>
-          Scarborough Campus&#160;(<span class="highlight"
-            >2019 - Present</span
-          >)<br />
-          HBSc. Computer Science Specialist - Soft. Eng Stream (<span
-            class="highlight"
-            >Co-op</span
-          >)<br />
-          - UofT Scholar Entrance Award (<span class="highlight">$7500</span>)
-        </p>
-        </div>
-        </div>
-      </div>
-      <br />
-      <h2 class="subtitle">Experiences</h2>
-      <work-card name="CaseWare International">
-        <img id="caseware-logo" slot="work-logo-img" src="../Assets/Caseware.png"/>
-        <p slot="work-body">
-          Remote (<span class="highlight">Sept. 2020 - Present</span>)  <br />
-          Software Developer Co-op, Cloud Engagements.
-        </p>
-      </work-card>
-      <div class="footer">
-        "Sometimes I'll start a sentence and I don't even know where it's going.
-        I just hope I find it along the way."<br /><br />- Michael G. Scott<br />
-      </div>`}constructor(){super()}}customElements.define("resume-page",Resume)});
+      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};/* -----------------------------------------------
+   /* Author : Vincent Garreau  - vincentgarreau.com
+   /* MIT license: http://opensource.org/licenses/MIT
+   /* Demo / Generator : vincentgarreau.com/particles.js
+   /* GitHub : github.com/VincentGarreau/particles.js
+   /* How to use? : Check the GitHub README
+   /* v2.0.0
+   /* ----------------------------------------------- */_exports.$faIcon=faIcon;var pJS=function(tag_id,params){var canvas_el=document.querySelector("#"+tag_id+" > .particles-js-canvas-el");/* particles.js variables with default values */this.pJS={canvas:{el:canvas_el,w:canvas_el.offsetWidth,h:canvas_el.offsetHeight},particles:{number:{value:400,density:{enable:!0,value_area:800}},color:{value:"#fff"},shape:{type:"circle",stroke:{width:0,color:"#ff0000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100}},opacity:{value:1,random:!1,anim:{enable:!1,speed:2,opacity_min:0,sync:!1}},size:{value:20,random:!1,anim:{enable:!1,speed:20,size_min:0,sync:!1}},line_linked:{enable:!0,distance:100,color:"#fff",opacity:1,width:1},move:{enable:!0,speed:2,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:100,line_linked:{opacity:1}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}},mouse:{}},retina_detect:!1,fn:{interact:{},modes:{},vendors:{}},tmp:{}};var pJS=this.pJS;/* params settings */if(params){Object.deepExtend(pJS,params)}pJS.tmp.obj={size_value:pJS.particles.size.value,size_anim_speed:pJS.particles.size.anim.speed,move_speed:pJS.particles.move.speed,line_linked_distance:pJS.particles.line_linked.distance,line_linked_width:pJS.particles.line_linked.width,mode_grab_distance:pJS.interactivity.modes.grab.distance,mode_bubble_distance:pJS.interactivity.modes.bubble.distance,mode_bubble_size:pJS.interactivity.modes.bubble.size,mode_repulse_distance:pJS.interactivity.modes.repulse.distance};pJS.fn.retinaInit=function(){if(pJS.retina_detect&&1<window.devicePixelRatio){pJS.canvas.pxratio=window.devicePixelRatio;pJS.tmp.retina=!0}else{pJS.canvas.pxratio=1;pJS.tmp.retina=!1}pJS.canvas.w=pJS.canvas.el.offsetWidth*pJS.canvas.pxratio;pJS.canvas.h=pJS.canvas.el.offsetHeight*pJS.canvas.pxratio;pJS.particles.size.value=pJS.tmp.obj.size_value*pJS.canvas.pxratio;pJS.particles.size.anim.speed=pJS.tmp.obj.size_anim_speed*pJS.canvas.pxratio;pJS.particles.move.speed=pJS.tmp.obj.move_speed*pJS.canvas.pxratio;pJS.particles.line_linked.distance=pJS.tmp.obj.line_linked_distance*pJS.canvas.pxratio;pJS.interactivity.modes.grab.distance=pJS.tmp.obj.mode_grab_distance*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.distance=pJS.tmp.obj.mode_bubble_distance*pJS.canvas.pxratio;pJS.particles.line_linked.width=pJS.tmp.obj.line_linked_width*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.size=pJS.tmp.obj.mode_bubble_size*pJS.canvas.pxratio;pJS.interactivity.modes.repulse.distance=pJS.tmp.obj.mode_repulse_distance*pJS.canvas.pxratio};/* ---------- pJS functions - canvas ------------ */pJS.fn.canvasInit=function(){pJS.canvas.ctx=pJS.canvas.el.getContext("2d")};pJS.fn.canvasSize=function(){pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;if(pJS&&pJS.interactivity.events.resize){window.addEventListener("resize",function(){pJS.canvas.w=pJS.canvas.el.offsetWidth;pJS.canvas.h=pJS.canvas.el.offsetHeight;/* resize canvas */if(pJS.tmp.retina){pJS.canvas.w*=pJS.canvas.pxratio;pJS.canvas.h*=pJS.canvas.pxratio}pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;/* repaint canvas on anim disabled */if(!pJS.particles.move.enable){pJS.fn.particlesEmpty();pJS.fn.particlesCreate();pJS.fn.particlesDraw();pJS.fn.vendors.densityAutoParticles()}/* density particles enabled */pJS.fn.vendors.densityAutoParticles()})}};pJS.fn.canvasPaint=function(){pJS.canvas.ctx.fillRect(0,0,pJS.canvas.w,pJS.canvas.h)};pJS.fn.canvasClear=function(){pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h)};/* --------- pJS functions - particles ----------- */pJS.fn.particle=function(color,opacity,position){/* size */this.radius=(pJS.particles.size.random?Math.random():1)*pJS.particles.size.value;if(pJS.particles.size.anim.enable){this.size_status=!1;this.vs=pJS.particles.size.anim.speed/100;if(!pJS.particles.size.anim.sync){this.vs=this.vs*Math.random()}}/* position */this.x=position?position.x:Math.random()*pJS.canvas.w;this.y=position?position.y:Math.random()*pJS.canvas.h;/* check position  - into the canvas */if(this.x>pJS.canvas.w-2*this.radius)this.x=this.x-this.radius;else if(this.x<2*this.radius)this.x=this.x+this.radius;if(this.y>pJS.canvas.h-2*this.radius)this.y=this.y-this.radius;else if(this.y<2*this.radius)this.y=this.y+this.radius;/* check position - avoid overlap */if(pJS.particles.move.bounce){pJS.fn.vendors.checkOverlap(this,position)}/* color */this.color={};if("object"==typeof color.value){if(color.value instanceof Array){var color_selected=color.value[Math.floor(Math.random()*pJS.particles.color.value.length)];this.color.rgb=hexToRgb(color_selected)}else{if(color.value.r!=void 0&&color.value.g!=void 0&&color.value.b!=void 0){this.color.rgb={r:color.value.r,g:color.value.g,b:color.value.b}}if(color.value.h!=void 0&&color.value.s!=void 0&&color.value.l!=void 0){this.color.hsl={h:color.value.h,s:color.value.s,l:color.value.l}}}}else if("random"==color.value){this.color.rgb={r:Math.floor(Math.random()*(255-0+1))+0,g:Math.floor(Math.random()*(255-0+1))+0,b:Math.floor(Math.random()*(255-0+1))+0}}else if("string"==typeof color.value){this.color=color;this.color.rgb=hexToRgb(this.color.value)}/* opacity */this.opacity=(pJS.particles.opacity.random?Math.random():1)*pJS.particles.opacity.value;if(pJS.particles.opacity.anim.enable){this.opacity_status=!1;this.vo=pJS.particles.opacity.anim.speed/100;if(!pJS.particles.opacity.anim.sync){this.vo=this.vo*Math.random()}}/* animation - velocity for speed */var velbase={};switch(pJS.particles.move.direction){case"top":velbase={x:0,y:-1};break;case"top-right":velbase={x:.5,y:-.5};break;case"right":velbase={x:1,y:-0};break;case"bottom-right":velbase={x:.5,y:.5};break;case"bottom":velbase={x:0,y:1};break;case"bottom-left":velbase={x:-.5,y:1};break;case"left":velbase={x:-1,y:0};break;case"top-left":velbase={x:-.5,y:-.5};break;default:velbase={x:0,y:0};break;}if(pJS.particles.move.straight){this.vx=velbase.x;this.vy=velbase.y;if(pJS.particles.move.random){this.vx=this.vx*Math.random();this.vy=this.vy*Math.random()}}else{this.vx=velbase.x+Math.random()-.5;this.vy=velbase.y+Math.random()-.5}// var theta = 2.0 * Math.PI * Math.random();
+// this.vx = Math.cos(theta);
+// this.vy = Math.sin(theta);
+this.vx_i=this.vx;this.vy_i=this.vy;/* if shape is image */var shape_type=pJS.particles.shape.type;if("object"==typeof shape_type){if(shape_type instanceof Array){var shape_selected=shape_type[Math.floor(Math.random()*shape_type.length)];this.shape=shape_selected}}else{this.shape=shape_type}if("image"==this.shape){var sh=pJS.particles.shape;this.img={src:sh.image.src,ratio:sh.image.width/sh.image.height};if(!this.img.ratio)this.img.ratio=1;if("svg"==pJS.tmp.img_type&&pJS.tmp.source_svg!=void 0){pJS.fn.vendors.createSvgImg(this);if(pJS.tmp.pushing){this.img.loaded=!1}}}};pJS.fn.particle.prototype.draw=function(){var p=this;if(p.radius_bubble!=void 0){var radius=p.radius_bubble}else{var radius=p.radius}if(p.opacity_bubble!=void 0){var opacity=p.opacity_bubble}else{var opacity=p.opacity}if(p.color.rgb){var color_value="rgba("+p.color.rgb.r+","+p.color.rgb.g+","+p.color.rgb.b+","+opacity+")"}else{var color_value="hsla("+p.color.hsl.h+","+p.color.hsl.s+"%,"+p.color.hsl.l+"%,"+opacity+")"}pJS.canvas.ctx.fillStyle=color_value;pJS.canvas.ctx.beginPath();switch(p.shape){case"circle":pJS.canvas.ctx.arc(p.x,p.y,radius,0,2*Math.PI,!1);break;case"edge":pJS.canvas.ctx.rect(p.x-radius,p.y-radius,2*radius,2*radius);break;case"triangle":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius,p.y+radius/1.66,2*radius,3,2);break;case"polygon":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius/(pJS.particles.shape.polygon.nb_sides/3.5),// startX
+p.y-radius/(2.66/3.5),// startY
+2.66*radius/(pJS.particles.shape.polygon.nb_sides/3),// sideLength
+pJS.particles.shape.polygon.nb_sides,// sideCountNumerator
+1// sideCountDenominator
+);break;case"star":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-2*radius/(pJS.particles.shape.polygon.nb_sides/4),// startX
+p.y-radius/(2.66*2/3.5),// startY
+2.66*(2*radius)/(pJS.particles.shape.polygon.nb_sides/3),// sideLength
+pJS.particles.shape.polygon.nb_sides,// sideCountNumerator
+2// sideCountDenominator
+);break;case"image":function draw(){pJS.canvas.ctx.drawImage(img_obj,p.x-radius,p.y-radius,2*radius,2*radius/p.img.ratio)}if("svg"==pJS.tmp.img_type){var img_obj=p.img.obj}else{var img_obj=pJS.tmp.img_obj}if(img_obj){draw()}break;}pJS.canvas.ctx.closePath();if(0<pJS.particles.shape.stroke.width){pJS.canvas.ctx.strokeStyle=pJS.particles.shape.stroke.color;pJS.canvas.ctx.lineWidth=pJS.particles.shape.stroke.width;pJS.canvas.ctx.stroke()}pJS.canvas.ctx.fill()};pJS.fn.particlesCreate=function(){for(var i=0;i<pJS.particles.number.value;i++){pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color,pJS.particles.opacity.value))}};pJS.fn.particlesUpdate=function(){for(var i=0,p;i<pJS.particles.array.length;i++){/* the particle */p=pJS.particles.array[i];// var d = ( dx = pJS.interactivity.mouse.click_pos_x - p.x ) * dx + ( dy = pJS.interactivity.mouse.click_pos_y - p.y ) * dy;
+// var f = -BANG_SIZE / d;
+// if ( d < BANG_SIZE ) {
+//     var t = Math.atan2( dy, dx );
+//     p.vx = f * Math.cos(t);
+//     p.vy = f * Math.sin(t);
+// }
+/* move the particle */if(pJS.particles.move.enable){var ms=pJS.particles.move.speed/2;p.x+=p.vx*ms;p.y+=p.vy*ms}/* change opacity status */if(pJS.particles.opacity.anim.enable){if(!0==p.opacity_status){if(p.opacity>=pJS.particles.opacity.value)p.opacity_status=!1;p.opacity+=p.vo}else{if(p.opacity<=pJS.particles.opacity.anim.opacity_min)p.opacity_status=!0;p.opacity-=p.vo}if(0>p.opacity)p.opacity=0}/* change size */if(pJS.particles.size.anim.enable){if(!0==p.size_status){if(p.radius>=pJS.particles.size.value)p.size_status=!1;p.radius+=p.vs}else{if(p.radius<=pJS.particles.size.anim.size_min)p.size_status=!0;p.radius-=p.vs}if(0>p.radius)p.radius=0}/* change particle position if it is out of canvas */if("bounce"==pJS.particles.move.out_mode){var new_pos={x_left:p.radius,x_right:pJS.canvas.w,y_top:p.radius,y_bottom:pJS.canvas.h}}else{var new_pos={x_left:-p.radius,x_right:pJS.canvas.w+p.radius,y_top:-p.radius,y_bottom:pJS.canvas.h+p.radius}}if(p.x-p.radius>pJS.canvas.w){p.x=new_pos.x_left;p.y=Math.random()*pJS.canvas.h}else if(0>p.x+p.radius){p.x=new_pos.x_right;p.y=Math.random()*pJS.canvas.h}if(p.y-p.radius>pJS.canvas.h){p.y=new_pos.y_top;p.x=Math.random()*pJS.canvas.w}else if(0>p.y+p.radius){p.y=new_pos.y_bottom;p.x=Math.random()*pJS.canvas.w}/* out of canvas modes */switch(pJS.particles.move.out_mode){case"bounce":if(p.x+p.radius>pJS.canvas.w)p.vx=-p.vx;else if(0>p.x-p.radius)p.vx=-p.vx;if(p.y+p.radius>pJS.canvas.h)p.vy=-p.vy;else if(0>p.y-p.radius)p.vy=-p.vy;break;}/* events */if(isInArray("grab",pJS.interactivity.events.onhover.mode)){pJS.fn.modes.grabParticle(p)}if(isInArray("bubble",pJS.interactivity.events.onhover.mode)||isInArray("bubble",pJS.interactivity.events.onclick.mode)){pJS.fn.modes.bubbleParticle(p)}if(isInArray("repulse",pJS.interactivity.events.onhover.mode)||isInArray("repulse",pJS.interactivity.events.onclick.mode)){pJS.fn.modes.repulseParticle(p)}/* interaction auto between particles */if(pJS.particles.line_linked.enable||pJS.particles.move.attract.enable){for(var j=i+1,p2;j<pJS.particles.array.length;j++){p2=pJS.particles.array[j];/* link particles */if(pJS.particles.line_linked.enable){pJS.fn.interact.linkParticles(p,p2)}/* attract particles */if(pJS.particles.move.attract.enable){pJS.fn.interact.attractParticles(p,p2)}/* bounce particles */if(pJS.particles.move.bounce){pJS.fn.interact.bounceParticles(p,p2)}}}}};pJS.fn.particlesDraw=function(){/* clear canvas */pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h);/* update each particles param */pJS.fn.particlesUpdate();/* draw each particle */for(var i=0,p;i<pJS.particles.array.length;i++){p=pJS.particles.array[i];p.draw()}};pJS.fn.particlesEmpty=function(){pJS.particles.array=[]};pJS.fn.particlesRefresh=function(){/* init all */cancelRequestAnimFrame(pJS.fn.checkAnimFrame);cancelRequestAnimFrame(pJS.fn.drawAnimFrame);pJS.tmp.source_svg=void 0;pJS.tmp.img_obj=void 0;pJS.tmp.count_svg=0;pJS.fn.particlesEmpty();pJS.fn.canvasClear();/* restart */pJS.fn.vendors.start()};/* ---------- pJS functions - particles interaction ------------ */pJS.fn.interact.linkParticles=function(p1,p2){var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);/* draw a line between p1 and p2 if the distance between them is under the config distance */if(dist<=pJS.particles.line_linked.distance){var opacity_line=pJS.particles.line_linked.opacity-dist/(1/pJS.particles.line_linked.opacity)/pJS.particles.line_linked.distance;if(0<opacity_line){/* style */var color_line=pJS.particles.line_linked.color_rgb_line;pJS.canvas.ctx.strokeStyle="rgba("+color_line.r+","+color_line.g+","+color_line.b+","+opacity_line+")";pJS.canvas.ctx.lineWidth=pJS.particles.line_linked.width;//pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
+/* path */pJS.canvas.ctx.beginPath();pJS.canvas.ctx.moveTo(p1.x,p1.y);pJS.canvas.ctx.lineTo(p2.x,p2.y);pJS.canvas.ctx.stroke();pJS.canvas.ctx.closePath()}}};pJS.fn.interact.attractParticles=function(p1,p2){/* condensed particles */var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<=pJS.particles.line_linked.distance){var ax=dx/(1e3*pJS.particles.move.attract.rotateX),ay=dy/(1e3*pJS.particles.move.attract.rotateY);p1.vx-=ax;p1.vy-=ay;p2.vx+=ax;p2.vy+=ay}};pJS.fn.interact.bounceParticles=function(p1,p2){var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy),dist_p=p1.radius+p2.radius;if(dist<=dist_p){p1.vx=-p1.vx;p1.vy=-p1.vy;p2.vx=-p2.vx;p2.vy=-p2.vy}};/* ---------- pJS functions - modes events ------------ */pJS.fn.modes.pushParticles=function(nb,pos){pJS.tmp.pushing=!0;for(var i=0;i<nb;i++){pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color,pJS.particles.opacity.value,{x:pos?pos.pos_x:Math.random()*pJS.canvas.w,y:pos?pos.pos_y:Math.random()*pJS.canvas.h}));if(i==nb-1){if(!pJS.particles.move.enable){pJS.fn.particlesDraw()}pJS.tmp.pushing=!1}}};pJS.fn.modes.removeParticles=function(nb){pJS.particles.array.splice(0,nb);if(!pJS.particles.move.enable){pJS.fn.particlesDraw()}};pJS.fn.modes.bubbleParticle=function(p){/* on hover event */if(pJS.interactivity.events.onhover.enable&&isInArray("bubble",pJS.interactivity.events.onhover.mode)){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),ratio=1-dist_mouse/pJS.interactivity.modes.bubble.distance;function init(){p.opacity_bubble=p.opacity;p.radius_bubble=p.radius}/* mousemove - check ratio */if(dist_mouse<=pJS.interactivity.modes.bubble.distance){if(0<=ratio&&"mousemove"==pJS.interactivity.status){/* size */if(pJS.interactivity.modes.bubble.size!=pJS.particles.size.value){if(pJS.interactivity.modes.bubble.size>pJS.particles.size.value){var size=p.radius+pJS.interactivity.modes.bubble.size*ratio;if(0<=size){p.radius_bubble=size}}else{var dif=p.radius-pJS.interactivity.modes.bubble.size,size=p.radius-dif*ratio;if(0<size){p.radius_bubble=size}else{p.radius_bubble=0}}}/* opacity */if(pJS.interactivity.modes.bubble.opacity!=pJS.particles.opacity.value){if(pJS.interactivity.modes.bubble.opacity>pJS.particles.opacity.value){var opacity=pJS.interactivity.modes.bubble.opacity*ratio;if(opacity>p.opacity&&opacity<=pJS.interactivity.modes.bubble.opacity){p.opacity_bubble=opacity}}else{var opacity=p.opacity-(pJS.particles.opacity.value-pJS.interactivity.modes.bubble.opacity)*ratio;if(opacity<p.opacity&&opacity>=pJS.interactivity.modes.bubble.opacity){p.opacity_bubble=opacity}}}}}else{init()}/* mouseleave */if("mouseleave"==pJS.interactivity.status){init()}}/* on click event */else if(pJS.interactivity.events.onclick.enable&&isInArray("bubble",pJS.interactivity.events.onclick.mode)){if(pJS.tmp.bubble_clicking){var dx_mouse=p.x-pJS.interactivity.mouse.click_pos_x,dy_mouse=p.y-pJS.interactivity.mouse.click_pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),time_spent=(new Date().getTime()-pJS.interactivity.mouse.click_time)/1e3;if(time_spent>pJS.interactivity.modes.bubble.duration){pJS.tmp.bubble_duration_end=!0}if(time_spent>2*pJS.interactivity.modes.bubble.duration){pJS.tmp.bubble_clicking=!1;pJS.tmp.bubble_duration_end=!1}}function process(bubble_param,particles_param,p_obj_bubble,p_obj,id){if(bubble_param!=particles_param){if(!pJS.tmp.bubble_duration_end){if(dist_mouse<=pJS.interactivity.modes.bubble.distance){if(p_obj_bubble!=void 0)var obj=p_obj_bubble;else var obj=p_obj;if(obj!=bubble_param){var value=p_obj-time_spent*(p_obj-bubble_param)/pJS.interactivity.modes.bubble.duration;if("size"==id)p.radius_bubble=value;if("opacity"==id)p.opacity_bubble=value}}else{if("size"==id)p.radius_bubble=void 0;if("opacity"==id)p.opacity_bubble=void 0}}else{if(p_obj_bubble!=void 0){var value_tmp=p_obj-time_spent*(p_obj-bubble_param)/pJS.interactivity.modes.bubble.duration,dif=bubble_param-value_tmp;value=bubble_param+dif;if("size"==id)p.radius_bubble=value;if("opacity"==id)p.opacity_bubble=value}}}}if(pJS.tmp.bubble_clicking){/* size */process(pJS.interactivity.modes.bubble.size,pJS.particles.size.value,p.radius_bubble,p.radius,"size");/* opacity */process(pJS.interactivity.modes.bubble.opacity,pJS.particles.opacity.value,p.opacity_bubble,p.opacity,"opacity")}}};pJS.fn.modes.repulseParticle=function(p){if(pJS.interactivity.events.onhover.enable&&isInArray("repulse",pJS.interactivity.events.onhover.mode)&&"mousemove"==pJS.interactivity.status){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),normVec={x:dx_mouse/dist_mouse,y:dy_mouse/dist_mouse},repulseRadius=pJS.interactivity.modes.repulse.distance,velocity=100,repulseFactor=clamp(1/repulseRadius*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity,0,50),pos={x:p.x+normVec.x*repulseFactor,y:p.y+normVec.y*repulseFactor};if("bounce"==pJS.particles.move.out_mode){if(0<pos.x-p.radius&&pos.x+p.radius<pJS.canvas.w)p.x=pos.x;if(0<pos.y-p.radius&&pos.y+p.radius<pJS.canvas.h)p.y=pos.y}else{p.x=pos.x;p.y=pos.y}}else if(pJS.interactivity.events.onclick.enable&&isInArray("repulse",pJS.interactivity.events.onclick.mode)){if(!pJS.tmp.repulse_finish){pJS.tmp.repulse_count++;if(pJS.tmp.repulse_count==pJS.particles.array.length){pJS.tmp.repulse_finish=!0}}if(pJS.tmp.repulse_clicking){var repulseRadius=Math.pow(pJS.interactivity.modes.repulse.distance/6,3),dx=pJS.interactivity.mouse.click_pos_x-p.x,dy=pJS.interactivity.mouse.click_pos_y-p.y,d=dx*dx+dy*dy,force=1*(-repulseRadius/d);function process(){var f=Math.atan2(dy,dx);p.vx=force*Math.cos(f);p.vy=force*Math.sin(f);if("bounce"==pJS.particles.move.out_mode){var pos={x:p.x+p.vx,y:p.y+p.vy};if(pos.x+p.radius>pJS.canvas.w)p.vx=-p.vx;else if(0>pos.x-p.radius)p.vx=-p.vx;if(pos.y+p.radius>pJS.canvas.h)p.vy=-p.vy;else if(0>pos.y-p.radius)p.vy=-p.vy}}// default
+if(d<=repulseRadius){process()}// bang - slow motion mode
+// if(!pJS.tmp.repulse_finish){
+//   if(d <= repulseRadius){
+//     process();
+//   }
+// }else{
+//   process();
+// }
+}else{if(!1==pJS.tmp.repulse_clicking){p.vx=p.vx_i;p.vy=p.vy_i}}}};pJS.fn.modes.grabParticle=function(p){if(pJS.interactivity.events.onhover.enable&&"mousemove"==pJS.interactivity.status){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse);/* draw a line between the cursor and the particle if the distance between them is under the config distance */if(dist_mouse<=pJS.interactivity.modes.grab.distance){var opacity_line=pJS.interactivity.modes.grab.line_linked.opacity-dist_mouse/(1/pJS.interactivity.modes.grab.line_linked.opacity)/pJS.interactivity.modes.grab.distance;if(0<opacity_line){/* style */var color_line=pJS.particles.line_linked.color_rgb_line;pJS.canvas.ctx.strokeStyle="rgba("+color_line.r+","+color_line.g+","+color_line.b+","+opacity_line+")";pJS.canvas.ctx.lineWidth=pJS.particles.line_linked.width;//pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
+/* path */pJS.canvas.ctx.beginPath();pJS.canvas.ctx.moveTo(p.x,p.y);pJS.canvas.ctx.lineTo(pJS.interactivity.mouse.pos_x,pJS.interactivity.mouse.pos_y);pJS.canvas.ctx.stroke();pJS.canvas.ctx.closePath()}}}};/* ---------- pJS functions - vendors ------------ */pJS.fn.vendors.eventsListeners=function(){/* events target element */if("window"==pJS.interactivity.detect_on){pJS.interactivity.el=window}else{pJS.interactivity.el=pJS.canvas.el}/* detect mouse pos - on hover / click event */if(pJS.interactivity.events.onhover.enable||pJS.interactivity.events.onclick.enable){/* el on mousemove */pJS.interactivity.el.addEventListener("mousemove",function(e){if(pJS.interactivity.el==window){var pos_x=e.clientX,pos_y=e.clientY}else{var pos_x=e.offsetX||e.clientX,pos_y=e.offsetY||e.clientY}pJS.interactivity.mouse.pos_x=pos_x;pJS.interactivity.mouse.pos_y=pos_y;if(pJS.tmp.retina){pJS.interactivity.mouse.pos_x*=pJS.canvas.pxratio;pJS.interactivity.mouse.pos_y*=pJS.canvas.pxratio}pJS.interactivity.status="mousemove"});/* el on onmouseleave */pJS.interactivity.el.addEventListener("mouseleave",function(e){pJS.interactivity.mouse.pos_x=null;pJS.interactivity.mouse.pos_y=null;pJS.interactivity.status="mouseleave"})}/* on click event */if(pJS.interactivity.events.onclick.enable){pJS.interactivity.el.addEventListener("click",function(){pJS.interactivity.mouse.click_pos_x=pJS.interactivity.mouse.pos_x;pJS.interactivity.mouse.click_pos_y=pJS.interactivity.mouse.pos_y;pJS.interactivity.mouse.click_time=new Date().getTime();if(pJS.interactivity.events.onclick.enable){switch(pJS.interactivity.events.onclick.mode){case"push":if(pJS.particles.move.enable){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb,pJS.interactivity.mouse)}else{if(1==pJS.interactivity.modes.push.particles_nb){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb,pJS.interactivity.mouse)}else if(1<pJS.interactivity.modes.push.particles_nb){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb)}}break;case"remove":pJS.fn.modes.removeParticles(pJS.interactivity.modes.remove.particles_nb);break;case"bubble":pJS.tmp.bubble_clicking=!0;break;case"repulse":pJS.tmp.repulse_clicking=!0;pJS.tmp.repulse_count=0;pJS.tmp.repulse_finish=!1;setTimeout(function(){pJS.tmp.repulse_clicking=!1},1e3*pJS.interactivity.modes.repulse.duration);break;}}})}};pJS.fn.vendors.densityAutoParticles=function(){if(pJS.particles.number.density.enable){/* calc area */var area=pJS.canvas.el.width*pJS.canvas.el.height/1e3;if(pJS.tmp.retina){area=area/(2*pJS.canvas.pxratio)}/* calc number of particles based on density area */var nb_particles=area*pJS.particles.number.value/pJS.particles.number.density.value_area,missing_particles=pJS.particles.array.length-nb_particles;/* add or remove X particles */if(0>missing_particles)pJS.fn.modes.pushParticles(Math.abs(missing_particles));else pJS.fn.modes.removeParticles(missing_particles)}};pJS.fn.vendors.checkOverlap=function(p1,position){for(var i=0;i<pJS.particles.array.length;i++){var p2=pJS.particles.array[i],dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<=p1.radius+p2.radius){p1.x=position?position.x:Math.random()*pJS.canvas.w;p1.y=position?position.y:Math.random()*pJS.canvas.h;pJS.fn.vendors.checkOverlap(p1)}}};pJS.fn.vendors.createSvgImg=function(p){/* set color to svg element */var svgXml=pJS.tmp.source_svg,rgbHex=/#([0-9A-F]{3,6})/gi,coloredSvgXml=svgXml.replace(rgbHex,function(m,r,g,b){if(p.color.rgb){var color_value="rgba("+p.color.rgb.r+","+p.color.rgb.g+","+p.color.rgb.b+","+p.opacity+")"}else{var color_value="hsla("+p.color.hsl.h+","+p.color.hsl.s+"%,"+p.color.hsl.l+"%,"+p.opacity+")"}return color_value}),svg=new Blob([coloredSvgXml],{type:"image/svg+xml;charset=utf-8"}),DOMURL=window.URL||window.webkitURL||window,url=DOMURL.createObjectURL(svg),img=new Image;/* prepare to create img with colored svg */img.addEventListener("load",function(){p.img.obj=img;p.img.loaded=!0;DOMURL.revokeObjectURL(url);pJS.tmp.count_svg++});img.src=url};pJS.fn.vendors.destroypJS=function(){cancelAnimationFrame(pJS.fn.drawAnimFrame);canvas_el.remove();pJSDom=null};pJS.fn.vendors.drawShape=function(c,startX,startY,sideLength,sideCountNumerator,sideCountDenominator){// By Programming Thomas - https://programmingthomas.wordpress.com/2013/04/03/n-sided-shapes/
+var sideCount=sideCountNumerator*sideCountDenominator,decimalSides=sideCountNumerator/sideCountDenominator,interiorAngleDegrees=180*(decimalSides-2)/decimalSides,interiorAngle=Math.PI-Math.PI*interiorAngleDegrees/180;// convert to radians
+c.save();c.beginPath();c.translate(startX,startY);c.moveTo(0,0);for(var i=0;i<sideCount;i++){c.lineTo(sideLength,0);c.translate(sideLength,0);c.rotate(interiorAngle)}//c.stroke();
+c.fill();c.restore()};pJS.fn.vendors.exportImg=function(){window.open(pJS.canvas.el.toDataURL("image/png"),"_blank")};pJS.fn.vendors.loadImg=function(type){pJS.tmp.img_error=void 0;if(""!=pJS.particles.shape.image.src){if("svg"==type){var xhr=new XMLHttpRequest;xhr.open("GET",pJS.particles.shape.image.src);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){pJS.tmp.source_svg=data.currentTarget.response;pJS.fn.vendors.checkBeforeDraw()}else{console.log("Error pJS - Image not found");pJS.tmp.img_error=!0}}};xhr.send()}else{var img=new Image;img.addEventListener("load",function(){pJS.tmp.img_obj=img;pJS.fn.vendors.checkBeforeDraw()});img.src=pJS.particles.shape.image.src}}else{console.log("Error pJS - No image.src");pJS.tmp.img_error=!0}};pJS.fn.vendors.draw=function(){if("image"==pJS.particles.shape.type){if("svg"==pJS.tmp.img_type){if(pJS.tmp.count_svg>=pJS.particles.number.value){pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}else{//console.log('still loading...');
+if(!pJS.tmp.img_error)pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}}else{if(pJS.tmp.img_obj!=void 0){pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}else{if(!pJS.tmp.img_error)pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}}}else{pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}};pJS.fn.vendors.checkBeforeDraw=function(){// if shape is image
+if("image"==pJS.particles.shape.type){if("svg"==pJS.tmp.img_type&&pJS.tmp.source_svg==void 0){pJS.tmp.checkAnimFrame=requestAnimFrame(check)}else{//console.log('images loaded! cancel check');
+cancelRequestAnimFrame(pJS.tmp.checkAnimFrame);if(!pJS.tmp.img_error){pJS.fn.vendors.init();pJS.fn.vendors.draw()}}}else{pJS.fn.vendors.init();pJS.fn.vendors.draw()}};pJS.fn.vendors.init=function(){/* init canvas + particles */pJS.fn.retinaInit();pJS.fn.canvasInit();pJS.fn.canvasSize();pJS.fn.canvasPaint();pJS.fn.particlesCreate();pJS.fn.vendors.densityAutoParticles();/* particles.line_linked - convert hex colors to rgb */pJS.particles.line_linked.color_rgb_line=hexToRgb(pJS.particles.line_linked.color)};pJS.fn.vendors.start=function(){if(isInArray("image",pJS.particles.shape.type)){pJS.tmp.img_type=pJS.particles.shape.image.src.substr(pJS.particles.shape.image.src.length-3);pJS.fn.vendors.loadImg(pJS.tmp.img_type)}else{pJS.fn.vendors.checkBeforeDraw()}};/* ---------- pJS - start ------------ */pJS.fn.vendors.eventsListeners();pJS.fn.vendors.start()};/* ---------- global functions - vendors ------------ */Object.deepExtend=function deepExtendFunction(destination,source){for(var property in source){if(source[property]&&source[property].constructor&&source[property].constructor===Object){destination[property]=destination[property]||{};deepExtendFunction(destination[property],source[property])}else{destination[property]=source[property]}}return destination};window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){window.setTimeout(callback,1e3/60)}}();window.cancelRequestAnimFrame=function(){return window.cancelAnimationFrame||window.webkitCancelRequestAnimationFrame||window.mozCancelRequestAnimationFrame||window.oCancelRequestAnimationFrame||window.msCancelRequestAnimationFrame||clearTimeout}();function hexToRgb(hex){// By Tim Down - http://stackoverflow.com/a/5624139/3493650
+// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandRegex,function(m,r,g,b){return r+r+g+g+b+b});var result=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);return result?{r:parseInt(result[1],16),g:parseInt(result[2],16),b:parseInt(result[3],16)}:null};function clamp(number,min,max){return Math.min(Math.max(number,min),max)};function isInArray(value,array){return-1<array.indexOf(value)}/* ---------- particles.js functions - start ------------ */window.pJSDom=[];window.particlesJS=function(tag_id,params){//console.log(params);
+/* no string id? so it's object params, and set the id with default id */if("string"!=typeof tag_id){params=tag_id;tag_id="particles-js"}/* no id? set the id to default id */if(!tag_id){tag_id="particles-js"}/* pJS elements */var pJS_tag=document.getElementById(tag_id),pJS_canvas_class="particles-js-canvas-el",exist_canvas=pJS_tag.getElementsByClassName(pJS_canvas_class);/* remove canvas if exists into the pJS target tag */if(exist_canvas.length){while(0<exist_canvas.length){pJS_tag.removeChild(exist_canvas[0])}}/* create canvas element */var canvas_el=document.createElement("canvas");canvas_el.className=pJS_canvas_class;/* set size canvas */canvas_el.style.width="100%";canvas_el.style.height="100%";/* append canvas */var canvas=document.getElementById(tag_id).appendChild(canvas_el);/* launch particle.js */if(null!=canvas){pJSDom.push(new pJS(tag_id,params))}};window.particlesJS.load=function(tag_id,path_config_json,callback){/* load json config */var xhr=new XMLHttpRequest;xhr.open("GET",path_config_json);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){var params=JSON.parse(data.currentTarget.response);window.particlesJS(tag_id,params);if(callback)callback()}else{console.log("Error pJS - XMLHttpRequest status: "+xhr.status);console.log("Error pJS - File config not found")}}};xhr.send()}});
