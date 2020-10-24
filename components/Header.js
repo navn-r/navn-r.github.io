@@ -40,6 +40,13 @@ class Header extends LitElement {
     `;
   }
 
+  firstUpdated() {
+    particlesJS.load("particles", "Assets/particles.json", function () {
+      console.log("callback - particles.js config loaded");
+    });
+
+  }
+
   constructor() {
     super();
   }

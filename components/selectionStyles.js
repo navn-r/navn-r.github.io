@@ -10,4 +10,9 @@ export const selectionStyles = css`
     color: var(--dark-gray);
     background: var(--aqua);
   }
+
+  .highlight {
+    color: var(--off-white);
+    text-decoration: none;
+  }
 `;

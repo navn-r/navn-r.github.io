@@ -6,6 +6,7 @@
         "components/**/*",
         "pages/**/*",
         "style.css",
+        "node_modules/jump.js/**/*",
         "package.json"
     ],
     "extraDependencies": [

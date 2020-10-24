@@ -15,7 +15,7 @@ class ExperienceCard extends LitElement {
       }
 
       .card {
-        margin-top: 2rem;
+        margin: 4rem  0;
       }
     `, selectionStyles];
   }
@@ -23,15 +23,16 @@ class ExperienceCard extends LitElement {
   render() {
     return html`
       <div class="card">
-        <span class="title">${this.title}</span
+        <span class="title">${this.name}</span
         > <span class="title location">${this.location}</span>
+        <slot name="body"></slot>
       </div>
     `;
   }
 
   static get properties() {
     return {
-      title: {
+      name: {
         type: String,
       },
 

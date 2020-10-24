@@ -1,3 +1,4 @@
+import jump from "jump.js";
 import { LitElement, html, css } from "lit-element";
 
 class Menu extends LitElement {
@@ -5,7 +6,7 @@ class Menu extends LitElement {
     return css`
       #button-container {
         display: grid;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         row-gap: 1rem;
       }
 
@@ -35,7 +36,7 @@ class Menu extends LitElement {
       @media (max-width: 1000px) {
         #button-container {
           grid-template-rows: auto;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
         }
 
         button {
@@ -46,11 +47,6 @@ class Menu extends LitElement {
       @media (max-width: 600px) {
         button {
           font-size: 1.75rem;
-        }
-      }
-      @media (max-width: 360px) {
-        button {
-          font-size: 1.5rem;
         }
       }
     `;
@@ -88,13 +84,6 @@ class Menu extends LitElement {
         >
           Projects
         </button>
-        <button
-          @click="${this.clickHandler}"
-          class="${this.current === "resume" ? "selected" : ""}"
-          id="resume"
-        >
-          Resume
-        </button>
       </div>
     `;
   }
@@ -102,6 +91,9 @@ class Menu extends LitElement {
   clickHandler(e) {
     if (this.current === e.target.id) return;
     this.current = e.target.id;
+    jump("." + this.current, {
+      offset: this.current === "projects" ? -15 : 0
+    });
   }
 
   constructor() {

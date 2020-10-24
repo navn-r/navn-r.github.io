@@ -4,6 +4,7 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "dependencies": {
+    "jump.js": "^1.0.2",
     "lit-element": "^2.4.0"
   },
   "devDependencies": {},

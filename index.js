@@ -9,8 +9,5 @@ import "./components/Menu";
 import "./components/Terminal";
 import './components/particles';
 import './components/fa-icon';
-import './components/selectionStyles'
-
-particlesJS.load("particles", "Assets/particles.json", function () {
-  console.log("callback - particles.js config loaded");
-});
+import './components/selectionStyles';
+import './components/Carousel';
