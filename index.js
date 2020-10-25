@@ -1817,7 +1817,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
             </div>
           </div>
         </project-card>
-        <project-card name="Portfolio Website">
+        <project-card name="Portfolio Website" github="https://github.com/navn-r/navn-r.github.io">
           <blockquote slot="description">
             Platform to showcase my projects and experiences.
           </blockquote>
