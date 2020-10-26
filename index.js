@@ -1528,6 +1528,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
         font-size: 2rem;
         text-align: right;
         font-family: var(--main);
+        outline: none;
         color: inherit;
       }
 
