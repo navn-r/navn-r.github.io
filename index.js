@@ -1282,10 +1282,6 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           >
           for my co-op term. <br />
           Let's connect. Reach out below! <br />
-          <span
-            style="font-family: var(--code); color: var(--green); font-size: 1.25rem;"
-            >under construction and new management</span
-          >
         </p>
         <div id="contacts">
           <a
@@ -1562,7 +1558,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
           font-size: 1.75rem;
         }
       }
-    `}static get properties(){return{current:{type:String}}}render(){return html`
+    `}static get properties(){return{current:{type:String},scrollFunc:{attribute:!1}}}render(){return html`
       <div id="button-container">
         <button
           @click="${this.clickHandler}"
@@ -1586,7 +1582,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
           Projects
         </button>
       </div>
-    `}clickHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;singleton("."+this.current,{offset:"projects"===this.current?-15:0})}constructor(){super();this.current="about"}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
+    `}firstUpdated(){window.addEventListener("scroll",this.scrollFunc,!0)}onScroll(){const scroll=window.scrollY,menus=["about","experience","projects"];menus.forEach(target=>{const section=document.getElementsByClassName(target)[0];let top=section.offsetTop;if(0>top)top=0;if("projects"===target)top-=15;if(top<=scroll&&top+section.offsetHeight>scroll)this.current=target;if(window.innerHeight+window.pageYOffset>=document.body.offsetHeight-20)this.current="projects"})}clickHandler(e){if(this.current===e.target.id)return;window.removeEventListener("scroll",this.scrollFunc,!0);this.current=e.target.id;singleton("."+this.current,{offset:"projects"===this.current?-15:0,callback:()=>{window.addEventListener("scroll",this.scrollFunc,!0)}})}constructor(){super();this.current="about";this.scrollFunc=()=>this.onScroll()}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
       #name {
         font-size: min(20vw, 8.5rem);
         -moz-user-select: none;
