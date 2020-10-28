@@ -1313,7 +1313,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </a>
           <a
             id="resume"
-            href="https://utsc-utoronto-csm.symplicity.com/qr/4db0a409d04be0eebe62b63e9d0e1e4f?resume=73d14a30f47b13ade479e1689e2fd6ae&student=46b91eed6f460f44229377b0f6ec2264"
+            href="https://bit.ly/34CNFuo"
             target="_blank"
             class="contact"
           >
