@@ -1313,7 +1313,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </a>
           <a
             id="resume"
-            href="https://bit.ly/34CNFuo"
+            href="https://s3.ca-central-1.amazonaws.com/symp.csm.ca/utsc-utoronto/files/73d/73d14a30f47b13ade479e1689e2fd6ae.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAID3RBESXBCESHUGA%2F20201030%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20201030T220551Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=2c16bcacce579959c9661c4cf8efbed217eb30ab9aad111579919a7ab33a8e30"
             target="_blank"
             class="contact"
           >
