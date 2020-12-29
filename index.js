@@ -1422,17 +1422,17 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <div slot="body">
             Sept. 2020 - Present
             <ul>
-                <li>Working in an <span class="highlight">Agile Scrum</span> on the <span class="highlight">CaseWare Cloud</span> product</li>
+                <li>Working in an <span class="highlight">Agile Scrum</span> on the <span class="highlight">Simple Engagements</span> product</li>
                 <li>Converting manual tests to unit tests using <span class="highlight">Karma and Jasmine</span></li>
                 <li>Developing bug fixes and features using <span class="highlight">Angular and AngularJS</span></li>
             </ul>
           </div>
         </experience-card>
-        <experience-card name="HBSc. Computer Science" location="@uoft">
+        <experience-card name="HBSc. Computer Science (Co-op)" location="@uoft">
           <div slot="body">
-            2019 - Present (Co-op)
+            Sept. 2019 - Apr. 2023 (Expected)
             <ul>
-                <li>cGPA: <span class="highlight">3.75</span>/4.0</li>
+                <li>cGPA: <span class="highlight">3.83</span>/4.0</li>
                 <li>Dean's List (<span class="highlight">2019-20</span>)</li>
                 <li>UofT Scholar (<span class="highlight">Sept 2019</span>)</li>
             </ul>
@@ -1735,6 +1735,62 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
       `,selectionStyles]}render(){return html`
       <span class="title">What I've made.</span>
       <div id="projects-container">
+      <project-card
+          name="UImpactify"
+          github="https://github.com/navn-r/uimpactify"
+          demo="https://uimpactify.herokuapp.com"
+        >
+          <blockquote slot="description">
+            The E-Learning website dedicated to serve the social purpose sector.
+          </blockquote>
+          <div slot="body">
+            <ul>
+                <li>Multiple User Types (Impact Learner, Impact Consultant, Social Initiatives)</li>
+                <li>Course Creation and Enrollment</li>
+                <li>Recorded Lectures and Graded Assessments</li>
+                <li>Course Surveys & Ratings</li>
+                <li>Student Analytics</li>
+                <li>Realtime Chat</li>
+                <li>Volunteer & Employment Opportunities</li>
+                <li>Community Driven Donation System (Giving Garden)</li>
+            </ul>
+            <div class="tags-container">
+              <div class="tag">MongoDB</div>
+              <div class="tag">ExpressJS</div>
+              <div class="tag">Angular</div>
+              <div class="tag">Node.js</div>
+              <div class="tag">Socket.io</div>
+              <div class="tag">Chart.js</div>
+              <div class="tag">Multer</div>
+              <div class="tag">GridFS</div>
+              <div class="tag">Figma</div>
+              <div class="tag">Jira</div>
+            </div>
+          </div>
+        </project-card>
+        <project-card
+          name="Spotify API Clone"
+          github="https://github.com/navn-r/spotify-api-clone"
+          demo="https://navn.me/spotify-api-clone"
+        >
+          <blockquote slot="description">
+            A REST API for a social-centric music player using microservices.
+          </blockquote>
+          <div slot="body">
+            <ul>
+              <li>Create and follow/unfollow user profiles</li>
+              <li>Upload and like/unlike songs</li>
+              <li>Playlist generation based on liked songs</li>
+              <li>Query liked songs based on followers</li>
+            </ul>
+            <div class="tags-container">
+              <div class="tag">Java</div>
+              <div class="tag">Spring Boot</div>
+              <div class="tag">MongoDB</div>
+              <div class="tag">Neo4j</div>
+            </div>
+          </div>
+        </project-card>
         <project-card
           name="Ritrovo"
           github="https://github.com/navn-r/ritrovo"
