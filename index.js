@@ -1432,7 +1432,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <div slot="body">
             Sept. 2019 - Apr. 2023 (Expected)
             <ul>
-                <li>cGPA: <span class="highlight">3.83</span>/4.0</li>
+                <li>cGPA: <span class="highlight">3.78</span>/4.0</li>
                 <li>Dean's List (<span class="highlight">2019-20</span>)</li>
                 <li>UofT Scholar (<span class="highlight">Sept 2019</span>)</li>
             </ul>
