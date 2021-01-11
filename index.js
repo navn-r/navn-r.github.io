@@ -1459,31 +1459,6 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         color: var(--red);
       }
 
-      #top {
-        display: none;
-        border-radius: 5rem;
-        background-color: var(--dark-gray);
-        color: var(--light-gray);
-        width: 5rem;
-        height: 5rem;
-        justify-content: center;
-        align-items: center;
-        margin: 1px;
-        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
-      }
-
-      #top:hover {
-        cursor: pointer;
-        color: var(--off-white);
-      }
-
-      fa-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-      }
-
       @media (max-width: 1000px) {
         :host {
           display: none;
@@ -1523,10 +1498,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           Projects
         </button>
       </div>
-      <div id="top" @click="${this.clickHandler}">
-        <fa-icon class="fas fa-hand-point-up"></fa-icon>
-      </div>
-    `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){if("top"===target)target="about";window.scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
+    `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
       #name {
         font-size: min(20vw, 8.5rem);
         -moz-user-select: none;
