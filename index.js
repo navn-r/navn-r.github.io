@@ -1394,6 +1394,9 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         background-color: var(--dark-gray);
         user-select: none;
         -moz-user-select: none;
+        box-shadow: 0px 20px 30px -10px rgba(5,7,8,0.61);
+        -webkit-box-shadow: 0px 20px 30px -10px rgba(5,7,8,0.61);
+        -moz-box-shadow: 0px 20px 30px -10px rgba(5,7,8,0.61);
       }
 
       app-name {
@@ -1418,6 +1421,12 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         <app-name></app-name>
       </div>
     `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);class Menu extends LitElement{static get styles(){return css`
+      :host {
+        grid-area: menu;
+        position: sticky;
+        top: 3rem;
+      }
+
       #button-container {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
@@ -1450,18 +1459,38 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         color: var(--red);
       }
 
+      #top {
+        display: none;
+        border-radius: 5rem;
+        background-color: var(--dark-gray);
+        color: var(--light-gray);
+        width: 5rem;
+        height: 5rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1px;
+        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      #top:hover {
+        cursor: pointer;
+        color: var(--off-white);
+      }
+
+      fa-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+      }
+
       @media (max-width: 1000px) {
+        :host {
+          display: none;
+        }
+
         #button-container {
-          grid-template-rows: auto;
-          grid-template-columns: repeat(3, 1fr);
-        }
-
-        button {
-          text-align: center;
-        }
-
-        button:hover {
-          color: inherit;
+          display: none;
         }
       }
 
@@ -1494,7 +1523,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           Projects
         </button>
       </div>
-    `}firstUpdated(){document.body.addEventListener("touchmove",this.onScroll.bind(this),!0);window.addEventListener("scroll",this.onScroll.bind(this),!0);const resizeObserver=new ResizeObserver(()=>{["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop)});resizeObserver.observe(document.body)}onScroll(){const scroll=window.scrollY;if(this.offset.projects<=scroll)this.current="projects";else if(this.offset.experience<=scroll)this.current="experience";else this.current="about"}clickHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;window.scrollTo({top:this.offset[e.target.id],behavior:"smooth"})}constructor(){super();this.offset={about:0};this.current="about"}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
+      <div id="top" @click="${this.clickHandler}">
+        <fa-icon class="fas fa-hand-point-up"></fa-icon>
+      </div>
+    `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){if("top"===target)target="about";window.scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
       #name {
         font-size: min(20vw, 8.5rem);
         -moz-user-select: none;
