@@ -1,4 +1,4 @@
-define(["exports"],function(_exports){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.eventOptions$1=_exports.eventOptions=eventOptions;_exports.insertNodeIntoTemplate=insertNodeIntoTemplate;_exports.internalProperty$1=_exports.internalProperty=internalProperty;_exports.property$1=_exports.property=property;_exports.query$1=_exports.query=query;_exports.queryAll$1=_exports.queryAll=queryAll;_exports.queryAssignedNodes$1=_exports.queryAssignedNodes=queryAssignedNodes;_exports.queryAsync$1=_exports.queryAsync=queryAsync;_exports.removeNodesFromTemplate=removeNodesFromTemplate;_exports.templateFactory$1=_exports.templateFactory=templateFactory;_exports.shadyTemplateFactory=_exports.selectionStyles=_exports.reparentNodes$1=_exports.reparentNodes=_exports.render$1=_exports.render$2=_exports.render=_exports.removeNodes$1=_exports.removeNodes=_exports.parts$1=_exports.parts=_exports.nothing$1=_exports.nothing=_exports.notEqual$1=_exports.notEqual=_exports.nodeMarker=_exports.noChange$1=_exports.noChange=_exports.markerRegex=_exports.marker=_exports.lastAttributeNameRegex=_exports.isTemplatePartActive$1=_exports.isTemplatePartActive=_exports.isPrimitive$1=_exports.isPrimitive=_exports.isIterable$1=_exports.isIterable=_exports.isDirective$1=_exports.isDirective=_exports.isCEPolyfill=_exports.html$2=_exports.html$1=_exports.html=_exports.directive$1=_exports.directive=_exports.defaultTemplateProcessor$1=_exports.defaultTemplateProcessor=_exports.defaultConverter$1=_exports.defaultConverter=_exports.customElement$1=_exports.customElement=_exports.css$1=_exports.css=_exports.createMarker$1=_exports.createMarker=_exports.boundAttributeSuffix=_exports.UpdatingElement$1=_exports.UpdatingElement=_exports.TemplateResult$3=_exports.TemplateResult$2=_exports.TemplateResult$1=_exports.TemplateResult=_exports.TemplateInstance$1=_exports.TemplateInstance=_exports.Template$1=_exports.Template=_exports.SVGTemplateResult$2=_exports.SVGTemplateResult$1=_exports.SVGTemplateResult=_exports.PropertyPart$1=_exports.PropertyPart=_exports.PropertyCommitter$1=_exports.PropertyCommitter=_exports.NodePart$1=_exports.NodePart=_exports.LitElement=_exports.FaIcon=_exports.EventPart$1=_exports.EventPart=_exports.DefaultTemplateProcessor$1=_exports.DefaultTemplateProcessor=_exports.CSSResult$1=_exports.CSSResult=_exports.BooleanAttributePart$1=_exports.BooleanAttributePart=_exports.AttributePart$1=_exports.AttributePart=_exports.AttributeCommitter$1=_exports.AttributeCommitter=_exports.$updatingElement=_exports.$templateResult=_exports.$templateInstance=_exports.$templateFactory=_exports.$template=_exports.$shadyRender=_exports.$selectionStyles=_exports.$render=_exports.$parts=_exports.$part=_exports.$modifyTemplate=_exports.$litHtml=_exports.$litElement=_exports.$jumpModuleDefault=_exports.$jumpModule=_exports.$faIcon=_exports.$dom=_exports.$directive=_exports.$defaultTemplateProcessor=_exports.$decorators=_exports.$cssTag=void 0;_exports.unsafeCSS$1=_exports.unsafeCSS=_exports.templateCaches$1=_exports.templateCaches=_exports.svg$2=_exports.svg$1=_exports.svg=_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=void 0;/**
+define(["exports"],function(_exports){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.eventOptions$1=_exports.eventOptions=eventOptions;_exports.insertNodeIntoTemplate=insertNodeIntoTemplate;_exports.internalProperty$1=_exports.internalProperty=internalProperty;_exports.property$1=_exports.property=property;_exports.query$1=_exports.query=query;_exports.queryAll$1=_exports.queryAll=queryAll;_exports.queryAssignedNodes$1=_exports.queryAssignedNodes=queryAssignedNodes;_exports.queryAsync$1=_exports.queryAsync=queryAsync;_exports.removeNodesFromTemplate=removeNodesFromTemplate;_exports.templateFactory$1=_exports.templateFactory=templateFactory;_exports.supportsAdoptingStyleSheets$1=_exports.supportsAdoptingStyleSheets=_exports.shadyTemplateFactory=_exports.selectionStyles=_exports.reparentNodes$1=_exports.reparentNodes=_exports.render$1=_exports.render$2=_exports.render=_exports.removeNodes$1=_exports.removeNodes=_exports.parts$1=_exports.parts=_exports.nothing$1=_exports.nothing=_exports.notEqual$1=_exports.notEqual=_exports.nodeMarker=_exports.noChange$1=_exports.noChange=_exports.markerRegex=_exports.marker=_exports.lastAttributeNameRegex=_exports.isTemplatePartActive$1=_exports.isTemplatePartActive=_exports.isPrimitive$1=_exports.isPrimitive=_exports.isIterable$1=_exports.isIterable=_exports.isDirective$1=_exports.isDirective=_exports.isCEPolyfill=_exports.html$2=_exports.html$1=_exports.html=_exports.directive$1=_exports.directive=_exports.defaultTemplateProcessor$1=_exports.defaultTemplateProcessor=_exports.defaultConverter$1=_exports.defaultConverter=_exports.customElement$1=_exports.customElement=_exports.css$1=_exports.css=_exports.createMarker$1=_exports.createMarker=_exports.boundAttributeSuffix=_exports.UpdatingElement$1=_exports.UpdatingElement=_exports.TemplateResult$3=_exports.TemplateResult$2=_exports.TemplateResult$1=_exports.TemplateResult=_exports.TemplateInstance$1=_exports.TemplateInstance=_exports.Template$1=_exports.Template=_exports.SVGTemplateResult$2=_exports.SVGTemplateResult$1=_exports.SVGTemplateResult=_exports.PropertyPart$1=_exports.PropertyPart=_exports.PropertyCommitter$1=_exports.PropertyCommitter=_exports.NodePart$1=_exports.NodePart=_exports.LitElement=_exports.FaIcon=_exports.EventPart$1=_exports.EventPart=_exports.DefaultTemplateProcessor$1=_exports.DefaultTemplateProcessor=_exports.CSSResult$1=_exports.CSSResult=_exports.BooleanAttributePart$1=_exports.BooleanAttributePart=_exports.AttributePart$1=_exports.AttributePart=_exports.AttributeCommitter$1=_exports.AttributeCommitter=_exports.$updatingElement=_exports.$templateResult=_exports.$templateInstance=_exports.$templateFactory=_exports.$template=_exports.$shadyRender=_exports.$selectionStyles=_exports.$render=_exports.$parts=_exports.$part=_exports.$modifyTemplate=_exports.$litHtml=_exports.$litElement=_exports.$faIcon=_exports.$dom=_exports.$directive=_exports.$defaultTemplateProcessor=_exports.$decorators=_exports.$cssTag=void 0;_exports.unsafeCSS$1=_exports.unsafeCSS=_exports.templateCaches$1=_exports.templateCaches=_exports.svg$2=_exports.svg$1=_exports.svg=void 0;/**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at
@@ -1179,11 +1179,16 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
 
         p {
           margin-top: 0;
+          padding-right: 2rem;
         }
 
         .title {
           font-size: var(--title);
           font-family: var(--main);
+        }
+
+        .link {
+          transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         .link:hover {
@@ -1214,6 +1219,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           justify-content: center;
           align-items: center;
           margin: 1px;
+          transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         .contact:hover {
@@ -1222,6 +1228,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         }
         .contact:hover .tooltip {
           visibility: visible;
+          transition: visibility 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         .contact .tooltip::before {
@@ -1313,7 +1320,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </a>
           <a
             id="resume"
-            href="https://raw.githubusercontent.com/navn-r/resume/master/RavindaranNavinn_Resume.pdf"
+            href="https://navn.me/resume/RavindaranNavinn_Resume.pdf"
             target="_blank"
             class="contact"
           >
@@ -1321,66 +1328,8 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
             <div class="tooltip">resume [dot] pdf</div>
           </a>
         </div>
-        <!-- <typewriter-term></typewriter-term> -->
       </div>
-    `}constructor(){super()}}customElements.define("about-section",About);class Carousel extends LitElement{static get styles(){return css`
-      fa-icon {
-        font-size: 5rem;
-      }
-      .button {
-        background: none;
-        border: 0;
-        cursor: pointer;
-        color: var(--light-gray);
-        width: 3rem;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .button:hover {
-        color: var(--off-white);
-      }
-
-      .slide {
-        width: 100%;
-        background-color: var(--gray);
-        justify-content: center;
-        display: flex;
-        justify-content: center;
-      }
-
-      .slide > img {
-        height: 100%;
-      }
-
-      .carousel {
-        display: grid;
-        grid-template-columns: 3rem 1fr 3rem;
-      }
-
-      .track {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-      }
-    `}render(){return html`
-      <div class="carousel">
-        <button @click="${this.changeImgLeft}" class="button">
-          <fa-icon class="fas fa-angle-left"></fa-icon>
-        </button>
-        <div class="track-container">
-          <ul class="track"></ul>
-        </div>
-        <button @click="${this.changeImgRight}" class="button">
-          <fa-icon class="fas fa-angle-right"></fa-icon>
-        </button>
-      </div>
-    `}static get properties(){return{name:{type:String},length:{type:Number},current:{type:Number},width:{type:Number}}}firstUpdated(){const track=this.shadowRoot.querySelector("ul");let slide=document.createElement("li");slide.className="slide";let image=document.createElement("img");this.current=1;image.src=`Assets/projects/${this.name}/${this.name}-1.png`;image.width=this.width;slide.appendChild(image);track.appendChild(slide)}changeImgRight(e){let image=this.shadowRoot.querySelector("img");if(this.current===this.length)this.current=1;else this.current++;image.src=`Assets/projects/${this.name}/${this.name}-${this.current}.png`}changeImgLeft(){let image=this.shadowRoot.querySelector("img");if(1===this.current)this.current=this.length;else this.current--;image.src=`Assets/projects/${this.name}/${this.name}-${this.current}.png`}constructor(){super()}}customElements.define("image-carousel",Carousel);class ExperienceCard extends LitElement{static get styles(){return[css`
+    `}constructor(){super()}}customElements.define("about-section",About);class ExperienceCard extends LitElement{static get styles(){return[css`
       .title {
         font-size: var(--subtitle);
       }
@@ -1448,11 +1397,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       }
 
       app-name {
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: -18rem;
+        margin-top: -15rem;
       }
 
       @media (max-width: 1000px) {
@@ -1461,7 +1409,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         }
 
         app-name {
-          margin-top: -10rem;
+          margin-top: -8.5rem;
         }
       }
     `}render(){return html`
@@ -1469,49 +1417,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         <slot name="particles"></slot>
         <app-name></app-name>
       </div>
-    `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);// Robert Penner's easeInOutQuad
-// find the rest of his easing functions here: http://robertpenner.com/easing/
-// find them exported for ES6 consumption here: https://github.com/jaxgeller/ez.js
-var easeInOutQuad=function easeInOutQuad(t,b,c,d){t/=d/2;if(1>t)return c/2*t*t+b;t--;return-c/2*(t*(t-2)-1)+b},_typeof="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?function(obj){return typeof obj}:function(obj){return obj&&"function"===typeof Symbol&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj},jumper=function jumper(){// private variable cache
-// no variables are created during a jump, preventing memory leaks
-var element=void 0,start=void 0,stop=void 0,offset=void 0,easing=void 0,a11y=void 0,distance=void 0,duration=void 0,timeStart=void 0,timeElapsed=void 0,next=void 0,callback=void 0;// element to scroll to                   (node)
-// to call when done scrolling            (function)
-// scroll position helper
-function location(){return window.scrollY||window.pageYOffset}// element offset helper
-function top(element){return element.getBoundingClientRect().top+start}// rAF loop helper
-function loop(timeCurrent){// store time scroll started, if not started already
-if(!timeStart){timeStart=timeCurrent}// determine time spent scrolling so far
-timeElapsed=timeCurrent-timeStart;// calculate next scroll position
-next=easing(timeElapsed,start,distance,duration);// scroll to it
-window.scrollTo(0,next);// check progress
-timeElapsed<duration?window.requestAnimationFrame(loop)// continue scroll loop
-:done();// scrolling is done
-}// scroll finished helper
-function done(){// account for rAF time rounding inaccuracies
-window.scrollTo(0,start+distance);// if scrolling to an element, and accessibility is enabled
-if(element&&a11y){// add tabindex indicating programmatic focus
-element.setAttribute("tabindex","-1");// focus the element
-element.focus()}// if it exists, fire the callback
-if("function"===typeof callback){callback()}// reset time for next jump
-timeStart=!1}// API
-function jump(target){var options=1<arguments.length&&arguments[1]!==void 0?arguments[1]:{};// resolve options, or use defaults
-duration=options.duration||1e3;offset=options.offset||0;callback=options.callback;// "undefined" is a suitable default, and won't be called
-easing=options.easing||easeInOutQuad;a11y=options.a11y||!1;// cache starting position
-start=location();// resolve target
-switch("undefined"===typeof target?"undefined":_typeof(target)){// scroll from current position
-case"number":element=void 0;// no element to scroll to
-a11y=!1;// make sure accessibility is off
-stop=start+target;break;// scroll to element (node)
-// bounding rect is relative to the viewport
-case"object":element=target;stop=top(element);break;// scroll to element (selector)
-// bounding rect is relative to the viewport
-case"string":element=document.querySelector(target);stop=top(element);break;}// resolve scroll distance, accounting for offset
-distance=stop-start+offset;// resolve duration
-switch(_typeof(options.duration)){// number in ms
-case"number":duration=options.duration;break;// function passed the distance of the scroll
-case"function":duration=options.duration(distance);break;}// start the loop
-window.requestAnimationFrame(loop)}// expose only the jump method
-return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_module={default:singleton};_exports.$jumpModule=jump_module;class Menu extends LitElement{static get styles(){return css`
+    `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);class Menu extends LitElement{static get styles(){return css`
       #button-container {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
@@ -1526,6 +1432,8 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
         font-family: var(--main);
         outline: none;
         color: inherit;
+        padding: 0;
+        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
       }
 
       .selected {
@@ -1551,14 +1459,18 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
         button {
           text-align: center;
         }
+
+        button:hover {
+          color: inherit;
+        }
       }
 
       @media (max-width: 600px) {
         button {
-          font-size: 1.75rem;
+          font-size: 1.875rem;
         }
       }
-    `}static get properties(){return{current:{type:String},scrollFunc:{attribute:!1}}}render(){return html`
+    `}static get properties(){return{current:String,offset:Object}}render(){return html`
       <div id="button-container">
         <button
           @click="${this.clickHandler}"
@@ -1582,7 +1494,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
           Projects
         </button>
       </div>
-    `}firstUpdated(){window.addEventListener("scroll",this.scrollFunc,!0)}onScroll(){const scroll=window.scrollY,menus=["about","experience","projects"];menus.forEach(target=>{const section=document.getElementsByClassName(target)[0];let top=section.offsetTop;if(0>top)top=0;if("projects"===target)top-=15;if(top<=scroll&&top+section.offsetHeight>scroll)this.current=target;if(window.innerHeight+window.pageYOffset>=document.body.offsetHeight-20)this.current="projects"})}clickHandler(e){if(this.current===e.target.id)return;window.removeEventListener("scroll",this.scrollFunc,!0);this.current=e.target.id;singleton("."+this.current,{offset:"projects"===this.current?-15:0,callback:()=>{window.addEventListener("scroll",this.scrollFunc,!0)}})}constructor(){super();this.current="about";this.scrollFunc=()=>this.onScroll()}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
+    `}firstUpdated(){document.body.addEventListener("touchmove",this.onScroll.bind(this),!0);window.addEventListener("scroll",this.onScroll.bind(this),!0);const resizeObserver=new ResizeObserver(()=>{["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop)});resizeObserver.observe(document.body)}onScroll(){const scroll=window.scrollY;if(this.offset.projects<=scroll)this.current="projects";else if(this.offset.experience<=scroll)this.current="experience";else this.current="about"}clickHandler(e){if(this.current===e.target.id)return;this.current=e.target.id;window.scrollTo({top:this.offset[e.target.id],behavior:"smooth"})}constructor(){super();this.offset={about:0};this.current="about"}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
       #name {
         font-size: min(20vw, 8.5rem);
         -moz-user-select: none;
@@ -1626,6 +1538,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
 
         a {
           color: var(--off-white);
+          transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
           text-decoration: none;
           margin-left: 1rem;
         }
@@ -1647,7 +1560,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
           padding-bottom: 3rem;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 1000px) {
           .subtitle {
             width: calc(100% - 2rem);
           }
@@ -1719,7 +1632,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
           justify-content: space-around;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 1000px) {
           blockquote {
             width: calc(100% - 5rem);
           }
@@ -1733,7 +1646,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
           }
         }
       `,selectionStyles]}render(){return html`
-      <span class="title">What I've made.</span>
+      <div class="title">What I've made.</div>
       <div id="projects-container">
       <project-card
           name="UImpactify"
@@ -1890,108 +1803,7 @@ return jump},singleton=jumper();_exports.$jumpModuleDefault=singleton;var jump_m
           </div></project-card
         >
       </div>
-    `}constructor(){super()}}customElements.define("projects-section",Projects);class Terminal extends LitElement{static get styles(){return css`
-      :host {
-        /* Code Colors */
-        /* --green: rgb(137, 202, 120);
-        --blue: rgb(82, 173, 242);
-        --red: rgb(239, 89, 111);
-        --aqua: rgb(43, 186, 197);
-        --yellow: rgb(229, 192, 123);
-        --salmon: rgb(216, 152, 95); */
-      }
-
-      .term {
-        padding: 1rem;
-        margin-bottom: 1rem;
-        color: var(--off-white);
-        max-width: 70rem;
-        border-radius: 5px;
-        user-select: none;
-        -webkit-user-select: none;
-        border: 0.2rem var(--dark-gray) solid;
-        /* filter: drop-shadow(0.25rem 0.25rem 0.1rem black); */
-      }
-
-      .dots {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 0.75rem;
-      }
-
-      .dot {
-        height: 0.75rem;
-        width: 0.75rem;
-        margin-right: 0.5rem;
-        border-radius: 50%;
-        display: inline-block;
-      }
-
-      #term-type {
-        /* animation: cursor-blink 0.9s infinite; */
-        padding-right: 0.05rem;
-        /* border-right: 0.1rem solid var(--off-white); */
-        font-family: var(--code);
-        line-height: 1.125;
-        color: var(--aqua);
-      }
-
-      @keyframes cursor-blink {
-        50% {
-          border-color: transparent;
-        }
-      }
-
-      #min {
-        background-color: rgb(255, 188, 68);
-      }
-      #max {
-        background-color: rgb(55, 200, 79);
-      }
-      #exit {
-        background-color: rgb(254, 86, 82);
-      }
-    `}render(){return html`<div class="term">
-      <div class="dots">
-        <span class="dot" id="exit"></span>
-        <span class="dot" id="min"></span>
-        <span class="dot" id="max"></span>
-      </div>
-      <div id="term-text">
-        <pre id="term-type"></pre>
-        <!-- <font size="-3"> -->
-<!-- <pre><font color=black>1000010100110011011010110</font><font color=#151515>1</font><font color=#626262>1</font><font color=#9e9e9e>1</font><font color=#b5b5b5>1</font><font color=#aeaeae>1</font><font color=#939393>0</font><font color=#757575>0</font><font color=#555555>1</font><font color=#313131>0</font><font color=#1c1c1c>1</font><font color=#0a0a0a>0</font><font color=black>100100010000100100010101</font><br><font color=black>111111101010111011000001001</font><font color=#030303>0</font><font color=#272727>0</font><font color=#6a6a6a>0</font><font color=#c2c2c2>0</font><font color=#fdfdfd>0</font><font color=white>0</font><font color=#fdfdfd>0</font><font color=#e9e9e9>1</font><font color=#cecece>1</font><font color=#aaaaaa>1</font><font color=#747474>0</font><font color=#3f3f3f>0</font><font color=#101010>1</font><font color=black>10101001001000110000</font><br><font color=black>110101100111010000110100000010</font><font color=#070707>0</font><font color=#373737>0</font><font color=#b4b4b4>1</font><font color=#fefefe>1</font><font color=white>0001</font><font color=#f9f9f9>0</font><font color=#eaeaea>1</font><font color=#b5b5b5>1</font><font color=#6d6d6d>0</font><font color=#202020>1</font><font color=#050505>1</font><font color=black>1101001100110000</font><br><font color=black>011101111011110011110001101001</font><font color=#020202>0</font><font color=#0b0b0b>0</font><font color=#242424>0</font><font color=#ebebeb>0</font><font color=white>11111000</font><font color=#f9f9f9>0</font><font color=#bbbbbb>0</font><font color=#5e5e5e>0</font><font color=#080808>1</font><font color=black>10010111001011</font><br><font color=black>01011000111100110000</font><font color=#0e0e0e>1</font><font color=#2e2e2e>0</font><font color=#4a4a4a>1</font><font color=#626262>0</font><font color=#7a7a7a>1</font><font color=#8b8b8b>1</font><font color=#9d9d9d>0</font><font color=#ababab>0</font><font color=#b7b7b7>0</font><font color=#c3c3c3>0</font><font color=#cfcfcf>0</font><font color=#d7d7d7>0</font><font color=#e9e9e9>0</font><font color=white>00100011010</font><font color=#fdfdfd>1</font><font color=#afafaf>1</font><font color=#111111>0</font><font color=black>0110001010011</font><br><font color=black>11001110000001</font><font color=#070707>0</font><font color=#1c1c1c>1</font><font color=#4a4a4a>1</font><font color=#828282>1</font><font color=#b3b3b3>0</font><font color=#e0e0e0>0</font><font color=#f8f8f8>1</font><font color=#fbfbfb>1</font><font color=#fdfdfd>0</font><font color=white>11011111010111111100100</font><font color=#c7c7c7>0</font><font color=#101010>0</font><font color=black>010111101100</font><br><font color=black>11110000001</font><font color=#050505>1</font><font color=#373737>1</font><font color=#7f7f7f>0</font><font color=#c3c3c3>0</font><font color=#f1f1f1>1</font><font color=white>0010</font><font color=#f4f4f4>0</font><font color=#dddddd>1</font><font color=#c8c8c8>0</font><font color=#b9b9b9>0</font><font color=#b0b0b0>0</font><font color=#a3a3a3>11</font><font color=#a4a4a4>0</font><font color=#b0b0b0>0</font><font color=#bbbbbb>1</font><font color=#cccccc>1</font><font color=#e0e0e0>0</font><font color=#fafafa>0</font><font color=white>00111000101000</font><font color=#a5a5a5>0</font><font color=#010101>0</font><font color=black>01101110100</font><br><font color=black>11101111</font><font color=#010101>0</font><font color=#121212>1</font><font color=#717171>0</font><font color=#cfcfcf>0</font><font color=#f6f6f6>0</font><font color=white>10</font><font color=#fbfbfb>0</font><font color=#e4e4e4>0</font><font color=#a5a5a5>1</font><font color=#6d6d6d>1</font><font color=#3a3a3a>0</font><font color=#1c1c1c>0</font><font color=#121212>1</font><font color=#090909>0</font><font color=#020202>1</font><font color=black>01000</font><font color=#030303>1</font><font color=#0a0a0a>0</font><font color=#131313>1</font><font color=#232323>1</font><font color=#4d4d4d>0</font><font color=#888888>1</font><font color=#cecece>0</font><font color=#fafafa>1</font><font color=white>0011011011</font><font color=#fcfcfc>0</font><font color=#333333>0</font><font color=black>011</font><font color=#010101>0</font><font color=black>1100100</font><br><font color=black>0000110</font><font color=#202020>1</font><font color=#8c8c8c>1</font><font color=#f0f0f0>1</font><font color=white>11</font><font color=#fcfcfc>0</font><font color=#d4d4d4>1</font><font color=gray>1</font><font color=#333333>0</font><font color=#020202>1</font><font color=black>0000001010111001011</font><font color=#2a2a2a>0</font><font color=#8b8b8b>1</font><font color=#eaeaea>1</font><font color=white>100100000</font><font color=#8b8b8b>1</font><font color=#050505>1</font><font color=#3b3b3b>1</font><font color=#939393>0</font><font color=#ababab>0</font><font color=#9a9a9a>1</font><font color=#5d5d5d>1</font><font color=#1c1c1c>1</font><font color=black>1111</font><br><font color=black>00101</font><font color=#040404>1</font><font color=#717171>0</font><font color=#e7e7e7>0</font><font color=white>010</font><font color=#bfbfbf>1</font><font color=#4f4f4f>0</font><font color=#0e0e0e>0</font><font color=black>111110111111101110100001</font><font color=#242424>1</font><font color=#b2b2b2>1</font><font color=white>00100011</font><font color=#e3e3e3>0</font><font color=#b6b6b6>1</font><font color=#f7f7f7>0</font><font color=white>0110</font><font color=#e6e6e6>0</font><font color=#7e7e7e>1</font><font color=#060606>0</font><font color=black>10</font><br><font color=black>0010</font><font color=#1b1b1b>1</font><font color=#bababa>0</font><font color=#fdfdfd>0</font><font color=white>00</font><font color=#dfdfdf>1</font><font color=#545454>0</font><font color=#060606>1</font><font color=black>00000110001011</font><font color=#010101>0</font><font color=#070707>01</font><font color=black>0001010011</font><font color=#060606>1</font><font color=#aeaeae>0</font><font color=white>101011100111111</font><font color=#fefefe>1</font><font color=#989898>0</font><font color=black>01</font><br><font color=black>101</font><font color=#212121>1</font><font color=#d4d4d4>0</font><font color=white>011</font><font color=#b5b5b5>0</font><font color=#191919>1</font><font color=black>111010000111101</font><font color=#0a0a0a>1</font><font color=#989898>1</font><font color=#c5c5c5>1</font><font color=#c3c3c3>1</font><font color=#878787>1</font><font color=#040404>0</font><font color=black>0</font><font color=#343434>1</font><font color=#8e8e8e>1</font><font color=#9b9b9b>0</font><font color=#7d7d7d>1</font><font color=#1a1a1a>1</font><font color=black>011</font><font color=#2c2c2c>0</font><font color=white>0010111100100000</font><font color=#fbfbfb>1</font><font color=#141414>0</font><font color=black>1</font><br><font color=black>11</font><font color=#0e0e0e>0</font><font color=#cfcfcf>1</font><font color=white>011</font><font color=#b0b0b0>1</font><font color=#0b0b0b>0</font><font color=black>10001011</font><font color=#212121>1</font><font color=#646464>1</font><font color=#464646>0</font><font color=black>01001</font><font color=#0c0c0c>1</font><font color=#b4b4b4>1</font><font color=#e8e8e8>0</font><font color=#e4e4e4>0</font><font color=#a1a1a1>1</font><font color=#050505>0</font><font color=black>1</font><font color=#898989>0</font><font color=#fefefe>1</font><font color=white>0</font><font color=#f7f7f7>1</font><font color=#4f4f4f>1</font><font color=black>101</font><font color=#191919>0</font><font color=white>01000011001000100</font><font color=#161616>1</font><font color=black>0</font><br><font color=black>11</font><font color=#9b9b9b>0</font><font color=white>100</font><font color=#dadada>0</font><font color=#0c0c0c>1</font><font color=black>0110010</font><font color=#141414>1</font><font color=#9d9d9d>0</font><font color=#fcfcfc>1</font><font color=white>1</font><font color=#fcfcfc>0</font><font color=#303030>1</font><font color=black>011110011011</font><font color=#121212>0</font><font color=#212121>0</font><font color=#0a0a0a>1</font><font color=black>0100</font><font color=#171717>1</font><font color=#fcfcfc>1</font><font color=white>100010000101110</font><font color=#bdbdbd>1</font><font color=black>00</font><br><font color=black>1</font><font color=#282828>0</font><font color=#f9f9f9>0</font><font color=white>001</font><font color=#595959>0</font><font color=black>0101001</font><font color=#0a0a0a>0</font><font color=#c4c4c4>1</font><font color=white>0011</font><font color=#b1b1b1>0</font><font color=#020202>1</font><font color=black>001010001001011010</font><font color=#040404>1</font><font color=#515151>0</font><font color=#8b8b8b>0</font><font color=#b2b2b2>1</font><font color=#d6d6d6>0</font><font color=#fdfdfd>1</font><font color=white>0101001001</font><font color=#f1f1f1>0</font><font color=#323232>1</font><font color=black>10</font><br><font color=black>0</font><font color=#7f7f7f>1</font><font color=white>0</font><font color=#f4f4f4>0</font><font color=#b9b9b9>0</font><font color=#6f6f6f>1</font><font color=#050505>0</font><font color=black>0001011</font><font color=#696969>1</font><font color=white>11111</font><font color=#fdfdfd>1</font><font color=#7a7a7a>1</font><font color=#040404>0</font><font color=black>01101110110010011100</font><font color=#020202>1</font><font color=#0c0c0c>1</font><font color=#878787>0</font><font color=white>111011110</font><font color=#f0f0f0>0</font><font color=#494949>0</font><font color=black>101</font><br><font color=black>0</font><font color=#8e8e8e>1</font><font color=#919191>1</font><font color=#232323>0</font><font color=black>1000101100</font><font color=#959595>0</font><font color=white>111111</font><font color=#fefefe>1</font><font color=#acacac>1</font><font color=#2b2b2b>1</font><font color=#010101>1</font><font color=black>1101001101011011111</font><font color=#2d2d2d>0</font><font color=#d8d8d8>0</font><font color=white>01110111</font><font color=#c9c9c9>0</font><font color=#2f2f2f>0</font><font color=black>0010</font><br><font color=black>1</font><font color=#0d0d0d>1</font><font color=black>110001100111</font><font color=#898989>1</font><font color=white>01100101</font><font color=#eeeeee>1</font><font color=#a9a9a9>1</font><font color=#4c4c4c>0</font><font color=#0c0c0c>0</font><font color=black>100100111011010</font><font color=#282828>0</font><font color=#868686>1</font><font color=#ebebeb>1</font><font color=white>0101010</font><font color=#e5e5e5>0</font><font color=#6f6f6f>0</font><font color=#0f0f0f>1</font><font color=black>10011</font><br><font color=black>01111010000101</font><font color=#333333>1</font><font color=#f9f9f9>0</font><font color=white>010100011</font><font color=#fdfdfd>1</font><font color=#f3f3f3>1</font><font color=silver>0</font><font color=#8d8d8d>0</font><font color=#616161>0</font><font color=#3f3f3f>0</font><font color=#262626>0</font><font color=#1d1d1d>0</font><font color=#1a1a1a>0</font><font color=#171717>1</font><font color=#1b1b1b>1</font><font color=#1d1d1d>1</font><font color=#2c2c2c>1</font><font color=#464646>1</font><font color=#6e6e6e>0</font><font color=#9a9a9a>1</font><font color=#d8d8d8>0</font><font color=#fafafa>1</font><font color=white>010010</font><font color=#f6f6f6>1</font><font color=#cccccc>0</font><font color=#666666>1</font><font color=#0b0b0b>1</font><font color=black>0000110</font><br><font color=black>011111100111001</font><font color=#888888>0</font><font color=white>101100111010000</font><font color=#fdfdfd>1</font><font color=#f6f6f6>0</font><font color=#f0f0f0>0</font><font color=#e8e8e8>0</font><font color=#f1f1f1>0</font><font color=#f7f7f7>0</font><font color=white>100101111</font><font color=#f5f5f5>0</font><font color=#c9c9c9>1</font><font color=#848484>1</font><font color=#373737>0</font><font color=#030303>0</font><font color=black>101001010</font><br><font color=black>000111000110111</font><font color=#070707>1</font><font color=#9a9a9a>0</font><font color=#fefefe>1</font><font color=white>101010000100001011100</font><font color=#fefefe>0</font><font color=#fcfcfc>1</font><font color=#f9f9f9>0</font><font color=#eaeaea>1</font><font color=#c1c1c1>0</font><font color=#8e8e8e>0</font><font color=#575757>0</font><font color=#222222>0</font><font color=#090909>1</font><font color=black>010000000111</font><br><font color=black>0000110111101110</font><font color=#010101>1</font><font color=#747474>1</font><font color=#f1f1f1>0</font><font color=white>1011101111101</font><font color=#fdfdfd>0</font><font color=#e8e8e8>0</font><font color=#d8d8d8>1</font><font color=#c8c8c8>0</font><font color=#adadad>1</font><font color=#959595>0</font><font color=#797979>1</font><font color=#5c5c5c>0</font><font color=#3e3e3e>1</font><font color=#1c1c1c>1</font><font color=#020202>0</font><font color=black>01011110100101000</font><br><font color=black>100001011010010110</font><font color=#343434>1</font><font color=#a8a8a8>0</font><font color=#f4f4f4>1</font><font color=white>10011010111</font><font color=#525252>1</font><font color=#1f1f1f>1</font><font color=#0c0c0c>1</font><font color=black>1010111100010111010000100</font><br><font color=black>0001000011011101000</font><font color=#030303>1</font><font color=#161616>1</font><font color=#545454>1</font><font color=#979797>0</font><font color=#d3d3d3>0</font><font color=#f0f0f0>0</font><font color=#fcfcfc>1</font><font color=white>001101</font><font color=#b6b6b6>0</font><font color=#323232>1</font><font color=#080808>0</font><font color=black>1010110011011110000001100</font><br><font color=black>00000111000100001011111</font><font color=#010101>0</font><font color=#1f1f1f>1</font><font color=#4c4c4c>1</font><font color=#7b7b7b>0</font><font color=#ababab>0</font><font color=#cdcdcd>1</font><font color=#e5e5e5>0</font><font color=#f9f9f9>1</font><font color=white>00</font><font color=#fbfbfb>0</font><font color=#c4c4c4>1</font><font color=#757575>1</font><font color=#2f2f2f>0</font><font color=#050505>0</font><font color=black>0010011011101100101010</font><br><font color=black>1110101000000110101010110011</font><font color=#0a0a0a>0</font><font color=#191919>1</font><font color=#272727>1</font><font color=#3e3e3e>1</font><font color=#5b5b5b>1</font><font color=#767676>1</font><font color=#8c8c8c>0</font><font color=#9f9f9f>0</font><font color=#a2a2a2>0</font><font color=#8b8b8b>1</font><font color=#464646>0</font><font color=#010101>0</font><font color=black>11101001001110110101</font><br>
-</pre></font> -->
-      </div>
-    </div>`}constructor(){super()}firstUpdated(){const logo=`
-                      .ohhs+:\`                     home@navn.me
-                       \`/mMMMmy/.                  ---------------------------
-                          /NMMMMMd+\`               OS: macOS Catalina 10.15.6 19G2021 x86_64
-                           oMMMMMMMMy.             Host: MacBookPro15,4
-                 \`:/osyhdmNMMMMMMMMMMN-            Kernel: 19.6.0
-             -ohNMMMMMMMMMMMMMMMMMMMMMN.           Uptime: 19 years, 18 hours, 26 mins
-          -sNMMMMMmhhyyyhmMMMMMMMMMMMMMh           Packages: 51 (brew)
-        :dMMMNy+.          -+dMMMMMMMMMM.          Shell: zsh 5.7.1
-      -dMMMd/                 -hMMMMMMMM+ +yy/     Resolution: 3840x2160, 3840x2160
-     oMMMd:                     /MMMMMMMmmMMMMm-   DE: Aqua
-    yMMMo                        +MMMMMMMMMMMMMN\`  WM: Rectangle
-   yMMM/             -hds  +yo\`   NMMMMMMMMMMMMM/  Terminal: vscode
-  +MMM+       .+.    -mNy \`NMM:   NMMMMMMMMMMMMM+  CPU: Intel i5-8257U (8) @ 1.40GHz
- \`NMMd       +MMd           .\`    NMMMMMMMMMMMMM.  GPU: Intel Iris Plus Graphics 645
- +MMM:      /MMMM:                :sdMMMMMMMMMMy   Memory: 6831MiB / 8192MiB
- dMm+       mMMMMm\`                  \`MMMMMMMMd\`  
- h:         MMMMMMm.                 oMMMMMMMd\`        
-            NMMMMMMMy-             .yMMMMMMMo      Made with ♥
-            yMMMMMMMMMmy+-.\` \`\`-/smMMMMMMMy.      
-            .MMMMMMMMMMMMMMMMMMMMMMMMMMmo\`        
-             /MMMMMMMMMMMMMMMMMMMMMNh+.           
-              /MMMMMMMMMMMMMNdys+:\`               
-               -dMMMMMMMMMd.                      
-                 -odMMMMMMM+                      
-                    \`/sdMMMMmo.                   
-                         .:+oyyo.                 
-
-`,text=this.shadowRoot.getElementById("term-type");text.innerText=logo}}customElements.define("typewriter-term",Terminal);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+    `}constructor(){super()}}customElements.define("projects-section",Projects);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -2044,4 +1856,32 @@ if("image"==pJS.particles.shape.type){if("svg"==pJS.tmp.img_type&&pJS.tmp.source
 cancelRequestAnimFrame(pJS.tmp.checkAnimFrame);if(!pJS.tmp.img_error){pJS.fn.vendors.init();pJS.fn.vendors.draw()}}}else{pJS.fn.vendors.init();pJS.fn.vendors.draw()}};pJS.fn.vendors.init=function(){/* init canvas + particles */pJS.fn.retinaInit();pJS.fn.canvasInit();pJS.fn.canvasSize();pJS.fn.canvasPaint();pJS.fn.particlesCreate();pJS.fn.vendors.densityAutoParticles();/* particles.line_linked - convert hex colors to rgb */pJS.particles.line_linked.color_rgb_line=hexToRgb(pJS.particles.line_linked.color)};pJS.fn.vendors.start=function(){if(isInArray("image",pJS.particles.shape.type)){pJS.tmp.img_type=pJS.particles.shape.image.src.substr(pJS.particles.shape.image.src.length-3);pJS.fn.vendors.loadImg(pJS.tmp.img_type)}else{pJS.fn.vendors.checkBeforeDraw()}};/* ---------- pJS - start ------------ */pJS.fn.vendors.eventsListeners();pJS.fn.vendors.start()};/* ---------- global functions - vendors ------------ */Object.deepExtend=function deepExtendFunction(destination,source){for(var property in source){if(source[property]&&source[property].constructor&&source[property].constructor===Object){destination[property]=destination[property]||{};deepExtendFunction(destination[property],source[property])}else{destination[property]=source[property]}}return destination};window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){window.setTimeout(callback,1e3/60)}}();window.cancelRequestAnimFrame=function(){return window.cancelAnimationFrame||window.webkitCancelRequestAnimationFrame||window.mozCancelRequestAnimationFrame||window.oCancelRequestAnimationFrame||window.msCancelRequestAnimationFrame||clearTimeout}();function hexToRgb(hex){// By Tim Down - http://stackoverflow.com/a/5624139/3493650
 // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandRegex,function(m,r,g,b){return r+r+g+g+b+b});var result=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);return result?{r:parseInt(result[1],16),g:parseInt(result[2],16),b:parseInt(result[3],16)}:null};function clamp(number,min,max){return Math.min(Math.max(number,min),max)};function isInArray(value,array){return-1<array.indexOf(value)}/* ---------- particles.js functions - start ------------ */window.pJSDom=[];window.particlesJS=function(tag_id,params){//console.log(params);
-/* no string id? so it's object params, and set the id with default id */if("string"!=typeof tag_id){params=tag_id;tag_id="particles-js"}/* no id? set the id to default id */if(!tag_id){tag_id="particles-js"}/* pJS elements */var pJS_tag=document.getElementById(tag_id),pJS_canvas_class="particles-js-canvas-el",exist_canvas=pJS_tag.getElementsByClassName(pJS_canvas_class);/* remove canvas if exists into the pJS target tag */if(exist_canvas.length){while(0<exist_canvas.length){pJS_tag.removeChild(exist_canvas[0])}}/* create canvas element */var canvas_el=document.createElement("canvas");canvas_el.className=pJS_canvas_class;/* set size canvas */canvas_el.style.width="100%";canvas_el.style.height="100%";/* append canvas */var canvas=document.getElementById(tag_id).appendChild(canvas_el);/* launch particle.js */if(null!=canvas){pJSDom.push(new pJS(tag_id,params))}};window.particlesJS.load=function(tag_id,path_config_json,callback){/* load json config */var xhr=new XMLHttpRequest;xhr.open("GET",path_config_json);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){var params=JSON.parse(data.currentTarget.response);window.particlesJS(tag_id,params);if(callback)callback()}else{console.log("Error pJS - XMLHttpRequest status: "+xhr.status);console.log("Error pJS - File config not found")}}};xhr.send()}});
+/* no string id? so it's object params, and set the id with default id */if("string"!=typeof tag_id){params=tag_id;tag_id="particles-js"}/* no id? set the id to default id */if(!tag_id){tag_id="particles-js"}/* pJS elements */var pJS_tag=document.getElementById(tag_id),pJS_canvas_class="particles-js-canvas-el",exist_canvas=pJS_tag.getElementsByClassName(pJS_canvas_class);/* remove canvas if exists into the pJS target tag */if(exist_canvas.length){while(0<exist_canvas.length){pJS_tag.removeChild(exist_canvas[0])}}/* create canvas element */var canvas_el=document.createElement("canvas");canvas_el.className=pJS_canvas_class;/* set size canvas */canvas_el.style.width="100%";canvas_el.style.height="100%";/* append canvas */var canvas=document.getElementById(tag_id).appendChild(canvas_el);/* launch particle.js */if(null!=canvas){pJSDom.push(new pJS(tag_id,params))}};window.particlesJS.load=function(tag_id,path_config_json,callback){/* load json config */var xhr=new XMLHttpRequest;xhr.open("GET",path_config_json);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){var params=JSON.parse(data.currentTarget.response);window.particlesJS(tag_id,params);if(callback)callback()}else{console.log("Error pJS - XMLHttpRequest status: "+xhr.status);console.log("Error pJS - File config not found")}}};xhr.send()};const now=new Date,uptime=now-new Date("2001-10-16").getTime(),years=Math.floor(uptime/315576e5),months=Math.floor(uptime/26298e5-12*years),days=Math.floor(uptime/864e5-365.25*years-30.4167*months);console.log(`
+                      .ohhs+:\`                     home@navn.me
+                       \`/mMMMmy/.                  ---------------------------
+                          /NMMMMMd+\`               OS: Linux + MacOS + Windows
+                           oMMMMMMMMy.             Host: Navinn Ravindaran
+                 \`:/osyhdmNMMMMMMMMMMN-            Kernel: ${now.getHours()}.${now.getMinutes()}
+             -ohNMMMMMMMMMMMMMMMMMMMMMN.           Uptime: ${years} years, ${months} months, ${days} days
+          -sNMMMMMmhhyyyhmMMMMMMMMMMMMMh           Packages: 51 (brew)
+        :dMMMNy+.          -+dMMMMMMMMMM.          Shell: zsh 5.8
+      -dMMMd/                 -hMMMMMMMM+ +yy/     Resolution: 3840x2160, 3840x2160
+     oMMMd:                     /MMMMMMMmmMMMMm-   Editor: vscode
+    yMMMo                        +MMMMMMMMMMMMMN\`  Font: Fira Code Retina
+   yMMM/             -hds  +yo\`   NMMMMMMMMMMMMM/  CPU: AMD Ryzen 9 3900X (24) @ 3.800GHz
+  +MMM+       .+.    -mNy \`NMM:   NMMMMMMMMMMMMM+  GPU: 404 Not Found
+ \`NMMd       +MMd           .\`    NMMMMMMMMMMMMM.  Memory: 6831MiB / 32098MiB
+ +MMM:      /MMMM:                :sdMMMMMMMMMMy   
+ dMm+       mMMMMm\`                  \`MMMMMMMMd\`   Made with ♥
+ h:         MMMMMMm.                 oMMMMMMMd\`        
+            NMMMMMMMy-             .yMMMMMMMo      
+            yMMMMMMMMMmy+-.\` \`\`-/smMMMMMMMy.      
+            .MMMMMMMMMMMMMMMMMMMMMMMMMMmo\`        
+             /MMMMMMMMMMMMMMMMMMMMMNh+.           
+              /MMMMMMMMMMMMMNdys+:\`               
+               -dMMMMMMMMMd.                      
+                 -odMMMMMMM+                      
+                    \`/sdMMMMmo.                   
+                         .:+oyyo.                 
+
+`)});
