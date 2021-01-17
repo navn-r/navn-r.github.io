@@ -1275,6 +1275,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           I am a student developer studying at the
           <a
             href="https://www.utoronto.ca/"
+            rel="noopener noreferrer nofollow"
             target="_blank"
             class="highlight link"
             >University of Toronto</a
@@ -1283,6 +1284,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           Currently, I am working as a
           <a
             href="https://www.caseware.com/ca"
+            rel="noopener noreferrer nofollow"
             target="_blank"
             class="highlight link"
             >Software Developer at CaseWare International</a
@@ -1294,6 +1296,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <a
             id="github"
             href="https://github.com/navn-r"
+            rel="noopener noreferrer nofollow"
             target="_blank"
             class="contact"
           >
@@ -1303,6 +1306,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <a
             id="linkedin"
             href="https://linkedin.com/in/navinn-ravindaran"
+            rel="noopener noreferrer nofollow"
             target="_blank"
             class="contact"
           >
@@ -1321,6 +1325,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <a
             id="resume"
             href="https://navn.me/resume/RavindaranNavinn_Resume.pdf"
+            rel="noopener noreferrer nofollow"
             target="_blank"
             class="contact"
           >
@@ -1330,32 +1335,37 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         </div>
       </div>
     `}constructor(){super()}}customElements.define("about-section",About);class ExperienceCard extends LitElement{static get styles(){return[css`
-      .title {
-        font-size: var(--subtitle);
-      }
+        .title {
+          font-size: var(--subtitle);
+        }
 
-      .location {
-        font-family: var(--code);
-        background: var(--dark-gray);
-        padding: 0.25rem;
-      }
+        .location {
+          font-family: var(--code);
+          background: var(--dark-gray);
+          padding: 0.25rem;
+        }
 
-      .card {
-        margin: 4rem  0;
-      }
-    `,selectionStyles]}render(){return html`
-      <div class="card">
-        <span class="title">${this.name}</span
-        > <span class="title location">${this.location}</span>
-        <slot name="body"></slot>
-      </div>
-    `}static get properties(){return{name:{type:String},location:{type:String}}}constructor(){super()}}customElements.define("experience-card",ExperienceCard);class Experiences extends LitElement{static get styles(){return[css`
-        #experience-container {
-          margin-bottom: 6rem;
+        .card {
+          margin: 4rem 0;
         }
 
         ul {
           padding-left: 2rem;
+        }
+      `,selectionStyles]}render(){return html`
+      <div class="card">
+        <span class="title">${this.name}</span>
+        <span class="title location">${this.location}</span>
+        <div class="body">
+          ${this.duration}
+          <ul>
+            ${this.info.map(i=>html`<li>${i}</li>`)}
+          </ul>
+        </div>
+      </div>
+    `}static get properties(){return{name:{type:String},location:{type:String},duration:{type:String},info:{attribute:".info"}}}constructor(){super()}}customElements.define("experience-card",ExperienceCard);const Experiences=[{name:"Software Developer Co-op",location:"@caseware",duration:"Sept. 2020 - Present",info:[html`Working in an <span class="highlight">Agile Scrum</span> on the <span class="highlight">Simple Engagements</span> product`,html`Converting manual tests to unit tests using <span class="highlight">Karma and Jasmine</span>`,html`Developing bug fixes and features using <span class="highlight">Angular and AngularJS</span>`]},{name:"HBSc. Computer Science (Co-op)",location:"@uoft",duration:"Sept. 2019 - Apr. 2023 (Expected)",info:[html`cGPA: <span class="highlight">3.78</span>/4.0`,html`Dean's List (<span class="highlight">2019-20</span>)`,html`UofT Scholar (<span class="highlight">Sept 2019</span>)`]}];class ExperiencesSection extends LitElement{static get styles(){return[css`
+        #experience-container {
+          margin-bottom: 6rem;
         }
 
         .title {
@@ -1367,27 +1377,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       `,selectionStyles]}render(){return html`
     <div class="title">What I do.</div>
     <div id="experience-container">
-        <experience-card name="Software Developer Co-op" location="@caseware">
-          <div slot="body">
-            Sept. 2020 - Present
-            <ul>
-                <li>Working in an <span class="highlight">Agile Scrum</span> on the <span class="highlight">Simple Engagements</span> product</li>
-                <li>Converting manual tests to unit tests using <span class="highlight">Karma and Jasmine</span></li>
-                <li>Developing bug fixes and features using <span class="highlight">Angular and AngularJS</span></li>
-            </ul>
-          </div>
-        </experience-card>
-        <experience-card name="HBSc. Computer Science (Co-op)" location="@uoft">
-          <div slot="body">
-            Sept. 2019 - Apr. 2023 (Expected)
-            <ul>
-                <li>cGPA: <span class="highlight">3.78</span>/4.0</li>
-                <li>Dean's List (<span class="highlight">2019-20</span>)</li>
-                <li>UofT Scholar (<span class="highlight">Sept 2019</span>)</li>
-            </ul>
-          </div>
-        </experience-card>
-    </div>`}constructor(){super()}}customElements.define("experiences-section",Experiences);class Header extends LitElement{static get styles(){return css`
+      ${Experiences.map(({name,location,duration,info})=>html`
+        <experience-card name="${name}" location="${location}" duration="${duration}" .info="${info}"></experience-card>
+      `)}
+    </div>`}constructor(){super()}}customElements.define("experiences-section",ExperiencesSection);class Header extends LitElement{static get styles(){return css`
       #header {
         width: 100%;
         height: 18rem;
@@ -1459,6 +1452,31 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         color: var(--red);
       }
 
+      #top {
+        display: none;
+        border-radius: 5rem;
+        background-color: var(--dark-gray);
+        color: var(--light-gray);
+        width: 5rem;
+        height: 5rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1px;
+        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      #top:hover {
+        cursor: pointer;
+        color: var(--off-white);
+      }
+
+      fa-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+      }
+
       @media (max-width: 1000px) {
         :host {
           display: none;
@@ -1498,7 +1516,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           Projects
         </button>
       </div>
-    `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
+      <div id="top" @click="${this.clickHandler}">
+        <fa-icon class="fas fa-hand-point-up"></fa-icon>
+      </div>
+    `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){if("top"===target)target="about";scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
       #name {
         font-size: min(20vw, 8.5rem);
         -moz-user-select: none;
@@ -1527,8 +1548,22 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
         crossorigin="anonymous"
       />
-      <div id="name"></div>
-    `}constructor(){super()}firstUpdated(){const nameKatex=katex.renderToString("\\mathbb{N}\\textnormal{a}\\vec{v}_i\\textnormal{nn}",{throwOnError:!1});this.shadowRoot.getElementById("name").innerHTML+=nameKatex;const i=this.shadowRoot.getElementById("name").childNodes[0].childNodes[1].childNodes[0].childNodes[3].childNodes[1].childNodes[0];i.className+=" wiggle"}}customElements.define("app-name",Name);class ProjectCard extends LitElement{static get styles(){return[css`
+      <div id="name"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">N</mi><mtext>a</mtext><msub><mover accent="true"><mi>v</mi><mo>⃗</mo></mover><mi>i</mi></msub><mtext>nn</mtext></mrow><annotation encoding="application/x-tex">\mathbb{N}\textnormal{a}\vec{v}_i\textnormal{nn}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.864em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathbb">N</span></span><span class="mord text"><span class="mord textrm">a</span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.20772em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+      3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+      10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+      -1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+      -7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+      H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+      c-16-25.333-24-45-24-59z">
+      </path></svg></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2 wiggle"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord textrm">nn</span></span></span></span></span></div>
+    `}constructor(){super()}firstUpdated(){// const nameKatex = katex.renderToString(
+//   "\\mathbb{N}\\textnormal{a}\\vec{v}_i\\textnormal{nn}",
+//   { throwOnError: false }
+// );
+// this.shadowRoot.getElementById("name").innerHTML += nameKatex;
+// const i = this.shadowRoot.getElementById("name").childNodes[0].childNodes[1].childNodes[0].childNodes[3].childNodes[1].childNodes[0];
+// i.className += " wiggle";
+}}customElements.define("app-name",Name);class ProjectCard extends LitElement{static get styles(){return[css`
         .subtitle {
           font-size: 2rem;
           width: 100%;
@@ -1555,7 +1590,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           color: var(--aqua);
         }
 
-        ::slotted(div) {
+        .body {
           margin-top: 2rem;
         }
 
@@ -1564,31 +1599,6 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           padding-bottom: 3rem;
         }
 
-        @media (max-width: 1000px) {
-          .subtitle {
-            width: calc(100% - 2rem);
-          }
-        }
-      `,selectionStyles]}render(){return html`
-      <div class="card">
-        <div class="subtitle">
-          ${this.name}
-          <div class="button-container">
-            <a href="${this.github}" target="_blank"><fa-icon class="fab fa-github"></fa-icon></a
-            >${this.demo?html`<a href="${this.demo}" target="_blank"
-              ><fa-icon class="fas fa-external-link-alt"></fa-icon
-            ></a>`:""}
-          </div>
-        </div>
-        <slot name="description"></slot>
-        <slot name="body"></slot>
-      </div>
-    `}static get properties(){return{name:{type:String},github:{type:String},demo:{type:String}}}constructor(){super()}}customElements.define("project-card",ProjectCard);class Projects extends LitElement{static get styles(){return[css`
-        .title {
-          font-family: var(--main);
-          font-size: var(--title);
-          color: var(--off-white);
-        }
 
         ul {
           margin-top: 0.5rem;
@@ -1629,14 +1639,11 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           width: max-content;
         }
 
-        .project {
-          width: 100%;
-          display: grid;
-          grid-template-columns: 1fr;
-          justify-content: space-around;
-        }
-
         @media (max-width: 1000px) {
+          .subtitle {
+            width: calc(100% - 2rem);
+          }
+
           blockquote {
             width: calc(100% - 5rem);
           }
@@ -1650,164 +1657,40 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           }
         }
       `,selectionStyles]}render(){return html`
+      <div class="card">
+        <div class="subtitle">
+          ${this.name}
+          <div class="button-container">
+            <a href="${this.github}" rel="noopener noreferrer nofollow" target="_blank"><fa-icon class="fab fa-github"></fa-icon></a>
+            ${"undefined"!==this.demo?html`<a href="${this.demo}" rel="noopener noreferrer nofollow" target="_blank"><fa-icon class="fas fa-external-link-alt"></fa-icon></a>`:""}
+          </div>
+        </div>
+        <blockquote>
+            ${this.description}
+        </blockquote>
+        <div class="body">
+          <ul>
+            ${this.features.map(f=>html`<li>${f}</li>`)}
+          </ul>
+          <div class="tags-container">
+            ${this.tags.map(t=>html`<div class="tag">${t}</div>`)}
+          </div>
+        </div>
+      </div>
+    `}static get properties(){return{name:{type:String},github:{type:String},demo:{type:String},description:{type:String},features:{attribute:".features"},tags:{attribute:".tags"}}}constructor(){super()}}customElements.define("project-card",ProjectCard);const Projects=[{name:"UImpactify",github:"https://github.com/navn-r/uimpactify",demo:"https://uimpactify.herokuapp.com",description:"The E-Learning website dedicated to serve the social purpose sector.",features:["Multiple User Types (Impact Learner, Impact Consultant, Social Initiatives)","Course Creation and Enrollment","Recorded Lectures and Graded Assessments","Course Surveys & Ratings","Student Analytics","Realtime Chat","Volunteer & Employment Opportunities","Community Driven Donation System (Giving Garden)"],tags:["MongoDB","ExpressJS","Angular","Node.js","Socket.io","Chart.js","Multer","GridFS","Figma","Jira"]},{name:"Spotify API Clone",github:"https://github.com/navn-r/spotify-api-clone",demo:"https://navn.me/spotify-api-clone",description:"A REST API for a social-centric music player using microservices.",features:["Create and follow/unfollow user profiles","Upload and like/unlike songs","Playlist generation based on liked songs","Query liked songs based on followers"],tags:["Java","Spring Boot","MongoDB","Neo4j"]},{name:"Ritrovo",github:"https://github.com/navn-r/ritrovo",demo:"https://ritrovo.herokuapp.com",description:"Meaning 'meeting place' in Italian, is a social platform.",features:["Single page, single community based design","View all posts by other users","Create, edit, and delete posts written in Markdown","Built on the MEAN stack"],tags:["MongoDB","ExpressJS","Angular","Node.js","TypeScript","Markdown","Bootstrap","Heroku"]},{name:"Standup Bot",github:"https://github.com/navn-r/standup-bot",description:"A Discord bot used for Scrum daily standup meetings.",features:[html`Creates and facilitates a <span class="code">#daily-standups</span> text channel upon joining`,"View, add and remove members in the standup","Private DM triggering a standup prompt and response","Present all member responses in a formatted message","Be in multiple standups in different servers simultaneously"],tags:["discord.js","MongoDB","Heroku","Node.js"]},{name:"Noten",github:"https://github.com/navn-r/standup-bot",demo:"https://ply.gl/com.noten",description:"Meaning 'grades' in German, is a cloud based grade management app.",features:["Basic Semester, Course, Category, Grade management","Grade Prediction Calculator","Pass/Fail Courses","Multiple Grade Scales (5.0, 4.33, 4.0)","Incognito Grades (ignored in GPA calculations)"],tags:["React Native","Google Sign-in","Firebase Realtime Database"]},{name:"Portfolio Website",github:"https://github.com/navn-r/navn-r.github.io",description:"Platform to showcase my projects and experiences.",features:["Fully responsive with CSS Grid","Modular encapsulated components using lit-element, lit-html","Automated build and deployment with TravisCI","Purposefully built without a front-end framework"],tags:["Web Components","HTML","CSS","JavaScript"]}];class ProjectsSection extends LitElement{static get styles(){return[css`
+        .title {
+          font-family: var(--main);
+          font-size: var(--title);
+          color: var(--off-white);
+        }
+      `,selectionStyles]}render(){return html`
       <div class="title">What I've made.</div>
       <div id="projects-container">
-      <project-card
-          name="UImpactify"
-          github="https://github.com/navn-r/uimpactify"
-          demo="https://uimpactify.herokuapp.com"
-        >
-          <blockquote slot="description">
-            The E-Learning website dedicated to serve the social purpose sector.
-          </blockquote>
-          <div slot="body">
-            <ul>
-                <li>Multiple User Types (Impact Learner, Impact Consultant, Social Initiatives)</li>
-                <li>Course Creation and Enrollment</li>
-                <li>Recorded Lectures and Graded Assessments</li>
-                <li>Course Surveys & Ratings</li>
-                <li>Student Analytics</li>
-                <li>Realtime Chat</li>
-                <li>Volunteer & Employment Opportunities</li>
-                <li>Community Driven Donation System (Giving Garden)</li>
-            </ul>
-            <div class="tags-container">
-              <div class="tag">MongoDB</div>
-              <div class="tag">ExpressJS</div>
-              <div class="tag">Angular</div>
-              <div class="tag">Node.js</div>
-              <div class="tag">Socket.io</div>
-              <div class="tag">Chart.js</div>
-              <div class="tag">Multer</div>
-              <div class="tag">GridFS</div>
-              <div class="tag">Figma</div>
-              <div class="tag">Jira</div>
-            </div>
-          </div>
-        </project-card>
-        <project-card
-          name="Spotify API Clone"
-          github="https://github.com/navn-r/spotify-api-clone"
-          demo="https://navn.me/spotify-api-clone"
-        >
-          <blockquote slot="description">
-            A REST API for a social-centric music player using microservices.
-          </blockquote>
-          <div slot="body">
-            <ul>
-              <li>Create and follow/unfollow user profiles</li>
-              <li>Upload and like/unlike songs</li>
-              <li>Playlist generation based on liked songs</li>
-              <li>Query liked songs based on followers</li>
-            </ul>
-            <div class="tags-container">
-              <div class="tag">Java</div>
-              <div class="tag">Spring Boot</div>
-              <div class="tag">MongoDB</div>
-              <div class="tag">Neo4j</div>
-            </div>
-          </div>
-        </project-card>
-        <project-card
-          name="Ritrovo"
-          github="https://github.com/navn-r/ritrovo"
-          demo="https://ritrovo.herokuapp.com"
-        >
-          <blockquote slot="description">
-            Meaning 'meeting place' in Italian, is a social platform.
-          </blockquote>
-          <div slot="body">
-            <ul>
-              <li>Single page, single community based design</li>
-              <li>View all posts by other users</li>
-              <li>Create, edit, and delete posts written in Markdown</li>
-              <li>Built on the MEAN stack</li>
-            </ul>
-            <div class="tags-container">
-              <div class="tag">MongoDB</div>
-              <div class="tag">ExpressJS</div>
-              <div class="tag">Angular</div>
-              <div class="tag">Node.js</div>
-              <div class="tag">TypeScript</div>
-              <div class="tag">Markdown</div>
-              <div class="tag">Bootstrap</div>
-              <div class="tag">Heroku</div>
-            </div>
-          </div>
-        </project-card>
-        <project-card
-          name="Standup Bot"
-          github="https://github.com/navn-r/standup-bot"
-        >
-          <blockquote slot="description">
-            A Discord bot used for Scrum daily standup meetings.
-          </blockquote>
-          <div slot="body">
-            <ul>
-              <li>
-                Creates and faciliates a
-                <span class="code">#daily-standups</span> text channel upon
-                joining
-              </li>
-              <li>View, add and remove members in the standup</li>
-              <li>Private DM triggering a standup prompt and response</li>
-              <li>Present all member responses in a formatted message</li>
-              <li>
-                Be in multiple standups in different servers simultaneously
-              </li>
-            </ul>
-            <div class="tags-container">
-              <div class="tag">discord.js</div>
-              <div class="tag">MongoDB</div>
-              <div class="tag">Heroku</div>
-              <div class="tag">Node.js</div>
-            </div>
-          </div>
-        </project-card>
-        <project-card
-          name="Noten"
-          github="https://github.com/navn-r/standup-bot"
-          demo="https://ply.gl/com.noten"
-        >
-          <blockquote slot="description">
-            Meaning 'grades' in German, is a cloud based grade management app.
-          </blockquote>
-          <div slot="body">
-            <ul>
-              <li>Basic Semester, Course, Catagory, Grade management</li>
-              <li>Grade Prediction Calculator</li>
-              <li>Pass/Fail Courses</li>
-              <li>Multiple Grade Scales (5.0, 4.33, 4.0)</li>
-              <li>Incognito Grades (ignored in GPA calculations)</li>
-            </ul>
-            <div class="tags-container">
-              <div class="tag">React Native</div>
-              <div class="tag">Google Sign-in</div>
-              <div class="tag">Firebase Realtime Database</div>
-            </div>
-          </div>
-        </project-card>
-        <project-card name="Portfolio Website" github="https://github.com/navn-r/navn-r.github.io">
-          <blockquote slot="description">
-            Platform to showcase my projects and experiences.
-          </blockquote>
-          <div slot="body">
-            <ul>
-              <li>Fully responsive with CSS Grid</li>
-              <li>Web components using lit-element, lit-html</li>
-              <li>Automated build and deployment with TravisCI</li>
-              <li>Purposefully built without a front-end framework</li>
-            </ul>
-            <div class="tags-container">
-              <div class="tag">Web Components</div>
-              <div class="tag">HTML</div>
-              <div class="tag">CSS</div>
-              <div class="tag">JavaScript</div>
-            </div>
-          </div></project-card
-        >
+        ${Projects.map(({name,github,demo,description,features,tags})=>html`
+          <project-card name="${name}" github="${github}" demo="${demo}" description="${description}" .features="${features}" .tags="${tags}"></project-card>
+        `)}
       </div>
-    `}constructor(){super()}}customElements.define("projects-section",Projects);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+    `}constructor(){super()}}customElements.define("projects-section",ProjectsSection);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
