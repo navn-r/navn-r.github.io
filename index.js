@@ -1756,7 +1756,7 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
      oMMMd:                     /MMMMMMMmmMMMMm-   Editor: vscode
     yMMMo                        +MMMMMMMMMMMMMN\`  Font: Fira Code Retina
    yMMM/             -hds  +yo\`   NMMMMMMMMMMMMM/  CPU: AMD Ryzen 9 3900X (24) @ 3.800GHz
-  +MMM+       .+.    -mNy \`NMM:   NMMMMMMMMMMMMM+  GPU: 404 Not Found
+  +MMM+       .+.    -mNy \`NMM:   NMMMMMMMMMMMMM+  GPU: NVIDIA GeForce RTX 3080
  \`NMMd       +MMd           .\`    NMMMMMMMMMMMMM.  Memory: 6831MiB / 32098MiB
  +MMM:      /MMMM:                :sdMMMMMMMMMMy   
  dMm+       mMMMMm\`                  \`MMMMMMMMd\`   Made with ♥
