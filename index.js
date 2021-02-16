@@ -1750,7 +1750,7 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
                            oMMMMMMMMy.             Host: Navinn Ravindaran
                  \`:/osyhdmNMMMMMMMMMMN-            Kernel: ${now.getHours()}.${now.getMinutes()}
              -ohNMMMMMMMMMMMMMMMMMMMMMN.           Uptime: ${years} years, ${months} months, ${days} days
-          -sNMMMMMmhhyyyhmMMMMMMMMMMMMMh           Packages: 51 (brew)
+          -sNMMMMMmhhyyyhmMMMMMMMMMMMMMh           Packages: 2001 (dpkg)
         :dMMMNy+.          -+dMMMMMMMMMM.          Shell: zsh 5.8
       -dMMMd/                 -hMMMMMMMM+ +yy/     Resolution: 3840x2160, 3840x2160
      oMMMd:                     /MMMMMMMmmMMMMm-   Editor: vscode
