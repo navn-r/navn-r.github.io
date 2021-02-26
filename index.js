@@ -1282,7 +1282,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           >
           in Canada.<br />You can view my course notes
           <a
-            href="https://navn.me/notes"
+            href="./notes"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="highlight link"
@@ -1331,7 +1331,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </a>
           <a
             id="resume"
-            href="https://navn.me/resume/RavindaranNavinn_Resume.pdf"
+            href="./resume/RavindaranNavinn_Resume.pdf"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="contact"
