@@ -1272,7 +1272,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       <div id="about">
         <span class="title highlight">Hello.</span><br /><br />
         <p>
-          I am a student developer studying at the
+          I am a student developer studying Computer Science & Statistics at the
           <a
             href="https://www.utoronto.ca/"
             rel="noopener noreferrer nofollow"
@@ -1280,7 +1280,14 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
             class="highlight link"
             >University of Toronto</a
           >
-          in Canada. <br />
+          in Canada.<br />You can view my course notes
+          <a
+            href="https://navn.me/notes"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            class="highlight link"
+            >here.</a
+          >
           Currently, I am working as a
           <a
             href="https://www.caseware.com/ca"
@@ -1288,8 +1295,8 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
             target="_blank"
             class="highlight link"
             >Software Developer at CaseWare International</a
-          >
-          for my co-op term. <br />
+          > <br />
+          for my co-op term.
           Let's connect. Reach out below! <br />
         </p>
         <div id="contacts">
@@ -1305,13 +1312,13 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </a>
           <a
             id="linkedin"
-            href="https://linkedin.com/in/navinn-ravindaran"
+            href="https://linkedin.com/in/navn-r"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="contact"
           >
             <fa-icon class="fab fa-linkedin"></fa-icon>
-            <div class="tooltip">navinn-ravindaran</div>
+            <div class="tooltip">/in/navn-r</div>
           </a>
           <a
             id="email"
