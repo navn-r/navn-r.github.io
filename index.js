@@ -1168,7 +1168,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
     color: var(--off-white);
     text-decoration: none;
   }
-`;_exports.selectionStyles=selectionStyles;var selectionStyles$1={selectionStyles:selectionStyles};_exports.$selectionStyles=selectionStyles$1;class About extends LitElement{static get styles(){return[css`
+`;_exports.selectionStyles=selectionStyles;var selectionStyles$1={selectionStyles:selectionStyles};_exports.$selectionStyles=selectionStyles$1;const Contacts=[{href:"https://github.com/navn-r",icon:"fab fa-github",tooltip:"navn-r"},{href:"https://linkedin.com/in/navn-r",icon:"fab fa-linkedin",tooltip:"/in/navn-r"},{href:"mailto:me@navn.me",icon:"fas fa-paper-plane",tooltip:"me [at] navn [dot] me"},{href:"./resume/RavindaranNavinn_Resume.pdf",icon:"fas fa-file-pdf",tooltip:"resume [dot] pdf"}];class About extends LitElement{static get styles(){return[css`
         #about {
           margin-bottom: 1rem;
         }
@@ -1263,82 +1263,34 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           align-items: center;
           font-size: 2rem;
         }
-
-        figure {
-          width: 70rem;
-          margin: 0;
-        }
-      `,selectionStyles]}render(){return html`
+      `,selectionStyles]}a(href,content){return html`<a
+      href="${href}"
+      rel="noopener noreferrer nofollow"
+      target="_blank"
+      class="highlight link"
+      >${content}</a
+    >`}render(){return html`
       <div id="about">
         <span class="title highlight">Hello.</span><br /><br />
         <p>
           I am a student developer studying Computer Science & Statistics at the
-          <a
-            href="https://www.utoronto.ca/"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            class="highlight link"
-            >University of Toronto</a
-          >
-          in Canada.<br />You can view my course notes
-          <a
-            href="./notes"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            class="highlight link"
-            >here.</a
-          >
-          Currently, I am working as a
-          <a
-            href="https://www.caseware.com/ca"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            class="highlight link"
-            >Software Developer at CaseWare International</a
-          > <br />
-          for my co-op term.
-          Let's connect. Reach out below! <br />
+          ${this.a("https://www.utoronto.ca/","University of Toronto")} in
+          Canada.<br />You can view my course notes
+          ${this.a("./notes","here")}. Currently, I am working as a
+          ${this.a("https://www.caseware.com/ca","Software Developer at CaseWare International")}
+          <br />
+          for my co-op term. Let's connect. Reach out below! <br />
         </p>
         <div id="contacts">
-          <a
-            id="github"
-            href="https://github.com/navn-r"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            class="contact"
-          >
-            <fa-icon class="fab fa-github"></fa-icon>
-            <div class="tooltip">navn-r</div>
-          </a>
-          <a
-            id="linkedin"
-            href="https://linkedin.com/in/navn-r"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            class="contact"
-          >
-            <fa-icon class="fab fa-linkedin"></fa-icon>
-            <div class="tooltip">/in/navn-r</div>
-          </a>
-          <a
-            id="email"
-            href="mailto:me@navn.me"
-            target="_blank"
-            class="contact"
-          >
-            <fa-icon class="fas fa-paper-plane"></fa-icon>
-            <div class="tooltip">me [at] navn [dot] me</div>
-          </a>
-          <a
-            id="resume"
-            href="./resume/RavindaranNavinn_Resume.pdf"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            class="contact"
-          >
-            <fa-icon class="fas fa-file-pdf"></fa-icon>
-            <div class="tooltip">resume [dot] pdf</div>
-          </a>
+          ${Contacts.map(({href,icon,tooltip})=>html`<a
+              href="${href}"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              class="contact"
+            >
+              <fa-icon class="${icon}"></fa-icon>
+              <div class="tooltip">${tooltip}</div>
+            </a>`)}
         </div>
       </div>
     `}constructor(){super()}}customElements.define("about-section",About);class ExperienceCard extends LitElement{static get styles(){return[css`
@@ -1348,8 +1300,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
 
         .location {
           font-family: var(--code);
+          color: var(--off-white);
           background: var(--dark-gray);
-          padding: 0.25rem;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
         }
 
         .card {
@@ -1361,16 +1315,19 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         }
       `,selectionStyles]}render(){return html`
       <div class="card">
-        <span class="title">${this.name}</span>
-        <span class="title location">${this.location}</span>
+        <span class="title">${this.experience.name}</span>
+        <span class="title location">${this.experience.location}</span>
         <div class="body">
-          ${this.duration}
+          ${this.experience.duration}
           <ul>
-            ${this.info.map(i=>html`<li>${i}</li>`)}
+            ${this.experience.info.map(i=>html`<li>${i}</li>`)}
           </ul>
         </div>
       </div>
-    `}static get properties(){return{name:{type:String},location:{type:String},duration:{type:String},info:{attribute:".info"}}}constructor(){super()}}customElements.define("experience-card",ExperienceCard);const Experiences=[{name:"Software Developer Co-op",location:"@caseware",duration:"Sept. 2020 - Present",info:[html`Working in an <span class="highlight">Agile Scrum</span> on the <span class="highlight">Simple Engagements</span> product`,html`Converting manual tests to unit tests using <span class="highlight">Karma and Jasmine</span>`,html`Developing bug fixes and features using <span class="highlight">Angular and AngularJS</span>`]},{name:"HBSc. Computer Science (Co-op)",location:"@uoft",duration:"Sept. 2019 - Apr. 2023 (Expected)",info:[html`cGPA: <span class="highlight">3.78</span>/4.0`,html`Dean's List (<span class="highlight">2019-20</span>)`,html`UofT Scholar (<span class="highlight">Sept 2019</span>)`]}];class ExperiencesSection extends LitElement{static get styles(){return[css`
+    `}static get properties(){return{experience:{attribute:".experience"}}}constructor(){super()}}customElements.define("experience-card",ExperienceCard);const Experiences=[{name:"Software Developer Co-op",location:"@caseware",duration:"Sept. 2020 - Apr. 2021",info:[html`Currently working in an <span class="highlight">Agile Scrum</span> with the
+        <span class="highlight">SE</span> team`,html`Converting manual tests to unit tests using
+        <span class="highlight">Karma and Jasmine</span>`,html`Developing major features and hotfixes using
+        <span class="highlight">Angular and AngularJS</span>`]},{name:"HBSc. Computer Science (Co-op)",location:"@uoft",duration:"Sept. 2019 - Apr. 2023 (Expected)",info:[html`cGPA: <span class="highlight">3.78</span>/4.0`,html`Dean's List (<span class="highlight">2019-20</span>)`,html`UofT Scholar (<span class="highlight">Sept 2019</span>)`]}];class ExperiencesSection extends LitElement{static get styles(){return[css`
         #experience-container {
           margin-bottom: 6rem;
         }
@@ -1381,29 +1338,42 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           color: var(--off-white);
           margin-bottom: -2rem;
         }
-      `,selectionStyles]}render(){return html`
-    <div class="title">What I do.</div>
-    <div id="experience-container">
-      ${Experiences.map(({name,location,duration,info})=>html`
-        <experience-card name="${name}" location="${location}" duration="${duration}" .info="${info}"></experience-card>
-      `)}
-    </div>`}constructor(){super()}}customElements.define("experiences-section",ExperiencesSection);class Header extends LitElement{static get styles(){return css`
+      `,selectionStyles]}render(){return html` <div class="title">What I do.</div>
+      <div id="experience-container">
+        ${Experiences.map(e=>html` <experience-card .experience="${e}"></experience-card> `)}
+      </div>`}constructor(){super()}}customElements.define("experiences-section",ExperiencesSection);class Header extends LitElement{static get styles(){return css`
       #header {
         width: 100%;
         height: 18rem;
         background-color: var(--dark-gray);
         user-select: none;
-        -moz-user-select: none;
-        box-shadow: 0px 20px 30px -10px rgba(5,7,8,0.61);
-        -webkit-box-shadow: 0px 20px 30px -10px rgba(5,7,8,0.61);
-        -moz-box-shadow: 0px 20px 30px -10px rgba(5,7,8,0.61);
       }
 
-      app-name {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: -15rem;
+      .divider {
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        margin-bottom: -2rem;
+      }
+
+      .divider svg {
+        position: relative;
+        z-index: -1;
+        display: block;
+        width: calc(150% + 1.3px);
+        height: 20rem;
+        transform: rotateY(180deg);
+      }
+
+      .divider .shape-fill {
+        fill: var(--dark-gray);
+        opacity: 0.6;
+      }
+
+      @media (max-width: 1500px) {
+        .divider svg {
+          width: calc(200% + 1.3px);
+        }
       }
 
       @media (max-width: 1000px) {
@@ -1411,14 +1381,22 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           height: 10rem;
         }
 
-        app-name {
-          margin-top: -8.5rem;
+        .divider svg {
+          width: calc(250% + 1.3px);
+          height: 12rem;
         }
       }
     `}render(){return html`
       <div id="header">
         <slot name="particles"></slot>
         <app-name></app-name>
+      </div>
+      <div class="divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
       </div>
     `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);class Menu extends LitElement{static get styles(){return css`
       :host {
@@ -1528,11 +1506,13 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       </div>
     `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){if("top"===target)target="about";scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
       #name {
-        font-size: min(20vw, 8.5rem);
+        font-size: min(20vw, 9.5rem);
         -moz-user-select: none;
         -webkit-user-select: none;
         color: var(--light-gray);
-        text-align: center;
+        width: max-content;
+        margin: 0 auto;
+        transform: translateY(-18rem);
       }
 
       .wiggle {
@@ -1545,7 +1525,8 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
 
       @media (max-width: 1000px) {
         #name {
-          font-size: min(15vw, 5rem);
+          font-size: min(15vw, 6rem);
+          transform: translateY(-9rem);
         }
       }
     `}render(){return html`
@@ -1563,14 +1544,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
       c-16-25.333-24-45-24-59z">
       </path></svg></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2 wiggle"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord textrm">nn</span></span></span></span></span></div>
-    `}constructor(){super()}firstUpdated(){// const nameKatex = katex.renderToString(
-//   "\\mathbb{N}\\textnormal{a}\\vec{v}_i\\textnormal{nn}",
-//   { throwOnError: false }
-// );
-// this.shadowRoot.getElementById("name").innerHTML += nameKatex;
-// const i = this.shadowRoot.getElementById("name").childNodes[0].childNodes[1].childNodes[0].childNodes[3].childNodes[1].childNodes[0];
-// i.className += " wiggle";
-}}customElements.define("app-name",Name);class ProjectCard extends LitElement{static get styles(){return[css`
+    `}constructor(){super()}}customElements.define("app-name",Name);class ProjectCard extends LitElement{static get styles(){return[css`
         .subtitle {
           font-size: 2rem;
           width: 100%;
@@ -1593,10 +1567,6 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           font-size: 2.25rem;
         }
 
-        a:hover {
-          color: var(--aqua);
-        }
-
         .body {
           margin-top: 2rem;
         }
@@ -1606,18 +1576,13 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           padding-bottom: 3rem;
         }
 
-
-        ul {
-          margin-top: 0.5rem;
-        }
-
-        li {
+        ul, li {
           margin-top: 0.5rem;
         }
 
         blockquote {
-          border-left: 1rem solid var(--dark-gray);
           background-color: var(--light-dark-gray);
+          color: var(--off-white);
           margin: 0;
           padding: 1rem;
           width: 45rem;
@@ -1664,27 +1629,41 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           }
         }
       `,selectionStyles]}render(){return html`
+      <style>
+        a:hover {
+          color: ${this.project.color};
+        }
+      </style>
       <div class="card">
         <div class="subtitle">
-          ${this.name}
+          ${this.project.name}
           <div class="button-container">
-            <a href="${this.github}" rel="noopener noreferrer nofollow" target="_blank"><fa-icon class="fab fa-github"></fa-icon></a>
-            ${"undefined"!==this.demo?html`<a href="${this.demo}" rel="noopener noreferrer nofollow" target="_blank"><fa-icon class="fas fa-external-link-alt"></fa-icon></a>`:""}
+            <a
+              href="${this.project.github}"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              ><fa-icon class="fab fa-github"></fa-icon
+            ></a>
+            ${"undefined"!==this.project.demo?html`<a
+                  href="${this.project.demo}"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  ><fa-icon class="fas fa-external-link-alt"></fa-icon
+                ></a>`:""}
           </div>
         </div>
-        <blockquote>
-            ${this.description}
-        </blockquote>
+        <blockquote style="border-left: 0.625rem solid ${this.project.color};">${this.project.description}</blockquote>
         <div class="body">
           <ul>
-            ${this.features.map(f=>html`<li>${f}</li>`)}
+            ${this.project.features.map(f=>html`<li>${f}</li>`)}
           </ul>
           <div class="tags-container">
-            ${this.tags.map(t=>html`<div class="tag">${t}</div>`)}
+            ${this.project.tags.map(t=>html`<div class="tag">${t}</div>`)}
           </div>
         </div>
       </div>
-    `}static get properties(){return{name:{type:String},github:{type:String},demo:{type:String},description:{type:String},features:{attribute:".features"},tags:{attribute:".tags"}}}constructor(){super()}}customElements.define("project-card",ProjectCard);const Projects=[{name:"UImpactify",github:"https://github.com/navn-r/uimpactify",demo:"https://uimpactify.herokuapp.com",description:"The E-Learning website dedicated to serve the social purpose sector.",features:["Multiple User Types (Impact Learner, Impact Consultant, Social Initiatives)","Course Creation and Enrollment","Recorded Lectures and Graded Assessments","Course Surveys & Ratings","Student Analytics","Realtime Chat","Volunteer & Employment Opportunities","Community Driven Donation System (Giving Garden)"],tags:["MongoDB","ExpressJS","Angular","Node.js","Socket.io","Chart.js","Multer","GridFS","Figma","Jira"]},{name:"Spotify API Clone",github:"https://github.com/navn-r/spotify-api-clone",demo:"https://navn.me/spotify-api-clone",description:"A REST API for a social-centric music player using microservices.",features:["Create and follow/unfollow user profiles","Upload and like/unlike songs","Playlist generation based on liked songs","Query liked songs based on followers"],tags:["Java","Spring Boot","MongoDB","Neo4j"]},{name:"Ritrovo",github:"https://github.com/navn-r/ritrovo",demo:"https://ritrovo.herokuapp.com",description:"Meaning 'meeting place' in Italian, is a social platform.",features:["Single page, single community based design","View all posts by other users","Create, edit, and delete posts written in Markdown","Built on the MEAN stack"],tags:["MongoDB","ExpressJS","Angular","Node.js","TypeScript","Markdown","Bootstrap","Heroku"]},{name:"Standup Bot",github:"https://github.com/navn-r/standup-bot",description:"A Discord bot used for Scrum daily standup meetings.",features:[html`Creates and facilitates a <span class="code">#daily-standups</span> text channel upon joining`,"View, add and remove members in the standup","Private DM triggering a standup prompt and response","Present all member responses in a formatted message","Be in multiple standups in different servers simultaneously"],tags:["discord.js","MongoDB","Heroku","Node.js"]},{name:"Noten",github:"https://github.com/navn-r/noten",demo:"https://ply.gl/com.noten",description:"Meaning 'grades' in German, is a cloud based grade management app.",features:["Basic Semester, Course, Category, Grade management","Grade Prediction Calculator","Pass/Fail Courses","Multiple Grade Scales (5.0, 4.33, 4.0)","Incognito Grades (ignored in GPA calculations)"],tags:["React Native","Google Sign-in","Firebase Realtime Database"]},{name:"Portfolio Website",github:"https://github.com/navn-r/navn-r.github.io",description:"Platform to showcase my projects and experiences.",features:["Fully responsive with CSS Grid","Modular encapsulated components using lit-element, lit-html","Automated build and deployment with TravisCI","Purposefully built without a front-end framework"],tags:["Web Components","HTML","CSS","JavaScript"]}];class ProjectsSection extends LitElement{static get styles(){return[css`
+    `}static get properties(){return{project:{attribute:".project"}}}constructor(){super()}}customElements.define("project-card",ProjectCard);const Projects=[{name:"UImpactify",color:"#a78ec3",github:"https://github.com/navn-r/uimpactify",demo:"https://uimpactify.herokuapp.com",description:"The E-Learning website dedicated to serve the social purpose sector.",features:["Multiple User Types (Impact Learner, Impact Consultant, Social Initiatives)","Course Creation and Enrollment","Recorded Lectures and Graded Assessments","Course Surveys & Ratings","Student Analytics","Realtime Chat","Volunteer & Employment Opportunities","Community Driven Donation System (Giving Garden)"],tags:["MongoDB","ExpressJS","Angular","Node.js","Socket.io","Chart.js","Multer","GridFS","Figma","Jira"]},{name:"Spotify API Clone",color:"#1DB954",github:"https://github.com/navn-r/spotify-api-clone",demo:"https://navn.me/spotify-api-clone",description:"A REST API for a social-centric music player using microservices.",features:["Create and follow/unfollow user profiles","Upload and like/unlike songs","Playlist generation based on liked songs","Query liked songs based on followers"],tags:["Java","Spring Boot","MongoDB","Neo4j"]},{name:"Ritrovo",color:"#8F4066",github:"https://github.com/navn-r/ritrovo",demo:"https://ritrovo.herokuapp.com",description:"Meaning 'meeting place' in Italian, is a social platform.",features:["Single page, single community based design","View all posts by other users","Create, edit, and delete posts written in Markdown","Built on the MEAN stack"],tags:["MongoDB","ExpressJS","Angular","Node.js","TypeScript","Markdown","Bootstrap","Heroku"]},{name:"Standup Bot",color:"#7289da",github:"https://github.com/navn-r/standup-bot",description:"A Discord bot used for Scrum daily standup meetings.",features:[html`Creates and facilitates a
+        <span class="code">#daily-standups</span> text channel upon joining`,"View, add and remove members in the standup","Private DM triggering a standup prompt and response","Present all member responses in a formatted message","Be in multiple standups in different servers simultaneously"],tags:["discord.js","MongoDB","Heroku","Node.js"]},{name:"Noten",color:"#F90",github:"https://github.com/navn-r/noten",demo:"https://ply.gl/com.noten",description:"Meaning 'grades' in German, is a cloud based grade management app.",features:["Basic Semester, Course, Category, Grade management","Grade Prediction Calculator","Pass/Fail Courses","Multiple Grade Scales (5.0, 4.33, 4.0)","Incognito Grades (ignored in GPA calculations)"],tags:["React Native","Google Sign-in","Firebase Realtime Database"]},{name:"Portfolio Website",color:"var(--red)",github:"https://github.com/navn-r/navn-r.github.io",description:"Platform to showcase my projects and experiences.",features:["Fully responsive with CSS Grid","Modular encapsulated components using lit-element, lit-html","Automated build and deployment with TravisCI","Purposefully built without a front-end framework"],tags:["Web Components","HTML","CSS","JavaScript"]}];class ProjectsSection extends LitElement{static get styles(){return[css`
         .title {
           font-family: var(--main);
           font-size: var(--title);
@@ -1693,9 +1672,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       `,selectionStyles]}render(){return html`
       <div class="title">What I've made.</div>
       <div id="projects-container">
-        ${Projects.map(({name,github,demo,description,features,tags})=>html`
-          <project-card name="${name}" github="${github}" demo="${demo}" description="${description}" .features="${features}" .tags="${tags}"></project-card>
-        `)}
+        ${Projects.map(p=>html`<project-card .project="${p}"></project-card>`)}
       </div>
     `}constructor(){super()}}customElements.define("projects-section",ProjectsSection);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
@@ -1703,14 +1680,77 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
-      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};/* -----------------------------------------------
-   /* Author : Vincent Garreau  - vincentgarreau.com
-   /* MIT license: http://opensource.org/licenses/MIT
-   /* Demo / Generator : vincentgarreau.com/particles.js
-   /* GitHub : github.com/VincentGarreau/particles.js
-   /* How to use? : Check the GitHub README
-   /* v2.0.0
-   /* ----------------------------------------------- */_exports.$faIcon=faIcon;var pJS=function(tag_id,params){var canvas_el=document.querySelector("#"+tag_id+" > .particles-js-canvas-el");/* particles.js variables with default values */this.pJS={canvas:{el:canvas_el,w:canvas_el.offsetWidth,h:canvas_el.offsetHeight},particles:{number:{value:400,density:{enable:!0,value_area:800}},color:{value:"#fff"},shape:{type:"circle",stroke:{width:0,color:"#ff0000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100}},opacity:{value:1,random:!1,anim:{enable:!1,speed:2,opacity_min:0,sync:!1}},size:{value:20,random:!1,anim:{enable:!1,speed:20,size_min:0,sync:!1}},line_linked:{enable:!0,distance:100,color:"#fff",opacity:1,width:1},move:{enable:!0,speed:2,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:100,line_linked:{opacity:1}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}},mouse:{}},retina_detect:!1,fn:{interact:{},modes:{},vendors:{}},tmp:{}};var pJS=this.pJS;/* params settings */if(params){Object.deepExtend(pJS,params)}pJS.tmp.obj={size_value:pJS.particles.size.value,size_anim_speed:pJS.particles.size.anim.speed,move_speed:pJS.particles.move.speed,line_linked_distance:pJS.particles.line_linked.distance,line_linked_width:pJS.particles.line_linked.width,mode_grab_distance:pJS.interactivity.modes.grab.distance,mode_bubble_distance:pJS.interactivity.modes.bubble.distance,mode_bubble_size:pJS.interactivity.modes.bubble.size,mode_repulse_distance:pJS.interactivity.modes.repulse.distance};pJS.fn.retinaInit=function(){if(pJS.retina_detect&&1<window.devicePixelRatio){pJS.canvas.pxratio=window.devicePixelRatio;pJS.tmp.retina=!0}else{pJS.canvas.pxratio=1;pJS.tmp.retina=!1}pJS.canvas.w=pJS.canvas.el.offsetWidth*pJS.canvas.pxratio;pJS.canvas.h=pJS.canvas.el.offsetHeight*pJS.canvas.pxratio;pJS.particles.size.value=pJS.tmp.obj.size_value*pJS.canvas.pxratio;pJS.particles.size.anim.speed=pJS.tmp.obj.size_anim_speed*pJS.canvas.pxratio;pJS.particles.move.speed=pJS.tmp.obj.move_speed*pJS.canvas.pxratio;pJS.particles.line_linked.distance=pJS.tmp.obj.line_linked_distance*pJS.canvas.pxratio;pJS.interactivity.modes.grab.distance=pJS.tmp.obj.mode_grab_distance*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.distance=pJS.tmp.obj.mode_bubble_distance*pJS.canvas.pxratio;pJS.particles.line_linked.width=pJS.tmp.obj.line_linked_width*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.size=pJS.tmp.obj.mode_bubble_size*pJS.canvas.pxratio;pJS.interactivity.modes.repulse.distance=pJS.tmp.obj.mode_repulse_distance*pJS.canvas.pxratio};/* ---------- pJS functions - canvas ------------ */pJS.fn.canvasInit=function(){pJS.canvas.ctx=pJS.canvas.el.getContext("2d")};pJS.fn.canvasSize=function(){pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;if(pJS&&pJS.interactivity.events.resize){window.addEventListener("resize",function(){pJS.canvas.w=pJS.canvas.el.offsetWidth;pJS.canvas.h=pJS.canvas.el.offsetHeight;/* resize canvas */if(pJS.tmp.retina){pJS.canvas.w*=pJS.canvas.pxratio;pJS.canvas.h*=pJS.canvas.pxratio}pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;/* repaint canvas on anim disabled */if(!pJS.particles.move.enable){pJS.fn.particlesEmpty();pJS.fn.particlesCreate();pJS.fn.particlesDraw();pJS.fn.vendors.densityAutoParticles()}/* density particles enabled */pJS.fn.vendors.densityAutoParticles()})}};pJS.fn.canvasPaint=function(){pJS.canvas.ctx.fillRect(0,0,pJS.canvas.w,pJS.canvas.h)};pJS.fn.canvasClear=function(){pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h)};/* --------- pJS functions - particles ----------- */pJS.fn.particle=function(color,opacity,position){/* size */this.radius=(pJS.particles.size.random?Math.random():1)*pJS.particles.size.value;if(pJS.particles.size.anim.enable){this.size_status=!1;this.vs=pJS.particles.size.anim.speed/100;if(!pJS.particles.size.anim.sync){this.vs=this.vs*Math.random()}}/* position */this.x=position?position.x:Math.random()*pJS.canvas.w;this.y=position?position.y:Math.random()*pJS.canvas.h;/* check position  - into the canvas */if(this.x>pJS.canvas.w-2*this.radius)this.x=this.x-this.radius;else if(this.x<2*this.radius)this.x=this.x+this.radius;if(this.y>pJS.canvas.h-2*this.radius)this.y=this.y-this.radius;else if(this.y<2*this.radius)this.y=this.y+this.radius;/* check position - avoid overlap */if(pJS.particles.move.bounce){pJS.fn.vendors.checkOverlap(this,position)}/* color */this.color={};if("object"==typeof color.value){if(color.value instanceof Array){var color_selected=color.value[Math.floor(Math.random()*pJS.particles.color.value.length)];this.color.rgb=hexToRgb(color_selected)}else{if(color.value.r!=void 0&&color.value.g!=void 0&&color.value.b!=void 0){this.color.rgb={r:color.value.r,g:color.value.g,b:color.value.b}}if(color.value.h!=void 0&&color.value.s!=void 0&&color.value.l!=void 0){this.color.hsl={h:color.value.h,s:color.value.s,l:color.value.l}}}}else if("random"==color.value){this.color.rgb={r:Math.floor(Math.random()*(255-0+1))+0,g:Math.floor(Math.random()*(255-0+1))+0,b:Math.floor(Math.random()*(255-0+1))+0}}else if("string"==typeof color.value){this.color=color;this.color.rgb=hexToRgb(this.color.value)}/* opacity */this.opacity=(pJS.particles.opacity.random?Math.random():1)*pJS.particles.opacity.value;if(pJS.particles.opacity.anim.enable){this.opacity_status=!1;this.vo=pJS.particles.opacity.anim.speed/100;if(!pJS.particles.opacity.anim.sync){this.vo=this.vo*Math.random()}}/* animation - velocity for speed */var velbase={};switch(pJS.particles.move.direction){case"top":velbase={x:0,y:-1};break;case"top-right":velbase={x:.5,y:-.5};break;case"right":velbase={x:1,y:-0};break;case"bottom-right":velbase={x:.5,y:.5};break;case"bottom":velbase={x:0,y:1};break;case"bottom-left":velbase={x:-.5,y:1};break;case"left":velbase={x:-1,y:0};break;case"top-left":velbase={x:-.5,y:-.5};break;default:velbase={x:0,y:0};break;}if(pJS.particles.move.straight){this.vx=velbase.x;this.vy=velbase.y;if(pJS.particles.move.random){this.vx=this.vx*Math.random();this.vy=this.vy*Math.random()}}else{this.vx=velbase.x+Math.random()-.5;this.vy=velbase.y+Math.random()-.5}// var theta = 2.0 * Math.PI * Math.random();
+      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;class Footer extends LitElement{static get styles(){return css`
+      .divider {
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      .divider svg {
+        position: relative;
+        display: block;
+        width: calc(200% + 1.3px);
+        height: 10rem;
+        transform: rotateY(180deg);
+      }
+
+      .divider .shape-fill {
+        fill: var(--dark-gray);
+      }
+
+      #logo {
+        width: 2.75rem;
+        transition: transform 0.42s ease-in-out;
+      }
+
+      #logo:hover {
+        transform: rotate(360deg);
+      }
+
+      footer {
+        font-family: var(--code);
+        background-color: var(--dark-gray);
+        height: 4rem;
+        padding: 0 3rem 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+        -moz-user-select: none;
+        position: sticky;
+        bottom: 0;
+      }
+
+      @media (max-width: 1000px) {
+        footer {
+          position: initial;
+        }
+
+        .divider svg {
+          height: 7.5rem;
+        }
+      }
+    `}render(){return html`
+      <div class="divider">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+              <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+              <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+          </svg>
+      </div>
+      <footer><img src="./Assets/Logo.svg" alt="logo" id="logo" title="Est. 2020"><span>Made with ❤️</span></footer>
+    `}constructor(){super()}}customElements.define("app-footer",Footer);/**
+                                              * 
+                                              */ /* -----------------------------------------------
+                                                 /* Author : Vincent Garreau  - vincentgarreau.com
+                                                 /* MIT license: http://opensource.org/licenses/MIT
+                                                 /* Demo / Generator : vincentgarreau.com/particles.js
+                                                 /* GitHub : github.com/VincentGarreau/particles.js
+                                                 /* How to use? : Check the GitHub README
+                                                 /* v2.0.0
+                                                 /* ----------------------------------------------- */var pJS=function(tag_id,params){var canvas_el=document.querySelector("#"+tag_id+" > .particles-js-canvas-el");/* particles.js variables with default values */this.pJS={canvas:{el:canvas_el,w:canvas_el.offsetWidth,h:canvas_el.offsetHeight},particles:{number:{value:400,density:{enable:!0,value_area:800}},color:{value:"#fff"},shape:{type:"circle",stroke:{width:0,color:"#ff0000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100}},opacity:{value:1,random:!1,anim:{enable:!1,speed:2,opacity_min:0,sync:!1}},size:{value:20,random:!1,anim:{enable:!1,speed:20,size_min:0,sync:!1}},line_linked:{enable:!0,distance:100,color:"#fff",opacity:1,width:1},move:{enable:!0,speed:2,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:100,line_linked:{opacity:1}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}},mouse:{}},retina_detect:!1,fn:{interact:{},modes:{},vendors:{}},tmp:{}};var pJS=this.pJS;/* params settings */if(params){Object.deepExtend(pJS,params)}pJS.tmp.obj={size_value:pJS.particles.size.value,size_anim_speed:pJS.particles.size.anim.speed,move_speed:pJS.particles.move.speed,line_linked_distance:pJS.particles.line_linked.distance,line_linked_width:pJS.particles.line_linked.width,mode_grab_distance:pJS.interactivity.modes.grab.distance,mode_bubble_distance:pJS.interactivity.modes.bubble.distance,mode_bubble_size:pJS.interactivity.modes.bubble.size,mode_repulse_distance:pJS.interactivity.modes.repulse.distance};pJS.fn.retinaInit=function(){if(pJS.retina_detect&&1<window.devicePixelRatio){pJS.canvas.pxratio=window.devicePixelRatio;pJS.tmp.retina=!0}else{pJS.canvas.pxratio=1;pJS.tmp.retina=!1}pJS.canvas.w=pJS.canvas.el.offsetWidth*pJS.canvas.pxratio;pJS.canvas.h=pJS.canvas.el.offsetHeight*pJS.canvas.pxratio;pJS.particles.size.value=pJS.tmp.obj.size_value*pJS.canvas.pxratio;pJS.particles.size.anim.speed=pJS.tmp.obj.size_anim_speed*pJS.canvas.pxratio;pJS.particles.move.speed=pJS.tmp.obj.move_speed*pJS.canvas.pxratio;pJS.particles.line_linked.distance=pJS.tmp.obj.line_linked_distance*pJS.canvas.pxratio;pJS.interactivity.modes.grab.distance=pJS.tmp.obj.mode_grab_distance*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.distance=pJS.tmp.obj.mode_bubble_distance*pJS.canvas.pxratio;pJS.particles.line_linked.width=pJS.tmp.obj.line_linked_width*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.size=pJS.tmp.obj.mode_bubble_size*pJS.canvas.pxratio;pJS.interactivity.modes.repulse.distance=pJS.tmp.obj.mode_repulse_distance*pJS.canvas.pxratio};/* ---------- pJS functions - canvas ------------ */pJS.fn.canvasInit=function(){pJS.canvas.ctx=pJS.canvas.el.getContext("2d")};pJS.fn.canvasSize=function(){pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;if(pJS&&pJS.interactivity.events.resize){window.addEventListener("resize",function(){pJS.canvas.w=pJS.canvas.el.offsetWidth;pJS.canvas.h=pJS.canvas.el.offsetHeight;/* resize canvas */if(pJS.tmp.retina){pJS.canvas.w*=pJS.canvas.pxratio;pJS.canvas.h*=pJS.canvas.pxratio}pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;/* repaint canvas on anim disabled */if(!pJS.particles.move.enable){pJS.fn.particlesEmpty();pJS.fn.particlesCreate();pJS.fn.particlesDraw();pJS.fn.vendors.densityAutoParticles()}/* density particles enabled */pJS.fn.vendors.densityAutoParticles()})}};pJS.fn.canvasPaint=function(){pJS.canvas.ctx.fillRect(0,0,pJS.canvas.w,pJS.canvas.h)};pJS.fn.canvasClear=function(){pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h)};/* --------- pJS functions - particles ----------- */pJS.fn.particle=function(color,opacity,position){/* size */this.radius=(pJS.particles.size.random?Math.random():1)*pJS.particles.size.value;if(pJS.particles.size.anim.enable){this.size_status=!1;this.vs=pJS.particles.size.anim.speed/100;if(!pJS.particles.size.anim.sync){this.vs=this.vs*Math.random()}}/* position */this.x=position?position.x:Math.random()*pJS.canvas.w;this.y=position?position.y:Math.random()*pJS.canvas.h;/* check position  - into the canvas */if(this.x>pJS.canvas.w-2*this.radius)this.x=this.x-this.radius;else if(this.x<2*this.radius)this.x=this.x+this.radius;if(this.y>pJS.canvas.h-2*this.radius)this.y=this.y-this.radius;else if(this.y<2*this.radius)this.y=this.y+this.radius;/* check position - avoid overlap */if(pJS.particles.move.bounce){pJS.fn.vendors.checkOverlap(this,position)}/* color */this.color={};if("object"==typeof color.value){if(color.value instanceof Array){var color_selected=color.value[Math.floor(Math.random()*pJS.particles.color.value.length)];this.color.rgb=hexToRgb(color_selected)}else{if(color.value.r!=void 0&&color.value.g!=void 0&&color.value.b!=void 0){this.color.rgb={r:color.value.r,g:color.value.g,b:color.value.b}}if(color.value.h!=void 0&&color.value.s!=void 0&&color.value.l!=void 0){this.color.hsl={h:color.value.h,s:color.value.s,l:color.value.l}}}}else if("random"==color.value){this.color.rgb={r:Math.floor(Math.random()*(255-0+1))+0,g:Math.floor(Math.random()*(255-0+1))+0,b:Math.floor(Math.random()*(255-0+1))+0}}else if("string"==typeof color.value){this.color=color;this.color.rgb=hexToRgb(this.color.value)}/* opacity */this.opacity=(pJS.particles.opacity.random?Math.random():1)*pJS.particles.opacity.value;if(pJS.particles.opacity.anim.enable){this.opacity_status=!1;this.vo=pJS.particles.opacity.anim.speed/100;if(!pJS.particles.opacity.anim.sync){this.vo=this.vo*Math.random()}}/* animation - velocity for speed */var velbase={};switch(pJS.particles.move.direction){case"top":velbase={x:0,y:-1};break;case"top-right":velbase={x:.5,y:-.5};break;case"right":velbase={x:1,y:-0};break;case"bottom-right":velbase={x:.5,y:.5};break;case"bottom":velbase={x:0,y:1};break;case"bottom-left":velbase={x:-.5,y:1};break;case"left":velbase={x:-1,y:0};break;case"top-left":velbase={x:-.5,y:-.5};break;default:velbase={x:0,y:0};break;}if(pJS.particles.move.straight){this.vx=velbase.x;this.vy=velbase.y;if(pJS.particles.move.random){this.vx=this.vx*Math.random();this.vy=this.vy*Math.random()}}else{this.vx=velbase.x+Math.random()-.5;this.vy=velbase.y+Math.random()-.5}// var theta = 2.0 * Math.PI * Math.random();
 // this.vx = Math.cos(theta);
 // this.vy = Math.sin(theta);
 this.vx_i=this.vx;this.vy_i=this.vy;/* if shape is image */var shape_type=pJS.particles.shape.type;if("object"==typeof shape_type){if(shape_type instanceof Array){var shape_selected=shape_type[Math.floor(Math.random()*shape_type.length)];this.shape=shape_selected}}else{this.shape=shape_type}if("image"==this.shape){var sh=pJS.particles.shape;this.img={src:sh.image.src,ratio:sh.image.width/sh.image.height};if(!this.img.ratio)this.img.ratio=1;if("svg"==pJS.tmp.img_type&&pJS.tmp.source_svg!=void 0){pJS.fn.vendors.createSvgImg(this);if(pJS.tmp.pushing){this.img.loaded=!1}}}};pJS.fn.particle.prototype.draw=function(){var p=this;if(p.radius_bubble!=void 0){var radius=p.radius_bubble}else{var radius=p.radius}if(p.opacity_bubble!=void 0){var opacity=p.opacity_bubble}else{var opacity=p.opacity}if(p.color.rgb){var color_value="rgba("+p.color.rgb.r+","+p.color.rgb.g+","+p.color.rgb.b+","+opacity+")"}else{var color_value="hsla("+p.color.hsl.h+","+p.color.hsl.s+"%,"+p.color.hsl.l+"%,"+opacity+")"}pJS.canvas.ctx.fillStyle=color_value;pJS.canvas.ctx.beginPath();switch(p.shape){case"circle":pJS.canvas.ctx.arc(p.x,p.y,radius,0,2*Math.PI,!1);break;case"edge":pJS.canvas.ctx.rect(p.x-radius,p.y-radius,2*radius,2*radius);break;case"triangle":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius,p.y+radius/1.66,2*radius,3,2);break;case"polygon":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius/(pJS.particles.shape.polygon.nb_sides/3.5),// startX
