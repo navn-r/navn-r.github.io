@@ -1212,7 +1212,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         .contact {
           display: flex;
           border-radius: 5rem;
-          background-color: var(--dark-gray);
+          background-color: var(--light-dark-gray);
           color: var(--light-gray);
           width: 5rem;
           height: 5rem;
@@ -1238,18 +1238,19 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           z-index: 1;
           height: 1rem;
           width: 1rem;
-          background: var(--dark-gray);
+          background: var(--light-dark-gray);
           content: "";
           transform: translateX(50%) rotate(45deg) translateZ(5rem);
         }
 
         .contact .tooltip {
           visibility: hidden;
-          background-color: var(--dark-gray);
+          background-color: var(--light-dark-gray);
           color: var(--off-white);
           text-align: center;
           font-family: var(--code);
           font-size: var(--tooltip);
+          font-weight: 500;
           position: absolute;
           z-index: 1;
           padding: 1rem;
@@ -1302,7 +1303,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         .location {
           font-family: var(--code);
           color: var(--off-white);
-          background: var(--dark-gray);
+          background: var(--light-dark-gray);
           padding: 0.5rem;
           border-radius: 0.5rem;
         }
@@ -1359,7 +1360,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       }
 
       .divider .shape-fill {
-        fill: var(--dark-gray);
+        fill: var(--light-dark-gray);
       }
 
       #logo {
@@ -1373,7 +1374,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
 
       footer {
         font-family: var(--code);
-        background-color: var(--dark-gray);
+        background-color: var(--light-dark-gray);
         height: 4rem;
         padding: 0 3rem 0 2rem;
         display: flex;
@@ -1647,7 +1648,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         }
 
         blockquote {
-          background-color: var(--light-dark-gray);
+          background-color: var(--dark-light-gray);
           color: var(--off-white);
           margin: 0;
           padding: 1rem;
@@ -1670,7 +1671,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         .tag {
           font-family: var(--code);
           font-size: 1rem;
-          background-color: var(--dark-gray);
+          background-color: var(--light-dark-gray);
           font-weight: 600;
           padding: 0.75rem;
           margin: 0.25rem;
