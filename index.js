@@ -1645,7 +1645,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
               target="_blank"
               ><fa-icon class="fab fa-github"></fa-icon
             ></a>
-            ${"undefined"!==this.project.demo?html`<a
+            ${this.project.demo?html`<a
                   href="${this.project.demo}"
                   rel="noopener noreferrer nofollow"
                   target="_blank"
