@@ -1168,7 +1168,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
     color: var(--off-white);
     text-decoration: none;
   }
-`;_exports.selectionStyles=selectionStyles;var selectionStyles$1={selectionStyles:selectionStyles};_exports.$selectionStyles=selectionStyles$1;const Contacts=[{href:"https://github.com/navn-r",icon:"fab fa-github",tooltip:"navn-r"},{href:"https://linkedin.com/in/navn-r",icon:"fab fa-linkedin",tooltip:"/in/navn-r"},{href:"mailto:me@navn.me",icon:"fas fa-paper-plane",tooltip:"me [at] navn [dot] me"},{href:"./resume/RavindaranNavinn_Resume.pdf",icon:"fas fa-file-pdf",tooltip:"resume [dot] pdf"}];class About extends LitElement{static get styles(){return[css`
+`;_exports.selectionStyles=selectionStyles;var selectionStyles$1={selectionStyles:selectionStyles};_exports.$selectionStyles=selectionStyles$1;const Contacts=[{id:"github",href:"https://github.com/navn-r",icon:"fab fa-github",tooltip:"navn-r"},{id:"linkedin",href:"https://linkedin.com/in/navn-r",icon:"fab fa-linkedin",tooltip:"/in/navn-r"},{id:"email",href:"mailto:me@navn.me",icon:"fas fa-paper-plane",tooltip:"me [at] navn [dot] me"},{id:"resume",href:"./resume/RavindaranNavinn_Resume.pdf",icon:"fas fa-file-pdf",tooltip:"resume [dot] pdf"}];class About extends LitElement{static get styles(){return[css`
         #about {
           margin-bottom: 1rem;
         }
@@ -1282,11 +1282,12 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           for my co-op term. Let's connect. Reach out below! <br />
         </p>
         <div id="contacts">
-          ${Contacts.map(({href,icon,tooltip})=>html`<a
+          ${Contacts.map(({id,href,icon,tooltip})=>html`<a
               href="${href}"
               rel="noopener noreferrer nofollow"
               target="_blank"
               class="contact"
+              aria-label="Link to ${id}"
             >
               <fa-icon class="${icon}"></fa-icon>
               <div class="tooltip">${tooltip}</div>
@@ -1706,12 +1707,14 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <div class="button-container">
             <a
               href="${this.project.github}"
+              aria-label="Link to GitHub Repository"
               rel="noopener noreferrer nofollow"
               target="_blank"
               ><fa-icon class="fab fa-github"></fa-icon
             ></a>
             ${this.project.demo?html`<a
                   href="${this.project.demo}"
+                  aria-label="Link to project demo"
                   rel="noopener noreferrer nofollow"
                   target="_blank"
                   ><fa-icon class="fas fa-external-link-alt"></fa-icon
@@ -1728,7 +1731,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </div>
         </div>
       </div>
-    `}static get properties(){return{project:{attribute:".project"}}}constructor(){super()}}customElements.define("project-card",ProjectCard);const Projects=[{name:"UImpactify",color:"#a78ec3",github:"https://github.com/navn-r/uimpactify",demo:"https://uimpactify.herokuapp.com",description:"The E-Learning website dedicated to serve the social purpose sector.",features:["Multiple User Types (Impact Learner, Impact Consultant, Social Initiatives)","Course Creation and Enrollment","Recorded Lectures and Graded Assessments","Course Surveys & Ratings","Student Analytics","Realtime Chat","Volunteer & Employment Opportunities","Community Driven Donation System (Giving Garden)"],tags:["MongoDB","ExpressJS","Angular","Node.js","Socket.io","Chart.js","Multer","GridFS","Figma","Jira"]},{name:"Spotify API Clone",color:"#1DB954",github:"https://github.com/navn-r/spotify-api-clone",demo:"https://navn.me/spotify-api-clone",description:"A REST API for a social-centric music player using microservices.",features:["Create and follow/unfollow user profiles","Upload and like/unlike songs","Playlist generation based on liked songs","Query liked songs based on followers"],tags:["Java","Spring Boot","MongoDB","Neo4j"]},{name:"Ritrovo",color:"#D3287F",github:"https://github.com/navn-r/ritrovo",demo:"https://ritrovo.herokuapp.com",description:"Meaning 'meeting place' in Italian, is a social platform.",features:["Single page, single community based design","View all posts by other users","Create, edit, and delete posts written in Markdown","Built on the MEAN stack"],tags:["MongoDB","ExpressJS","Angular","Node.js","TypeScript","Markdown","Bootstrap","Heroku"]},{name:"Standup Bot",color:"#7289da",github:"https://github.com/navn-r/standup-bot",description:"A Discord bot used for Scrum daily standup meetings.",features:[html`Creates and facilitates a
+    `}static get properties(){return{project:{attribute:".project"}}}constructor(){super()}}customElements.define("project-card",ProjectCard);const Projects=[{name:"UImpactify",color:"#a78ec3",github:"https://github.com/navn-r/uimpactify",demo:"https://uimpactify.herokuapp.com",description:"The E-Learning website dedicated to serve the social purpose sector.",features:["Multiple User Types (Impact Learner, Impact Consultant, Social Initiatives)","Course Creation and Enrollment","Recorded Lectures and Graded Assessments","Course Surveys & Ratings","Student Analytics","Realtime Chat","Volunteer & Employment Opportunities","Community Driven Donation System (Giving Garden)"],tags:["MongoDB","ExpressJS","Angular","Node.js","Socket.io","Chart.js","Multer","GridFS","Figma","Jira"]},{name:"Spotify API Clone",color:"#1DB954",github:"https://github.com/navn-r/spotify-api-clone",demo:"https://navn.me/spotify-api-clone",description:"A REST API for a social-centric music player using microservices.",features:["Create and follow/unfollow user profiles","Upload and like/unlike songs","Playlist generation based on liked songs","Query liked songs based on followers"],tags:["Java","Spring Boot","MongoDB","Neo4j"]},{name:"Ritrovo",color:"#F596D1",github:"https://github.com/navn-r/ritrovo",demo:"https://ritrovo.herokuapp.com",description:"Meaning 'meeting place' in Italian, is a social platform.",features:["Single page, single community based design","View all posts by other users","Create, edit, and delete posts written in Markdown","Built on the MEAN stack"],tags:["MongoDB","ExpressJS","Angular","Node.js","TypeScript","Markdown","Bootstrap","Heroku"]},{name:"Standup Bot",color:"#7289da",github:"https://github.com/navn-r/standup-bot",description:"A Discord bot used for Scrum daily standup meetings.",features:[html`Creates and facilitates a
         <span class="code">#daily-standups</span> text channel upon joining`,"View, add and remove members in the standup","Private DM triggering a standup prompt and response","Present all member responses in a formatted message","Be in multiple standups in different servers simultaneously"],tags:["discord.js","MongoDB","Heroku","Node.js"]},{name:"Noten",color:"#F90",github:"https://github.com/navn-r/noten",demo:"https://ply.gl/com.noten",description:"Meaning 'grades' in German, is a cloud based grade management app.",features:["Basic Semester, Course, Category, Grade management","Grade Prediction Calculator","Pass/Fail Courses","Multiple Grade Scales (5.0, 4.33, 4.0)","Incognito Grades (ignored in GPA calculations)"],tags:["React Native","Google Sign-in","Firebase Realtime Database"]},{name:"Portfolio Website",color:"var(--red)",github:"https://github.com/navn-r/navn-r.github.io",description:"Platform to showcase my projects and experiences.",features:["Fully responsive with CSS Grid","Modular encapsulated components using lit-element, lit-html","Automated build and deployment with TravisCI","Purposefully built without a front-end framework"],tags:["Web Components","HTML","CSS","JavaScript"]}];class ProjectsSection extends LitElement{static get styles(){return[css`
         .title {
           font-family: var(--main);
