@@ -1417,6 +1417,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         width: max-content;
         margin: 0 auto;
         margin-top: -18rem;
+        overflow-x: hidden;
       }
 
       .wiggle {
