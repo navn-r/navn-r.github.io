@@ -1408,7 +1408,94 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </svg>
       </div>
       <footer><img src="./Assets/Logo.svg" alt="logo" id="logo" title="Est. 2020"><span>Made with <fa-icon class="fas fa-heart"></fa-icon></span></footer>
-    `}constructor(){super()}}customElements.define("app-footer",Footer);class Header extends LitElement{static get styles(){return css`
+    `}constructor(){super()}}customElements.define("app-footer",Footer);class Name extends LitElement{static get styles(){return css`
+      #name {
+        font-size: min(20vw, 9.5rem);
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        color: var(--light-gray);
+        width: max-content;
+        margin: 0 auto;
+        transform: translateY(-18rem);
+      }
+
+      .wiggle {
+        transition: transform 0.5s ease-out;
+      }
+
+      .wiggle:hover {
+        transform: rotate(20deg);
+      }
+
+      @media (max-width: 1000px) {
+        #name {
+          font-size: min(15vw, 6rem);
+          transform: translateY(-9rem);
+        }
+      }
+    `}render(){return html`
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+        crossorigin="anonymous"
+      />
+      <div id="name"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">N</mi><mtext>a</mtext><msub><mover accent="true"><mi>v</mi><mo>⃗</mo></mover><mi>i</mi></msub><mtext>nn</mtext></mrow><annotation encoding="application/x-tex">\mathbb{N}\textnormal{a}\vec{v}_i\textnormal{nn}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.864em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathbb">N</span></span><span class="mord text"><span class="mord textrm">a</span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.20772em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg id="arrow" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+      3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+      10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+      -1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+      -7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+      H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+      c-16-25.333-24-45-24-59z">
+      </path></svg></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2 wiggle"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord textrm">nn</span></span></span></span></span></div>
+    `}setParallax(){const scroll=window.pageYOffset,name=this.shadowRoot.getElementById("name"),arrow=this.shadowRoot.getElementById("arrow");name.style.transform=`translateY(calc(${.25*scroll}px - 18rem))`;arrow.style.transform=`translateX(${.5*scroll}px)`}firstUpdated(){window.addEventListener("scroll",this.setParallax.bind(this),!0)}constructor(){super()}}customElements.define("app-name",Name);/* -----------------------------------------------
+                                         /* Author : Vincent Garreau  - vincentgarreau.com
+                                         /* MIT license: http://opensource.org/licenses/MIT
+                                         /* Demo / Generator : vincentgarreau.com/particles.js
+                                         /* GitHub : github.com/VincentGarreau/particles.js
+                                         /* How to use? : Check the GitHub README
+                                         /* v2.0.0
+                                         /* ----------------------------------------------- */var pJS=function(tag_id,params){var canvas_el=document.querySelector("#"+tag_id+" > .particles-js-canvas-el");/* particles.js variables with default values */this.pJS={canvas:{el:canvas_el,w:canvas_el.offsetWidth,h:canvas_el.offsetHeight},particles:{number:{value:400,density:{enable:!0,value_area:800}},color:{value:"#fff"},shape:{type:"circle",stroke:{width:0,color:"#ff0000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100}},opacity:{value:1,random:!1,anim:{enable:!1,speed:2,opacity_min:0,sync:!1}},size:{value:20,random:!1,anim:{enable:!1,speed:20,size_min:0,sync:!1}},line_linked:{enable:!0,distance:100,color:"#fff",opacity:1,width:1},move:{enable:!0,speed:2,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:100,line_linked:{opacity:1}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}},mouse:{}},retina_detect:!1,fn:{interact:{},modes:{},vendors:{}},tmp:{}};var pJS=this.pJS;/* params settings */if(params){Object.deepExtend(pJS,params)}pJS.tmp.obj={size_value:pJS.particles.size.value,size_anim_speed:pJS.particles.size.anim.speed,move_speed:pJS.particles.move.speed,line_linked_distance:pJS.particles.line_linked.distance,line_linked_width:pJS.particles.line_linked.width,mode_grab_distance:pJS.interactivity.modes.grab.distance,mode_bubble_distance:pJS.interactivity.modes.bubble.distance,mode_bubble_size:pJS.interactivity.modes.bubble.size,mode_repulse_distance:pJS.interactivity.modes.repulse.distance};pJS.fn.retinaInit=function(){if(pJS.retina_detect&&1<window.devicePixelRatio){pJS.canvas.pxratio=window.devicePixelRatio;pJS.tmp.retina=!0}else{pJS.canvas.pxratio=1;pJS.tmp.retina=!1}pJS.canvas.w=pJS.canvas.el.offsetWidth*pJS.canvas.pxratio;pJS.canvas.h=pJS.canvas.el.offsetHeight*pJS.canvas.pxratio;pJS.particles.size.value=pJS.tmp.obj.size_value*pJS.canvas.pxratio;pJS.particles.size.anim.speed=pJS.tmp.obj.size_anim_speed*pJS.canvas.pxratio;pJS.particles.move.speed=pJS.tmp.obj.move_speed*pJS.canvas.pxratio;pJS.particles.line_linked.distance=pJS.tmp.obj.line_linked_distance*pJS.canvas.pxratio;pJS.interactivity.modes.grab.distance=pJS.tmp.obj.mode_grab_distance*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.distance=pJS.tmp.obj.mode_bubble_distance*pJS.canvas.pxratio;pJS.particles.line_linked.width=pJS.tmp.obj.line_linked_width*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.size=pJS.tmp.obj.mode_bubble_size*pJS.canvas.pxratio;pJS.interactivity.modes.repulse.distance=pJS.tmp.obj.mode_repulse_distance*pJS.canvas.pxratio};/* ---------- pJS functions - canvas ------------ */pJS.fn.canvasInit=function(){pJS.canvas.ctx=pJS.canvas.el.getContext("2d")};pJS.fn.canvasSize=function(){pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;if(pJS&&pJS.interactivity.events.resize){window.addEventListener("resize",function(){pJS.canvas.w=pJS.canvas.el.offsetWidth;pJS.canvas.h=pJS.canvas.el.offsetHeight;/* resize canvas */if(pJS.tmp.retina){pJS.canvas.w*=pJS.canvas.pxratio;pJS.canvas.h*=pJS.canvas.pxratio}pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;/* repaint canvas on anim disabled */if(!pJS.particles.move.enable){pJS.fn.particlesEmpty();pJS.fn.particlesCreate();pJS.fn.particlesDraw();pJS.fn.vendors.densityAutoParticles()}/* density particles enabled */pJS.fn.vendors.densityAutoParticles()})}};pJS.fn.canvasPaint=function(){pJS.canvas.ctx.fillRect(0,0,pJS.canvas.w,pJS.canvas.h)};pJS.fn.canvasClear=function(){pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h)};/* --------- pJS functions - particles ----------- */pJS.fn.particle=function(color,opacity,position){/* size */this.radius=(pJS.particles.size.random?Math.random():1)*pJS.particles.size.value;if(pJS.particles.size.anim.enable){this.size_status=!1;this.vs=pJS.particles.size.anim.speed/100;if(!pJS.particles.size.anim.sync){this.vs=this.vs*Math.random()}}/* position */this.x=position?position.x:Math.random()*pJS.canvas.w;this.y=position?position.y:Math.random()*pJS.canvas.h;/* check position  - into the canvas */if(this.x>pJS.canvas.w-2*this.radius)this.x=this.x-this.radius;else if(this.x<2*this.radius)this.x=this.x+this.radius;if(this.y>pJS.canvas.h-2*this.radius)this.y=this.y-this.radius;else if(this.y<2*this.radius)this.y=this.y+this.radius;/* check position - avoid overlap */if(pJS.particles.move.bounce){pJS.fn.vendors.checkOverlap(this,position)}/* color */this.color={};if("object"==typeof color.value){if(color.value instanceof Array){var color_selected=color.value[Math.floor(Math.random()*pJS.particles.color.value.length)];this.color.rgb=hexToRgb(color_selected)}else{if(color.value.r!=void 0&&color.value.g!=void 0&&color.value.b!=void 0){this.color.rgb={r:color.value.r,g:color.value.g,b:color.value.b}}if(color.value.h!=void 0&&color.value.s!=void 0&&color.value.l!=void 0){this.color.hsl={h:color.value.h,s:color.value.s,l:color.value.l}}}}else if("random"==color.value){this.color.rgb={r:Math.floor(Math.random()*(255-0+1))+0,g:Math.floor(Math.random()*(255-0+1))+0,b:Math.floor(Math.random()*(255-0+1))+0}}else if("string"==typeof color.value){this.color=color;this.color.rgb=hexToRgb(this.color.value)}/* opacity */this.opacity=(pJS.particles.opacity.random?Math.random():1)*pJS.particles.opacity.value;if(pJS.particles.opacity.anim.enable){this.opacity_status=!1;this.vo=pJS.particles.opacity.anim.speed/100;if(!pJS.particles.opacity.anim.sync){this.vo=this.vo*Math.random()}}/* animation - velocity for speed */var velbase={};switch(pJS.particles.move.direction){case"top":velbase={x:0,y:-1};break;case"top-right":velbase={x:.5,y:-.5};break;case"right":velbase={x:1,y:-0};break;case"bottom-right":velbase={x:.5,y:.5};break;case"bottom":velbase={x:0,y:1};break;case"bottom-left":velbase={x:-.5,y:1};break;case"left":velbase={x:-1,y:0};break;case"top-left":velbase={x:-.5,y:-.5};break;default:velbase={x:0,y:0};break;}if(pJS.particles.move.straight){this.vx=velbase.x;this.vy=velbase.y;if(pJS.particles.move.random){this.vx=this.vx*Math.random();this.vy=this.vy*Math.random()}}else{this.vx=velbase.x+Math.random()-.5;this.vy=velbase.y+Math.random()-.5}// var theta = 2.0 * Math.PI * Math.random();
+// this.vx = Math.cos(theta);
+// this.vy = Math.sin(theta);
+this.vx_i=this.vx;this.vy_i=this.vy;/* if shape is image */var shape_type=pJS.particles.shape.type;if("object"==typeof shape_type){if(shape_type instanceof Array){var shape_selected=shape_type[Math.floor(Math.random()*shape_type.length)];this.shape=shape_selected}}else{this.shape=shape_type}if("image"==this.shape){var sh=pJS.particles.shape;this.img={src:sh.image.src,ratio:sh.image.width/sh.image.height};if(!this.img.ratio)this.img.ratio=1;if("svg"==pJS.tmp.img_type&&pJS.tmp.source_svg!=void 0){pJS.fn.vendors.createSvgImg(this);if(pJS.tmp.pushing){this.img.loaded=!1}}}};pJS.fn.particle.prototype.draw=function(){var p=this;if(p.radius_bubble!=void 0){var radius=p.radius_bubble}else{var radius=p.radius}if(p.opacity_bubble!=void 0){var opacity=p.opacity_bubble}else{var opacity=p.opacity}if(p.color.rgb){var color_value="rgba("+p.color.rgb.r+","+p.color.rgb.g+","+p.color.rgb.b+","+opacity+")"}else{var color_value="hsla("+p.color.hsl.h+","+p.color.hsl.s+"%,"+p.color.hsl.l+"%,"+opacity+")"}pJS.canvas.ctx.fillStyle=color_value;pJS.canvas.ctx.beginPath();switch(p.shape){case"circle":pJS.canvas.ctx.arc(p.x,p.y,radius,0,2*Math.PI,!1);break;case"edge":pJS.canvas.ctx.rect(p.x-radius,p.y-radius,2*radius,2*radius);break;case"triangle":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius,p.y+radius/1.66,2*radius,3,2);break;case"polygon":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius/(pJS.particles.shape.polygon.nb_sides/3.5),// startX
+p.y-radius/(2.66/3.5),// startY
+2.66*radius/(pJS.particles.shape.polygon.nb_sides/3),// sideLength
+pJS.particles.shape.polygon.nb_sides,// sideCountNumerator
+1// sideCountDenominator
+);break;case"star":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-2*radius/(pJS.particles.shape.polygon.nb_sides/4),// startX
+p.y-radius/(2.66*2/3.5),// startY
+2.66*(2*radius)/(pJS.particles.shape.polygon.nb_sides/3),// sideLength
+pJS.particles.shape.polygon.nb_sides,// sideCountNumerator
+2// sideCountDenominator
+);break;case"image":function draw(){pJS.canvas.ctx.drawImage(img_obj,p.x-radius,p.y-radius,2*radius,2*radius/p.img.ratio)}if("svg"==pJS.tmp.img_type){var img_obj=p.img.obj}else{var img_obj=pJS.tmp.img_obj}if(img_obj){draw()}break;}pJS.canvas.ctx.closePath();if(0<pJS.particles.shape.stroke.width){pJS.canvas.ctx.strokeStyle=pJS.particles.shape.stroke.color;pJS.canvas.ctx.lineWidth=pJS.particles.shape.stroke.width;pJS.canvas.ctx.stroke()}pJS.canvas.ctx.fill()};pJS.fn.particlesCreate=function(){for(var i=0;i<pJS.particles.number.value;i++){pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color,pJS.particles.opacity.value))}};pJS.fn.particlesUpdate=function(){for(var i=0,p;i<pJS.particles.array.length;i++){/* the particle */p=pJS.particles.array[i];// var d = ( dx = pJS.interactivity.mouse.click_pos_x - p.x ) * dx + ( dy = pJS.interactivity.mouse.click_pos_y - p.y ) * dy;
+// var f = -BANG_SIZE / d;
+// if ( d < BANG_SIZE ) {
+//     var t = Math.atan2( dy, dx );
+//     p.vx = f * Math.cos(t);
+//     p.vy = f * Math.sin(t);
+// }
+/* move the particle */if(pJS.particles.move.enable){var ms=pJS.particles.move.speed/2;p.x+=p.vx*ms;p.y+=p.vy*ms}/* change opacity status */if(pJS.particles.opacity.anim.enable){if(!0==p.opacity_status){if(p.opacity>=pJS.particles.opacity.value)p.opacity_status=!1;p.opacity+=p.vo}else{if(p.opacity<=pJS.particles.opacity.anim.opacity_min)p.opacity_status=!0;p.opacity-=p.vo}if(0>p.opacity)p.opacity=0}/* change size */if(pJS.particles.size.anim.enable){if(!0==p.size_status){if(p.radius>=pJS.particles.size.value)p.size_status=!1;p.radius+=p.vs}else{if(p.radius<=pJS.particles.size.anim.size_min)p.size_status=!0;p.radius-=p.vs}if(0>p.radius)p.radius=0}/* change particle position if it is out of canvas */if("bounce"==pJS.particles.move.out_mode){var new_pos={x_left:p.radius,x_right:pJS.canvas.w,y_top:p.radius,y_bottom:pJS.canvas.h}}else{var new_pos={x_left:-p.radius,x_right:pJS.canvas.w+p.radius,y_top:-p.radius,y_bottom:pJS.canvas.h+p.radius}}if(p.x-p.radius>pJS.canvas.w){p.x=new_pos.x_left;p.y=Math.random()*pJS.canvas.h}else if(0>p.x+p.radius){p.x=new_pos.x_right;p.y=Math.random()*pJS.canvas.h}if(p.y-p.radius>pJS.canvas.h){p.y=new_pos.y_top;p.x=Math.random()*pJS.canvas.w}else if(0>p.y+p.radius){p.y=new_pos.y_bottom;p.x=Math.random()*pJS.canvas.w}/* out of canvas modes */switch(pJS.particles.move.out_mode){case"bounce":if(p.x+p.radius>pJS.canvas.w)p.vx=-p.vx;else if(0>p.x-p.radius)p.vx=-p.vx;if(p.y+p.radius>pJS.canvas.h)p.vy=-p.vy;else if(0>p.y-p.radius)p.vy=-p.vy;break;}/* events */if(isInArray("grab",pJS.interactivity.events.onhover.mode)){pJS.fn.modes.grabParticle(p)}if(isInArray("bubble",pJS.interactivity.events.onhover.mode)||isInArray("bubble",pJS.interactivity.events.onclick.mode)){pJS.fn.modes.bubbleParticle(p)}if(isInArray("repulse",pJS.interactivity.events.onhover.mode)||isInArray("repulse",pJS.interactivity.events.onclick.mode)){pJS.fn.modes.repulseParticle(p)}/* interaction auto between particles */if(pJS.particles.line_linked.enable||pJS.particles.move.attract.enable){for(var j=i+1,p2;j<pJS.particles.array.length;j++){p2=pJS.particles.array[j];/* link particles */if(pJS.particles.line_linked.enable){pJS.fn.interact.linkParticles(p,p2)}/* attract particles */if(pJS.particles.move.attract.enable){pJS.fn.interact.attractParticles(p,p2)}/* bounce particles */if(pJS.particles.move.bounce){pJS.fn.interact.bounceParticles(p,p2)}}}}};pJS.fn.particlesDraw=function(){/* clear canvas */pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h);/* update each particles param */pJS.fn.particlesUpdate();/* draw each particle */for(var i=0,p;i<pJS.particles.array.length;i++){p=pJS.particles.array[i];p.draw()}};pJS.fn.particlesEmpty=function(){pJS.particles.array=[]};pJS.fn.particlesRefresh=function(){/* init all */cancelRequestAnimFrame(pJS.fn.checkAnimFrame);cancelRequestAnimFrame(pJS.fn.drawAnimFrame);pJS.tmp.source_svg=void 0;pJS.tmp.img_obj=void 0;pJS.tmp.count_svg=0;pJS.fn.particlesEmpty();pJS.fn.canvasClear();/* restart */pJS.fn.vendors.start()};/* ---------- pJS functions - particles interaction ------------ */pJS.fn.interact.linkParticles=function(p1,p2){var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);/* draw a line between p1 and p2 if the distance between them is under the config distance */if(dist<=pJS.particles.line_linked.distance){var opacity_line=pJS.particles.line_linked.opacity-dist/(1/pJS.particles.line_linked.opacity)/pJS.particles.line_linked.distance;if(0<opacity_line){/* style */var color_line=pJS.particles.line_linked.color_rgb_line;pJS.canvas.ctx.strokeStyle="rgba("+color_line.r+","+color_line.g+","+color_line.b+","+opacity_line+")";pJS.canvas.ctx.lineWidth=pJS.particles.line_linked.width;//pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
+/* path */pJS.canvas.ctx.beginPath();pJS.canvas.ctx.moveTo(p1.x,p1.y);pJS.canvas.ctx.lineTo(p2.x,p2.y);pJS.canvas.ctx.stroke();pJS.canvas.ctx.closePath()}}};pJS.fn.interact.attractParticles=function(p1,p2){/* condensed particles */var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<=pJS.particles.line_linked.distance){var ax=dx/(1e3*pJS.particles.move.attract.rotateX),ay=dy/(1e3*pJS.particles.move.attract.rotateY);p1.vx-=ax;p1.vy-=ay;p2.vx+=ax;p2.vy+=ay}};pJS.fn.interact.bounceParticles=function(p1,p2){var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy),dist_p=p1.radius+p2.radius;if(dist<=dist_p){p1.vx=-p1.vx;p1.vy=-p1.vy;p2.vx=-p2.vx;p2.vy=-p2.vy}};/* ---------- pJS functions - modes events ------------ */pJS.fn.modes.pushParticles=function(nb,pos){pJS.tmp.pushing=!0;for(var i=0;i<nb;i++){pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color,pJS.particles.opacity.value,{x:pos?pos.pos_x:Math.random()*pJS.canvas.w,y:pos?pos.pos_y:Math.random()*pJS.canvas.h}));if(i==nb-1){if(!pJS.particles.move.enable){pJS.fn.particlesDraw()}pJS.tmp.pushing=!1}}};pJS.fn.modes.removeParticles=function(nb){pJS.particles.array.splice(0,nb);if(!pJS.particles.move.enable){pJS.fn.particlesDraw()}};pJS.fn.modes.bubbleParticle=function(p){/* on hover event */if(pJS.interactivity.events.onhover.enable&&isInArray("bubble",pJS.interactivity.events.onhover.mode)){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),ratio=1-dist_mouse/pJS.interactivity.modes.bubble.distance;function init(){p.opacity_bubble=p.opacity;p.radius_bubble=p.radius}/* mousemove - check ratio */if(dist_mouse<=pJS.interactivity.modes.bubble.distance){if(0<=ratio&&"mousemove"==pJS.interactivity.status){/* size */if(pJS.interactivity.modes.bubble.size!=pJS.particles.size.value){if(pJS.interactivity.modes.bubble.size>pJS.particles.size.value){var size=p.radius+pJS.interactivity.modes.bubble.size*ratio;if(0<=size){p.radius_bubble=size}}else{var dif=p.radius-pJS.interactivity.modes.bubble.size,size=p.radius-dif*ratio;if(0<size){p.radius_bubble=size}else{p.radius_bubble=0}}}/* opacity */if(pJS.interactivity.modes.bubble.opacity!=pJS.particles.opacity.value){if(pJS.interactivity.modes.bubble.opacity>pJS.particles.opacity.value){var opacity=pJS.interactivity.modes.bubble.opacity*ratio;if(opacity>p.opacity&&opacity<=pJS.interactivity.modes.bubble.opacity){p.opacity_bubble=opacity}}else{var opacity=p.opacity-(pJS.particles.opacity.value-pJS.interactivity.modes.bubble.opacity)*ratio;if(opacity<p.opacity&&opacity>=pJS.interactivity.modes.bubble.opacity){p.opacity_bubble=opacity}}}}}else{init()}/* mouseleave */if("mouseleave"==pJS.interactivity.status){init()}}/* on click event */else if(pJS.interactivity.events.onclick.enable&&isInArray("bubble",pJS.interactivity.events.onclick.mode)){if(pJS.tmp.bubble_clicking){var dx_mouse=p.x-pJS.interactivity.mouse.click_pos_x,dy_mouse=p.y-pJS.interactivity.mouse.click_pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),time_spent=(new Date().getTime()-pJS.interactivity.mouse.click_time)/1e3;if(time_spent>pJS.interactivity.modes.bubble.duration){pJS.tmp.bubble_duration_end=!0}if(time_spent>2*pJS.interactivity.modes.bubble.duration){pJS.tmp.bubble_clicking=!1;pJS.tmp.bubble_duration_end=!1}}function process(bubble_param,particles_param,p_obj_bubble,p_obj,id){if(bubble_param!=particles_param){if(!pJS.tmp.bubble_duration_end){if(dist_mouse<=pJS.interactivity.modes.bubble.distance){if(p_obj_bubble!=void 0)var obj=p_obj_bubble;else var obj=p_obj;if(obj!=bubble_param){var value=p_obj-time_spent*(p_obj-bubble_param)/pJS.interactivity.modes.bubble.duration;if("size"==id)p.radius_bubble=value;if("opacity"==id)p.opacity_bubble=value}}else{if("size"==id)p.radius_bubble=void 0;if("opacity"==id)p.opacity_bubble=void 0}}else{if(p_obj_bubble!=void 0){var value_tmp=p_obj-time_spent*(p_obj-bubble_param)/pJS.interactivity.modes.bubble.duration,dif=bubble_param-value_tmp;value=bubble_param+dif;if("size"==id)p.radius_bubble=value;if("opacity"==id)p.opacity_bubble=value}}}}if(pJS.tmp.bubble_clicking){/* size */process(pJS.interactivity.modes.bubble.size,pJS.particles.size.value,p.radius_bubble,p.radius,"size");/* opacity */process(pJS.interactivity.modes.bubble.opacity,pJS.particles.opacity.value,p.opacity_bubble,p.opacity,"opacity")}}};pJS.fn.modes.repulseParticle=function(p){if(pJS.interactivity.events.onhover.enable&&isInArray("repulse",pJS.interactivity.events.onhover.mode)&&"mousemove"==pJS.interactivity.status){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),normVec={x:dx_mouse/dist_mouse,y:dy_mouse/dist_mouse},repulseRadius=pJS.interactivity.modes.repulse.distance,velocity=100,repulseFactor=clamp(1/repulseRadius*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity,0,50),pos={x:p.x+normVec.x*repulseFactor,y:p.y+normVec.y*repulseFactor};if("bounce"==pJS.particles.move.out_mode){if(0<pos.x-p.radius&&pos.x+p.radius<pJS.canvas.w)p.x=pos.x;if(0<pos.y-p.radius&&pos.y+p.radius<pJS.canvas.h)p.y=pos.y}else{p.x=pos.x;p.y=pos.y}}else if(pJS.interactivity.events.onclick.enable&&isInArray("repulse",pJS.interactivity.events.onclick.mode)){if(!pJS.tmp.repulse_finish){pJS.tmp.repulse_count++;if(pJS.tmp.repulse_count==pJS.particles.array.length){pJS.tmp.repulse_finish=!0}}if(pJS.tmp.repulse_clicking){var repulseRadius=Math.pow(pJS.interactivity.modes.repulse.distance/6,3),dx=pJS.interactivity.mouse.click_pos_x-p.x,dy=pJS.interactivity.mouse.click_pos_y-p.y,d=dx*dx+dy*dy,force=1*(-repulseRadius/d);function process(){var f=Math.atan2(dy,dx);p.vx=force*Math.cos(f);p.vy=force*Math.sin(f);if("bounce"==pJS.particles.move.out_mode){var pos={x:p.x+p.vx,y:p.y+p.vy};if(pos.x+p.radius>pJS.canvas.w)p.vx=-p.vx;else if(0>pos.x-p.radius)p.vx=-p.vx;if(pos.y+p.radius>pJS.canvas.h)p.vy=-p.vy;else if(0>pos.y-p.radius)p.vy=-p.vy}}// default
+if(d<=repulseRadius){process()}// bang - slow motion mode
+// if(!pJS.tmp.repulse_finish){
+//   if(d <= repulseRadius){
+//     process();
+//   }
+// }else{
+//   process();
+// }
+}else{if(!1==pJS.tmp.repulse_clicking){p.vx=p.vx_i;p.vy=p.vy_i}}}};pJS.fn.modes.grabParticle=function(p){if(pJS.interactivity.events.onhover.enable&&"mousemove"==pJS.interactivity.status){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse);/* draw a line between the cursor and the particle if the distance between them is under the config distance */if(dist_mouse<=pJS.interactivity.modes.grab.distance){var opacity_line=pJS.interactivity.modes.grab.line_linked.opacity-dist_mouse/(1/pJS.interactivity.modes.grab.line_linked.opacity)/pJS.interactivity.modes.grab.distance;if(0<opacity_line){/* style */var color_line=pJS.particles.line_linked.color_rgb_line;pJS.canvas.ctx.strokeStyle="rgba("+color_line.r+","+color_line.g+","+color_line.b+","+opacity_line+")";pJS.canvas.ctx.lineWidth=pJS.particles.line_linked.width;//pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
+/* path */pJS.canvas.ctx.beginPath();pJS.canvas.ctx.moveTo(p.x,p.y);pJS.canvas.ctx.lineTo(pJS.interactivity.mouse.pos_x,pJS.interactivity.mouse.pos_y);pJS.canvas.ctx.stroke();pJS.canvas.ctx.closePath()}}}};/* ---------- pJS functions - vendors ------------ */pJS.fn.vendors.eventsListeners=function(){/* events target element */if("window"==pJS.interactivity.detect_on){pJS.interactivity.el=window}else{pJS.interactivity.el=pJS.canvas.el}/* detect mouse pos - on hover / click event */if(pJS.interactivity.events.onhover.enable||pJS.interactivity.events.onclick.enable){/* el on mousemove */pJS.interactivity.el.addEventListener("mousemove",function(e){if(pJS.interactivity.el==window){var pos_x=e.clientX,pos_y=e.clientY}else{var pos_x=e.offsetX||e.clientX,pos_y=e.offsetY||e.clientY}pJS.interactivity.mouse.pos_x=pos_x;pJS.interactivity.mouse.pos_y=pos_y;if(pJS.tmp.retina){pJS.interactivity.mouse.pos_x*=pJS.canvas.pxratio;pJS.interactivity.mouse.pos_y*=pJS.canvas.pxratio}pJS.interactivity.status="mousemove"});/* el on onmouseleave */pJS.interactivity.el.addEventListener("mouseleave",function(e){pJS.interactivity.mouse.pos_x=null;pJS.interactivity.mouse.pos_y=null;pJS.interactivity.status="mouseleave"})}/* on click event */if(pJS.interactivity.events.onclick.enable){pJS.interactivity.el.addEventListener("click",function(){pJS.interactivity.mouse.click_pos_x=pJS.interactivity.mouse.pos_x;pJS.interactivity.mouse.click_pos_y=pJS.interactivity.mouse.pos_y;pJS.interactivity.mouse.click_time=new Date().getTime();if(pJS.interactivity.events.onclick.enable){switch(pJS.interactivity.events.onclick.mode){case"push":if(pJS.particles.move.enable){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb,pJS.interactivity.mouse)}else{if(1==pJS.interactivity.modes.push.particles_nb){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb,pJS.interactivity.mouse)}else if(1<pJS.interactivity.modes.push.particles_nb){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb)}}break;case"remove":pJS.fn.modes.removeParticles(pJS.interactivity.modes.remove.particles_nb);break;case"bubble":pJS.tmp.bubble_clicking=!0;break;case"repulse":pJS.tmp.repulse_clicking=!0;pJS.tmp.repulse_count=0;pJS.tmp.repulse_finish=!1;setTimeout(function(){pJS.tmp.repulse_clicking=!1},1e3*pJS.interactivity.modes.repulse.duration);break;}}})}};pJS.fn.vendors.densityAutoParticles=function(){if(pJS.particles.number.density.enable){/* calc area */var area=pJS.canvas.el.width*pJS.canvas.el.height/1e3;if(pJS.tmp.retina){area=area/(2*pJS.canvas.pxratio)}/* calc number of particles based on density area */var nb_particles=area*pJS.particles.number.value/pJS.particles.number.density.value_area,missing_particles=pJS.particles.array.length-nb_particles;/* add or remove X particles */if(0>missing_particles)pJS.fn.modes.pushParticles(Math.abs(missing_particles));else pJS.fn.modes.removeParticles(missing_particles)}};pJS.fn.vendors.checkOverlap=function(p1,position){for(var i=0;i<pJS.particles.array.length;i++){var p2=pJS.particles.array[i],dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<=p1.radius+p2.radius){p1.x=position?position.x:Math.random()*pJS.canvas.w;p1.y=position?position.y:Math.random()*pJS.canvas.h;pJS.fn.vendors.checkOverlap(p1)}}};pJS.fn.vendors.createSvgImg=function(p){/* set color to svg element */var svgXml=pJS.tmp.source_svg,rgbHex=/#([0-9A-F]{3,6})/gi,coloredSvgXml=svgXml.replace(rgbHex,function(m,r,g,b){if(p.color.rgb){var color_value="rgba("+p.color.rgb.r+","+p.color.rgb.g+","+p.color.rgb.b+","+p.opacity+")"}else{var color_value="hsla("+p.color.hsl.h+","+p.color.hsl.s+"%,"+p.color.hsl.l+"%,"+p.opacity+")"}return color_value}),svg=new Blob([coloredSvgXml],{type:"image/svg+xml;charset=utf-8"}),DOMURL=window.URL||window.webkitURL||window,url=DOMURL.createObjectURL(svg),img=new Image;/* prepare to create img with colored svg */img.addEventListener("load",function(){p.img.obj=img;p.img.loaded=!0;DOMURL.revokeObjectURL(url);pJS.tmp.count_svg++});img.src=url};pJS.fn.vendors.destroypJS=function(){cancelAnimationFrame(pJS.fn.drawAnimFrame);canvas_el.remove();pJSDom=null};pJS.fn.vendors.drawShape=function(c,startX,startY,sideLength,sideCountNumerator,sideCountDenominator){// By Programming Thomas - https://programmingthomas.wordpress.com/2013/04/03/n-sided-shapes/
+var sideCount=sideCountNumerator*sideCountDenominator,decimalSides=sideCountNumerator/sideCountDenominator,interiorAngleDegrees=180*(decimalSides-2)/decimalSides,interiorAngle=Math.PI-Math.PI*interiorAngleDegrees/180;// convert to radians
+c.save();c.beginPath();c.translate(startX,startY);c.moveTo(0,0);for(var i=0;i<sideCount;i++){c.lineTo(sideLength,0);c.translate(sideLength,0);c.rotate(interiorAngle)}//c.stroke();
+c.fill();c.restore()};pJS.fn.vendors.exportImg=function(){window.open(pJS.canvas.el.toDataURL("image/png"),"_blank")};pJS.fn.vendors.loadImg=function(type){pJS.tmp.img_error=void 0;if(""!=pJS.particles.shape.image.src){if("svg"==type){var xhr=new XMLHttpRequest;xhr.open("GET",pJS.particles.shape.image.src);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){pJS.tmp.source_svg=data.currentTarget.response;pJS.fn.vendors.checkBeforeDraw()}else{console.log("Error pJS - Image not found");pJS.tmp.img_error=!0}}};xhr.send()}else{var img=new Image;img.addEventListener("load",function(){pJS.tmp.img_obj=img;pJS.fn.vendors.checkBeforeDraw()});img.src=pJS.particles.shape.image.src}}else{console.log("Error pJS - No image.src");pJS.tmp.img_error=!0}};pJS.fn.vendors.draw=function(){if("image"==pJS.particles.shape.type){if("svg"==pJS.tmp.img_type){if(pJS.tmp.count_svg>=pJS.particles.number.value){pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}else{//console.log('still loading...');
+if(!pJS.tmp.img_error)pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}}else{if(pJS.tmp.img_obj!=void 0){pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}else{if(!pJS.tmp.img_error)pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}}}else{pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}};pJS.fn.vendors.checkBeforeDraw=function(){// if shape is image
+if("image"==pJS.particles.shape.type){if("svg"==pJS.tmp.img_type&&pJS.tmp.source_svg==void 0){pJS.tmp.checkAnimFrame=requestAnimFrame(check)}else{//console.log('images loaded! cancel check');
+cancelRequestAnimFrame(pJS.tmp.checkAnimFrame);if(!pJS.tmp.img_error){pJS.fn.vendors.init();pJS.fn.vendors.draw()}}}else{pJS.fn.vendors.init();pJS.fn.vendors.draw()}};pJS.fn.vendors.init=function(){/* init canvas + particles */pJS.fn.retinaInit();pJS.fn.canvasInit();pJS.fn.canvasSize();pJS.fn.canvasPaint();pJS.fn.particlesCreate();pJS.fn.vendors.densityAutoParticles();/* particles.line_linked - convert hex colors to rgb */pJS.particles.line_linked.color_rgb_line=hexToRgb(pJS.particles.line_linked.color)};pJS.fn.vendors.start=function(){if(isInArray("image",pJS.particles.shape.type)){pJS.tmp.img_type=pJS.particles.shape.image.src.substr(pJS.particles.shape.image.src.length-3);pJS.fn.vendors.loadImg(pJS.tmp.img_type)}else{pJS.fn.vendors.checkBeforeDraw()}};/* ---------- pJS - start ------------ */pJS.fn.vendors.eventsListeners();pJS.fn.vendors.start()};/* ---------- global functions - vendors ------------ */Object.deepExtend=function deepExtendFunction(destination,source){for(var property in source){if(source[property]&&source[property].constructor&&source[property].constructor===Object){destination[property]=destination[property]||{};deepExtendFunction(destination[property],source[property])}else{destination[property]=source[property]}}return destination};window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){window.setTimeout(callback,1e3/60)}}();window.cancelRequestAnimFrame=function(){return window.cancelAnimationFrame||window.webkitCancelRequestAnimationFrame||window.mozCancelRequestAnimationFrame||window.oCancelRequestAnimationFrame||window.msCancelRequestAnimationFrame||clearTimeout}();function hexToRgb(hex){// By Tim Down - http://stackoverflow.com/a/5624139/3493650
+// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandRegex,function(m,r,g,b){return r+r+g+g+b+b});var result=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);return result?{r:parseInt(result[1],16),g:parseInt(result[2],16),b:parseInt(result[3],16)}:null};function clamp(number,min,max){return Math.min(Math.max(number,min),max)};function isInArray(value,array){return-1<array.indexOf(value)}/* ---------- particles.js functions - start ------------ */window.pJSDom=[];window.particlesJS=function(tag_id,params){//console.log(params);
+/* no string id? so it's object params, and set the id with default id */if("string"!=typeof tag_id){params=tag_id;tag_id="particles-js"}/* no id? set the id to default id */if(!tag_id){tag_id="particles-js"}/* pJS elements */var pJS_tag=document.getElementById(tag_id),pJS_canvas_class="particles-js-canvas-el",exist_canvas=pJS_tag.getElementsByClassName(pJS_canvas_class);/* remove canvas if exists into the pJS target tag */if(exist_canvas.length){while(0<exist_canvas.length){pJS_tag.removeChild(exist_canvas[0])}}/* create canvas element */var canvas_el=document.createElement("canvas");canvas_el.className=pJS_canvas_class;/* set size canvas */canvas_el.style.width="100%";canvas_el.style.height="100%";/* append canvas */var canvas=document.getElementById(tag_id).appendChild(canvas_el);/* launch particle.js */if(null!=canvas){pJSDom.push(new pJS(tag_id,params))}};window.particlesJS.load=function(tag_id,path_config_json,callback){/* load json config */var xhr=new XMLHttpRequest;xhr.open("GET",path_config_json);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){var params=JSON.parse(data.currentTarget.response);window.particlesJS(tag_id,params);if(callback)callback()}else{console.log("Error pJS - XMLHttpRequest status: "+xhr.status);console.log("Error pJS - File config not found")}}};xhr.send()};class Header extends LitElement{static get styles(){return css`
       #header {
         width: 100%;
         height: 18rem;
@@ -1465,153 +1552,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
         </svg>
       </div>
-    `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);class Menu extends LitElement{static get styles(){return css`
-      :host {
-        grid-area: menu;
-        position: sticky;
-        top: 3rem;
-      }
-
-      #button-container {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        row-gap: 1rem;
-      }
-
-      button {
-        background-color: inherit;
-        border: 0;
-        font-size: 2rem;
-        text-align: right;
-        font-family: var(--main);
-        outline: none;
-        color: inherit;
-        padding: 0;
-        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
-      }
-
-      .selected {
-        color: var(--red);
-      }
-
-      .selected:hover {
-        color: var(--red);
-        cursor: initial;
-      }
-
-      button:hover {
-        cursor: pointer;
-        color: var(--red);
-      }
-
-      #top {
-        display: none;
-        border-radius: 5rem;
-        background-color: var(--dark-gray);
-        color: var(--light-gray);
-        width: 5rem;
-        height: 5rem;
-        justify-content: center;
-        align-items: center;
-        margin: 1px;
-        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
-      }
-
-      #top:hover {
-        cursor: pointer;
-        color: var(--off-white);
-      }
-
-      fa-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-      }
-
-      @media (max-width: 1000px) {
-        :host {
-          display: none;
-        }
-
-        #button-container {
-          display: none;
-        }
-      }
-
-      @media (max-width: 600px) {
-        button {
-          font-size: 1.875rem;
-        }
-      }
-    `}static get properties(){return{current:String,offset:Object}}render(){return html`
-      <div id="button-container">
-        <button
-          @click="${this.clickHandler}"
-          class="${"about"===this.current?"selected":""}"
-          id="about"
-        >
-          About
-        </button>
-        <button
-          @click="${this.clickHandler}"
-          class="${"experience"===this.current?"selected":""}"
-          id="experience"
-        >
-          Experience
-        </button>
-        <button
-          @click="${this.clickHandler}"
-          class="${"projects"===this.current?"selected":""}"
-          id="projects"
-        >
-          Projects
-        </button>
-      </div>
-      <div id="top" @click="${this.clickHandler}">
-        <fa-icon class="fas fa-hand-point-up"></fa-icon>
-      </div>
-    `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){if("top"===target)target="about";scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class Name extends LitElement{static get styles(){return css`
-      #name {
-        font-size: min(20vw, 9.5rem);
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        color: var(--light-gray);
-        width: max-content;
-        margin: 0 auto;
-        transform: translateY(-18rem);
-      }
-
-      .wiggle {
-        transition: transform 0.5s ease-out;
-      }
-
-      .wiggle:hover {
-        transform: rotate(20deg);
-      }
-
-      @media (max-width: 1000px) {
-        #name {
-          font-size: min(15vw, 6rem);
-          transform: translateY(-9rem);
-        }
-      }
-    `}render(){return html`
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
-        crossorigin="anonymous"
-      />
-      <div id="name"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">N</mi><mtext>a</mtext><msub><mover accent="true"><mi>v</mi><mo>⃗</mo></mover><mi>i</mi></msub><mtext>nn</mtext></mrow><annotation encoding="application/x-tex">\mathbb{N}\textnormal{a}\vec{v}_i\textnormal{nn}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.864em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathbb">N</span></span><span class="mord text"><span class="mord textrm">a</span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.20772em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
-      3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
-      10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
-      -1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
-      -7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
-      H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
-      c-16-25.333-24-45-24-59z">
-      </path></svg></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2 wiggle"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord textrm">nn</span></span></span></span></span></div>
-    `}constructor(){super()}}customElements.define("app-name",Name);class ProjectCard extends LitElement{static get styles(){return[css`
+    `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);class ProjectCard extends LitElement{static get styles(){return[css`
         .subtitle {
           font-size: 2rem;
           width: 100%;
@@ -1744,60 +1685,119 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       <div id="projects-container">
         ${Projects.map(p=>html`<project-card .project="${p}"></project-card>`)}
       </div>
-    `}constructor(){super()}}customElements.define("projects-section",ProjectsSection);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
+    `}constructor(){super()}}customElements.define("projects-section",ProjectsSection);class Menu extends LitElement{static get styles(){return[css`
+      :host {
+        grid-area: menu;
+        position: sticky;
+        top: 3rem;
+      }
+
+      #button-container {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 1rem;
+      }
+
+      button {
+        background-color: inherit;
+        border: 0;
+        font-size: 2rem;
+        text-align: right;
+        font-family: var(--main);
+        outline: none;
+        color: inherit;
+        padding: 0;
+        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      .selected {
+        color: var(--red);
+      }
+
+      .selected:hover {
+        color: var(--red);
+        cursor: initial;
+      }
+
+      button:hover {
+        cursor: pointer;
+        color: var(--red);
+      }
+
+      #top {
+        display: none;
+        border-radius: 5rem;
+        background-color: var(--dark-gray);
+        color: var(--light-gray);
+        width: 5rem;
+        height: 5rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1px;
+        transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      #top:hover {
+        cursor: pointer;
+        color: var(--off-white);
+      }
+
+      fa-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+      }
+
+      @media (max-width: 1000px) {
+        :host {
+          display: none;
+        }
+
+        #button-container {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        button {
+          font-size: 1.875rem;
+        }
+      }
+    `,selectionStyles]}static get properties(){return{current:String,offset:Object}}render(){return html`
+      <div id="button-container">
+        <button
+          @click="${this.clickHandler}"
+          class="${"about"===this.current?"selected":""}"
+          id="about"
+        >
+          About
+        </button>
+        <button
+          @click="${this.clickHandler}"
+          class="${"experience"===this.current?"selected":""}"
+          id="experience"
+        >
+          Experience
+        </button>
+        <button
+          @click="${this.clickHandler}"
+          class="${"projects"===this.current?"selected":""}"
+          id="projects"
+        >
+          Projects
+        </button>
+      </div>
+      <div id="top" @click="${this.clickHandler}">
+        <fa-icon class="fas fa-hand-point-up"></fa-icon>
+      </div>
+    `}firstUpdated(){window.addEventListener("scroll",this.setCurrent.bind(this),!0);const resizeObserver=new ResizeObserver(this.setOffset.bind(this));resizeObserver.observe(document.body)}setOffset(){["experience","projects"].forEach(target=>this.offset[target]=document.getElementById(target).offsetTop-15);this.setCurrent()}scroll(target){if("top"===target)target="about";scrollTo({top:this.offset[target],behavior:"smooth"})}setCurrent(){const scroll=window.pageYOffset;this.current=this.offset.projects<=scroll?"projects":this.offset.experience<=scroll?"experience":"about"}clickHandler(e){return this.current===e.target.id||this.scroll(e.target.id)}constructor(){super();this.offset={about:0}}}customElements.define("app-menu",Menu);class FaIcon extends LitElement{static get properties(){return{class:{type:String},style:{type:String}}}constructor(){super();this.class="";this.style=""}render(){return html`<link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
-      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};/* -----------------------------------------------
-   /* Author : Vincent Garreau  - vincentgarreau.com
-   /* MIT license: http://opensource.org/licenses/MIT
-   /* Demo / Generator : vincentgarreau.com/particles.js
-   /* GitHub : github.com/VincentGarreau/particles.js
-   /* How to use? : Check the GitHub README
-   /* v2.0.0
-   /* ----------------------------------------------- */_exports.$faIcon=faIcon;var pJS=function(tag_id,params){var canvas_el=document.querySelector("#"+tag_id+" > .particles-js-canvas-el");/* particles.js variables with default values */this.pJS={canvas:{el:canvas_el,w:canvas_el.offsetWidth,h:canvas_el.offsetHeight},particles:{number:{value:400,density:{enable:!0,value_area:800}},color:{value:"#fff"},shape:{type:"circle",stroke:{width:0,color:"#ff0000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100}},opacity:{value:1,random:!1,anim:{enable:!1,speed:2,opacity_min:0,sync:!1}},size:{value:20,random:!1,anim:{enable:!1,speed:20,size_min:0,sync:!1}},line_linked:{enable:!0,distance:100,color:"#fff",opacity:1,width:1},move:{enable:!0,speed:2,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:100,line_linked:{opacity:1}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}},mouse:{}},retina_detect:!1,fn:{interact:{},modes:{},vendors:{}},tmp:{}};var pJS=this.pJS;/* params settings */if(params){Object.deepExtend(pJS,params)}pJS.tmp.obj={size_value:pJS.particles.size.value,size_anim_speed:pJS.particles.size.anim.speed,move_speed:pJS.particles.move.speed,line_linked_distance:pJS.particles.line_linked.distance,line_linked_width:pJS.particles.line_linked.width,mode_grab_distance:pJS.interactivity.modes.grab.distance,mode_bubble_distance:pJS.interactivity.modes.bubble.distance,mode_bubble_size:pJS.interactivity.modes.bubble.size,mode_repulse_distance:pJS.interactivity.modes.repulse.distance};pJS.fn.retinaInit=function(){if(pJS.retina_detect&&1<window.devicePixelRatio){pJS.canvas.pxratio=window.devicePixelRatio;pJS.tmp.retina=!0}else{pJS.canvas.pxratio=1;pJS.tmp.retina=!1}pJS.canvas.w=pJS.canvas.el.offsetWidth*pJS.canvas.pxratio;pJS.canvas.h=pJS.canvas.el.offsetHeight*pJS.canvas.pxratio;pJS.particles.size.value=pJS.tmp.obj.size_value*pJS.canvas.pxratio;pJS.particles.size.anim.speed=pJS.tmp.obj.size_anim_speed*pJS.canvas.pxratio;pJS.particles.move.speed=pJS.tmp.obj.move_speed*pJS.canvas.pxratio;pJS.particles.line_linked.distance=pJS.tmp.obj.line_linked_distance*pJS.canvas.pxratio;pJS.interactivity.modes.grab.distance=pJS.tmp.obj.mode_grab_distance*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.distance=pJS.tmp.obj.mode_bubble_distance*pJS.canvas.pxratio;pJS.particles.line_linked.width=pJS.tmp.obj.line_linked_width*pJS.canvas.pxratio;pJS.interactivity.modes.bubble.size=pJS.tmp.obj.mode_bubble_size*pJS.canvas.pxratio;pJS.interactivity.modes.repulse.distance=pJS.tmp.obj.mode_repulse_distance*pJS.canvas.pxratio};/* ---------- pJS functions - canvas ------------ */pJS.fn.canvasInit=function(){pJS.canvas.ctx=pJS.canvas.el.getContext("2d")};pJS.fn.canvasSize=function(){pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;if(pJS&&pJS.interactivity.events.resize){window.addEventListener("resize",function(){pJS.canvas.w=pJS.canvas.el.offsetWidth;pJS.canvas.h=pJS.canvas.el.offsetHeight;/* resize canvas */if(pJS.tmp.retina){pJS.canvas.w*=pJS.canvas.pxratio;pJS.canvas.h*=pJS.canvas.pxratio}pJS.canvas.el.width=pJS.canvas.w;pJS.canvas.el.height=pJS.canvas.h;/* repaint canvas on anim disabled */if(!pJS.particles.move.enable){pJS.fn.particlesEmpty();pJS.fn.particlesCreate();pJS.fn.particlesDraw();pJS.fn.vendors.densityAutoParticles()}/* density particles enabled */pJS.fn.vendors.densityAutoParticles()})}};pJS.fn.canvasPaint=function(){pJS.canvas.ctx.fillRect(0,0,pJS.canvas.w,pJS.canvas.h)};pJS.fn.canvasClear=function(){pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h)};/* --------- pJS functions - particles ----------- */pJS.fn.particle=function(color,opacity,position){/* size */this.radius=(pJS.particles.size.random?Math.random():1)*pJS.particles.size.value;if(pJS.particles.size.anim.enable){this.size_status=!1;this.vs=pJS.particles.size.anim.speed/100;if(!pJS.particles.size.anim.sync){this.vs=this.vs*Math.random()}}/* position */this.x=position?position.x:Math.random()*pJS.canvas.w;this.y=position?position.y:Math.random()*pJS.canvas.h;/* check position  - into the canvas */if(this.x>pJS.canvas.w-2*this.radius)this.x=this.x-this.radius;else if(this.x<2*this.radius)this.x=this.x+this.radius;if(this.y>pJS.canvas.h-2*this.radius)this.y=this.y-this.radius;else if(this.y<2*this.radius)this.y=this.y+this.radius;/* check position - avoid overlap */if(pJS.particles.move.bounce){pJS.fn.vendors.checkOverlap(this,position)}/* color */this.color={};if("object"==typeof color.value){if(color.value instanceof Array){var color_selected=color.value[Math.floor(Math.random()*pJS.particles.color.value.length)];this.color.rgb=hexToRgb(color_selected)}else{if(color.value.r!=void 0&&color.value.g!=void 0&&color.value.b!=void 0){this.color.rgb={r:color.value.r,g:color.value.g,b:color.value.b}}if(color.value.h!=void 0&&color.value.s!=void 0&&color.value.l!=void 0){this.color.hsl={h:color.value.h,s:color.value.s,l:color.value.l}}}}else if("random"==color.value){this.color.rgb={r:Math.floor(Math.random()*(255-0+1))+0,g:Math.floor(Math.random()*(255-0+1))+0,b:Math.floor(Math.random()*(255-0+1))+0}}else if("string"==typeof color.value){this.color=color;this.color.rgb=hexToRgb(this.color.value)}/* opacity */this.opacity=(pJS.particles.opacity.random?Math.random():1)*pJS.particles.opacity.value;if(pJS.particles.opacity.anim.enable){this.opacity_status=!1;this.vo=pJS.particles.opacity.anim.speed/100;if(!pJS.particles.opacity.anim.sync){this.vo=this.vo*Math.random()}}/* animation - velocity for speed */var velbase={};switch(pJS.particles.move.direction){case"top":velbase={x:0,y:-1};break;case"top-right":velbase={x:.5,y:-.5};break;case"right":velbase={x:1,y:-0};break;case"bottom-right":velbase={x:.5,y:.5};break;case"bottom":velbase={x:0,y:1};break;case"bottom-left":velbase={x:-.5,y:1};break;case"left":velbase={x:-1,y:0};break;case"top-left":velbase={x:-.5,y:-.5};break;default:velbase={x:0,y:0};break;}if(pJS.particles.move.straight){this.vx=velbase.x;this.vy=velbase.y;if(pJS.particles.move.random){this.vx=this.vx*Math.random();this.vy=this.vy*Math.random()}}else{this.vx=velbase.x+Math.random()-.5;this.vy=velbase.y+Math.random()-.5}// var theta = 2.0 * Math.PI * Math.random();
-// this.vx = Math.cos(theta);
-// this.vy = Math.sin(theta);
-this.vx_i=this.vx;this.vy_i=this.vy;/* if shape is image */var shape_type=pJS.particles.shape.type;if("object"==typeof shape_type){if(shape_type instanceof Array){var shape_selected=shape_type[Math.floor(Math.random()*shape_type.length)];this.shape=shape_selected}}else{this.shape=shape_type}if("image"==this.shape){var sh=pJS.particles.shape;this.img={src:sh.image.src,ratio:sh.image.width/sh.image.height};if(!this.img.ratio)this.img.ratio=1;if("svg"==pJS.tmp.img_type&&pJS.tmp.source_svg!=void 0){pJS.fn.vendors.createSvgImg(this);if(pJS.tmp.pushing){this.img.loaded=!1}}}};pJS.fn.particle.prototype.draw=function(){var p=this;if(p.radius_bubble!=void 0){var radius=p.radius_bubble}else{var radius=p.radius}if(p.opacity_bubble!=void 0){var opacity=p.opacity_bubble}else{var opacity=p.opacity}if(p.color.rgb){var color_value="rgba("+p.color.rgb.r+","+p.color.rgb.g+","+p.color.rgb.b+","+opacity+")"}else{var color_value="hsla("+p.color.hsl.h+","+p.color.hsl.s+"%,"+p.color.hsl.l+"%,"+opacity+")"}pJS.canvas.ctx.fillStyle=color_value;pJS.canvas.ctx.beginPath();switch(p.shape){case"circle":pJS.canvas.ctx.arc(p.x,p.y,radius,0,2*Math.PI,!1);break;case"edge":pJS.canvas.ctx.rect(p.x-radius,p.y-radius,2*radius,2*radius);break;case"triangle":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius,p.y+radius/1.66,2*radius,3,2);break;case"polygon":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-radius/(pJS.particles.shape.polygon.nb_sides/3.5),// startX
-p.y-radius/(2.66/3.5),// startY
-2.66*radius/(pJS.particles.shape.polygon.nb_sides/3),// sideLength
-pJS.particles.shape.polygon.nb_sides,// sideCountNumerator
-1// sideCountDenominator
-);break;case"star":pJS.fn.vendors.drawShape(pJS.canvas.ctx,p.x-2*radius/(pJS.particles.shape.polygon.nb_sides/4),// startX
-p.y-radius/(2.66*2/3.5),// startY
-2.66*(2*radius)/(pJS.particles.shape.polygon.nb_sides/3),// sideLength
-pJS.particles.shape.polygon.nb_sides,// sideCountNumerator
-2// sideCountDenominator
-);break;case"image":function draw(){pJS.canvas.ctx.drawImage(img_obj,p.x-radius,p.y-radius,2*radius,2*radius/p.img.ratio)}if("svg"==pJS.tmp.img_type){var img_obj=p.img.obj}else{var img_obj=pJS.tmp.img_obj}if(img_obj){draw()}break;}pJS.canvas.ctx.closePath();if(0<pJS.particles.shape.stroke.width){pJS.canvas.ctx.strokeStyle=pJS.particles.shape.stroke.color;pJS.canvas.ctx.lineWidth=pJS.particles.shape.stroke.width;pJS.canvas.ctx.stroke()}pJS.canvas.ctx.fill()};pJS.fn.particlesCreate=function(){for(var i=0;i<pJS.particles.number.value;i++){pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color,pJS.particles.opacity.value))}};pJS.fn.particlesUpdate=function(){for(var i=0,p;i<pJS.particles.array.length;i++){/* the particle */p=pJS.particles.array[i];// var d = ( dx = pJS.interactivity.mouse.click_pos_x - p.x ) * dx + ( dy = pJS.interactivity.mouse.click_pos_y - p.y ) * dy;
-// var f = -BANG_SIZE / d;
-// if ( d < BANG_SIZE ) {
-//     var t = Math.atan2( dy, dx );
-//     p.vx = f * Math.cos(t);
-//     p.vy = f * Math.sin(t);
-// }
-/* move the particle */if(pJS.particles.move.enable){var ms=pJS.particles.move.speed/2;p.x+=p.vx*ms;p.y+=p.vy*ms}/* change opacity status */if(pJS.particles.opacity.anim.enable){if(!0==p.opacity_status){if(p.opacity>=pJS.particles.opacity.value)p.opacity_status=!1;p.opacity+=p.vo}else{if(p.opacity<=pJS.particles.opacity.anim.opacity_min)p.opacity_status=!0;p.opacity-=p.vo}if(0>p.opacity)p.opacity=0}/* change size */if(pJS.particles.size.anim.enable){if(!0==p.size_status){if(p.radius>=pJS.particles.size.value)p.size_status=!1;p.radius+=p.vs}else{if(p.radius<=pJS.particles.size.anim.size_min)p.size_status=!0;p.radius-=p.vs}if(0>p.radius)p.radius=0}/* change particle position if it is out of canvas */if("bounce"==pJS.particles.move.out_mode){var new_pos={x_left:p.radius,x_right:pJS.canvas.w,y_top:p.radius,y_bottom:pJS.canvas.h}}else{var new_pos={x_left:-p.radius,x_right:pJS.canvas.w+p.radius,y_top:-p.radius,y_bottom:pJS.canvas.h+p.radius}}if(p.x-p.radius>pJS.canvas.w){p.x=new_pos.x_left;p.y=Math.random()*pJS.canvas.h}else if(0>p.x+p.radius){p.x=new_pos.x_right;p.y=Math.random()*pJS.canvas.h}if(p.y-p.radius>pJS.canvas.h){p.y=new_pos.y_top;p.x=Math.random()*pJS.canvas.w}else if(0>p.y+p.radius){p.y=new_pos.y_bottom;p.x=Math.random()*pJS.canvas.w}/* out of canvas modes */switch(pJS.particles.move.out_mode){case"bounce":if(p.x+p.radius>pJS.canvas.w)p.vx=-p.vx;else if(0>p.x-p.radius)p.vx=-p.vx;if(p.y+p.radius>pJS.canvas.h)p.vy=-p.vy;else if(0>p.y-p.radius)p.vy=-p.vy;break;}/* events */if(isInArray("grab",pJS.interactivity.events.onhover.mode)){pJS.fn.modes.grabParticle(p)}if(isInArray("bubble",pJS.interactivity.events.onhover.mode)||isInArray("bubble",pJS.interactivity.events.onclick.mode)){pJS.fn.modes.bubbleParticle(p)}if(isInArray("repulse",pJS.interactivity.events.onhover.mode)||isInArray("repulse",pJS.interactivity.events.onclick.mode)){pJS.fn.modes.repulseParticle(p)}/* interaction auto between particles */if(pJS.particles.line_linked.enable||pJS.particles.move.attract.enable){for(var j=i+1,p2;j<pJS.particles.array.length;j++){p2=pJS.particles.array[j];/* link particles */if(pJS.particles.line_linked.enable){pJS.fn.interact.linkParticles(p,p2)}/* attract particles */if(pJS.particles.move.attract.enable){pJS.fn.interact.attractParticles(p,p2)}/* bounce particles */if(pJS.particles.move.bounce){pJS.fn.interact.bounceParticles(p,p2)}}}}};pJS.fn.particlesDraw=function(){/* clear canvas */pJS.canvas.ctx.clearRect(0,0,pJS.canvas.w,pJS.canvas.h);/* update each particles param */pJS.fn.particlesUpdate();/* draw each particle */for(var i=0,p;i<pJS.particles.array.length;i++){p=pJS.particles.array[i];p.draw()}};pJS.fn.particlesEmpty=function(){pJS.particles.array=[]};pJS.fn.particlesRefresh=function(){/* init all */cancelRequestAnimFrame(pJS.fn.checkAnimFrame);cancelRequestAnimFrame(pJS.fn.drawAnimFrame);pJS.tmp.source_svg=void 0;pJS.tmp.img_obj=void 0;pJS.tmp.count_svg=0;pJS.fn.particlesEmpty();pJS.fn.canvasClear();/* restart */pJS.fn.vendors.start()};/* ---------- pJS functions - particles interaction ------------ */pJS.fn.interact.linkParticles=function(p1,p2){var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);/* draw a line between p1 and p2 if the distance between them is under the config distance */if(dist<=pJS.particles.line_linked.distance){var opacity_line=pJS.particles.line_linked.opacity-dist/(1/pJS.particles.line_linked.opacity)/pJS.particles.line_linked.distance;if(0<opacity_line){/* style */var color_line=pJS.particles.line_linked.color_rgb_line;pJS.canvas.ctx.strokeStyle="rgba("+color_line.r+","+color_line.g+","+color_line.b+","+opacity_line+")";pJS.canvas.ctx.lineWidth=pJS.particles.line_linked.width;//pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
-/* path */pJS.canvas.ctx.beginPath();pJS.canvas.ctx.moveTo(p1.x,p1.y);pJS.canvas.ctx.lineTo(p2.x,p2.y);pJS.canvas.ctx.stroke();pJS.canvas.ctx.closePath()}}};pJS.fn.interact.attractParticles=function(p1,p2){/* condensed particles */var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<=pJS.particles.line_linked.distance){var ax=dx/(1e3*pJS.particles.move.attract.rotateX),ay=dy/(1e3*pJS.particles.move.attract.rotateY);p1.vx-=ax;p1.vy-=ay;p2.vx+=ax;p2.vy+=ay}};pJS.fn.interact.bounceParticles=function(p1,p2){var dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy),dist_p=p1.radius+p2.radius;if(dist<=dist_p){p1.vx=-p1.vx;p1.vy=-p1.vy;p2.vx=-p2.vx;p2.vy=-p2.vy}};/* ---------- pJS functions - modes events ------------ */pJS.fn.modes.pushParticles=function(nb,pos){pJS.tmp.pushing=!0;for(var i=0;i<nb;i++){pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color,pJS.particles.opacity.value,{x:pos?pos.pos_x:Math.random()*pJS.canvas.w,y:pos?pos.pos_y:Math.random()*pJS.canvas.h}));if(i==nb-1){if(!pJS.particles.move.enable){pJS.fn.particlesDraw()}pJS.tmp.pushing=!1}}};pJS.fn.modes.removeParticles=function(nb){pJS.particles.array.splice(0,nb);if(!pJS.particles.move.enable){pJS.fn.particlesDraw()}};pJS.fn.modes.bubbleParticle=function(p){/* on hover event */if(pJS.interactivity.events.onhover.enable&&isInArray("bubble",pJS.interactivity.events.onhover.mode)){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),ratio=1-dist_mouse/pJS.interactivity.modes.bubble.distance;function init(){p.opacity_bubble=p.opacity;p.radius_bubble=p.radius}/* mousemove - check ratio */if(dist_mouse<=pJS.interactivity.modes.bubble.distance){if(0<=ratio&&"mousemove"==pJS.interactivity.status){/* size */if(pJS.interactivity.modes.bubble.size!=pJS.particles.size.value){if(pJS.interactivity.modes.bubble.size>pJS.particles.size.value){var size=p.radius+pJS.interactivity.modes.bubble.size*ratio;if(0<=size){p.radius_bubble=size}}else{var dif=p.radius-pJS.interactivity.modes.bubble.size,size=p.radius-dif*ratio;if(0<size){p.radius_bubble=size}else{p.radius_bubble=0}}}/* opacity */if(pJS.interactivity.modes.bubble.opacity!=pJS.particles.opacity.value){if(pJS.interactivity.modes.bubble.opacity>pJS.particles.opacity.value){var opacity=pJS.interactivity.modes.bubble.opacity*ratio;if(opacity>p.opacity&&opacity<=pJS.interactivity.modes.bubble.opacity){p.opacity_bubble=opacity}}else{var opacity=p.opacity-(pJS.particles.opacity.value-pJS.interactivity.modes.bubble.opacity)*ratio;if(opacity<p.opacity&&opacity>=pJS.interactivity.modes.bubble.opacity){p.opacity_bubble=opacity}}}}}else{init()}/* mouseleave */if("mouseleave"==pJS.interactivity.status){init()}}/* on click event */else if(pJS.interactivity.events.onclick.enable&&isInArray("bubble",pJS.interactivity.events.onclick.mode)){if(pJS.tmp.bubble_clicking){var dx_mouse=p.x-pJS.interactivity.mouse.click_pos_x,dy_mouse=p.y-pJS.interactivity.mouse.click_pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),time_spent=(new Date().getTime()-pJS.interactivity.mouse.click_time)/1e3;if(time_spent>pJS.interactivity.modes.bubble.duration){pJS.tmp.bubble_duration_end=!0}if(time_spent>2*pJS.interactivity.modes.bubble.duration){pJS.tmp.bubble_clicking=!1;pJS.tmp.bubble_duration_end=!1}}function process(bubble_param,particles_param,p_obj_bubble,p_obj,id){if(bubble_param!=particles_param){if(!pJS.tmp.bubble_duration_end){if(dist_mouse<=pJS.interactivity.modes.bubble.distance){if(p_obj_bubble!=void 0)var obj=p_obj_bubble;else var obj=p_obj;if(obj!=bubble_param){var value=p_obj-time_spent*(p_obj-bubble_param)/pJS.interactivity.modes.bubble.duration;if("size"==id)p.radius_bubble=value;if("opacity"==id)p.opacity_bubble=value}}else{if("size"==id)p.radius_bubble=void 0;if("opacity"==id)p.opacity_bubble=void 0}}else{if(p_obj_bubble!=void 0){var value_tmp=p_obj-time_spent*(p_obj-bubble_param)/pJS.interactivity.modes.bubble.duration,dif=bubble_param-value_tmp;value=bubble_param+dif;if("size"==id)p.radius_bubble=value;if("opacity"==id)p.opacity_bubble=value}}}}if(pJS.tmp.bubble_clicking){/* size */process(pJS.interactivity.modes.bubble.size,pJS.particles.size.value,p.radius_bubble,p.radius,"size");/* opacity */process(pJS.interactivity.modes.bubble.opacity,pJS.particles.opacity.value,p.opacity_bubble,p.opacity,"opacity")}}};pJS.fn.modes.repulseParticle=function(p){if(pJS.interactivity.events.onhover.enable&&isInArray("repulse",pJS.interactivity.events.onhover.mode)&&"mousemove"==pJS.interactivity.status){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse),normVec={x:dx_mouse/dist_mouse,y:dy_mouse/dist_mouse},repulseRadius=pJS.interactivity.modes.repulse.distance,velocity=100,repulseFactor=clamp(1/repulseRadius*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity,0,50),pos={x:p.x+normVec.x*repulseFactor,y:p.y+normVec.y*repulseFactor};if("bounce"==pJS.particles.move.out_mode){if(0<pos.x-p.radius&&pos.x+p.radius<pJS.canvas.w)p.x=pos.x;if(0<pos.y-p.radius&&pos.y+p.radius<pJS.canvas.h)p.y=pos.y}else{p.x=pos.x;p.y=pos.y}}else if(pJS.interactivity.events.onclick.enable&&isInArray("repulse",pJS.interactivity.events.onclick.mode)){if(!pJS.tmp.repulse_finish){pJS.tmp.repulse_count++;if(pJS.tmp.repulse_count==pJS.particles.array.length){pJS.tmp.repulse_finish=!0}}if(pJS.tmp.repulse_clicking){var repulseRadius=Math.pow(pJS.interactivity.modes.repulse.distance/6,3),dx=pJS.interactivity.mouse.click_pos_x-p.x,dy=pJS.interactivity.mouse.click_pos_y-p.y,d=dx*dx+dy*dy,force=1*(-repulseRadius/d);function process(){var f=Math.atan2(dy,dx);p.vx=force*Math.cos(f);p.vy=force*Math.sin(f);if("bounce"==pJS.particles.move.out_mode){var pos={x:p.x+p.vx,y:p.y+p.vy};if(pos.x+p.radius>pJS.canvas.w)p.vx=-p.vx;else if(0>pos.x-p.radius)p.vx=-p.vx;if(pos.y+p.radius>pJS.canvas.h)p.vy=-p.vy;else if(0>pos.y-p.radius)p.vy=-p.vy}}// default
-if(d<=repulseRadius){process()}// bang - slow motion mode
-// if(!pJS.tmp.repulse_finish){
-//   if(d <= repulseRadius){
-//     process();
-//   }
-// }else{
-//   process();
-// }
-}else{if(!1==pJS.tmp.repulse_clicking){p.vx=p.vx_i;p.vy=p.vy_i}}}};pJS.fn.modes.grabParticle=function(p){if(pJS.interactivity.events.onhover.enable&&"mousemove"==pJS.interactivity.status){var dx_mouse=p.x-pJS.interactivity.mouse.pos_x,dy_mouse=p.y-pJS.interactivity.mouse.pos_y,dist_mouse=Math.sqrt(dx_mouse*dx_mouse+dy_mouse*dy_mouse);/* draw a line between the cursor and the particle if the distance between them is under the config distance */if(dist_mouse<=pJS.interactivity.modes.grab.distance){var opacity_line=pJS.interactivity.modes.grab.line_linked.opacity-dist_mouse/(1/pJS.interactivity.modes.grab.line_linked.opacity)/pJS.interactivity.modes.grab.distance;if(0<opacity_line){/* style */var color_line=pJS.particles.line_linked.color_rgb_line;pJS.canvas.ctx.strokeStyle="rgba("+color_line.r+","+color_line.g+","+color_line.b+","+opacity_line+")";pJS.canvas.ctx.lineWidth=pJS.particles.line_linked.width;//pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
-/* path */pJS.canvas.ctx.beginPath();pJS.canvas.ctx.moveTo(p.x,p.y);pJS.canvas.ctx.lineTo(pJS.interactivity.mouse.pos_x,pJS.interactivity.mouse.pos_y);pJS.canvas.ctx.stroke();pJS.canvas.ctx.closePath()}}}};/* ---------- pJS functions - vendors ------------ */pJS.fn.vendors.eventsListeners=function(){/* events target element */if("window"==pJS.interactivity.detect_on){pJS.interactivity.el=window}else{pJS.interactivity.el=pJS.canvas.el}/* detect mouse pos - on hover / click event */if(pJS.interactivity.events.onhover.enable||pJS.interactivity.events.onclick.enable){/* el on mousemove */pJS.interactivity.el.addEventListener("mousemove",function(e){if(pJS.interactivity.el==window){var pos_x=e.clientX,pos_y=e.clientY}else{var pos_x=e.offsetX||e.clientX,pos_y=e.offsetY||e.clientY}pJS.interactivity.mouse.pos_x=pos_x;pJS.interactivity.mouse.pos_y=pos_y;if(pJS.tmp.retina){pJS.interactivity.mouse.pos_x*=pJS.canvas.pxratio;pJS.interactivity.mouse.pos_y*=pJS.canvas.pxratio}pJS.interactivity.status="mousemove"});/* el on onmouseleave */pJS.interactivity.el.addEventListener("mouseleave",function(e){pJS.interactivity.mouse.pos_x=null;pJS.interactivity.mouse.pos_y=null;pJS.interactivity.status="mouseleave"})}/* on click event */if(pJS.interactivity.events.onclick.enable){pJS.interactivity.el.addEventListener("click",function(){pJS.interactivity.mouse.click_pos_x=pJS.interactivity.mouse.pos_x;pJS.interactivity.mouse.click_pos_y=pJS.interactivity.mouse.pos_y;pJS.interactivity.mouse.click_time=new Date().getTime();if(pJS.interactivity.events.onclick.enable){switch(pJS.interactivity.events.onclick.mode){case"push":if(pJS.particles.move.enable){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb,pJS.interactivity.mouse)}else{if(1==pJS.interactivity.modes.push.particles_nb){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb,pJS.interactivity.mouse)}else if(1<pJS.interactivity.modes.push.particles_nb){pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb)}}break;case"remove":pJS.fn.modes.removeParticles(pJS.interactivity.modes.remove.particles_nb);break;case"bubble":pJS.tmp.bubble_clicking=!0;break;case"repulse":pJS.tmp.repulse_clicking=!0;pJS.tmp.repulse_count=0;pJS.tmp.repulse_finish=!1;setTimeout(function(){pJS.tmp.repulse_clicking=!1},1e3*pJS.interactivity.modes.repulse.duration);break;}}})}};pJS.fn.vendors.densityAutoParticles=function(){if(pJS.particles.number.density.enable){/* calc area */var area=pJS.canvas.el.width*pJS.canvas.el.height/1e3;if(pJS.tmp.retina){area=area/(2*pJS.canvas.pxratio)}/* calc number of particles based on density area */var nb_particles=area*pJS.particles.number.value/pJS.particles.number.density.value_area,missing_particles=pJS.particles.array.length-nb_particles;/* add or remove X particles */if(0>missing_particles)pJS.fn.modes.pushParticles(Math.abs(missing_particles));else pJS.fn.modes.removeParticles(missing_particles)}};pJS.fn.vendors.checkOverlap=function(p1,position){for(var i=0;i<pJS.particles.array.length;i++){var p2=pJS.particles.array[i],dx=p1.x-p2.x,dy=p1.y-p2.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<=p1.radius+p2.radius){p1.x=position?position.x:Math.random()*pJS.canvas.w;p1.y=position?position.y:Math.random()*pJS.canvas.h;pJS.fn.vendors.checkOverlap(p1)}}};pJS.fn.vendors.createSvgImg=function(p){/* set color to svg element */var svgXml=pJS.tmp.source_svg,rgbHex=/#([0-9A-F]{3,6})/gi,coloredSvgXml=svgXml.replace(rgbHex,function(m,r,g,b){if(p.color.rgb){var color_value="rgba("+p.color.rgb.r+","+p.color.rgb.g+","+p.color.rgb.b+","+p.opacity+")"}else{var color_value="hsla("+p.color.hsl.h+","+p.color.hsl.s+"%,"+p.color.hsl.l+"%,"+p.opacity+")"}return color_value}),svg=new Blob([coloredSvgXml],{type:"image/svg+xml;charset=utf-8"}),DOMURL=window.URL||window.webkitURL||window,url=DOMURL.createObjectURL(svg),img=new Image;/* prepare to create img with colored svg */img.addEventListener("load",function(){p.img.obj=img;p.img.loaded=!0;DOMURL.revokeObjectURL(url);pJS.tmp.count_svg++});img.src=url};pJS.fn.vendors.destroypJS=function(){cancelAnimationFrame(pJS.fn.drawAnimFrame);canvas_el.remove();pJSDom=null};pJS.fn.vendors.drawShape=function(c,startX,startY,sideLength,sideCountNumerator,sideCountDenominator){// By Programming Thomas - https://programmingthomas.wordpress.com/2013/04/03/n-sided-shapes/
-var sideCount=sideCountNumerator*sideCountDenominator,decimalSides=sideCountNumerator/sideCountDenominator,interiorAngleDegrees=180*(decimalSides-2)/decimalSides,interiorAngle=Math.PI-Math.PI*interiorAngleDegrees/180;// convert to radians
-c.save();c.beginPath();c.translate(startX,startY);c.moveTo(0,0);for(var i=0;i<sideCount;i++){c.lineTo(sideLength,0);c.translate(sideLength,0);c.rotate(interiorAngle)}//c.stroke();
-c.fill();c.restore()};pJS.fn.vendors.exportImg=function(){window.open(pJS.canvas.el.toDataURL("image/png"),"_blank")};pJS.fn.vendors.loadImg=function(type){pJS.tmp.img_error=void 0;if(""!=pJS.particles.shape.image.src){if("svg"==type){var xhr=new XMLHttpRequest;xhr.open("GET",pJS.particles.shape.image.src);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){pJS.tmp.source_svg=data.currentTarget.response;pJS.fn.vendors.checkBeforeDraw()}else{console.log("Error pJS - Image not found");pJS.tmp.img_error=!0}}};xhr.send()}else{var img=new Image;img.addEventListener("load",function(){pJS.tmp.img_obj=img;pJS.fn.vendors.checkBeforeDraw()});img.src=pJS.particles.shape.image.src}}else{console.log("Error pJS - No image.src");pJS.tmp.img_error=!0}};pJS.fn.vendors.draw=function(){if("image"==pJS.particles.shape.type){if("svg"==pJS.tmp.img_type){if(pJS.tmp.count_svg>=pJS.particles.number.value){pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}else{//console.log('still loading...');
-if(!pJS.tmp.img_error)pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}}else{if(pJS.tmp.img_obj!=void 0){pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}else{if(!pJS.tmp.img_error)pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}}}else{pJS.fn.particlesDraw();if(!pJS.particles.move.enable)cancelRequestAnimFrame(pJS.fn.drawAnimFrame);else pJS.fn.drawAnimFrame=requestAnimFrame(pJS.fn.vendors.draw)}};pJS.fn.vendors.checkBeforeDraw=function(){// if shape is image
-if("image"==pJS.particles.shape.type){if("svg"==pJS.tmp.img_type&&pJS.tmp.source_svg==void 0){pJS.tmp.checkAnimFrame=requestAnimFrame(check)}else{//console.log('images loaded! cancel check');
-cancelRequestAnimFrame(pJS.tmp.checkAnimFrame);if(!pJS.tmp.img_error){pJS.fn.vendors.init();pJS.fn.vendors.draw()}}}else{pJS.fn.vendors.init();pJS.fn.vendors.draw()}};pJS.fn.vendors.init=function(){/* init canvas + particles */pJS.fn.retinaInit();pJS.fn.canvasInit();pJS.fn.canvasSize();pJS.fn.canvasPaint();pJS.fn.particlesCreate();pJS.fn.vendors.densityAutoParticles();/* particles.line_linked - convert hex colors to rgb */pJS.particles.line_linked.color_rgb_line=hexToRgb(pJS.particles.line_linked.color)};pJS.fn.vendors.start=function(){if(isInArray("image",pJS.particles.shape.type)){pJS.tmp.img_type=pJS.particles.shape.image.src.substr(pJS.particles.shape.image.src.length-3);pJS.fn.vendors.loadImg(pJS.tmp.img_type)}else{pJS.fn.vendors.checkBeforeDraw()}};/* ---------- pJS - start ------------ */pJS.fn.vendors.eventsListeners();pJS.fn.vendors.start()};/* ---------- global functions - vendors ------------ */Object.deepExtend=function deepExtendFunction(destination,source){for(var property in source){if(source[property]&&source[property].constructor&&source[property].constructor===Object){destination[property]=destination[property]||{};deepExtendFunction(destination[property],source[property])}else{destination[property]=source[property]}}return destination};window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){window.setTimeout(callback,1e3/60)}}();window.cancelRequestAnimFrame=function(){return window.cancelAnimationFrame||window.webkitCancelRequestAnimationFrame||window.mozCancelRequestAnimationFrame||window.oCancelRequestAnimationFrame||window.msCancelRequestAnimationFrame||clearTimeout}();function hexToRgb(hex){// By Tim Down - http://stackoverflow.com/a/5624139/3493650
-// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandRegex,function(m,r,g,b){return r+r+g+g+b+b});var result=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);return result?{r:parseInt(result[1],16),g:parseInt(result[2],16),b:parseInt(result[3],16)}:null};function clamp(number,min,max){return Math.min(Math.max(number,min),max)};function isInArray(value,array){return-1<array.indexOf(value)}/* ---------- particles.js functions - start ------------ */window.pJSDom=[];window.particlesJS=function(tag_id,params){//console.log(params);
-/* no string id? so it's object params, and set the id with default id */if("string"!=typeof tag_id){params=tag_id;tag_id="particles-js"}/* no id? set the id to default id */if(!tag_id){tag_id="particles-js"}/* pJS elements */var pJS_tag=document.getElementById(tag_id),pJS_canvas_class="particles-js-canvas-el",exist_canvas=pJS_tag.getElementsByClassName(pJS_canvas_class);/* remove canvas if exists into the pJS target tag */if(exist_canvas.length){while(0<exist_canvas.length){pJS_tag.removeChild(exist_canvas[0])}}/* create canvas element */var canvas_el=document.createElement("canvas");canvas_el.className=pJS_canvas_class;/* set size canvas */canvas_el.style.width="100%";canvas_el.style.height="100%";/* append canvas */var canvas=document.getElementById(tag_id).appendChild(canvas_el);/* launch particle.js */if(null!=canvas){pJSDom.push(new pJS(tag_id,params))}};window.particlesJS.load=function(tag_id,path_config_json,callback){/* load json config */var xhr=new XMLHttpRequest;xhr.open("GET",path_config_json);xhr.onreadystatechange=function(data){if(4==xhr.readyState){if(200==xhr.status){var params=JSON.parse(data.currentTarget.response);window.particlesJS(tag_id,params);if(callback)callback()}else{console.log("Error pJS - XMLHttpRequest status: "+xhr.status);console.log("Error pJS - File config not found")}}};xhr.send()};const now=new Date,uptime=now-new Date("2001-10-16").getTime(),years=Math.floor(uptime/315576e5),months=Math.floor(uptime/26298e5-12*years),days=Math.floor(uptime/864e5-365.25*years-30.4167*months);console.log(`
+      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;const now=new Date,uptime=now-new Date("2001-10-16").getTime(),years=Math.floor(uptime/315576e5),months=Math.floor(uptime/26298e5-12*years),days=Math.floor(uptime/864e5-365.25*years-30.4167*months);console.log(`
                       .ohhs+:\`                     home@navn.me
                        \`/mMMMmy/.                  ---------------------------
                           /NMMMMMd+\`               OS: Linux + Windows
