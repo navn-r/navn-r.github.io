@@ -1416,7 +1416,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         color: var(--light-gray);
         width: max-content;
         margin: 0 auto;
-        transform: translateY(-18rem);
+        margin-top: -18rem;
       }
 
       .wiggle {
@@ -1430,7 +1430,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       @media (max-width: 1000px) {
         #name {
           font-size: min(15vw, 6rem);
-          transform: translateY(-9rem);
+          margin-top: -9rem;
         }
       }
     `}render(){return html`
@@ -1448,7 +1448,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
       c-16-25.333-24-45-24-59z">
       </path></svg></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2 wiggle"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord textrm">nn</span></span></span></span></span></div>
-    `}setParallax(){const scroll=window.pageYOffset,name=this.shadowRoot.getElementById("name"),arrow=this.shadowRoot.getElementById("arrow");name.style.transform=`translateY(calc(${.25*scroll}px - 18rem))`;arrow.style.transform=`translateX(${.5*scroll}px)`}firstUpdated(){window.addEventListener("scroll",this.setParallax.bind(this),!0)}constructor(){super()}}customElements.define("app-name",Name);/* -----------------------------------------------
+    `}setParallax(){const scroll=window.pageYOffset,name=this.shadowRoot.getElementById("name"),arrow=this.shadowRoot.getElementById("arrow");name.style.transform=`translateY(${.25*scroll}px)`;arrow.style.transform=`translateX(${.5*scroll}px)`}firstUpdated(){window.addEventListener("scroll",this.setParallax.bind(this),!0)}constructor(){super()}}customElements.define("app-name",Name);/* -----------------------------------------------
                                          /* Author : Vincent Garreau  - vincentgarreau.com
                                          /* MIT license: http://opensource.org/licenses/MIT
                                          /* Demo / Generator : vincentgarreau.com/particles.js
