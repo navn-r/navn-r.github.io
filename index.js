@@ -1554,14 +1554,18 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
         </svg>
       </div>
     `}firstUpdated(){particlesJS.load("particles","Assets/particles.json",function(){console.log("callback - particles.js config loaded")})}constructor(){super()}}customElements.define("app-header",Header);class ProjectCard extends LitElement{static get styles(){return[css`
+        .card {
+          width: 48rem;
+          margin-top: 2rem;
+          padding-bottom: 3rem;
+        }
+
         .subtitle {
           font-size: 2rem;
-          width: 100%;
           color: var(--off-white);
           margin-bottom: 1rem;
           display: flex;
           justify-content: space-between;
-          width: 48rem;
           align-items: center;
         }
 
@@ -1580,12 +1584,8 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
           margin-top: 2rem;
         }
 
-        .card {
-          margin-top: 2rem;
-          padding-bottom: 3rem;
-        }
-
-        ul, li {
+        ul,
+        li {
           margin-top: 0.5rem;
         }
 
@@ -1594,7 +1594,6 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
           color: var(--off-white);
           margin: 0;
           padding: 1rem;
-          width: 45rem;
         }
 
         .code {
@@ -1607,7 +1606,6 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
           flex-wrap: wrap;
           user-select: none;
           -moz-user-select: none;
-          width: 45rem;
         }
 
         .tag {
@@ -1622,20 +1620,12 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
         }
 
         @media (max-width: 1000px) {
-          .subtitle {
+          .card {
             width: calc(100% - 2rem);
-          }
-
-          blockquote {
-            width: calc(100% - 5rem);
           }
 
           ul {
             padding-left: 2rem;
-          }
-
-          .tags-container {
-            width: calc(100% - 3rem);
           }
         }
       `,selectionStyles]}render(){return html`
