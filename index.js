@@ -1816,4 +1816,4 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
                     \`/sdMMMMmo.                   
                          .:+oyyo.                 
 
-`;document.addEventListener("DOMContentLoaded",()=>{document.getElementById("loader").style.cssText+="animation: disappear 1s forwards";console.log(loaded)})});
+`,onLoad=()=>{document.getElementById("loader").style.cssText+="animation: disappear 1s forwards";console.log(loaded)};if("complete"===document.readyState){onLoad()}else{window.addEventListener("load",onLoad);document.removeEventListener("load",onLoad)}});
