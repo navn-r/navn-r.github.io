@@ -1788,7 +1788,7 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
-      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;const now=new Date,uptime=now-new Date("2001-10-16").getTime(),years=Math.floor(uptime/315576e5),months=Math.floor(uptime/26298e5-12*years),days=Math.floor(uptime/864e5-365.25*years-30.4167*months);console.log(`
+      <i class="${this.class} icon" style="${this.style}"></i>`}}_exports.FaIcon=FaIcon;customElements.define("fa-icon",FaIcon);var faIcon={FaIcon:FaIcon};_exports.$faIcon=faIcon;const now=new Date,uptime=now-new Date("2001-10-16").getTime(),years=Math.floor(uptime/315576e5),months=Math.floor(uptime/26298e5-12*years),days=Math.floor(uptime/864e5-365.25*years-30.4167*months),loaded=`
                       .ohhs+:\`                     home@navn.me
                        \`/mMMMmy/.                  ---------------------------
                           /NMMMMMd+\`               OS: Linux + Windows
@@ -1816,4 +1816,4 @@ var shorthandRegex=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;hex=hex.replace(shorthandR
                     \`/sdMMMMmo.                   
                          .:+oyyo.                 
 
-`)});
+`;window.addEventListener("load",()=>{document.getElementById("loader").style.cssText+="animation: disappear 1s forwards";console.log(loaded)})});
