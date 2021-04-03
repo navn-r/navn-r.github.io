@@ -1168,7 +1168,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
     color: var(--off-white);
     text-decoration: none;
   }
-`;_exports.selectionStyles=selectionStyles;var selectionStyles$1={selectionStyles:selectionStyles};_exports.$selectionStyles=selectionStyles$1;const Contacts=[{id:"github",href:"https://github.com/navn-r",icon:"fab fa-github",tooltip:"navn-r"},{id:"linkedin",href:"https://linkedin.com/in/navn-r",icon:"fab fa-linkedin",tooltip:"/in/navn-r"},{id:"email",href:"mailto:me@navn.me",icon:"fas fa-paper-plane",tooltip:"me [at] navn [dot] me"},{id:"resume",href:"./resume/RavindaranNavinn_Resume.pdf",icon:"fas fa-file-pdf",tooltip:"resume [dot] pdf"}];class About extends LitElement{static get styles(){return[css`
+`;_exports.selectionStyles=selectionStyles;var selectionStyles$1={selectionStyles:selectionStyles};_exports.$selectionStyles=selectionStyles$1;const Contacts=[{id:"github",href:"https://github.com/navn-r",icon:"fab fa-github",tooltip:"navn-r"},{id:"linkedin",href:"https://linkedin.com/in/navn-r",icon:"fab fa-linkedin",tooltip:"/in/navn-r"},{id:"email",href:"mailto:me@navn.me",icon:"fas fa-paper-plane",tooltip:"me [at] navn [dot] me"},{id:"resume",href:"./resume",icon:"fas fa-file-pdf",tooltip:"resume [dot] pdf"}];class About extends LitElement{static get styles(){return[css`
         #about {
           margin-bottom: 1rem;
         }
