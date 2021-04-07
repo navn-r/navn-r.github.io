@@ -1325,7 +1325,14 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
       `,selectionStyles]}render(){return html`
       <div class="card">
         <span class="title">${this.experience.name}</span>
-        <a href="${this.experience.url}" class="title location">${this.experience.location}</a>
+        <a
+          href="${this.experience.url}"
+          aria-label="Link to experience"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+          class="title location"
+          >${this.experience.location}</a
+        >
         <div class="body">
           ${this.experience.duration}
           <ul>
