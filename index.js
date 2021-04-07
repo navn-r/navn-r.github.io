@@ -1306,6 +1306,9 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           background: var(--light-dark-gray);
           padding: 0.5rem;
           border-radius: 0.5rem;
+          text-decoration: none;
+          outline: none;
+          transition: color 0.375s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         .card {
@@ -1315,10 +1318,14 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         ul {
           padding-left: 2rem;
         }
+
+        .location:hover {
+          color: var(--orange);
+        }
       `,selectionStyles]}render(){return html`
       <div class="card">
         <span class="title">${this.experience.name}</span>
-        <span class="title location">${this.experience.location}</span>
+        <a href="${this.experience.url}" class="title location">${this.experience.location}</a>
         <div class="body">
           ${this.experience.duration}
           <ul>
@@ -1326,10 +1333,10 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
           </ul>
         </div>
       </div>
-    `}static get properties(){return{experience:{attribute:".experience"}}}constructor(){super()}}customElements.define("experience-card",ExperienceCard);const Experiences=[{name:"Software Developer Co-op",location:"@caseware",duration:"Sept. 2020 - Apr. 2021",info:[html`Currently working in an <span class="highlight">Agile Scrum</span> with the
+    `}static get properties(){return{experience:{attribute:".experience"}}}constructor(){super()}}customElements.define("experience-card",ExperienceCard);const Experiences=[{name:"Software Developer Co-op",location:"@caseware",url:"https://www.caseware.com/ca",duration:"Sept. 2020 - Apr. 2021",info:[html`Currently working in an <span class="highlight">Agile Scrum</span> with the
         <span class="highlight">SE</span> team`,html`Converting manual tests to unit tests using
         <span class="highlight">Karma and Jasmine</span>`,html`Developing major features and hotfixes using
-        <span class="highlight">Angular and AngularJS</span>`]},{name:"HBSc. Computer Science (Co-op)",location:"@uoft",duration:"Sept. 2019 - Apr. 2023 (Expected)",info:[html`cGPA: <span class="highlight">3.78</span>/4.0`,html`Dean's List (<span class="highlight">2019-20</span>)`,html`UofT Scholar (<span class="highlight">Sept 2019</span>)`]}];class ExperiencesSection extends LitElement{static get styles(){return[css`
+        <span class="highlight">Angular and AngularJS</span>`]},{name:"HBSc. Computer Science (Co-op)",location:"@uoft",url:"https://www.utoronto.ca",duration:"Sept. 2019 - Apr. 2023 (Expected)",info:[html`cGPA: <span class="highlight">3.78</span>/4.0`,html`Dean's List (<span class="highlight">2019-20</span>)`,html`UofT Scholar (<span class="highlight">Sept 2019</span>)`]}];class ExperiencesSection extends LitElement{static get styles(){return[css`
         #experience-container {
           margin-bottom: 6rem;
         }
