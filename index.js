@@ -1320,7 +1320,7 @@ if(this._needsShimAdoptedStyleSheets){this._needsShimAdoptedStyleSheets=!1;this.
         }
 
         .location:hover {
-          color: var(--orange);
+          color: var(--aqua);
         }
       `,selectionStyles]}render(){return html`
       <div class="card">
