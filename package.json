@@ -1,0 +1,42 @@
+{
+  "name": "navn-r.github.io",
+  "version": "3.0.0",
+  "author": "Navinn Ravindaran",
+  "description": "Portfolio Website",
+  "license": "Unlicense",
+  "homepage": "https://github.com/navn-r/navn-r.github.io#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navn-r/navn-r.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/navn-r/navn-r.github.io/issues"
+  },
+  "engines": {
+    "node": ">=12.x"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint 'src/*' --fix",
+    "format": "prettier --write 'src/**/*.svelte' 'src/**/*.ts'",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.3.0",
+    "prettier-plugin-svelte": "^2.3.0",
+    "sass": "^1.34.0",
+    "svelte": "^3.37.0",
+    "svelte-preprocess": "^4.7.2",
+    "typescript": "^4.2.4",
+    "vite": "^2.3.3"
+  }
+}
