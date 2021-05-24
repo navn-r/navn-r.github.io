@@ -15,3 +15,34 @@
   - **Built With:** Svelte, TypeScript, Sass, Vite
 
 Made with ❤️ by Navinn Ravindaran
+
+---
+
+## Getting Started
+
+Install Dependencies
+```sh
+yarn  # runs husky install after completion
+```
+
+Development Server
+```sh
+yarn run dev  # http://localhost:3000
+```
+
+Build
+```sh
+yarn run build  # /dist
+
+yarn run serve  # serves /dist @ http://localhost:5000
+```
+
+Lint
+```sh
+yarn run lint  # lints /src
+```
+<!-- TODO: add '.scss' -->
+Format
+```sh
+yarn run format  # formats .svelte, .ts @ /src
+```
