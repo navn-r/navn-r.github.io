@@ -41,8 +41,8 @@ Lint
 ```sh
 yarn run lint  # lints /src
 ```
-<!-- TODO: add '.scss' -->
+
 Format
 ```sh
-yarn run format  # formats .svelte, .ts @ /src
+yarn run format  # formats .svelte, .ts, .scss @ /src
 ```
