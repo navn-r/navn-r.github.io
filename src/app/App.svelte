@@ -4,6 +4,7 @@
   import github from '../assets/icons/github.svg';
   import linkedin from '../assets/icons/linkedin.svg';
   import resume from '../assets/icons/resume.svg';
+
   const Contacts = [
     {
       id: 'github',
@@ -41,7 +42,7 @@
       height: 100%;
     }
     body {
-      background: url('src/assets/bg.jpeg');
+      background: url('bg.jpeg');
       display: grid;
       place-items: center;
     }
