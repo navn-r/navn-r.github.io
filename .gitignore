@@ -2,5 +2,3 @@
 /dist/
 /.vscode/
 .DS_Store
-# TODO: remove when not needed anymore
-/src/assets/fonts/applegaramond-extra

@@ -32,9 +32,8 @@ jobs:
     - name: Build
       run: yarn run build
 
-    # TODO: uncomment later
-    # - name: Deploy
-    #   uses: JamesIves/github-pages-deploy-action@4.1.1
-    #   with:
-    #     branch: master
-    #     folder: dist
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        branch: gh-pages
+        folder: dist
