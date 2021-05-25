@@ -20,7 +20,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint 'src/*' --fix",
-    "format": "prettier --write 'src/**/*.svelte' 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.svelte' 'src/**/*.ts' 'src/**/*.scss'",
     "prepare": "husky install"
   },
   "devDependencies": {

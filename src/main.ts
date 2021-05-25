@@ -1,12 +1,12 @@
-import App from './App.svelte';
+import App from './app/App.svelte';
 
 const app = new App({
   target: document.getElementById('app') as Element,
 });
 
 if (process.env.NODE_ENV === 'production') {
-  const now: any = new Date();
-  const uptime = now - new Date('2001-10-16').getTime(),
+  const now = new Date();
+  const uptime = now.getTime() - new Date('2001-10-16').getTime(),
     years = Math.floor(uptime / 31557600000),
     months = Math.floor(uptime / 2629800000 - years * 12),
     days = Math.floor(uptime / 86400000 - years * 365.25 - months * 30.4167);
