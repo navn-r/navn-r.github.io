@@ -1,33 +1,7 @@
 <script lang="ts">
-  import Contact from '../components/Contact.svelte';
-  import Cursor from '../components/Cursor.svelte';
-  import email from '../assets/icons/email.svg';
-  import github from '../assets/icons/github.svg';
-  import linkedin from '../assets/icons/linkedin.svg';
-  import resume from '../assets/icons/resume.svg';
-
-  const Contacts = [
-    {
-      id: 'github',
-      href: 'https://github.com/navn-r',
-      icon: github,
-    },
-    {
-      id: 'linkedin',
-      href: 'https://linkedin.com/in/navn-r',
-      icon: linkedin,
-    },
-    {
-      id: 'email',
-      href: 'mailto:me@navn.me',
-      icon: email,
-    },
-    {
-      id: 'resume',
-      href: './resume',
-      icon: resume,
-    },
-  ];
+  import Contact from '@components/Contact.svelte';
+  import Cursor from '@components/Cursor.svelte';
+  import { Contacts } from '../lib/Data';
 </script>
 
 <Cursor />
