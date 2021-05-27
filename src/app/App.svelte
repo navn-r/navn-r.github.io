@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Contact from '../lib/Contact.svelte';
-  import Cursor from '../lib/Cursor.svelte';
+  import Contact from '../components/Contact.svelte';
+  import Cursor from '../components/Cursor.svelte';
   import email from '../assets/icons/email.svg';
   import github from '../assets/icons/github.svg';
   import linkedin from '../assets/icons/linkedin.svg';

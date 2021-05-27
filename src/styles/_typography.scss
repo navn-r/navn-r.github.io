@@ -5,12 +5,16 @@
 //  \__|\__, | .__/ \___/ \__, |_|  \__,_| .__/|_| |_|\__, (_)
 //      |___/|_|          |___/          |_|          |___/
 
+@use './variables' as *;
+
 h1 {
+  font-family: $serif;
   font-size: 2.617647em;
   font-weight: normal;
   letter-spacing: -0.02em;
 }
 
 p {
+  font-family: $sans-serif;
   color: #7d7d7d;
 }
