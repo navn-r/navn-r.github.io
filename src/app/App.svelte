@@ -1,5 +1,6 @@
 <script lang="ts">
   import Contact from '../lib/Contact.svelte';
+  import Cursor from '../lib/Cursor.svelte';
   import email from '../assets/icons/email.svg';
   import github from '../assets/icons/github.svg';
   import linkedin from '../assets/icons/linkedin.svg';
@@ -32,7 +33,7 @@
 <svelte:head>
   <style src="../styles/main.scss"></style>
 </svelte:head>
-
+<Cursor />
 <main>
   <h1>Under Construction.</h1>
   <p>I just want to sit on the beach and eat hot dogs. That's all I've ever wanted.</p>
