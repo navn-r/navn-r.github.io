@@ -45,28 +45,28 @@
   };
 </script>
 
-<div class="cursor inner" bind:this={inner} />
-<div class="cursor outer" bind:this={outer} />
+<div class="inner" bind:this={inner} />
+<div class="outer" bind:this={outer} />
 
 <style lang="scss">
   @use '../styles/mixins' as *;
 
-  .cursor {
+  div {
     @include set(left width height, 10px);
     position: fixed;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
+  }
 
-    &.inner {
-      background: white;
-      transition: width 0.5s, height 0.5s;
-    }
+  .inner {
+    background: #ffffff;
+    transition: width 0.5s, height 0.5s;
+  }
 
-    &.outer {
-      @include set(width height, 25px);
-      border: 1px solid white;
-    }
+  .outer {
+    @include set(width height, 25px);
+    border: 1px solid #ffffff;
   }
 </style>
