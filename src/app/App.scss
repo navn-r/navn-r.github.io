@@ -3,8 +3,7 @@
 /** Global Styles */
 
 * {
-  margin: 0;
-  padding: 0;
+  @include set(margin padding, 0);
   box-sizing: border-box;
   cursor: none;
 }
@@ -39,10 +38,9 @@ main {
   width: 50ch;
 
   & > div {
-    width: min-content;
+    @include set(column-gap margin-top, 2rem);
     display: grid;
+    width: min-content;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 2rem;
-    margin-top: 2rem;
   }
 }
