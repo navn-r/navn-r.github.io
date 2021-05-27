@@ -1,25 +1,49 @@
-@use "../styles/partials" as *;
+@use "../styles" as *;
+
+/** Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  background: url('bg.jpeg');
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 2vw;
+  }
+
+  body {
+    place-items: initial;
+    align-items: flex-end;
+    padding: 2rem;
+  }
+}
+
+/** App styles */
 
 main {
   font-size: 2rem;
   font-family: $serif;
   width: 50ch;
-}
 
-h1 {
-  font-size: 2.617647em;
-  font-weight: normal;
-  letter-spacing: -0.02em;
-}
-
-p {
-  color: #7d7d7d;
-}
-
-div {
-  width: min-content;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 2rem;
-  margin-top: 2rem;
+  & > div {
+    width: min-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    margin-top: 2rem;
+  }
 }

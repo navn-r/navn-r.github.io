@@ -23,6 +23,7 @@
       setPosition(outer, x, y);
     });
 
+    /** Grow inner on hover links */
     Array.from(document.querySelectorAll('a')).forEach((a) => {
       a.addEventListener('mouseover', () => setDimensions(inner, 25));
       a.addEventListener('mouseleave', () => setDimensions(inner, 10));
@@ -48,7 +49,7 @@
 <div class="cursor outer" bind:this={outer} />
 
 <style lang="scss">
-  @use '../styles/partials/mixins' as *;
+  @use '../styles/mixins' as *;
 
   .cursor {
     @include set(left width height, 10px);
