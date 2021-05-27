@@ -30,36 +30,9 @@
 </script>
 
 <svelte:head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-    }
-    body {
-      background: url('bg.jpeg');
-      display: grid;
-      place-items: center;
-    }
-
-    @media screen and (max-width: 800px) {
-      html {
-        font-size: 2vw;
-      }
-
-      body {
-        place-items: initial;
-        align-items: flex-end;
-        padding: 2rem;
-      }
-    }
-  </style>
+  <style src="../styles/main.scss"></style>
 </svelte:head>
+
 <main>
   <h1>Under Construction.</h1>
   <p>I just want to sit on the beach and eat hot dogs. That's all I've ever wanted.</p>
