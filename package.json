@@ -16,7 +16,7 @@
     "node": ">=12.x"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint 'src/*' --fix",

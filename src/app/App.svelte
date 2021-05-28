@@ -7,13 +7,25 @@
 <Cursor />
 
 <main>
-  <h1>Under Construction.</h1>
-  <p>I just want to sit on the beach and eat hot dogs. That's all I've ever wanted.</p>
-  <div>
-    {#each Contacts as contact}
-      <Contact {contact} />
-    {/each}
-  </div>
+  <section>
+    <div>
+      <h1>Hey, I'm <em>Navinn.</em></h1>
+      <p>
+        I'm a Software Engineer, now in my third year studying Computer Science and Statistics at the
+        <a href="https://www.utoronto.ca/" rel="noopener noreferrer nofollow" target="_blank">University of Toronto</a>
+        in Canada. Currently, I'm working as a
+        <a href="https://www.halo.science/" rel="noopener noreferrer nofollow" target="_blank"
+          >Full Stack Engineer at Halo Science</a
+        >
+        for my Summer 2021 Internship.
+      </p>
+      <div class="contacts">
+        {#each Contacts as contact}
+          <Contact {contact} />
+        {/each}
+      </div>
+    </div>
+  </section>
 </main>
 
 <style lang="scss" global>

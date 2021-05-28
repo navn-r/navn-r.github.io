@@ -8,39 +8,31 @@
   cursor: none;
 }
 
-html,
-body {
-  margin: 0;
-  height: 100%;
+html {
+  font-size: clamp(10px, 2vw, 16px);
 }
+
 body {
   background: url('/bg.jpeg');
-  display: grid;
-  place-items: center;
-}
-
-@media screen and (max-width: 800px) {
-  html {
-    font-size: 2vw;
-  }
-
-  body {
-    place-items: initial;
-    align-items: flex-end;
-    padding: 2rem;
-  }
 }
 
 /** App styles */
 
 main {
-  font-size: 2rem;
-  width: 50ch;
+  display: grid;
+  width: calc(100% - min(20%, 18rem));
+  margin: 0 auto;
+}
 
-  & > div {
-    @include set(column-gap margin-top, 2rem);
-    display: grid;
-    width: min-content;
-    grid-template-columns: repeat(4, 1fr);
-  }
+section {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.contacts {
+  @include set(column-gap margin-top, s(2));
+  display: grid;
+  width: min-content;
+  grid-template-columns: repeat(4, 1fr);
 }

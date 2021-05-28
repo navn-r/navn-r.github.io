@@ -18,6 +18,9 @@
 </a>
 
 <style lang="scss">
+  @use '../styles/mixins' as *;
+  @use '../styles/functions' as *;
+
   a {
     display: grid;
     place-items: center;
@@ -26,7 +29,6 @@
   }
 
   img {
-    width: 2.5rem;
-    height: 2.5rem;
+    @include set(width height, s(2));
   }
 </style>
