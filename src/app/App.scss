@@ -16,6 +16,12 @@ body {
   background: url('/bg.jpeg');
 }
 
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
 /** App styles */
 
 main {
@@ -31,7 +37,8 @@ section {
 }
 
 .contacts {
-  @include set(column-gap margin-top, s(2));
+  column-gap: s(2);
+  margin: s(2) 0;
   display: grid;
   width: min-content;
   grid-template-columns: repeat(4, 1fr);

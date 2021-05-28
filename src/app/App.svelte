@@ -24,6 +24,14 @@
           <Contact {contact} />
         {/each}
       </div>
+      <img
+        width="341px"
+        height="53px"
+        style="width: 21.3125rem !important: height: 3.3125rem !important;"
+        loading="lazy"
+        src="/underconstruction.gif"
+        alt=""
+      />
     </div>
   </section>
 </main>
