@@ -1,5 +1,18 @@
 import ICONS from './Icons';
 
+export const Themes = [
+  {
+    id: 0,
+    name: 'dark',
+    icon: ICONS.moon,
+  },
+  {
+    id: 1,
+    name: 'light',
+    icon: ICONS.sun,
+  },
+];
+
 export const Contacts = [
   {
     id: 'github',

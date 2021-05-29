@@ -10,24 +10,26 @@
 
 h1 {
   font-family: $serif;
-  letter-spacing: -0.02rem;
+  color: var(--primary);
   font-size: s(4);
+  letter-spacing: -0.02rem;
 }
 
 h2 {
   font-family: $sans-serif;
+  color: var(--primary);
   font-size: s(2);
-  text-transform: uppercase;
   letter-spacing: s(0.5);
+  text-transform: uppercase;
 }
 
 p {
   font-family: $sans-serif;
+  color: var(--secondary);
   font-size: s();
   line-height: $scale;
   margin: s() 0;
   width: min(100%, 50ch);
-  color: $gray;
 }
 
 a {

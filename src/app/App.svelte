@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ThemeSwitcher from '@components/ThemeSwitcher.svelte';
   import Contact from '@components/Contact.svelte';
   import Cursor from '@components/Cursor.svelte';
   import { Contacts } from '../lib/Data';
@@ -23,6 +24,7 @@
         {#each Contacts as contact}
           <Contact {contact} />
         {/each}
+        <ThemeSwitcher />
       </div>
       <img
         width="341px"
@@ -30,7 +32,7 @@
         style="width: 21.3125rem !important: height: 3.3125rem !important;"
         loading="lazy"
         src="/underconstruction.gif"
-        alt=""
+        alt="under construction sign"
       />
     </div>
   </section>

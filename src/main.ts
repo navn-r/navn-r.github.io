@@ -1,17 +1,20 @@
 import App from './app/App.svelte';
 
-const app = new App({
-  target: document.getElementById('app') as Element,
-});
+const target: HTMLElement = document.getElementById('app')!;
 
-if (process.env.NODE_ENV === 'production') {
-  const now = new Date();
-  const uptime = now.getTime() - new Date('2001-10-16').getTime(),
-    years = Math.floor(uptime / 31557600000),
-    months = Math.floor(uptime / 2629800000 - years * 12),
-    days = Math.floor(uptime / 86400000 - years * 365.25 - months * 30.4167);
+/** Initialize theme */
+const theme = window.localStorage.getItem('theme');
+target.dataset.theme = theme ? theme : window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
 
-  const loaded = `
+const app = new App({ target: target as Element });
+
+const now = new Date();
+const uptime = now.getTime() - new Date('2001-10-16').getTime(),
+  years = Math.floor(uptime / 31557600000),
+  months = Math.floor(uptime / 2629800000 - years * 12),
+  days = Math.floor(uptime / 86400000 - years * 365.25 - months * 30.4167);
+
+const loaded = `
                       .ohhs+:\`                     home@navn.me
                        \`/mMMMmy/.                  ---------------------------
                           /NMMMMMd+\`               OS: Linux + Windows
@@ -40,16 +43,18 @@ if (process.env.NODE_ENV === 'production') {
                          .:+oyyo.                 
 `;
 
-  const onLoad = () => {
+const onLoad = () => {
+  target.style.cssText += 'animation: fade 750ms forwards';
+  if (process.env.NODE_ENV === 'production') {
     console.log(loaded);
-  };
-
-  if (document.readyState === 'complete') {
-    onLoad();
-  } else {
-    window.addEventListener('load', onLoad);
-    document.removeEventListener('load', onLoad);
   }
+};
+
+if (document.readyState === 'complete') {
+  onLoad();
+} else {
+  window.addEventListener('load', onLoad);
+  document.removeEventListener('load', onLoad);
 }
 
 export default app;

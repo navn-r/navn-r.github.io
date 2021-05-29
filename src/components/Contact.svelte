@@ -14,19 +14,12 @@
   target="_blank"
   aria-label={'Link to ' + contact.id}
 >
-  <img loading="lazy" src={contact.icon} alt={contact.id} />
+  <img class="icon" loading="lazy" src={contact.icon} alt={contact.id} />
 </a>
 
 <style lang="scss">
-  @use '../styles/mixins' as *;
-  @use '../styles/functions' as *;
-
   a {
     display: grid;
     place-items: center;
-  }
-
-  img {
-    @include set(width height, s(2));
   }
 </style>

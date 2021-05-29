@@ -10,16 +10,48 @@
 
 html {
   font-size: clamp(10px, 2vw, 16px);
-}
-
-body {
-  background: url('/bg.jpeg');
+  background-color: map-get(map-get($themes, light), bg);
 }
 
 img {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+
+  &.icon {
+    @include set(width height, s(2));
+    filter: var(--icon);
+  }
+}
+
+/** Setup App theme */
+
+@keyframes fade {
+  100% {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
+#app {
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--bg);
+
+  &,
+  &:before,
+  &:after {
+    transition: background-color 750ms ease;
+    transition-delay: 0ms;
+  }
+}
+
+@each $name, $theme in $themes {
+  #app[data-theme='#{$name}'] {
+    @each $color-name, $color in $theme {
+      --#{$color-name}: #{$color};
+    }
+  }
 }
 
 /** App styles */
@@ -41,5 +73,5 @@ section {
   margin: s(2) 0;
   display: grid;
   width: min-content;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
