@@ -15,22 +15,22 @@ export const Themes = [
 
 export const Contacts = [
   {
-    id: 'github',
+    id: 'GitHub: navn-r',
     href: 'https://github.com/navn-r',
     icon: ICONS.github,
   },
   {
-    id: 'linkedin',
+    id: 'LinkedIn: in/navn-r',
     href: 'https://linkedin.com/in/navn-r',
     icon: ICONS.linkedin,
   },
   {
-    id: 'email',
+    id: 'Email: me@navn.me',
     href: 'mailto:me@navn.me',
     icon: ICONS.email,
   },
   {
-    id: 'resume',
+    id: 'Resume: html/pdf',
     href: './resume',
     icon: ICONS.resume,
   },
