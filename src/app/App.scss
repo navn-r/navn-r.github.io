@@ -13,14 +13,15 @@ html {
   background-color: map-get(map-get($themes, light), bg);
 }
 
-img {
+img,
+svg {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
 
   &.icon {
     @include set(width height, s(2));
-    filter: var(--icon);
+    color: var(--primary);
   }
 }
 

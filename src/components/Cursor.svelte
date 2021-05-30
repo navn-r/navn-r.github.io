@@ -24,9 +24,9 @@
     });
 
     /** Grow inner on hover links */
-    Array.from(document.querySelectorAll('a')).forEach((a) => {
-      a.addEventListener('mouseover', () => setDimensions(inner, 25));
-      a.addEventListener('mouseleave', () => setDimensions(inner, 10));
+    Array.from(document.querySelectorAll('a, button')).forEach((e) => {
+      e.addEventListener('mouseover', () => setDimensions(inner, 25));
+      e.addEventListener('mouseleave', () => setDimensions(inner, 10));
     });
   });
 

@@ -14,7 +14,7 @@
   target="_blank"
   aria-label={'Link to ' + contact.id}
 >
-  <img class="icon" loading="lazy" src={contact.icon} alt={contact.id} />
+  {@html contact.icon}
 </a>
 
 <style lang="scss">

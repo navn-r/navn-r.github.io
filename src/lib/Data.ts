@@ -1,4 +1,4 @@
-import ICONS from './Icons';
+import ICONS from '../assets/Icons';
 
 export const Themes = [
   {

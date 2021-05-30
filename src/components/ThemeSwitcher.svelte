@@ -16,4 +16,14 @@
   });
 </script>
 
-<img class="icon" loading="lazy" on:click={changeTheme} src={theme.icon} alt="" />
+<button on:click={changeTheme}>
+  {@html theme.icon}
+</button>
+
+<style lang="scss">
+  button {
+    border: 0;
+    outline: none;
+    background: none;
+  }
+</style>
