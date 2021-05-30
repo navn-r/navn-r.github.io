@@ -23,8 +23,12 @@
     "format": "prettier --write 'src/**/*.svelte' 'src/**/*.ts' 'src/**/*.scss'",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "three": "^0.129.0"
+  },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
+    "@types/three": "^0.128.0",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
     "eslint": "^7.27.0",

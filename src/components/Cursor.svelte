@@ -1,15 +1,14 @@
 <script lang="ts">
+  import { isMobile } from '../lib/Utils';
+
   import { onMount } from 'svelte';
 
   let inner: HTMLElement;
   let outer: HTMLElement;
 
-  const MOBILE_REGEX =
-    /mobile|android|webos|iphone|ipad|ipod|blackberry|bb|playbook|iemobile|windows phone|kindle|silk|opera mini/i;
-
   onMount(() => {
     /** Remove custom cursor if on mobile */
-    if (navigator.userAgent.toLowerCase().match(MOBILE_REGEX)) {
+    if (isMobile()) {
       setDimensions(inner);
       setDimensions(outer);
       return;

@@ -2,6 +2,7 @@
   import ThemeSwitcher from '@components/ThemeSwitcher.svelte';
   import Contact from '@components/Contact.svelte';
   import Cursor from '@components/Cursor.svelte';
+  import Logo from '@components/Logo.svelte';
   import { Contacts } from '../lib/Data';
 </script>
 
@@ -13,6 +14,7 @@
 
 <main>
   <section>
+    <Logo />
     <div>
       <h1>Hey, I'm <em>Navinn.</em></h1>
       <p>
