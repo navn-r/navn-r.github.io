@@ -4,7 +4,11 @@ const target: HTMLElement = document.getElementById('app')!;
 
 /** Initialize theme */
 const theme = window.localStorage.getItem('theme');
-target.dataset.theme = theme ? theme : window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
+document.documentElement.dataset.theme = theme
+  ? theme
+  : window.matchMedia('(prefers-color-scheme: dark)')
+  ? 'dark'
+  : 'light';
 
 const app = new App({ target: target as Element });
 

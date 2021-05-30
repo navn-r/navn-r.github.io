@@ -3,7 +3,7 @@
   import { Themes } from '../lib/Data';
 
   let theme = Themes[0];
-  const target: HTMLElement = document.getElementById('app')!;
+  const target: HTMLElement = document.documentElement;
 
   const changeTheme = () => {
     theme = Themes[(theme.id + 1) % Themes.length];

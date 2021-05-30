@@ -24,14 +24,42 @@ img {
   }
 }
 
-/** Setup App theme */
-
 @keyframes fade {
   100% {
     opacity: 100%;
     visibility: visible;
   }
 }
+
+/** Setup theme */
+
+@each $name, $theme in $themes {
+  html[data-theme='#{$name}'] {
+    @each $color-name, $color in $theme {
+      --#{$color-name}: #{$color};
+    }
+  }
+}
+
+/** Custom scroll bar  */
+
+*::-webkit-scrollbar {
+  width: 0.75rem;
+
+  &-track {
+    background: var(--bg);
+  }
+
+  &-thumb {
+    background: var(--primary);
+
+    &:hover {
+      background: var(--secondary);
+    }
+  }
+}
+
+/** App styles */
 
 #app {
   opacity: 0;
@@ -45,16 +73,6 @@ img {
     transition-delay: 0ms;
   }
 }
-
-@each $name, $theme in $themes {
-  #app[data-theme='#{$name}'] {
-    @each $color-name, $color in $theme {
-      --#{$color-name}: #{$color};
-    }
-  }
-}
-
-/** App styles */
 
 main {
   display: grid;
