@@ -7,6 +7,10 @@
 
 <Cursor />
 
+<header>
+  <ThemeSwitcher />
+</header>
+
 <main>
   <section>
     <div>
@@ -24,7 +28,6 @@
         {#each Contacts as contact}
           <Contact {contact} />
         {/each}
-        <ThemeSwitcher />
       </div>
       <img
         width="341px"

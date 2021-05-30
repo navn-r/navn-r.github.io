@@ -74,6 +74,16 @@ img {
   }
 }
 
+header {
+  display: grid;
+  align-items: center;
+  justify-content: right;
+  width: calc(100% - min(10%, 9rem));
+  padding-top: s();
+  height: calc(3 * #{s()});
+  margin: 0 auto;
+}
+
 main {
   display: grid;
   width: calc(100% - min(20%, 18rem));
@@ -84,6 +94,12 @@ section {
   min-height: 100vh;
   display: grid;
   align-items: center;
+
+  // Hero section
+  &:first-of-type {
+    min-height: calc(100vh - 2 * 3 * #{s()});
+    margin-bottom: calc(3 * #{s()});
+  }
 }
 
 .contacts {
@@ -91,5 +107,5 @@ section {
   margin: s(2) 0;
   display: grid;
   width: min-content;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
