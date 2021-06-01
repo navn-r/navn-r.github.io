@@ -25,18 +25,11 @@
         for my Summer 2021 Internship.
       </p>
       <div class="contacts">
+        <img loading="lazy" src="/underconstruction.gif" alt="under construction sign" />
         {#each Contacts as contact}
           <Contact {contact} />
         {/each}
       </div>
-      <img
-        width="341px"
-        height="53px"
-        style="width: 21.3125rem !important: height: 3.3125rem !important;"
-        loading="lazy"
-        src="/underconstruction.gif"
-        alt="under construction sign"
-      />
     </div>
   </section>
 </main>

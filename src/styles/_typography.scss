@@ -5,17 +5,40 @@
 //  \__|\__, | .__/ \___/ \__, |_|  \__,_| .__/|_| |_|\__, (_)
 //      |___/|_|          |___/          |_|          |___/
 
+@use './mixins' as *;
 @use './variables' as *;
 @use './functions' as *;
 
-h1 {
+h1,
+h2,
+h3,
+p {
+  &,
+  * {
+    @include tr;
+  }
+}
+
+h1,
+h2 {
   font-family: $serif;
   color: var(--primary);
-  font-size: s(4);
   letter-spacing: -0.02rem;
+
+  em {
+    color: var(--accent);
+  }
+}
+
+h1 {
+  font-size: s(5);
 }
 
 h2 {
+  font-size: s(4);
+}
+
+h3 {
   font-family: $sans-serif;
   color: var(--primary);
   font-size: s(2);

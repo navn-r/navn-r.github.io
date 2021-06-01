@@ -9,17 +9,16 @@
 }
 
 html {
-  font-size: clamp(10px, 2vw, 16px);
+  font-size: $font-size;
   background-color: map-get(map-get($themes, light), bg);
 }
 
 img,
 svg {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
+  @include pre(user-select, none);
 
   &.icon {
+    @include tr;
     @include set(width height, s(2));
     color: var(--primary);
   }
@@ -70,8 +69,7 @@ svg {
   &,
   &:before,
   &:after {
-    transition: background-color 750ms ease;
-    transition-delay: 0ms;
+    @include tr(background-color);
   }
 }
 
@@ -108,5 +106,10 @@ section {
   margin: s(2) 0;
   display: grid;
   width: min-content;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+
+  // Under construction sign
+  img {
+    height: s(3);
+  }
 }

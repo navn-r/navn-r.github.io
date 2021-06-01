@@ -9,3 +9,17 @@
     #{$p}: $val;
   }
 }
+
+@mixin tr($prop: color) {
+  transition: $prop 750ms;
+  transition-delay: 0ms;
+}
+
+@mixin pre($prop, $value, $prefixes: moz webkit) {
+  @each $p in $prefixes {
+    -#{$p}-#{$prop}: #{$value};
+  }
+
+  // compatibility fallback
+  $prop: $value;
+}

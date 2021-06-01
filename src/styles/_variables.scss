@@ -20,14 +20,17 @@ $themes: (
     bg: #f0e7dc,
     primary: #1b1b1b,
     secondary: #7d7d7d,
+    accent: #3c8a2d,
   ),
   dark: (
     bg: #131516,
     primary: #e8e6e3,
     secondary: #999083,
+    accent: #ff6347,
   ),
 );
 
 /** Sizes & Dimensions */
 
 $scale: 1.5;
+$font-size: clamp(10px, 2vw, 16px);
