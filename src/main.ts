@@ -1,4 +1,4 @@
-import App from './app/App.svelte';
+import App from './App.svelte';
 
 const target: HTMLElement = document.getElementById('app')!;
 
