@@ -93,23 +93,4 @@ section {
   min-height: 100vh;
   display: grid;
   align-items: center;
-
-  // Hero section
-  &:first-of-type {
-    min-height: calc(100vh - 2 * 3 * #{s()});
-    margin-bottom: calc(3 * #{s()});
-  }
-}
-
-.contacts {
-  column-gap: s(2);
-  margin: s(2) 0;
-  display: grid;
-  width: min-content;
-  grid-template-columns: repeat(5, 1fr);
-
-  // Under construction sign
-  img {
-    height: s(3);
-  }
 }
