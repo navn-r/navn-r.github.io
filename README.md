@@ -9,7 +9,7 @@
 
 
 **v3.0: Under Construction**
-  - Pre-commit linting ([eslint](https://eslint.org/)) + formatting ([prettier](https://prettier.io/)) with [Husky](https://typicode.github.io/husky)
+  - Pre-commit linting ([svelte-check](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check)) + formatting ([prettier](https://prettier.io/)) with [Husky](https://typicode.github.io/husky)
   - Commit messages enforced with [Conventional Commits](https://www.conventionalcommits.org/)
   - Automated build and deployment with Github Actions and Github Pages
   - **Built With:** Svelte, TypeScript, Sass, Vite
@@ -39,7 +39,7 @@ yarn run serve  # serves /dist @ http://localhost:5000
 
 Lint
 ```sh
-yarn run lint  # lints /src
+yarn run lint  # will fail on warnings and hints, uses tsconfig.json
 ```
 
 Format
