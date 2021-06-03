@@ -33,18 +33,18 @@ const loaded = `
    yMMM/             -hds  +yo\`   NMMMMMMMMMMMMM/  CPU: AMD Ryzen 9 3900X (24) @ 3.800GHz
   +MMM+       .+.    -mNy \`NMM:   NMMMMMMMMMMMMM+  GPU: NVIDIA GeForce RTX 3080
  \`NMMd       +MMd           .\`    NMMMMMMMMMMMMM.  Memory: 22147MiB / 32098MiB
- +MMM:      /MMMM:                :sdMMMMMMMMMMy   
+ +MMM:      /MMMM:                :sdMMMMMMMMMMy
  dMm+       mMMMMm\`                  \`MMMMMMMMd\`   Made with ♥
- h:         MMMMMMm.                 oMMMMMMMd\`        
-            NMMMMMMMy-             .yMMMMMMMo      
-            yMMMMMMMMMmy+-.\` \`\`-/smMMMMMMMy.      
-            .MMMMMMMMMMMMMMMMMMMMMMMMMMmo\`        
-             /MMMMMMMMMMMMMMMMMMMMMNh+.           
-              /MMMMMMMMMMMMMNdys+:\`               
-               -dMMMMMMMMMd.                      
-                 -odMMMMMMM+                      
-                    \`/sdMMMMmo.                   
-                         .:+oyyo.                 
+ h:         MMMMMMm.                 oMMMMMMMd\`
+            NMMMMMMMy-             .yMMMMMMMo
+            yMMMMMMMMMmy+-.\` \`\`-/smMMMMMMMy.
+            .MMMMMMMMMMMMMMMMMMMMMMMMMMmo\`
+             /MMMMMMMMMMMMMMMMMMMMMNh+.
+              /MMMMMMMMMMMMMNdys+:\`
+               -dMMMMMMMMMd.
+                 -odMMMMMMM+
+                    \`/sdMMMMmo.
+                         .:+oyyo.
 `;
 
 const onLoad = () => {
