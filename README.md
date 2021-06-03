@@ -1,6 +1,6 @@
 # Portfolio Website
 
-[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)[![Build & Deploy](https://github.com/navn-r/navn-r.github.io/actions/workflows/main.yml/badge.svg?branch=develop)](https://github.com/navn-r/navn-r.github.io/actions/workflows/main.yml)  [![time tracker](https://wakatime.com/badge/github/navn-r/navn-r.github.io.svg)](https://wakatime.com/badge/github/navn-r/navn-r.github.io)
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)[![CodeFactor](https://www.codefactor.io/repository/github/navn-r/navn-r.github.io/badge/develop)](https://www.codefactor.io/repository/github/navn-r/navn-r.github.io/overview/develop)[![Build & Deploy](https://github.com/navn-r/navn-r.github.io/actions/workflows/main.yml/badge.svg?branch=develop)](https://github.com/navn-r/navn-r.github.io/actions/workflows/main.yml)  [![time tracker](https://wakatime.com/badge/github/navn-r/navn-r.github.io.svg)](https://wakatime.com/badge/github/navn-r/navn-r.github.io)
 
 ~~Built with pure HTML and CSS.~~  
 
