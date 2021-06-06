@@ -20,7 +20,7 @@ $themes: (
     bg: #f0e7dc,
     primary: #1b1b1b,
     secondary: #7d7d7d,
-    accent: #3c8a2d,
+    accent: #aa6c39,
   ),
   dark: (
     bg: #131516,
@@ -33,4 +33,4 @@ $themes: (
 /** Sizes & Dimensions */
 
 $scale: 1.5;
-$font-size: clamp(10px, 1vw, 16px);
+$font-size: clamp(10px, 1.5vw, 16px);

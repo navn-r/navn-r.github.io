@@ -9,13 +9,13 @@
 @use './variables' as *;
 @use './functions' as *;
 
-h1,
-h2,
-h3,
-p {
-  &,
-  * {
+/* prettier-ignore */
+h1, h2, h3, p { 
+  &, * {
     @include tr;
+    &::selection {
+      background-color: rgba(map-get(map-get($themes, light), secondary), 0.5);
+    }
   }
 }
 
