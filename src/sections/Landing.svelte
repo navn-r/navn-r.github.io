@@ -9,11 +9,15 @@
     <p>
       I'm a Software Engineer, now in my third year studying Computer Science and Statistics at the
       <a href="https://www.utoronto.ca/" rel="noopener noreferrer nofollow" target="_blank">University of Toronto</a>
-      in Canada. Currently, I'm working as a
+      in Canada. Currently, I'm an
+      <a href="https://fellowship.mlh.io/" rel="noopener noreferrer nofollow" target="_blank"
+        >Open Source Fellow at MLH</a
+      >
+      and working as a
       <a href="https://www.halo.science/" rel="noopener noreferrer nofollow" target="_blank"
         >Full Stack Engineer at Halo Science</a
       >
-      for my Summer 2021 Internship.
+      for Summer 2021.
     </p>
     <div class="contacts">
       <img loading="lazy" src="/underconstruction.gif" alt="under construction sign" />

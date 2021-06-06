@@ -37,20 +37,20 @@
     align-items: center;
     justify-content: right;
     width: calc(100% - min(10%, 9rem));
-    padding-top: s();
     height: calc(3 * #{s()});
+    padding-top: s();
     margin: 0 auto;
   }
 
   main {
     display: grid;
-    width: calc(100% - min(20%, 18rem));
-    margin: 0 auto;
   }
 
   section {
-    min-height: 100vh;
     display: grid;
     align-items: center;
+    min-height: 100vh;
+    width: calc(100% - min(20%, 18rem));
+    margin: 0 auto;
   }
 </style>
