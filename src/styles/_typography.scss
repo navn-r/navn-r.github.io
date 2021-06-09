@@ -5,9 +5,8 @@
 //  \__|\__, | .__/ \___/ \__, |_|  \__,_| .__/|_| |_|\__, (_)
 //      |___/|_|          |___/          |_|          |___/
 
-@use './mixins' as *;
+@use './utils' as *;
 @use './variables' as *;
-@use './functions' as *;
 
 /* prettier-ignore */
 h1, h2, h3, p { 

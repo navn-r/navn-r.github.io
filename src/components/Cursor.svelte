@@ -49,7 +49,7 @@
 <div class="outer" bind:this={outer} />
 
 <style lang="scss">
-  @use '../styles/mixins' as *;
+  @use '../styles/utils' as *;
 
   div {
     @include set(left width height, 10px);

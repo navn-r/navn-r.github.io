@@ -29,7 +29,7 @@
 </section>
 
 <style lang="scss">
-  @use '../styles/functions' as *;
+  @use '../styles/utils' as *;
 
   section {
     min-height: calc(100vh - 2 * 3 * #{s()});
