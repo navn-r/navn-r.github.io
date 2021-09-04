@@ -18,10 +18,13 @@
     /** Setup custom cursor */
     document.addEventListener('mouseup', () => setDimensions(inner, 10));
     document.addEventListener('mousedown', () => setDimensions(inner, 25));
-    document.addEventListener('mousemove', ({ clientX: x, clientY: y }: MouseEvent) => {
-      setPosition(inner, x, y);
-      setPosition(outer, x, y);
-    });
+    document.addEventListener(
+      'mousemove',
+      ({ clientX: x, clientY: y }: MouseEvent) => {
+        setPosition(inner, x, y);
+        setPosition(outer, x, y);
+      }
+    );
 
     /** Grow inner on hover links */
     Array.from(document.querySelectorAll('a, button')).forEach((e) => {
@@ -49,11 +52,9 @@
 <div class="outer" bind:this={outer} />
 
 <style lang="scss">
-  @use '../styles/utils' as *;
-
   div {
-    @include set(left width height, 10px);
     position: fixed;
+    left: 10px;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
     border-radius: 50%;
@@ -61,12 +62,15 @@
   }
 
   .inner {
+    width: 10px;
+    height: 10px;
     background: #ffffff;
     transition: width 0.5s, height 0.5s;
   }
 
   .outer {
-    @include set(width height, 25px);
+    width: 25px;
+    height: 25px;
     border: 1px solid #ffffff;
   }
 </style>

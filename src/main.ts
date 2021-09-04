@@ -1,16 +1,12 @@
 import App from './App.svelte';
 
-const target: HTMLElement = document.getElementById('app')!;
+const theme =
+  window.localStorage.getItem('theme') ??
+  (window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light');
 
-/** Initialize theme */
-const theme = window.localStorage.getItem('theme');
-document.documentElement.dataset.theme = theme
-  ? theme
-  : window.matchMedia('(prefers-color-scheme: dark)')
-  ? 'dark'
-  : 'light';
+document.documentElement.dataset.theme = theme;
 
-const app = new App({ target: target as Element });
+const app = new App({ target: document.body });
 
 const now = new Date();
 const uptime = now.getTime() - new Date('2001-10-16').getTime(),
@@ -48,7 +44,7 @@ const loaded = `
 `;
 
 const onLoad = () => {
-  target.style.cssText += 'animation: fade 750ms forwards';
+  document.body.style.cssText += 'animation: fade 750ms forwards';
   if (process.env.NODE_ENV === 'production') {
     console.log(loaded);
   }

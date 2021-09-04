@@ -1,6 +1,19 @@
 <script lang="ts">
+  import ICONS from '../assets/Icons';
   import { onMount } from 'svelte';
-  import { Themes } from '../lib/Data';
+
+  const Themes = [
+    {
+      id: 0,
+      name: 'dark',
+      icon: ICONS.moon,
+    },
+    {
+      id: 1,
+      name: 'light',
+      icon: ICONS.sun,
+    },
+  ];
 
   let theme = Themes[0];
   const target: HTMLElement = document.documentElement;
@@ -16,7 +29,7 @@
   });
 </script>
 
-<button on:click={changeTheme}>
+<button on:click={changeTheme} aria-label="change theme">
   {@html theme.icon}
 </button>
 
@@ -25,5 +38,7 @@
     border: 0;
     outline: none;
     background: none;
+    height: 2.25rem;
+    width: 2.25rem;
   }
 </style>
