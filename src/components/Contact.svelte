@@ -56,7 +56,6 @@
     height: 3.375rem;
     user-select: none;
     transform: scale(1.25) rotate(11.25deg);
-    z-index: -1; // Fixes mouseover
   }
 
   a {

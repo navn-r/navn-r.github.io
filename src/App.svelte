@@ -21,7 +21,7 @@
         rel="noopener noreferrer nofollow"
         target="_blank">University of Toronto</a
       >
-      in Canada. I've had the opportunity to work at
+      in Canada. I've had the pleasure to work at
       <a
         href="https://www.caseware.com/ca"
         rel="noopener noreferrer nofollow"
@@ -67,12 +67,12 @@
 
   :global(html) {
     font-size: clamp(12px, 1.5vw, 16px);
-    background-color: map-get(map-get($themes, light), bg);
   }
 
   :global(body) {
+    opacity: 0;
+    visibility: hidden;
     background-color: var(--bg);
-
     &,
     &:before,
     &:after {

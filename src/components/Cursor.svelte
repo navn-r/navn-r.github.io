@@ -54,11 +54,13 @@
 <style lang="scss">
   div {
     position: fixed;
-    left: 10px;
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
+    z-index: 1000;
   }
 
   .inner {
