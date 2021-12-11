@@ -8,7 +8,7 @@
   - ~~Automated deployment to `master` branch with Travis CI~~
 
 
-**v3.0: Under Construction**
+**v3.0:**
   - Pre-commit linting ([svelte-check](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check)) + formatting ([prettier](https://prettier.io/)) with [Husky](https://typicode.github.io/husky)
   - Commit messages enforced with [Conventional Commits](https://www.conventionalcommits.org/)
   - Automated build and deployment with Github Actions and Github Pages
@@ -22,27 +22,27 @@ Made with ❤️ by Navinn Ravindaran
 
 Install Dependencies
 ```sh
-yarn  # runs husky install after completion
+pnpm i  # runs husky install after completion
 ```
 
 Development Server
 ```sh
-yarn run dev  # http://localhost:3000
+npm run dev  # http://localhost:3000
 ```
 
 Build
 ```sh
-yarn run build  # /dist
+npm run build  # /dist
 
-yarn run serve  # serves /dist @ http://localhost:5000
+npm run serve  # serves /dist @ http://localhost:5000
 ```
 
 Lint
 ```sh
-yarn run lint  # will fail on warnings and hints, uses tsconfig.json
+npm run lint  # will fail on warnings and hints, uses tsconfig.json
 ```
 
 Format
 ```sh
-yarn run format  # formats .svelte, .ts, .scss @ /src
+npm run format  # formats .svelte, .ts, .scss @ /src
 ```
