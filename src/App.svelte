@@ -1,17 +1,15 @@
 <script lang="ts">
-  import ThemeSwitcher from '@components/ThemeSwitcher.svelte';
-  import Cursor from '@components/Cursor.svelte';
-  import Contact from '@components/Contact.svelte';
+  import { fade } from 'svelte/transition';
+  import Contact from './components/Contact.svelte';
+  import Cursor from './components/Cursor.svelte';
+  import ThemeSwitcher from './components/ThemeSwitcher.svelte';
 </script>
 
 <Cursor />
 
-<header>
-  <ThemeSwitcher />
-</header>
-
 <main>
-  <section>
+  <section in:fade={{ delay: 200, duration: 300 }}>
+    <ThemeSwitcher />
     <h1>Hey, I'm <em>Navinn.</em></h1>
     <p>
       I'm a Software Engineer, now in my third year studying Computer Science
@@ -47,16 +45,9 @@
 </main>
 
 <style lang="scss">
-  @use "./styles" as *;
+  @use './styles' as *;
 
   /** Global Styles */
-
-  @keyframes -global-fade {
-    100% {
-      opacity: 100%;
-      visibility: visible;
-    }
-  }
 
   :global(*) {
     margin: 0;
@@ -66,89 +57,102 @@
   }
 
   :global(html) {
-    font-size: clamp(12px, 1.5vw, 16px);
+    transition: filter $ease;
   }
 
-  :global(body) {
-    opacity: 0;
-    visibility: hidden;
-    background-color: var(--bg);
-    &,
-    &:before,
-    &:after {
-      transition: background-color $ease;
-    }
+  :global(html[data-theme='dark']) {
+    filter: invert(95%);
+  }
+
+  :global(#app) {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $bg;
+
+    background-image: linear-gradient(rgba($primary, 0.25) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($primary, 0.25) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+  }
+
+  :global(a) {
+    color: currentColor;
+    text-decoration: none;
   }
 
   // For Icons.ts
-  :global(.icon) {
-    color: var(--primary);
+  :global(i) {
+    color: $primary;
     user-select: none;
-    width: inherit;
-    height: inherit;
+    font-size: 2.25rem;
     transition: all $ease;
-  }
-
-  *::selection {
-    background-color: rgba(map-get(map-get($themes, light), secondary), 0.5);
   }
 
   /** App Styles */
 
-  main {
-    display: grid;
-    min-height: 100vh;
-    max-width: 1600px;
-    margin: -6rem auto 0; // Fill screen without absolute header
-    padding: 0 min(10%, 7.5rem);
+  *::selection {
+    background-color: rgba($primary, 0.25);
+  }
 
-    * {
-      transition: color $ease;
-    }
+  main {
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+    padding: 0 150px;
+
+    display: grid;
+    place-items: center;
+
+    font-family: $sans-serif;
+    font-size: 1.25rem;
+    color: $primary;
   }
 
   section {
-    height: max-content;
-    margin: auto 0;
-  }
+    background-color: white;
+    border: 2px $primary solid;
+    width: max-content;
+    min-height: 500px;
+    padding: 5rem;
+    box-shadow: 0.75rem 0.75rem 0 0 $secondary;
+    position: relative;
 
-  header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 3rem;
-    height: 6rem;
+    // ThemeSwitcher
+    & :global(button) {
+      position: absolute;
+      top: 0;
+      left: -5rem;
+    }
   }
 
   h1 {
-    font-size: 7.59375rem;
     font-family: $serif;
-    color: var(--primary);
     letter-spacing: -0.02rem;
+    font-size: 5rem;
 
-    em {
-      color: var(--accent);
+    & em {
+      color: $accent;
     }
   }
 
   p {
-    font-family: $sans-serif;
-    color: var(--secondary);
-    font-size: 1.5rem;
+    max-width: 60ch;
+    margin: 1rem 0;
     line-height: 1.5;
-    margin: 1.5rem 0;
-    width: min(100%, 60ch);
-  }
+    color: $secondary;
 
-  a {
-    color: currentColor;
+    & a {
+      background-image: linear-gradient(90deg, $primary, $primary);
+      background-size: 100% 1.5px;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      transition: background-size $ease;
 
-    &:focus-visible {
-      outline: none;
-    }
-
-    &:hover {
-      text-decoration: none;
+      &:hover {
+        background-size: 0 1.5px;
+      }
     }
   }
 </style>

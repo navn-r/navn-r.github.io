@@ -1,17 +1,16 @@
 <script lang="ts">
-  import ICONS from '../assets/Icons';
   import { onMount } from 'svelte';
 
   const Themes = [
     {
       id: 0,
       name: 'dark',
-      icon: ICONS.moon,
+      icon: 'fas fa-moon',
     },
     {
       id: 1,
       name: 'light',
-      icon: ICONS.sun,
+      icon: 'fas fa-sun',
     },
   ];
 
@@ -25,20 +24,34 @@
   };
 
   onMount(() => {
-    theme = Themes.find(({ name }) => name === target.dataset.theme!)!;
+    theme = Themes.find(
+      ({ name }) => name === (target.dataset.theme ?? 'light')
+    )!;
   });
 </script>
 
-<button on:click={changeTheme} aria-label="change theme">
-  {@html theme.icon}
+<button
+  on:click={changeTheme}
+  aria-label="change theme"
+  title={`Toggle ${theme.name} mode`}
+>
+  <i class={theme.icon} />
 </button>
 
 <style lang="scss">
+  @use '../styles' as *;
+
   button {
     border: 0;
     outline: none;
-    background: none;
-    height: 2.25rem;
-    width: 2.25rem;
+    background: white;
+    padding: 0.5rem;
+
+    border: 2px $primary solid;
+    box-shadow: 0.3rem 0.3rem 0 0 $secondary;
+
+    &:hover i {
+      color: $accent;
+    }
   }
 </style>

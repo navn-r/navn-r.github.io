@@ -1,32 +1,30 @@
 <script lang="ts">
-  import ICONS from '../assets/Icons';
-
   const Contacts = [
     {
       id: 'GitHub: navn-r',
       href: 'https://github.com/navn-r',
-      icon: ICONS.github,
+      icon: 'fab fa-github',
     },
     {
       id: 'LinkedIn: in/navn-r',
       href: 'https://linkedin.com/in/navn-r',
-      icon: ICONS.linkedin,
+      icon: 'fab fa-linkedin',
     },
     {
       id: 'Email: me@navn.me',
       href: 'mailto:me@navn.me',
-      icon: ICONS.email,
+      icon: 'fas fa-paper-plane',
     },
     {
       id: 'Resume: html/pdf',
       href: './resume',
-      icon: ICONS.resume,
+      icon: 'fas fa-file-pdf',
     },
   ];
 </script>
 
 <div>
-  <img loading="lazy" src="/computer.gif" alt="computer" />
+  <img src="/computer.gif" alt="computer" />
   {#each Contacts as contact}
     <a
       href={contact.href}
@@ -35,20 +33,21 @@
       target="_blank"
       aria-label={'Link to ' + contact.id}
     >
-      {@html contact.icon}
+      <i class={contact.icon} />
     </a>
   {/each}
 </div>
 
 <style lang="scss">
   @use '../styles' as *;
+
   div {
     column-gap: 2.25rem;
     margin: 2.25rem 0;
     display: grid;
     width: min-content;
     align-items: center;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
   img {
@@ -56,6 +55,11 @@
     height: 3.375rem;
     user-select: none;
     transform: scale(1.25) rotate(11.25deg);
+
+    // prevents inversion
+    :global(html[data-theme='dark']) & {
+      mix-blend-mode: difference;
+    }
   }
 
   a {
@@ -63,5 +67,9 @@
     place-items: center;
     width: 2.25rem;
     height: 2.25rem;
+
+    &:hover i {
+      color: $accent;
+    }
   }
 </style>

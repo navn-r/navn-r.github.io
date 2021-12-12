@@ -27,7 +27,7 @@
     );
 
     /** Grow inner on hover links */
-    Array.from(document.querySelectorAll('a, button')).forEach((e) => {
+    Array.from(document.querySelectorAll('a, i, button')).forEach((e) => {
       e.addEventListener('mouseover', () => setDimensions(inner, 25));
       e.addEventListener('mouseleave', () => setDimensions(inner, 10));
     });
@@ -67,7 +67,7 @@
     width: 10px;
     height: 10px;
     background: #ffffff;
-    transition: width 0.5s, height 0.5s;
+    transition: width 0.3s, height 0.3s;
   }
 
   .outer {
