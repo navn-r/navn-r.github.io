@@ -74,5 +74,6 @@
     width: 25px;
     height: 25px;
     border: 1px solid #ffffff;
+    transition: all 0.1s;
   }
 </style>

@@ -19,7 +19,13 @@
         rel="noopener noreferrer nofollow"
         target="_blank">University of Toronto</a
       >
-      in Canada. I've had the pleasure to work at
+      in Canada. Currently, I'm working as a
+      <a
+        href="https://www.rbc.com"
+        target="_blank"
+        rel="noopener noreferrer nofollow">Full Stack Developer at RBC</a
+      >
+      for Winter 2022. I've also had the pleasure to work at
       <a
         href="https://www.caseware.com/ca"
         rel="noopener noreferrer nofollow"
@@ -57,7 +63,16 @@
   }
 
   :global(html) {
+    font-size: 13px;
     transition: filter $ease;
+
+    @media (min-width: 1600px) {
+      font-size: 14.5px;
+    }
+
+    @media (min-width: 1900px) {
+      font-size: 16px;
+    }
   }
 
   :global(html[data-theme='dark']) {
@@ -72,6 +87,8 @@
 
     background-image: linear-gradient(rgba($primary, 0.25) 1px, transparent 1px),
       linear-gradient(90deg, rgba($primary, 0.25) 1px, transparent 1px);
+
+    box-shadow: 0 0 50px 2rem $bg inset;
     background-size: 2rem 2rem;
   }
 
