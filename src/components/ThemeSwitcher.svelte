@@ -44,14 +44,16 @@
   button {
     border: 0;
     outline: none;
-    background: white;
     padding: 0.5rem;
-
-    border: 2px $primary solid;
-    box-shadow: 0.3rem 0.3rem 0 0 $secondary;
+    background: $primary;
+    border-radius: 50%;
 
     &:hover i {
       color: $accent;
+    }
+
+    i {
+      color: $bg;
     }
   }
 </style>

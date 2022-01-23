@@ -1,45 +1,51 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+
   import Contact from './components/Contact.svelte';
   import Cursor from './components/Cursor.svelte';
-  import ThemeSwitcher from './components/ThemeSwitcher.svelte';
 </script>
 
 <Cursor />
 
 <main>
   <section in:fade={{ delay: 200, duration: 300 }}>
-    <ThemeSwitcher />
-    <h1>Hey, I'm <em>Navinn.</em></h1>
+    <h1>A Software Engineer, studying Computer Science.</h1>
     <p>
-      I'm a Software Engineer, now in my third year studying Computer Science
-      and Statistics at the
+      Hey, my name is <strong>Navinn</strong> (/nævɪn/). I am in my third year
+      <s>studying</s>
+      surviving at the
       <a
         href="https://www.utoronto.ca/"
         rel="noopener noreferrer nofollow"
         target="_blank">University of Toronto</a
       >
-      in Canada. Currently, I'm working as a
+      in Canada. I have over 12 months of total work experience, with major contributions
+      in startup, enterprise and open source Agile Scrums.
+    </p>
+    <p>
+      For Winter 2022, I'm currently working as a Full Stack Developer at
       <a
         href="https://www.rbc.com"
         target="_blank"
-        rel="noopener noreferrer nofollow">Full Stack Developer at RBC</a
+        rel="noopener noreferrer nofollow">RBC</a
       >
-      for Winter 2022. I've also had the pleasure to work at
-      <a
-        href="https://www.caseware.com/ca"
-        rel="noopener noreferrer nofollow"
-        target="_blank">CaseWare</a
-      >,
-      <a
-        href="https://www.halo.science/"
-        rel="noopener noreferrer nofollow"
-        target="_blank">Halo Science</a
-      >, and at the
+      and a Pod Leader at the
       <a
         href="https://fellowship.mlh.io"
         rel="noopener noreferrer nofollow"
         target="_blank">MLH Fellowship</a
+      >
+      . I've also had the pleasure to work at
+      <a
+        href="https://www.caseware.com/ca"
+        rel="noopener noreferrer nofollow"
+        target="_blank">CaseWare</a
+      >
+      and
+      <a
+        href="https://www.halo.science/"
+        rel="noopener noreferrer nofollow"
+        target="_blank">Halo Science</a
       >.
     </p>
     <p>
@@ -62,34 +68,23 @@
     cursor: none;
   }
 
+  :global(html, body, #app) {
+    width: 100%;
+    height: 100%;
+  }
+
   :global(html) {
-    font-size: 13px;
-    transition: filter $ease;
-
-    @media (min-width: 1600px) {
-      font-size: 14.5px;
-    }
-
-    @media (min-width: 1900px) {
-      font-size: 16px;
-    }
+    font-size: 16px;
+    transition: all $ease;
   }
 
   :global(html[data-theme='dark']) {
     filter: invert(95%);
+    background-color: invert($bg, 95%) !important;
   }
 
   :global(#app) {
-    width: 100vw;
-    height: 100vh;
-
     background-color: $bg;
-
-    background-image: linear-gradient(rgba($primary, 0.25) 1px, transparent 1px),
-      linear-gradient(90deg, rgba($primary, 0.25) 1px, transparent 1px);
-
-    box-shadow: 0 0 50px 2rem $bg inset;
-    background-size: 2rem 2rem;
   }
 
   :global(a) {
@@ -117,7 +112,6 @@
     max-width: 1600px;
 
     margin: 0 auto;
-    padding: 0 150px;
 
     display: grid;
     place-items: center;
@@ -125,33 +119,36 @@
     font-family: $sans-serif;
     font-size: 1.25rem;
     color: $primary;
+
+    @media (max-width: 1000px) {
+      place-items: end center;
+
+      @media (max-height: 800px) {
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 500px) {
+      align-items: start;
+    }
   }
 
   section {
-    background-color: white;
-    border: 2px $primary solid;
-    width: max-content;
     min-height: 500px;
     padding: 5rem;
-    box-shadow: 0.75rem 0.75rem 0 0 $secondary;
-    position: relative;
 
-    // ThemeSwitcher
-    & :global(button) {
-      position: absolute;
-      top: 0;
-      left: -5rem;
+    @media (max-width: 1000px) {
+      padding: 2.5rem;
     }
   }
 
   h1 {
     font-family: $serif;
     letter-spacing: -0.02rem;
-    font-size: 5rem;
-
-    & em {
-      color: $accent;
-    }
+    font-weight: 400;
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    margin-bottom: 2.25rem;
+    max-width: 23ch;
   }
 
   p {
@@ -170,6 +167,10 @@
       &:hover {
         background-size: 0 1.5px;
       }
+    }
+
+    & strong {
+      color: $primary;
     }
   }
 </style>
