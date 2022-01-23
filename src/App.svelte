@@ -98,6 +98,10 @@
     user-select: none;
     font-size: 2.25rem;
     transition: all $ease;
+
+    @media (max-width: 500px) {
+      font-size: 2rem;
+    }
   }
 
   /** App Styles */

@@ -50,6 +50,10 @@
     width: min-content;
     align-items: center;
     grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width: 500px) {
+      column-gap: 1.5rem;
+    }
   }
 
   a {
