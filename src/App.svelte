@@ -59,53 +59,6 @@
 <style lang="scss">
   @use './styles' as *;
 
-  /** Global Styles */
-
-  :global(*) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: none;
-  }
-
-  :global(html, body, #app) {
-    width: 100%;
-    height: 100%;
-  }
-
-  :global(html) {
-    font-size: 16px;
-    transition: all $ease;
-  }
-
-  :global(html[data-theme='dark']) {
-    filter: invert(95%);
-    background-color: invert($bg, 95%) !important;
-  }
-
-  :global(#app) {
-    background-color: $bg;
-  }
-
-  :global(a) {
-    color: currentColor;
-    text-decoration: none;
-  }
-
-  // For Icons.ts
-  :global(i) {
-    color: $primary;
-    user-select: none;
-    font-size: 2.25rem;
-    transition: all $ease;
-
-    @media (max-width: 500px) {
-      font-size: 2rem;
-    }
-  }
-
-  /** App Styles */
-
   *::selection {
     background-color: rgba($primary, 0.25);
   }
