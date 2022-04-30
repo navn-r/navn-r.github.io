@@ -19,17 +19,12 @@
         rel="noopener noreferrer nofollow"
         target="_blank">University of Toronto</a
       >
-      in Canada. I have over 12 months of total work experience, with major contributions
+      in Canada. I have over 16 months of total work experience, with major contributions
       in startup, enterprise and open source Agile Scrums.
     </p>
     <p>
-      For Winter 2022, I'm currently working as a Full Stack Developer at
-      <a
-        href="https://www.rbc.com"
-        target="_blank"
-        rel="noopener noreferrer nofollow">RBC</a
-      >
-      and a Pod Leader at the
+      For Summer 2022, I'm currently working as an Undergraduate Teaching
+      Assistant, and a Pod Leader at the
       <a
         href="https://fellowship.mlh.io"
         rel="noopener noreferrer nofollow"
@@ -40,12 +35,17 @@
         href="https://www.caseware.com/ca"
         rel="noopener noreferrer nofollow"
         target="_blank">CaseWare</a
-      >
-      and
+      >,
       <a
         href="https://www.halo.science/"
         rel="noopener noreferrer nofollow"
         target="_blank">Halo Science</a
+      >
+      and
+      <a
+        href="https://www.rbc.com"
+        target="_blank"
+        rel="noopener noreferrer nofollow">RBC</a
       >.
     </p>
     <p>
