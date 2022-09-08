@@ -11,7 +11,7 @@
   <section in:fade={{ delay: 200, duration: 300 }}>
     <h1>A Software Engineer, studying Computer Science.</h1>
     <p>
-      Hey, my name is <strong>Navinn</strong> (/nævɪn/). I am in my third year
+      Hey, my name is <strong>Navinn</strong> (/nævɪn/). I am in my fourth year
       <s>studying</s>
       surviving at the
       <a
@@ -20,11 +20,14 @@
         target="_blank">University of Toronto</a
       >
       in Canada. I have over 16 months of total work experience, with major contributions
-      in startup, enterprise and open source Agile Scrums.
+      in startup, enterprise and open source development teams.
     </p>
     <p>
-      For Summer 2022, I'm currently working as an Undergraduate Teaching
-      Assistant, and a Pod Leader at the
+      For Fall 2022, I'm currently working as a Software Developer at <a
+        href="https://hubspot.com"
+        rel="noopener noreferrer nofollow"
+        target="_blank">HubSpot</a
+      >, and a Pod Leader at the
       <a
         href="https://fellowship.mlh.io"
         rel="noopener noreferrer nofollow"
@@ -32,20 +35,20 @@
       >
       . I've also had the pleasure to work at
       <a
+        href="https://www.rbc.com"
+        target="_blank"
+        rel="noopener noreferrer nofollow">RBC</a
+      >,
+      <a
         href="https://www.caseware.com/ca"
         rel="noopener noreferrer nofollow"
         target="_blank">CaseWare</a
-      >,
+      >
+      and
       <a
         href="https://www.halo.science/"
         rel="noopener noreferrer nofollow"
         target="_blank">Halo Science</a
-      >
-      and
-      <a
-        href="https://www.rbc.com"
-        target="_blank"
-        rel="noopener noreferrer nofollow">RBC</a
       >.
     </p>
     <p>
