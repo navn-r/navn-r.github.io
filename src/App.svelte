@@ -23,7 +23,7 @@
       in startup, enterprise and open source development teams.
     </p>
     <p>
-      For Fall 2022, I'm currently working as a Software Developer at <a
+      For Fall 2022, I'm currently working as a Software Engineer at <a
         href="https://hubspot.com"
         rel="noopener noreferrer nofollow"
         target="_blank">HubSpot</a

@@ -25,17 +25,17 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
+    "@sveltejs/vite-plugin-svelte": "^1.0.5",
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
-    "prettier": "^2.5.1",
-    "prettier-plugin-svelte": "^2.5.1",
-    "sass": "^1.45.0",
-    "svelte": "^3.44.2",
-    "svelte-check": "^2.2.10",
-    "svelte-preprocess": "^4.9.8",
-    "typescript": "^4.5.3",
-    "vite": "^2.7.1"
+    "lint-staged": "^12.5.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.7.0",
+    "sass": "^1.54.9",
+    "svelte": "^3.50.1",
+    "svelte-check": "^2.9.0",
+    "svelte-preprocess": "^4.10.7",
+    "typescript": "^4.8.3",
+    "vite": "^2.9.15"
   },
   "lint-staged": {
     "src/*": [
