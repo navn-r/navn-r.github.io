@@ -19,25 +19,30 @@
         rel="noopener noreferrer nofollow"
         target="_blank">University of Toronto</a
       >
-      in Canada. I have over 16 months of total work experience, with major contributions
+      in Canada. I have over 20 months of total work experience, with major contributions
       in startup, enterprise and open source development teams.
     </p>
     <p>
-      For Fall 2022, I'm currently working as a Software Engineer at <a
+      For Winter 2023, I'm currently working as a Teaching Assistant for <a
+        href="https://cscc09.com"
+        rel="noopener noreferrer nofollow"
+        target="_blank">CSCC09 Programming on the Web</a
+      >, and actively seeking internship and new-grad positions. I've had the
+      pleasure to work at
+      <a
         href="https://hubspot.com"
         rel="noopener noreferrer nofollow"
         target="_blank">HubSpot</a
-      >, and a Pod Leader at the
-      <a
-        href="https://fellowship.mlh.io"
-        rel="noopener noreferrer nofollow"
-        target="_blank">MLH Fellowship</a
-      >
-      . I've also had the pleasure to work at
+      >,
       <a
         href="https://www.rbc.com"
         target="_blank"
         rel="noopener noreferrer nofollow">RBC</a
+      >,
+      <a
+        href="https://mlh.io"
+        rel="noopener noreferrer nofollow"
+        target="_blank">MLH</a
       >,
       <a
         href="https://www.caseware.com/ca"
