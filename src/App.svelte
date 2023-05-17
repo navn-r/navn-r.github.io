@@ -23,10 +23,10 @@
       in startup, enterprise and open source development teams.
     </p>
     <p>
-      For Winter 2023, I'm currently working as a Teaching Assistant for <a
-        href="https://cscc09.com"
+      For Summer 2023, I'm currently working as a Teaching Assistant for <a
+        href="https://utsc.calendar.utoronto.ca/course/cscc01h3"
         rel="noopener noreferrer nofollow"
-        target="_blank">CSCC09 Programming on the Web</a
+        target="_blank">CSCC01 Introduction to Software Engineering</a
       >, and actively seeking internship and new-grad positions. I've had the
       pleasure to work at
       <a
