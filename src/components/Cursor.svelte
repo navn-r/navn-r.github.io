@@ -10,12 +10,13 @@
   onMount(() => {
     /** Remove custom cursor if on mobile */
     if (navigator.userAgent.toLowerCase().match(MOBILE_REGEX)) {
-      setDimensions(inner);
-      setDimensions(outer);
+      inner.remove();
+      outer.remove();
       return;
     }
 
     /** Setup custom cursor */
+    document.documentElement.style.cursor = 'none';
     document.addEventListener('mouseup', () => setDimensions(inner, 10));
     document.addEventListener('mousedown', () => setDimensions(inner, 25));
     document.addEventListener(
@@ -34,14 +35,14 @@
   });
 
   const setPosition = (e: HTMLElement, x: number, y: number) => {
-    if (!!e) {
+    if (e?.style) {
       e.style.top = `${y}px`;
       e.style.left = `${x}px`;
     }
   };
 
   const setDimensions = (e: HTMLElement, size: number = 0) => {
-    if (!!e) {
+    if (e?.style) {
       e.style.height = `${size}px`;
       e.style.width = `${size}px`;
     }
