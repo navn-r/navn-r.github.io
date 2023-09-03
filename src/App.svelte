@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
 
+  import Voice from './components/Voice.svelte';
   import Contact from './components/Contact.svelte';
   import Cursor from './components/Cursor.svelte';
 </script>
@@ -10,10 +11,9 @@
 <main>
   <section in:fade={{ delay: 200, duration: 300 }}>
     <h1>A Software Engineer, studying <span>Computer Science.</span></h1>
+    <p>Hey, my name is <strong>Navinn</strong> (/nævɪn/) <Voice /></p>
     <p>
-      Hey, my name is <strong>Navinn</strong> (/nævɪn/). I am in my final year
-      <s>studying</s>
-      surviving at the
+      I am in my final year <s>studying</s> surviving at the
       <a
         href="https://www.utoronto.ca/"
         rel="noopener noreferrer nofollow"
