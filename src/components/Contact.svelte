@@ -1,6 +1,4 @@
 <script lang="ts">
-  import ThemeSwitcher from './ThemeSwitcher.svelte';
-
   const Contacts = [
     {
       id: 'GitHub: navn-r',
@@ -26,7 +24,7 @@
 </script>
 
 <div>
-  <ThemeSwitcher />
+  <img src="computer.gif" alt="Computer" id="computer" />
   {#each Contacts as contact}
     <a
       href={contact.href}
@@ -54,6 +52,14 @@
     @media (max-width: 500px) {
       column-gap: 1.5rem;
     }
+  }
+
+  #computer {
+    width: 3.5rem;
+    transform: rotate(-11.25deg);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
   }
 
   a {

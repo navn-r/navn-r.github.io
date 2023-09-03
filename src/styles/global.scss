@@ -17,15 +17,14 @@ body,
 html {
   font-size: 16px;
   transition: all $ease;
-}
-
-html[data-theme='dark'] {
-  filter: invert(95%);
-  background-color: invert($bg, 95%) !important;
+  background-color: $bg;
+  background-image: url('/cartographer.png');
 }
 
 #app {
-  background-color: $bg;
+  @media (max-width: 850px) {
+    @include blur;
+  }
 }
 
 a {
