@@ -9,14 +9,17 @@
 
   onMount(() => {
     /** Remove custom cursor if on mobile */
-    if (navigator.userAgent.toLowerCase().match(MOBILE_REGEX)) {
+    if (
+      navigator.userAgent.toLowerCase().match(MOBILE_REGEX) ||
+      window.matchMedia('(hover: none)').matches
+    ) {
       inner.remove();
       outer.remove();
       return;
     }
 
     /** Setup custom cursor */
-    document.documentElement.style.cursor = 'none';
+    document.documentElement.style.setProperty('--cursor', 'none');
     document.addEventListener('mouseup', () => setDimensions(inner, 10));
     document.addEventListener('mousedown', () => setDimensions(inner, 25));
     document.addEventListener(

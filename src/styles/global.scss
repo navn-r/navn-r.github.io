@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: var(--cursor, default);
 }
 
 html,
@@ -23,6 +24,10 @@ html {
 #app {
   @media (max-width: 850px) {
     @include blur;
+
+    min-height: 100%;
+    width: fit-content;
+    height: fit-content;
   }
 }
 

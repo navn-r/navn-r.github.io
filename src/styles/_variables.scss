@@ -21,9 +21,9 @@ $funky: 'Lostar', $serif;
 /** Colors */
 
 $bg: #000000;
-$primary: white; // #1b1b1b;
+$primary: white;
 $secondary: rgba($primary, 0.75);
-$accent: #c54545;
+$accent: #e34c26;
 $invert: invert($accent, 95%);
 
 /** Transitions */
@@ -31,9 +31,8 @@ $ease: 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
 /** Blur - From https://css.glass */
 @mixin blur {
-  background: rgba($invert, 0.01);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba($invert, 0.05);
+  background: rgba($primary, 0.01);
+  box-shadow: 0 4px 30px rgba($primary, 0.05);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }

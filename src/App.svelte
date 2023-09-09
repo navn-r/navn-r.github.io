@@ -91,10 +91,40 @@
 
   section {
     padding: clamp(2rem, 5vw, 5rem);
-
     @media (min-width: 850px) {
       @include blur;
-      border: 1px solid rgba($invert, 0.5);
+
+      border-top: 1px solid rgba($accent, 0.75);
+      border-left: 1px solid rgba($accent, 0.75);
+      border-bottom: 1px solid rgba($invert, 0.75);
+      border-right: 1px solid rgba($invert, 0.75);
+
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        filter: blur(100px);
+      }
+
+      &::before {
+        top: -6rem;
+        left: -6rem;
+        background: $accent;
+      }
+
+      &::after {
+        bottom: -6rem;
+        right: -6rem;
+        background: $invert;
+      }
     }
   }
 
@@ -110,7 +140,7 @@
       font-family: $funky;
       font-size: clamp(2.5rem, 10vw, 4.5rem);
 
-      background: linear-gradient(45deg, $accent 50%, $invert 70%);
+      background: linear-gradient(45deg, $accent 40%, $invert 60%);
       background-size: 200% 200%;
       background-clip: text;
       -webkit-background-clip: text;
@@ -141,8 +171,10 @@
       background-position: left bottom;
       transition: background-size $ease;
 
-      &:hover {
-        background-size: 0 1px;
+      @media (hover: hover) {
+        &:hover {
+          background-size: 0 1px;
+        }
       }
     }
 

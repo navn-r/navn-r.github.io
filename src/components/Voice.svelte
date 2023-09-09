@@ -42,8 +42,10 @@
     font-size: 1.25rem;
     transform: translateY(0.025rem);
 
-    &:hover {
-      color: $accent;
+    @media (hover: hover) {
+      &:hover {
+        color: $accent;
+      }
     }
   }
 
