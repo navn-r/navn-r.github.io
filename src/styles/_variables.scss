@@ -20,7 +20,7 @@ $funky: 'Lostar', $serif;
 
 /** Colors */
 
-$bg: #000000;
+$bg: #101010;
 $primary: white;
 $secondary: rgba($primary, 0.75);
 $accent: #e34c26;
@@ -33,6 +33,6 @@ $ease: 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
 @mixin blur {
   background: rgba($primary, 0.01);
   box-shadow: 0 4px 30px rgba($primary, 0.05);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }

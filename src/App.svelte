@@ -9,7 +9,7 @@
 <Cursor />
 
 <main>
-  <section in:fade={{ delay: 200, duration: 300 }}>
+  <section in:fade={{ delay: 500, duration: 300 }}>
     <h1>A Software Engineer, studying <span>Computer Science.</span></h1>
     <p>Hey, my name is <strong>Navinn</strong> (/nævɪn/) <Voice /></p>
     <p>
@@ -100,7 +100,7 @@
       border-right: 1px solid rgba($invert, 0.75);
 
       position: relative;
-      border-radius: 16px;
+      border-radius: 1rem;
       overflow: hidden;
 
       &::before,

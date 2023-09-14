@@ -17,8 +17,8 @@ body,
 html {
   font-size: 16px;
   transition: all $ease;
-  background-color: $bg;
-  background-image: url('/cartographer.png');
+  background: linear-gradient(rgba($bg, 0.97), rgba($bg, 0.97)),
+    url('/cartographer.svg');
 }
 
 #app {
