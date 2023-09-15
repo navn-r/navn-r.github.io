@@ -32,11 +32,19 @@
   };
 </script>
 
-<i class="fas fa-volume-up" class:playing={isPlaying} on:click={onPlay} />
+<button on:click={onPlay} aria-label="Play Voice">
+  <i class="fas fa-volume-up" class:playing={isPlaying} />
+</button>
 <audio bind:this={audio} />
 
 <style lang="scss">
   @use '../styles' as *;
+
+  button {
+    background: none;
+    border: none;
+  }
+  
 
   i {
     font-size: 1.25rem;
