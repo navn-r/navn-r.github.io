@@ -39,8 +39,7 @@
 
   const setPosition = (e: HTMLElement, x: number, y: number) => {
     if (e?.style) {
-      e.style.top = `${y}px`;
-      e.style.left = `${x}px`;
+      e.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
     }
   };
 
