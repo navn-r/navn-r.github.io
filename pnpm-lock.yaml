@@ -7,7 +7,7 @@ settings:
 devDependencies:
   '@sveltejs/vite-plugin-svelte':
     specifier: ^1.0.5
-    version: 1.0.5(svelte@3.50.1)(vite@2.9.16)
+    version: 1.0.5(svelte@3.59.2)(vite@2.9.16)
   husky:
     specifier: ^7.0.4
     version: 7.0.4
@@ -19,19 +19,19 @@ devDependencies:
     version: 2.7.1
   prettier-plugin-svelte:
     specifier: ^2.7.0
-    version: 2.7.0(prettier@2.7.1)(svelte@3.50.1)
+    version: 2.7.0(prettier@2.7.1)(svelte@3.59.2)
   sass:
     specifier: ^1.54.9
     version: 1.54.9
   svelte:
-    specifier: ^3.50.1
-    version: 3.50.1
+    specifier: ^3.59.2
+    version: 3.59.2
   svelte-check:
     specifier: ^2.9.0
-    version: 2.9.0(sass@1.54.9)(svelte@3.50.1)
+    version: 2.9.0(sass@1.54.9)(svelte@3.59.2)
   svelte-preprocess:
     specifier: ^4.10.7
-    version: 4.10.7(sass@1.54.9)(svelte@3.50.1)(typescript@4.8.3)
+    version: 4.10.7(sass@1.54.9)(svelte@3.59.2)(typescript@4.8.3)
   typescript:
     specifier: ^4.8.3
     version: 4.8.3
@@ -95,7 +95,7 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte@1.0.5(svelte@3.50.1)(vite@2.9.16):
+  /@sveltejs/vite-plugin-svelte@1.0.5(svelte@3.59.2)(vite@2.9.16):
     resolution: {integrity: sha512-CmSdSow0Dr5ua1A11BQMtreWnE0JZmkVIcRU/yG3PKbycKUpXjNdgYTWFSbStLB0vdlGnBbm2+Y4sBVj+C+TIw==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
@@ -111,8 +111,8 @@ packages:
       deepmerge: 4.2.2
       kleur: 4.1.5
       magic-string: 0.26.3
-      svelte: 3.50.1
-      svelte-hmr: 0.14.12(svelte@3.50.1)
+      svelte: 3.59.2
+      svelte-hmr: 0.14.12(svelte@3.59.2)
       vite: 2.9.16(sass@1.54.9)
     transitivePeerDependencies:
       - supports-color
@@ -934,14 +934,14 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier-plugin-svelte@2.7.0(prettier@2.7.1)(svelte@3.50.1):
+  /prettier-plugin-svelte@2.7.0(prettier@2.7.1)(svelte@3.59.2):
     resolution: {integrity: sha512-fQhhZICprZot2IqEyoiUYLTRdumULGRvw0o4dzl5jt0jfzVWdGqeYW27QTWAeXhoupEZJULmNoH3ueJwUWFLIA==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
     dependencies:
       prettier: 2.7.1
-      svelte: 3.50.1
+      svelte: 3.59.2
     dev: true
 
   /prettier@2.7.1:
@@ -1165,7 +1165,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check@2.9.0(sass@1.54.9)(svelte@3.50.1):
+  /svelte-check@2.9.0(sass@1.54.9)(svelte@3.59.2):
     resolution: {integrity: sha512-9AVrtP7WbfDgCdqTZNPdj5CCCy1OrYMxFVWAWzNw7fl93c9klFJFtqzVXa6fovfQ050CcpUyJE2dPFL9TFAREw==}
     hasBin: true
     peerDependencies:
@@ -1177,8 +1177,8 @@ packages:
       import-fresh: 3.3.0
       picocolors: 1.0.0
       sade: 1.8.1
-      svelte: 3.50.1
-      svelte-preprocess: 4.10.7(sass@1.54.9)(svelte@3.50.1)(typescript@4.8.3)
+      svelte: 3.59.2
+      svelte-preprocess: 4.10.7(sass@1.54.9)(svelte@3.59.2)(typescript@4.8.3)
       typescript: 4.8.3
     transitivePeerDependencies:
       - '@babel/core'
@@ -1193,16 +1193,16 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-hmr@0.14.12(svelte@3.50.1):
+  /svelte-hmr@0.14.12(svelte@3.59.2):
     resolution: {integrity: sha512-4QSW/VvXuqVcFZ+RhxiR8/newmwOCTlbYIezvkeN6302YFRE8cXy0naamHcjz8Y9Ce3ITTZtrHrIL0AGfyo61w==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       svelte: '>=3.19.0'
     dependencies:
-      svelte: 3.50.1
+      svelte: 3.59.2
     dev: true
 
-  /svelte-preprocess@4.10.7(sass@1.54.9)(svelte@3.50.1)(typescript@4.8.3):
+  /svelte-preprocess@4.10.7(sass@1.54.9)(svelte@3.59.2)(typescript@4.8.3):
     resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -1250,12 +1250,12 @@ packages:
       sass: 1.54.9
       sorcery: 0.10.0
       strip-indent: 3.0.0
-      svelte: 3.50.1
+      svelte: 3.59.2
       typescript: 4.8.3
     dev: true
 
-  /svelte@3.50.1:
-    resolution: {integrity: sha512-bS4odcsdj5D5jEg6riZuMg5NKelzPtmsCbD9RG+8umU03TeNkdWnP6pqbCm0s8UQNBkqk29w/Bdubn3C+HWSwA==}
+  /svelte@3.59.2:
+    resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
     engines: {node: '>= 8'}
     dev: true
 
