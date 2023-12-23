@@ -1,73 +1,79 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
 
   import Voice from './components/Voice.svelte';
   import Contact from './components/Contact.svelte';
   import Cursor from './components/Cursor.svelte';
+
+  let loaded = false;
+  onMount(() => (loaded = true));
 </script>
 
 <Cursor />
 
 <main>
-  <section in:fade={{ delay: 500, duration: 300 }}>
-    <h1>A Software Engineer, studying <span>Computer Science.</span></h1>
-    <p>Hey, my name is <strong>Navinn</strong> (/nævɪn/) <Voice /></p>
-    <p>
-      I am in my final year <s>studying</s> surviving at the
-      <a
-        href="https://www.utoronto.ca/"
-        rel="noopener noreferrer nofollow"
-        target="_blank">University of Toronto</a
-      >
-      in Canada. I have over 20 months of work experience, with major contributions
-      in startup, enterprise and open source development teams.
-    </p>
-    <p>
-      For Fall 2023, I'm currently working as a Software Engineer Intern at <a
-        href="https://www.americanexpress.com/en-ca/"
-        rel="noopener noreferrer nofollow"
-        target="_blank">American Express</a
-      >
-      and a Teaching Assistant for
-      <a
-        href="https://utsc.calendar.utoronto.ca/course/cscD01h3"
-        rel="noopener noreferrer nofollow"
-        target="_blank">CSCD01: Engineering Large Software Systems</a
-      >. I'm also actively seeking internship and new-grad positions for 2024.
-      I've had the pleasure to work at
-      <a
-        href="https://hubspot.com"
-        rel="noopener noreferrer nofollow"
-        target="_blank">HubSpot</a
-      >,
-      <a
-        href="https://www.rbc.com"
-        target="_blank"
-        rel="noopener noreferrer nofollow">RBC</a
-      >,
-      <a
-        href="https://mlh.io"
-        rel="noopener noreferrer nofollow"
-        target="_blank">MLH</a
-      >,
-      <a
-        href="https://www.caseware.com/ca"
-        rel="noopener noreferrer nofollow"
-        target="_blank">CaseWare</a
-      >
-      and
-      <a
-        href="https://www.halo.science/"
-        rel="noopener noreferrer nofollow"
-        target="_blank">Halo Science</a
-      >.
-    </p>
-    <p>
-      Whether if it's a hackathon, party or a job offer, I'm always looking for
-      new opportunities. Want to connect? Reach out below!
-    </p>
-    <Contact />
-  </section>
+  {#if loaded}
+    <section in:fade={{ delay: 300, duration: 300 }}>
+      <h1>A Software Engineer, studying <span>Computer Science.</span></h1>
+      <p>Hey, my name is <strong>Navinn</strong> (/nævɪn/) <Voice /></p>
+      <p>
+        I am in my final year <s>studying</s> surviving at the
+        <a
+          href="https://www.utoronto.ca/"
+          rel="noopener noreferrer nofollow"
+          target="_blank">University of Toronto</a
+        >
+        in Canada. I have over 2 years of work experience, with major contributions
+        in startup, enterprise and open source development teams.
+      </p>
+      <p>
+        For Winter 2024, I'm currently working as a Teaching Assistant for
+        <a
+          href="https://utsc.calendar.utoronto.ca/course/cscB20h3"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+          >CSCB20: Introduction to Databases and Web Applications</a
+        >. I've also had the pleasure to work at
+        <a
+          href="https://www.americanexpress.com/en-ca/"
+          rel="noopener noreferrer nofollow"
+          target="_blank">American Express</a
+        >,
+        <a
+          href="https://hubspot.com"
+          rel="noopener noreferrer nofollow"
+          target="_blank">HubSpot</a
+        >,
+        <a
+          href="https://www.rbc.com"
+          target="_blank"
+          rel="noopener noreferrer nofollow">RBC</a
+        >,
+        <a
+          href="https://mlh.io"
+          rel="noopener noreferrer nofollow"
+          target="_blank">MLH</a
+        >,
+        <a
+          href="https://www.caseware.com/ca"
+          rel="noopener noreferrer nofollow"
+          target="_blank">CaseWare</a
+        >
+        and
+        <a
+          href="https://www.halo.science/"
+          rel="noopener noreferrer nofollow"
+          target="_blank">Halo Science</a
+        >.
+      </p>
+      <p>
+        Whether if it's a hackathon, party or a job offer, I'm always looking
+        for new opportunities. Want to connect? Reach out below!
+      </p>
+      <Contact />
+    </section>
+  {/if}
 </main>
 
 <style lang="scss">
