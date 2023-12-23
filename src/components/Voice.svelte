@@ -44,7 +44,6 @@
     background: none;
     border: none;
   }
-  
 
   i {
     font-size: 1.25rem;

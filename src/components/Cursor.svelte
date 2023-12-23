@@ -70,7 +70,9 @@
     width: 10px;
     height: 10px;
     background: #ffffff;
-    transition: width 0.3s, height 0.3s;
+    transition:
+      width 0.3s,
+      height 0.3s;
   }
 
   .outer {
