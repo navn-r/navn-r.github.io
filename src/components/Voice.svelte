@@ -3,15 +3,15 @@
   let isPlaying = false;
 
   /**
-   * @see http://ipa-reader.xyz/?text=n%C3%A6v%C9%AAn
+   * @see http://ipa-reader.xyz/?text=n%C9%9Cv%C9%AAn&voice=Raveena
    */
   const fetchAudio = async () => {
     const IPA_READER_API_URL =
       'https://iawll6of90.execute-api.us-east-1.amazonaws.com/production';
 
     const payload = {
-      text: 'nævɪn',
-      voice: 'Brian',
+      text: 'nɜvɪn',
+      voice: 'Raveena',
     };
 
     const voice = await fetch(IPA_READER_API_URL, {

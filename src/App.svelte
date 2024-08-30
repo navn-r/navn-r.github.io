@@ -15,56 +15,27 @@
 <main>
   {#if loaded}
     <section in:fade={{ delay: 300, duration: 300 }}>
-      <h1>A Software Engineer, studying <span>Computer Science.</span></h1>
-      <p>Hey, my name is <strong>Navinn</strong> (/nævɪn/) <Voice /></p>
+      <h3>Just another...</h3>
+      <h1>Software Engineer.</h1>
+      <p>Hey, my name is <strong>Navinn</strong> (/nɜvɪn/) <Voice /></p>
       <p>
-        I am in my final year <s>studying</s> surviving at the
+        I'm a Software Engineer at <a
+          href="https://meta.com"
+          rel="noopener noreferrer nofollow"
+          target="_blank">Meta</a
+        > in New York, originally from Toronto, Canada.
+      </p>
+      <p>
+        I graduated with a degree in Computer Science from the
         <a
           href="https://www.utoronto.ca/"
           rel="noopener noreferrer nofollow"
           target="_blank">University of Toronto</a
         >
-        in Canada. I have over 2 years of work experience, with major contributions
-        in startup, enterprise and open source development teams.
-      </p>
-      <p>
-        For Winter 2024, I'm currently working as a Teaching Assistant for
-        <a
-          href="https://utsc.calendar.utoronto.ca/course/cscB20h3"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-          >CSCB20: Introduction to Databases and Web Applications</a
-        >. I've also had the pleasure to work at
-        <a
-          href="https://www.americanexpress.com/en-ca/"
-          rel="noopener noreferrer nofollow"
-          target="_blank">American Express</a
-        >,
-        <a
-          href="https://hubspot.com"
-          rel="noopener noreferrer nofollow"
-          target="_blank">HubSpot</a
-        >,
-        <a
-          href="https://www.rbc.com"
-          target="_blank"
-          rel="noopener noreferrer nofollow">RBC</a
-        >,
-        <a
-          href="https://mlh.io"
-          rel="noopener noreferrer nofollow"
-          target="_blank">MLH</a
-        >,
-        <a
-          href="https://www.caseware.com/ca"
-          rel="noopener noreferrer nofollow"
-          target="_blank">CaseWare</a
-        >
-        and
-        <a
-          href="https://www.halo.science/"
-          rel="noopener noreferrer nofollow"
-          target="_blank">Halo Science</a
+        in 2024. During my undergrad, I was a Teaching Assistant and had the pleasure
+        of doing multiple internships. My course notes are available
+        <a href="/notes" rel="noopener noreferrer nofollow" target="_blank"
+          >here</a
         >.
       </p>
       <p>
@@ -134,25 +105,23 @@
     }
   }
 
-  h1 {
+  h3 {
     font-family: $serif;
     letter-spacing: -0.02rem;
     font-weight: 400;
-    font-size: clamp(2.5rem, 10vw, 4rem);
-    margin-bottom: 2.25rem;
-    max-width: 24ch;
+    font-size: 2.5rem;
+  }
 
-    span {
-      font-family: $funky;
-      font-size: clamp(2.5rem, 10vw, 4.5rem);
+  h1 {
+    font-family: $funky;
+    font-size: clamp(2.5rem, 10vw, 4.25rem);
 
-      background: linear-gradient(45deg, $accent 40%, $invert 60%);
-      background-size: 200% 200%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: gradient 3s linear alternate infinite;
-    }
+    background: linear-gradient(45deg, $accent 40%, $invert 60%);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 3s linear alternate infinite;
   }
 
   @keyframes gradient {
