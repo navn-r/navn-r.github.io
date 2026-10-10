@@ -1,23 +1,46 @@
 {
   "name": "navn-r.github.io",
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "type": "module",
+  "author": "Navinn Ravindaran",
   "description": "Portfolio Website",
-  "main": "index.js",
-  "dependencies": {
-    "lit-element": "^2.4.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "Unlicense",
+  "homepage": "https://github.com/navn-r/navn-r.github.io#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/navn-r/navn-r.github.io.git"
   },
-  "author": "Navinn Ravindaran",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/navn-r/navn-r.github.io/issues"
   },
-  "homepage": "https://github.com/navn-r/navn-r.github.io#readme"
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "svelte-check --tsconfig tsconfig.json  --fail-on-warnings",
+    "format": "prettier --write src",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-svelte": "^3.1.2",
+    "sass": "^1.69.5",
+    "svelte": "^4.2.8",
+    "svelte-check": "^3.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  },
+  "lint-staged": {
+    "src/*": [
+      "npm run lint",
+      "npm run format"
+    ]
+  }
 }
