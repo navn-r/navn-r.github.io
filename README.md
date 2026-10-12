@@ -40,3 +40,9 @@ bun run build  # TypeScript checks + build to /dist
 
 bun run preview  # serves /dist @ http://localhost:4173
 ```
+
+## Shader development
+
+[Shaders.com](https://shaders.com) effects are available through `shaders/react`.
+The [$shaders](.agents/skills/shaders/SKILL.md) skill covers finding components,
+composition, fonts, and images.
