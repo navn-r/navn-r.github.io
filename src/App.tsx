@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { FlowingGradient, Shader } from 'shaders/react'
 import { GlassPanel } from './components/GlassPanel/GlassPanel'
 import './global.css'
+import './console'
 import { Logo } from './components/Logo/Logo'
 
 function Link(props: ComponentProps<'a'>) {
