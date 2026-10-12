@@ -1,0 +1,84 @@
+.container {
+  --panel-inset: clamp(24px, 5vmin, 64px);
+  --content-inset: clamp(24px, 5vw, 48px);
+
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: var(--panel-inset) 4.5vw;
+}
+
+.definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.surround {
+  position: relative;
+  width: min(1125px, 100%);
+}
+
+.frame {
+  --corner-glow-opacity: 35%;
+  --corner-glow-reach: 45%;
+
+  display: grid;
+  /* Let the content set the minimum height when it outgrows the 4:3 frame. */
+  grid-template-rows: minmax(min-content, 1fr);
+  align-items: center;
+  aspect-ratio: 4 / 3;
+  clip-path: var(--panel-outline);
+  background:
+    radial-gradient(
+      ellipse at top left,
+      rgb(227 76 38 / var(--corner-glow-opacity)),
+      transparent var(--corner-glow-reach)
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgb(50 97 174 / var(--corner-glow-opacity)),
+      transparent var(--corner-glow-reach)
+    ),
+    rgb(0 0 0 / 25%);
+}
+
+.surface {
+  overflow: hidden;
+  color: rgb(255 255 255 / 80%);
+  /* Curve the content separately so the glass can blur the background behind it. */
+  filter: var(--panel-distortion);
+}
+
+.border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.borderGlow {
+  opacity: 0.4875;
+  filter: blur(6px);
+}
+
+.content {
+  padding: var(--content-inset);
+}
+
+@media (max-width: 850px) {
+  .frame {
+    aspect-ratio: auto;
+  }
+
+  .container {
+    --panel-inset: 16px;
+
+    padding: var(--panel-inset);
+  }
+}
