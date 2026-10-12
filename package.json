@@ -1,6 +1,7 @@
 {
   "name": "navn-r.github.io",
-  "version": "3.0.0",
+  "version": "4.0.0",
+  "private": true,
   "type": "module",
   "author": "Navinn Ravindaran",
   "description": "Portfolio Website",
@@ -14,33 +15,27 @@
     "url": "https://github.com/navn-r/navn-r.github.io/issues"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "serve": "vite preview",
-    "lint": "svelte-check --tsconfig tsconfig.json  --fail-on-warnings",
-    "format": "prettier --write src",
-    "prepare": "husky install",
-    "precommit": "lint-staged"
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
-    "prettier": "^3.1.1",
-    "prettier-plugin-svelte": "^3.1.2",
-    "sass": "^1.69.5",
-    "svelte": "^4.2.8",
-    "svelte-check": "^3.6.2",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.10"
-  },
-  "lint-staged": {
-    "src/*": [
-      "npm run lint",
-      "npm run format"
-    ]
+    "@babel/core": "^7.29.7",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.0"
   }
 }
