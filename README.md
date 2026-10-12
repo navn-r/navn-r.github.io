@@ -41,6 +41,11 @@ bun run build  # TypeScript checks + build to /dist
 bun run preview  # serves /dist @ http://localhost:4173
 ```
 
+## Formatting
+
+Run `bun run format` after editing or generating files.
+`bun run format:check` verifies the repository without rewriting it and runs in CI.
+
 ## Shader development
 
 [Shaders.com](https://shaders.com) effects are available through `shaders/react`.
