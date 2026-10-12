@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 280px;
+  background: #000;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+}
+
+::selection {
+  background-color: #e34c26;
+  color: inherit;
+}
+
+.scene {
+  position: relative;
+  height: 100dvh;
+}
+
+.scene > canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.intro {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #cfeeff;
+}
+
+.intro p {
+  margin: 0 0 1rem;
+}
+
+.intro nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.intro a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+  text-underline-offset: 4px;
+}
+
+.intro a:hover {
+  text-decoration-color: #e34c26;
+}
+
+.intro a:focus-visible {
+  outline: 2px solid #e34c26;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+@media (max-width: 850px) {
+  .intro {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .intro nav a:last-child {
+    grid-column: 2 / span 2;
+  }
+}
